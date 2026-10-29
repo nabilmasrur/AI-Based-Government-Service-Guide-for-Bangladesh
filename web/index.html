@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>সেবা সহায়ক</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#FBFBFA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400&display=swap">
+
+<style>
+/* ═══ CONFIG ═══ Same-origin? leave API_BASE "". Split deploy? set it near the
+   bottom of this file.                                                        */
+
+:root{
+  --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --surface: rgba(255, 255, 255, 0.85);
+  --raised: rgba(255, 255, 255, 0.95);
+  --ink:#17191C;
+  --ink-2:#55585E;
+  --ink-3:#8A8E95;
+  --hair: rgba(0, 0, 0, 0.05);
+  --hair-2: rgba(0, 0, 0, 0.08);
+  --accent:#00875A;
+  --accent-ink:#006946;
+  --accent-soft:#E4F3ED;
+  --amber:#9A6510;
+  --amber-soft:#FBF1DF;
+  --alert:#B03A20;
+  --alert-soft:#FCEDE8;
+  --shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --shadow-lift: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg-gradient: radial-gradient(circle at 15% 50%, #1e1e24, #121214 25%, #080808 100%);
+    --surface: rgba(28, 30, 36, 0.6);
+    --raised: rgba(45, 48, 56, 0.8);
+    --ink:#ECEDEE;
+    --ink-2:#A9ADB3;
+    --ink-3:#787D85;
+    --hair: rgba(255, 255, 255, 0.08);
+    --hair-2: rgba(255, 255, 255, 0.12);
+    --accent:#35C892;
+    --accent-ink:#5FD8AA;
+    --accent-soft: rgba(53, 200, 146, 0.15);
+    --amber:#D8A85A;
+    --amber-soft: rgba(216, 168, 90, 0.15);
+    --alert:#E8846A;
+    --alert-soft: rgba(232, 132, 106, 0.15);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --shadow-lift: 0 18px 48px rgba(0, 0, 0, 0.6);
+  }
+}
+:root[data-theme="dark"]{
+  --bg-gradient: radial-gradient(circle at 15% 50%, #1e1e24, #121214 25%, #080808 100%);
+  --surface: rgba(28, 30, 36, 0.6);
+  --raised: rgba(45, 48, 56, 0.8);
+  --ink:#ECEDEE; --ink-2:#A9ADB3; --ink-3:#787D85;
+  --hair: rgba(255, 255, 255, 0.08); --hair-2: rgba(255, 255, 255, 0.12);
+  --accent:#35C892; --accent-ink:#5FD8AA; --accent-soft: rgba(53, 200, 146, 0.15);
+  --amber:#D8A85A; --amber-soft: rgba(216, 168, 90, 0.15);
+  --alert:#E8846A; --alert-soft: rgba(232, 132, 106, 0.15);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-lift: 0 18px 48px rgba(0, 0, 0, 0.6);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  color:var(--ink);
+  font-family:"Hind Siliguri",Manrope,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  display:flex;
+  flex-direction:column;
+  height:100dvh;
+  overflow:hidden;
+}
+body[data-lang="en"]{font-family:Manrope,"Hind Siliguri",-apple-system,sans-serif}
+.ui{font-family:Manrope,"Hind Siliguri",sans-serif}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+
+/* ───────────────────────── top bar ───────────────────────── */
+.top{
+  flex:none;display:flex;align-items:center;gap:10px;
+  padding:12px 18px;background:var(--surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom:1px solid var(--hair);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+.iconbtn{
+  width:36px;height:36px;flex:none;border:none;border-radius:10px;cursor:pointer;
+  background:transparent;color:var(--ink-2);display:grid;place-items:center;
+}
+.iconbtn:hover{background:var(--raised);color:var(--ink)}
+.brand{flex:1;min-width:0;display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.brand b{font-family:"Hind Siliguri",Manrope,sans-serif;font-size:17px;font-weight:600;letter-spacing:-.01em}
+.brand span{font-size:13px;color:var(--ink-3)}
+@media (max-width:720px){ .brand span{display:none} }
+
+.tools{display:flex;align-items:center;gap:7px}
+.status{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-3);
+  font-family:Manrope,sans-serif;white-space:nowrap}
+@media (max-width:860px){ .status span{display:none} }
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ink-3);flex:none;transition:background .3s}
+.dot.wake{background:#D9A227;animation:pulse 1.4s infinite}
+.dot.ok{background:var(--accent)}
+.dot.bad{background:var(--alert)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+.pillbtn{
+  font-family:"Hind Siliguri",Manrope,sans-serif;font-size:13.5px;font-weight:600;
+  padding:7px 14px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--hair);background:var(--surface);color:var(--ink-2);
+  transition:background .15s,border-color .15s;
+}
+.pillbtn:hover{background:var(--raised);color:var(--ink)}
+.pillbtn[aria-pressed="true"]{background:var(--accent-soft);border-color:transparent;color:var(--accent-ink)}
+.pillbtn[disabled]{opacity:.5;cursor:default}
+.seg{display:flex;background:var(--raised);border-radius:999px;padding:3px}
+.seg button{
+  font-family:"Hind Siliguri",Manrope,sans-serif;font-size:13px;font-weight:600;
+  padding:5px 13px;border:none;border-radius:999px;background:transparent;
+  color:var(--ink-3);cursor:pointer;
+}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.07)}
+
+/* ───────────────────────── thread ───────────────────────── */
+.thread{
+  flex:1;overflow-y:auto;overscroll-behavior:contain;
+  padding:34px 20px 8px;
+}
+.col{max-width:720px;margin:0 auto;padding-bottom:10px}
+
+.msg{margin-bottom:30px}
+.msg.me{display:flex;justify-content:flex-end}
+.msg.me .bubble{
+  background: linear-gradient(135deg, var(--accent), var(--accent-ink));
+  color: #fff;
+  padding:11px 18px;border-radius:20px 20px 5px 20px;
+  max-width:80%;font-size:16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+.who{
+  display:flex;align-items:center;gap:9px;margin-bottom:10px;
+  font-family:Manrope,sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);
+}
+.who .clock{font-weight:400;letter-spacing:.02em;opacity:.8;text-transform:none}
+.msg.me{flex-direction:column;align-items:flex-end}
+.msg.me .who{justify-content:flex-end}
+.lead{margin:0 0 18px;font-size:17px;line-height:1.7;white-space:pre-line}
+.msg.plain .lead{margin-bottom:0}
+
+/* clarify + refusal */
+.tagline{
+  display:inline-flex;align-items:center;gap:7px;margin-bottom:10px;
+  font-family:Manrope,sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.tagline.ask{color:var(--accent-ink)}
+.tagline.no{color:var(--alert)}
+.tagline i{width:6px;height:6px;border-radius:50%;background:currentColor;display:block}
+
+/* answer body — sections, not boxes */
+.ans{margin-top:8px}
+.sec{
+  margin-bottom:16px;border-radius:14px;overflow:hidden;
+  background:var(--surface);border:1px solid var(--hair);
+  box-shadow:0 1px 2px rgba(20,22,26,.05);
+}
+.sec:last-of-type{margin-bottom:0}
+.sec h4{
+  display:flex;align-items:center;gap:11px;margin:0;
+  padding:12px 16px;border-bottom:1px solid var(--hair);
+  background:var(--accent-soft);color:var(--accent-ink);
+  font-family:"Hind Siliguri",Manrope,sans-serif;font-size:14px;font-weight:700;
+  letter-spacing:.01em;
+}
+.sec h4 .si{
+  width:26px;height:26px;flex:none;border-radius:8px;display:grid;place-items:center;
+  background:var(--surface);color:inherit;
+}
+.secbody{padding:16px}
+.sec.f-fee h4{background:var(--amber-soft);color:var(--amber)}
+.sec.f-timeline h4,.sec.f-note h4,.sec.f-validity h4,.sec.f-appointment h4,.sec.f-helpline h4{background:var(--raised);color:var(--ink-2)}
+.sec.f-payment h4{background:var(--amber-soft);color:var(--amber)}
+.sec p{margin:0;font-size:16.5px;line-height:1.8;white-space:pre-line}
+.steps{margin:0;padding-left:1.55em;list-style-type:decimal}
+body[data-lang="bn"] .steps{list-style-type:bengali}
+.steps li{margin:0 0 11px;padding-left:5px;font-size:16.5px;line-height:1.75}
+.steps li:last-child{margin-bottom:0}
+.steps li::marker{color:var(--accent);font-weight:600;font-size:.88em}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;
+  padding:6px 14px 6px 10px;border-radius:999px;background:var(--raised);
+  font-size:13.5px;font-weight:600;color:var(--ink-2);
+}
+.badge i{width:7px;height:7px;border-radius:2px;background:var(--accent);display:block}
+.badge.l i{background:var(--amber)}
+.quota{color:var(--ink-3)}
+.quota.low{color:var(--amber)}
+.hl{
+  display:inline-block;margin-bottom:14px;padding:7px 15px;border-radius:999px;
+  background:var(--accent-soft);color:var(--accent-ink);font-size:14.5px;font-weight:600;
+}
+.note{
+  display:flex;gap:10px;align-items:flex-start;margin-top:18px;
+  background:var(--amber-soft);color:var(--amber);
+  padding:12px 16px;border-radius:12px;font-size:14.5px;line-height:1.6;
+}
+.foot{
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  margin-top:18px;font-size:13px;color:var(--ink-3);
+}
+.foot a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--hair)}
+.foot a:hover{color:var(--accent-ink);border-color:currentColor}
+.stamp{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-3);margin-top:14px}
+.stamp b{color:var(--accent-ink);font-weight:400}
+
+/* animations and glassmorphism */
+.msg { animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+.sec, .card, .composer, .sheet {
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--hair);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .sec, :root:not([data-theme="light"]) .card, :root:not([data-theme="light"]) .composer, :root:not([data-theme="light"]) .sheet {
+    background: var(--surface);
+    border: 1px solid var(--hair);
+  }
+}
+:root[data-theme="dark"] .sec, :root[data-theme="dark"] .card, :root[data-theme="dark"] .composer, :root[data-theme="dark"] .sheet {
+  background: var(--surface);
+  border: 1px solid var(--hair);
+}
+
+/* feedback */
+.fb-box { display: flex; gap: 8px; margin-top: 14px; align-items: center; }
+.fb-btn { 
+  width: 32px; height: 32px; border: 1px solid var(--hair); border-radius: 50%;
+  background: var(--surface); color: var(--ink-2); display: grid; place-items: center;
+  cursor: pointer; transition: transform 0.15s, background 0.15s, color 0.15s; 
+}
+.fb-btn:hover { transform: scale(1.1); background: var(--raised); }
+.fb-btn.act { background: var(--accent-soft); color: var(--accent-ink); border-color: var(--accent); }
+.fb-msg { font-size: 13px; color: var(--accent); opacity: 0; transition: opacity 0.3s; }
+.fb-msg.show { opacity: 1; }
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin:-12px 0 30px}
+.chip{
+  font-family:"Hind Siliguri",Manrope,sans-serif;font-size:15px;font-weight:500;
+  padding:10px 18px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--hair);background:var(--surface);color:var(--ink);
+  transition:border-color .15s,background .15s;
+}
+.chip:hover{border-color:var(--accent);background:var(--accent-soft)}
+.chip.soft{color:var(--ink-2);font-weight:400}
+.chip.soft:hover{color:var(--ink)}
+
+/* welcome */
+.hello{margin-bottom:26px}
+.hello h1{
+  font-family:"Hind Siliguri",Manrope,sans-serif;
+  font-size:clamp(25px,4.6vw,33px);font-weight:600;letter-spacing:-.015em;
+  line-height:1.3;margin:0 0 12px;text-wrap:balance;
+}
+.hello p{margin:0;font-size:17px;color:var(--ink-2);line-height:1.7;max-width:56ch}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0 24px}
+@media (max-width:560px){ .cards{grid-template-columns:1fr} }
+.card{
+  text-align:left;padding:20px;border-radius:16px;cursor:pointer;
+  border:1px solid var(--hair);background:var(--surface);font-family:inherit;
+  color:var(--ink);
+  transition:border-color .15s,transform .15s,box-shadow .15s;
+}
+.card:hover{border-color:var(--accent);transform:translateY(-1px);box-shadow:var(--shadow)}
+.card .ic{width:38px;height:38px;border-radius:11px;background:var(--accent-soft);
+  display:grid;place-items:center;margin-bottom:14px;color:var(--accent-ink)}
+.card.l .ic{background:var(--amber-soft);color:var(--amber)}
+.card b{display:block;font-size:16.5px;font-weight:600;margin-bottom:3px}
+.card span{display:block;font-size:14px;color:var(--ink-3);line-height:1.55}
+.hint{font-size:13.5px;color:var(--ink-3);margin:0 0 12px}
+
+/* typing */
+.dots{display:inline-flex;gap:5px;align-items:center;padding:6px 0}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--ink-3);animation:b 1.3s infinite}
+.dots i:nth-child(2){animation-delay:.18s}.dots i:nth-child(3){animation-delay:.36s}
+@keyframes b{0%,60%,100%{opacity:.28;transform:translateY(0)}30%{opacity:.9;transform:translateY(-3px)}}
+
+/* ───────────────────────── composer ───────────────────────── */
+.bottom{flex:none;padding:10px 20px 14px;background:transparent}
+.composer{
+  max-width:720px;margin:0 auto;display:flex;align-items:flex-end;gap:8px;
+  background:var(--surface);border:1px solid var(--hair);border-radius:26px;
+  padding:6px 6px 6px 20px;box-shadow:var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.composer:focus-within {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+  border-color: var(--accent);
+}
+.composer input{
+  flex:1;min-width:0;border:none;background:transparent;color:var(--ink);
+  font-family:inherit;font-size:16.5px;padding:11px 0;outline:none;
+}
+.composer input::placeholder{color:var(--ink-3)}
+.send{
+  width:40px;height:40px;flex:none;border:none;border-radius:50%;cursor:pointer;
+  background:var(--accent);color:#fff;display:grid;place-items:center;
+  transition:opacity .15s,transform .15s;
+}
+.send:hover{transform:scale(1.05)}
+.send[disabled]{opacity:.4;cursor:default;transform:none}
+.legal{
+  max-width:720px;margin:10px auto 0;font-size:12px;color:var(--ink-3);
+  text-align:center;line-height:1.5;
+}
+
+/* ───────────────────────── overlays ───────────────────────── */
+.scrim{
+  position:fixed;inset:0;background:rgba(16,18,20,.34);opacity:0;pointer-events:none;
+  transition:opacity .22s;z-index:40;backdrop-filter:blur(2px);
+}
+.scrim.on{opacity:1;pointer-events:auto}
+
+.sheet{
+  position:fixed;top:0;bottom:0;width:min(330px,86vw);background:var(--surface);
+  z-index:50;display:flex;flex-direction:column;
+  box-shadow:var(--shadow-lift);transition:transform .26s cubic-bezier(.32,.72,0,1);
+}
+#drawer{left:0;transform:translateX(-102%);border-right:1px solid var(--hair)}
+#drawer.on{transform:none}
+#panel{right:0;transform:translateX(102%);border-left:1px solid var(--hair);width:min(350px,90vw)}
+#panel.on{transform:none}
+
+.sheet-top{
+  flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:16px 18px;border-bottom:1px solid var(--hair);
+}
+.sheet-top h3{font-family:"Hind Siliguri",Manrope,sans-serif;font-size:16px;font-weight:600;margin:0}
+.sheet-body{flex:1;overflow-y:auto;padding:14px 0 24px}
+
+.grp{margin-bottom:22px}
+.grp-h{
+  display:flex;align-items:center;gap:9px;padding:0 18px;margin-bottom:8px;
+  font-family:Manrope,sans-serif;font-size:11px;font-weight:700;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink-3);
+}
+.grp-h i{width:7px;height:7px;border-radius:2px;background:var(--accent);display:block}
+.grp-h.l i{background:var(--amber)}
+.nav{
+  display:block;width:100%;text-align:left;font-family:inherit;font-size:15.5px;
+  padding:10px 18px;border:none;background:none;color:var(--ink-2);cursor:pointer;
+  line-height:1.4;
+}
+.nav:hover{background:var(--raised);color:var(--ink)}
+.kbinfo{padding:0 18px;font-size:13px;color:var(--ink-3);line-height:1.6}
+
+/* trace panel */
+.blk{padding:0 18px;margin-bottom:22px}
+.blk-h{font-family:Manrope,sans-serif;font-size:11px;font-weight:700;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+.kv{display:flex;justify-content:space-between;gap:10px;padding:6px 0;font-size:14px;
+  border-bottom:1px solid var(--hair-2)}
+.kv:last-child{border-bottom:none}
+.kv span:first-child{color:var(--ink-3)}
+.kv span:last-child{font-family:"IBM Plex Mono",monospace;font-size:12.5px;text-align:right}
+.dim{color:var(--ink-3);font-style:italic}
+.bar{height:6px;border-radius:99px;background:var(--hair);overflow:hidden;margin:8px 0 7px}
+.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .4s ease}
+.bar.q i{background:var(--ink-3)}
+.barv{display:flex;justify-content:space-between;font-family:"IBM Plex Mono",monospace;
+  font-size:12px;color:var(--ink-3)}
+.hit{display:flex;justify-content:space-between;gap:10px;padding:5px 0;
+  font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-2);
+  border-bottom:1px solid var(--hair-2)}
+.hit:last-child{border-bottom:none}
+.hit b{font-weight:400;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.verdict{display:inline-block;padding:6px 14px;border-radius:999px;
+  font-family:"Hind Siliguri",Manrope,sans-serif;font-size:13px;font-weight:600}
+.verdict.a{background:var(--accent-soft);color:var(--accent-ink)}
+.verdict.c{background:var(--raised);color:var(--ink-2)}
+.verdict.r{background:var(--alert-soft);color:var(--alert)}
+.small{font-size:13px;color:var(--ink-3);line-height:1.55;margin-top:9px}
+
+@media (max-width:620px){
+  .top{padding:10px 12px;gap:6px}
+  .brand b{font-size:16px}
+  .seg{display:none}                 /* language moves into the drawer */
+  #traceBtn{padding:7px 12px}
+  .thread{padding:20px 14px 8px}
+  .msg{margin-bottom:24px}
+  .msg.me .bubble{max-width:88%;font-size:15.5px}
+  .lead{font-size:16px}
+  .sec{padding:14px 15px}
+  .sec p,.steps li{font-size:16px}
+  .bottom{padding:8px 12px 12px}
+  .composer{padding:5px 5px 5px 16px;border-radius:24px}
+  .composer input{font-size:16px;padding:10px 0}
+  .chip{font-size:14.5px;padding:9px 16px}
+  .cards{gap:10px}
+  .card{padding:16px}
+  .legal{font-size:11px}
+}
+.install{
+  display:none;margin:0 18px 6px;padding:14px 16px;border-radius:14px;
+  background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 26%,transparent);
+}
+.install.on{display:block}
+.install b{display:block;font-size:14.5px;font-weight:600;color:var(--accent-ink);margin-bottom:4px}
+.install p{margin:0 0 12px;font-size:13px;color:var(--ink-2);line-height:1.55}
+.install button{
+  width:100%;font-family:inherit;font-size:14px;font-weight:600;padding:10px;
+  border:none;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;
+}
+.install .ios{margin:0;font-size:13px;color:var(--ink-2);line-height:1.6}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .thread{scroll-behavior:auto}
+}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-thumb{background:var(--hair);border-radius:99px;border:3px solid var(--bg)}
+</style>
+</head>
+<body data-lang="bn">
+
+<header class="top">
+  <button class="iconbtn" id="menuBtn" type="button" aria-label="সেবা তালিকা">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <div class="brand">
+    <b data-t="appTitle">সেবা সহায়ক</b>
+    <span data-t="appSub">পাসপোর্ট ও ড্রাইভিং লাইসেন্স</span>
+  </div>
+  <div class="tools">
+    <span class="status"><i class="dot" id="dot"></i><span id="statusText"></span></span>
+    <button class="iconbtn" id="themeBtn" type="button" aria-label="Theme">
+      <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></svg>
+    </button>
+    <div class="seg" role="group" aria-label="Language">
+      <button type="button" id="langBn" aria-pressed="true">বাংলা</button>
+      <button type="button" id="langEn" aria-pressed="false">EN</button>
+    </div>
+    <button class="pillbtn" id="traceBtn" type="button" aria-pressed="false" data-t="btnTrace">বিশ্লেষণ</button>
+    <button class="iconbtn" id="resetBtn" type="button" aria-label="নতুন শুরু">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 4v4h4"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="thread" id="thread" aria-live="polite"><div class="col" id="col"></div></main>
+
+<div class="bottom">
+  <form class="composer" id="composer">
+    <input id="msg" autocomplete="off" aria-label="প্রশ্ন" placeholder="প্রশ্ন লিখুন…">
+    <button class="send" type="submit" id="send" aria-label="পাঠান">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+    </button>
+  </form>
+  <p class="legal" data-t="legal">অনানুষ্ঠানিক সহায়িকা · চূড়ান্ত তথ্যের জন্য সরকারি ওয়েবসাইট দেখুন · CSE 3202, BAUST</p>
+</div>
+
+<div class="scrim" id="scrim"></div>
+
+<aside class="sheet" id="drawer" aria-hidden="true">
+  <div class="sheet-top">
+    <h3 data-t="services">সেবা তালিকা</h3>
+    <button class="iconbtn" data-close type="button" aria-label="বন্ধ">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="sheet-body">
+    <div class="install" id="install">
+      <b data-t="installTitle">ফোনে অ্যাপ হিসেবে রাখুন</b>
+      <p data-t="installBody">হোম স্ক্রিনে যোগ করলে ব্রাউজার ছাড়াই খুলবে, অনেকটা সত্যিকারের অ্যাপের মতো।</p>
+      <button id="installBtn" type="button" data-t="installBtn">যোগ করুন</button>
+      <p class="ios" id="installIos" hidden data-t="installIos">Safari-তে নিচের Share বোতাম চেপে “Add to Home Screen” বেছে নিন।</p>
+    </div>
+    <div id="drawerBody"></div>
+  </div>
+</aside>
+
+<aside class="sheet" id="panel" aria-hidden="true">
+  <div class="sheet-top">
+    <h3 data-t="analysis">এজেন্ট বিশ্লেষণ</h3>
+    <button class="iconbtn" data-close type="button" aria-label="বন্ধ">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="sheet-body">
+    <div class="blk">
+      <div class="blk-h" data-t="intent">শনাক্তকৃত অভিপ্রায়</div>
+      <div class="kv"><span>domain</span><span id="sDom" class="dim">—</span></div>
+      <div class="kv"><span>subtype</span><span id="sSub" class="dim">—</span></div>
+      <div class="kv"><span>field</span><span id="sFld" class="dim">—</span></div>
+    </div>
+    <div class="blk">
+      <div class="blk-h" data-t="slots">স্লট</div>
+      <div id="slots"></div>
+    </div>
+    <div class="blk">
+      <div class="blk-h" data-t="conf">আস্থা স্কোর</div>
+      <div class="bar"><i id="bar"></i></div>
+      <div class="barv"><span id="cVal">0.00</span><span id="cThr">—</span></div>
+      <div class="small" id="cNote"></div>
+    </div>
+    <div class="blk">
+      <div class="blk-h" data-t="sources">উদ্ধৃত উৎস</div>
+      <div id="hits"></div>
+    </div>
+    <div class="blk">
+      <div class="blk-h" data-t="quota">ব্যবহারের সীমা</div>
+      <div class="kv"><span id="qMinLabel">per minute</span><span id="qMin">—</span></div>
+      <div class="kv"><span id="qDayLabel">per day</span><span id="qDay">—</span></div>
+      <div class="bar q"><i id="qBar"></i></div>
+      <div class="small" id="qNote"></div>
+    </div>
+    <div class="blk">
+      <div class="blk-h" data-t="decision">সিদ্ধান্ত</div>
+      <div id="dec"></div>
+      <div class="small" id="decNote"></div>
+    </div>
+  </div>
+</aside>
+
+<script>
+window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
+
+(function () {
+  "use strict";
+  var API = (window.API_BASE || "").replace(/\/$/, "");
+  var sid = crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random());
+  var lang = "bn", meta = null, busy = false, serverReady = false;
+
+  var L = {
+    bn: {
+      appTitle:"সেবা সহায়ক", appSub:"পাসপোর্ট ও ড্রাইভিং লাইসেন্স",
+      btnTraceOnly:1, btnTrace:"বিশ্লেষণ",
+      services:"সেবা তালিকা", analysis:"এজেন্ট বিশ্লেষণ",
+      intent:"শনাক্তকৃত অভিপ্রায়", slots:"স্লট", conf:"আস্থা স্কোর",
+      sources:"উদ্ধৃত উৎস", decision:"সিদ্ধান্ত",
+      legal:"অনানুষ্ঠানিক সহায়িকা · চূড়ান্ত তথ্যের জন্য সরকারি ওয়েবসাইট দেখুন · CSE 3202, BAUST · UI v7",
+      placeholder:"প্রশ্ন লিখুন…", placeholderWake:"সার্ভার জাগছে, এক মুহূর্ত…",
+      bot:"সহায়ক",
+      slotEmpty:"এখনো কিছু জানা হয়নি", unknown:"অজানা",
+      thr:"সীমা", noHits:"কোনো এন্ট্রি সীমা পেরোয়নি",
+      decA:"উত্তর দেওয়া হয়েছে", decC:"স্পষ্ট করা দরকার", decR:"উত্তর দেওয়া হয়নি", decW:"অপেক্ষমাণ",
+      decWNote:"প্রথম বার্তার অপেক্ষায়।",
+      confHigh:"সীমার উপরে — উদ্ধৃত অংশ থেকে উত্তর তৈরি হয়েছে।",
+      confLow:"সীমার নিচে — এজেন্ট উত্তর তৈরি করেনি।",
+      waking:"সংযোগ হচ্ছে · {s} সে", ready:"প্রস্তুত · {s} সে", failed:"সংযোগ নেই", offline:"অফলাইন",
+      fast:"তাৎক্ষণিক", full:"২ Gemini কল",
+      source:"উৎস", verified:"যাচাই", unverified:"অযাচাইকৃত",
+      kb:"জ্ঞানভাণ্ডার", entries:"এন্ট্রি",
+      quota:"ব্যবহারের সীমা", perMin:"এই মিনিটে", perDay:"আজ",
+      quotaLeft:"আজ আর {n}টি প্রশ্ন", quotaNote:"শুধু লেখা প্রশ্ন গোনা হয় — বোতামে ক্লিক করলে কিছু খরচ হয় না।",
+      themeLight:"আলো", themeDark:"অন্ধকার",
+      you:"আপনি", settings:"সেটিংস", language:"ভাষা",
+      installTitle:"ফোনে অ্যাপ হিসেবে রাখুন",
+      installBody:"হোম স্ক্রিনে যোগ করলে ব্রাউজার ছাড়াই খুলবে, অনেকটা সত্যিকারের অ্যাপের মতো।",
+      installBtn:"যোগ করুন", installDone:"যোগ হয়েছে",
+      installIos:"Safari-তে নিচের Share বোতাম চেপে “Add to Home Screen” বেছে নিন।",
+      greet:"আসসালামু আলাইকুম",
+      intro:"পাসপোর্ট আর ড্রাইভিং লাইসেন্স নিয়ে যা জানতে চান জিজ্ঞেস করুন — কোন অফিসে যেতে হবে, কী কী কাগজ লাগবে, কত ফি, কত দিন সময়, আর কতটুকু ঘরে বসেই হয়ে যায়।",
+      dPass:"পাসপোর্ট", dPassSub:"নতুন · নবায়ন · সংশোধন · হারানো",
+      dLic:"ড্রাইভিং লাইসেন্স", dLicSub:"শিক্ষানবিশ · স্মার্ট কার্ড · নবায়ন",
+      or:"অথবা এভাবেও জিজ্ঞেস করতে পারেন",
+      ex1:"নতুন পাসপোর্ট করতে কী লাগে?", ex2:"learner license er fee koto?", ex3:"জমির খতিয়ান কীভাবে পাব?",
+      netErr:"সার্ভারে পৌঁছানো যাচ্ছে না। একটু পরে আবার চেষ্টা করুন।"
+    },
+    en: {
+      appTitle:"Seba Sohayok", appSub:"Passport & driving licence",
+      btnTraceOnly:1, btnTrace:"Analysis",
+      services:"Services", analysis:"Agent analysis",
+      intent:"Detected intent", slots:"Slots", conf:"Confidence",
+      sources:"Cited sources", decision:"Decision",
+      legal:"Unofficial guidance · confirm on the official government website · CSE 3202, BAUST · UI v7",
+      placeholder:"Ask a question…", placeholderWake:"Waking the server, one moment…",
+      bot:"Assistant",
+      slotEmpty:"nothing known yet", unknown:"unknown",
+      thr:"threshold", noHits:"no entry passed the threshold",
+      decA:"Answered", decC:"Needs clarifying", decR:"Declined", decW:"Waiting",
+      decWNote:"Waiting for the first message.",
+      confHigh:"Above threshold — answered from the cited records.",
+      confLow:"Below threshold — no answer was generated.",
+      waking:"Connecting · {s}s", ready:"Ready · {s}s", failed:"No connection", offline:"offline",
+      fast:"instant", full:"2 Gemini calls",
+      source:"Source", verified:"verified", unverified:"unverified",
+      kb:"Knowledge base", entries:"entries",
+      quota:"Usage limit", perMin:"this minute", perDay:"today",
+      quotaLeft:"{n} questions left today", quotaNote:"Only typed questions count — clicking a button costs nothing.",
+      themeLight:"Light", themeDark:"Dark",
+      you:"You", settings:"Settings", language:"Language",
+      installTitle:"Keep it on your phone",
+      installBody:"Add it to your home screen and it opens without the browser, much like a real app.",
+      installBtn:"Add", installDone:"Added",
+      installIos:"In Safari, tap the Share button and choose “Add to Home Screen”.",
+      greet:"Hello",
+      intro:"Ask anything about passport and driving licence services — which office to visit, what documents to bring, the fee, how long it takes, and how much can be done from home.",
+      dPass:"Passport", dPassSub:"New · renewal · correction · lost",
+      dLic:"Driving licence", dLicSub:"Learner · smart card · renewal",
+      or:"Or try one of these",
+      ex1:"What do I need for a new passport?", ex2:"How much is a learner licence?", ex3:"How do I get a land record?",
+      netErr:"Cannot reach the server. Please try again shortly."
+    }
+  };
+  function S(k){ return L[lang][k]; }
+
+  var $ = function(id){ return document.getElementById(id); };
+
+  /* ── theme ── remembered per browser; falls back to the OS setting ── */
+  var SUN = "<circle cx='12' cy='12' r='4'/><path d='M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4'/>";
+  var MOON = "<path d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/>";
+  function currentTheme(){
+    return document.documentElement.getAttribute("data-theme") ||
+      (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  }
+  function paintTheme(){
+    var dark = currentTheme() === "dark";
+    document.getElementById("themeIcon").innerHTML = dark ? SUN : MOON;
+    document.getElementById("themeBtn").setAttribute("aria-label", dark ? S("themeLight") : S("themeDark"));
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute("content", dark ? "#101113" : "#FBFBFA");
+  }
+  try {
+    var saved = localStorage.getItem("theme");
+    if (saved === "dark" || saved === "light") document.documentElement.setAttribute("data-theme", saved);
+  } catch (e) {}
+  var col = $("col"), thread = $("thread");
+  function el(t,c,h){ var n=document.createElement(t); if(c)n.className=c; if(h!=null)n.innerHTML=h; return n; }
+  function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  function scroll(){ thread.scrollTop = thread.scrollHeight; }
+
+  /* Enough empty space under the last message that it can always be pulled to
+     the top of the view — otherwise a short answer cannot scroll into place. */
+  function roomToScroll(){ col.style.paddingBottom = "55vh"; }
+
+  /* A long answer must open at its FIRST line, not at its last.
+     Fonts and the growing card change the layout for a few frames after the
+     node lands, so the position is re-applied until it stops moving instead of
+     being set once and hoped for. */
+  function scrollToTopOf(node){
+    if (!node) return;
+    var tries = 0;
+    function place(){
+      var y = node.getBoundingClientRect().top - thread.getBoundingClientRect().top
+              + thread.scrollTop - 14;
+      thread.scrollTop = Math.max(0, y);
+      if (++tries < 6) setTimeout(place, 70);
+    }
+    requestAnimationFrame(place);
+  }
+
+  /* ── overlays ── */
+  function open(which){
+    var sheet = $(which), other = which === "drawer" ? $("panel") : $("drawer");
+    other.classList.remove("on"); other.setAttribute("aria-hidden","true");
+    sheet.classList.add("on"); sheet.setAttribute("aria-hidden","false");
+    $("scrim").classList.add("on");
+    if (which === "panel") $("traceBtn").setAttribute("aria-pressed","true");
+  }
+  function closeAll(){
+    ["drawer","panel"].forEach(function(id){
+      $(id).classList.remove("on"); $(id).setAttribute("aria-hidden","true");
+    });
+    $("scrim").classList.remove("on");
+    $("traceBtn").setAttribute("aria-pressed","false");
+  }
+  $("scrim").addEventListener("click", closeAll);
+  document.querySelectorAll("[data-close]").forEach(function(b){ b.addEventListener("click", closeAll); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeAll(); });
+  $("menuBtn").addEventListener("click", function(){ open("drawer"); });
+  $("traceBtn").addEventListener("click", function(){
+    if ($("panel").classList.contains("on")) closeAll(); else open("panel");
+  });
+
+  /* ── server status ── */
+  var timer = null, t0 = 0;
+  function setStatus(kind, text){
+    $("dot").className = "dot" + (kind ? " " + kind : "");
+    $("statusText").textContent = text;
+  }
+  function wake(){
+    if (!API){ serverReady = true; setStatus("ok", ""); return; }
+    t0 = Date.now(); serverReady = false;
+    setStatus("wake", S("waking").replace("{s}","0"));
+    $("msg").placeholder = S("placeholderWake");
+    clearInterval(timer);
+    timer = setInterval(function(){
+      if (serverReady) return;
+      setStatus("wake", S("waking").replace("{s}", Math.round((Date.now()-t0)/1000)));
+    }, 1000);
+    fetch(API + "/health", {cache:"no-store"})
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(){
+        clearInterval(timer); serverReady = true;
+        setStatus("ok", S("ready").replace("{s}", Math.round((Date.now()-t0)/1000)));
+        $("msg").placeholder = S("placeholder");
+        setTimeout(function(){ if(serverReady) setStatus("ok", (meta && meta.model) || ""); }, 3200);
+      })
+      .catch(function(){
+        clearInterval(timer); setStatus("bad", S("failed"));
+        $("msg").placeholder = S("placeholder");
+      });
+  }
+
+  function post(path, body){
+    return fetch(API + path, {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify(Object.assign({session_id:sid, lang:lang}, body))
+    }).then(function(r){ return r.json(); });
+  }
+
+  window.submitFeedback = function(btn, query_id, is_positive) {
+    if (btn.classList.contains('act')) return;
+    var box = btn.parentNode;
+    box.querySelectorAll('.fb-btn').forEach(function(b) { b.classList.remove('act'); });
+    btn.classList.add('act');
+    var msg = box.querySelector('.fb-msg');
+    msg.classList.add('show');
+    msg.textContent = lang === 'bn' ? "ধন্যবাদ!" : "Thank you!";
+    setTimeout(function() { msg.classList.remove('show'); }, 2000);
+    post("/api/feedback", { query_id: query_id, is_positive: is_positive });
+  };
+
+  /* ── messages ── */
+  function clock(){
+    var d = new Date(), h = d.getHours(), mm = ("0" + d.getMinutes()).slice(-2);
+    var am = h < 12;
+    h = h % 12 || 12;
+    if (lang === "bn") return num(h) + ":" + num(mm) + (am ? " AM" : " PM");
+    return h + ":" + mm + (am ? " AM" : " PM");
+  }
+  function head(who){
+    return "<div class='who'><span>" + esc(who) + "</span><span class='clock'>" + clock() + "</span></div>";
+  }
+  function me(text){
+    col.appendChild(el("div","msg me", head(S("you")) + "<div class='bubble'>" + esc(text) + "</div>"));
+    roomToScroll();
+    scroll();
+  }
+  function bot(inner, extra){
+    var m = el("div","msg" + (extra ? " " + extra : ""));
+    m.innerHTML = head(S("bot")) + inner;
+    col.appendChild(m); return m;
+  }
+  function typing(){
+    var g = bot("<div class='dots'><i></i><i></i><i></i></div>", "plain");
+    scroll();
+    return g;
+  }
+
+  function chips(list){
+    var old = col.querySelector(".chips"); if (old) old.remove();
+    if (!list || !list.length) return;
+    var box = el("div","chips");
+    list.forEach(function(o){
+      var b = el("button","chip" + (o.grey ? " soft" : ""), esc(o.label));
+      b.type = "button";
+      b.addEventListener("click", function(){
+        box.remove(); me(o.label); send({action:o.action}, "/api/action");
+      });
+      box.appendChild(b);
+    });
+    col.appendChild(box);
+  }
+
+  /* "১. ..." lines read as a numbered list, not as one pre-wrapped block. */
+  var NUMBERED = /^\s*[\u09E6-\u09EF0-9]+[.)]\s+/;
+  function body(text){
+    var lines = String(text || "").split("\n");
+    var steps = lines.filter(function(l){ return NUMBERED.test(l); });
+    if (steps.length < 2) return "<p>" + esc(text) + "</p>";
+    var out = "", open = false;
+    lines.forEach(function(l){
+      if (NUMBERED.test(l)){
+        if (!open){ out += "<ol class='steps'>"; open = true; }
+        out += "<li>" + esc(l.replace(NUMBERED, "")) + "</li>";
+      } else {
+        if (open){ out += "</ol>"; open = false; }
+        if (l.trim()) out += "<p>" + esc(l) + "</p>";
+      }
+    });
+    return out + (open ? "</ol>" : "");
+  }
+
+  var ICON = {
+    office:"<path d='M3 21h18M5 21V7l7-4 7 4v14M9.5 21v-4h5v4'/>",
+    documents:"<path d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/><path d='M14 2v6h6'/><path d='M8 13h8M8 17h5'/>",
+    fee:"<rect x='2.5' y='6' width='19' height='12' rx='2.5'/><circle cx='12' cy='12' r='2.6'/><path d='M6 12h.01M18 12h.01'/>",
+    timeline:"<circle cx='12' cy='12' r='9'/><path d='M12 7.2V12l3.2 2'/>",
+    online_steps:"<circle cx='12' cy='12' r='9'/><path d='M3.2 12h17.6'/><path d='M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z'/>",
+    note:"<circle cx='12' cy='12' r='9'/><path d='M12 16.2V11.5M12 8.2h.01'/>",
+    payment:"<rect x='2.5' y='5' width='19' height='14' rx='2.5'/><path d='M2.5 9.5h19'/><path d='M6.5 15h3'/>",
+    verification:"<path d='M12 3l7.5 3v5.5c0 4.2-3.1 7.8-7.5 9-4.4-1.2-7.5-4.8-7.5-9V6L12 3z'/><path d='M9.2 12.1l2 2 3.6-4'/>",
+    minor:"<circle cx='12' cy='8' r='3.2'/><path d='M5.5 20a6.5 6.5 0 0 1 13 0'/>",
+    collection:"<path d='M3 8.5l9-4.5 9 4.5v7L12 20l-9-4.5z'/><path d='M3 8.5L12 13l9-4.5M12 13v7'/>",
+    eligibility:"<circle cx='9.5' cy='8' r='3.4'/><path d='M3 19.5a6.5 6.5 0 0 1 11.2-4.5'/><path d='M15.5 18l1.8 1.8 3.2-3.6'/>",
+    validity:"<rect x='3.5' y='5' width='17' height='15.5' rx='2.5'/><path d='M3.5 10h17M8 3v4M16 3v4'/>",
+    appointment:"<rect x='3.5' y='5' width='17' height='15.5' rx='2.5'/><path d='M3.5 10h17M8 3v4M16 3v4'/><path d='M12 13.5v2.5l1.8 1'/>",
+    helpline:"<path d='M21 16.4v2.6a2 2 0 0 1-2.2 2 19.5 19.5 0 0 1-8.5-3 19 19 0 0 1-5.9-5.9 19.5 19.5 0 0 1-3-8.6A2 2 0 0 1 3.4 3H6a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.1 10.7a16 16 0 0 0 6.2 6.2l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z'/>"
+  };
+  function icon(key){
+    return "<span class='si'><svg width='16' height='16' viewBox='0 0 24 24' fill='none' " +
+      "stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'>" +
+      (ICON[key] || ICON.note) + "</svg></span>";
+  }
+
+  function answerHTML(res){
+    var c = res.card, out = "";
+    out += "<div class='badge" + (c.domain === "licence" ? " l" : "") + "'><i></i>" + esc(c.badge) + "</div>";
+    if (res.lead) out += "<p class='lead'>" + esc(res.lead) + "</p>";
+    if (c.highlight) out += "<div class='hl'>" + esc(c.highlight) + "</div>";
+    out += "<div class='ans'>";
+    (c.fields || []).forEach(function(f){
+      out += "<div class='sec f-" + esc(f.key) + "'><h4>" + icon(f.key) + esc(f.label) + "</h4>" +
+             "<div class='secbody'>" + body(f.content) + "</div></div>";
+    });
+    out += "</div>";
+    if (c.warn_text)
+      out += "<div class='note'><span>&#9888;</span><span>" + esc(c.warn_text) + "</span></div>";
+    var s = (c.sources || [])[0];
+    if (s){
+      var host = s.url; try { host = new URL(s.url).hostname.replace(/^www\./,""); } catch(e){}
+      out += "<div class='foot'><a href='" + esc(s.url) + "' target='_blank' rel='noopener'>" +
+             esc(S("source")) + " · " + esc(host) + "</a><span>" +
+             (s.verified_on ? esc(S("verified")) + " " + esc(s.verified_on) : esc(S("unverified"))) +
+             "</span></div>";
+    }
+    var ms = res.ms || 0;
+    out += "<div class='stamp'><b>" + (ms < 1000 ? ms + " ms" : (ms/1000).toFixed(1) + " s") +
+           "</b> · " + esc(res._fast ? S("fast") : S("full")) + quotaTail(res.limit) + "</div>";
+           
+    if (res.query_id) {
+      out += "<div class='fb-box'>" +
+             "<button class='fb-btn' aria-label='Helpful' onclick='submitFeedback(this, " + res.query_id + ", true)'><svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3'></path></svg></button>" +
+             "<button class='fb-btn' aria-label='Not Helpful' onclick='submitFeedback(this, " + res.query_id + ", false)'><svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17'></path></svg></button>" +
+             "<span class='fb-msg'></span></div>";
+    }
+    
+    return out;
+  }
+
+  /* Bangla copy reads wrong with Latin digits, so numbers shown inside Bangla
+     sentences are transliterated. Mono/technical readouts keep Latin digits. */
+  var BN = "\u09E6\u09E7\u09E8\u09E9\u09EA\u09EB\u09EC\u09ED\u09EE\u09EF";
+  function num(n){
+    var t = String(n);
+    return lang === "bn" ? t.replace(/[0-9]/g, function(d){ return BN[+d]; }) : t;
+  }
+
+  function quotaTail(lim){
+    if (!lim) return "";
+    var low = lim.day_left <= lim.day_max * 0.2 || lim.minute_left <= 2;
+    return " · <span class='quota" + (low ? " low" : "") + "'>" +
+           esc(S("quotaLeft").replace("{n}", num(lim.day_left))) + "</span>";
+  }
+
+  function paintQuota(lim){
+    if (!lim) return;
+    $("qMinLabel").textContent = S("perMin");
+    $("qDayLabel").textContent = S("perDay");
+    $("qMin").textContent = num(lim.minute_left) + " / " + num(lim.minute_max);
+    $("qDay").textContent = num(lim.day_left) + " / " + num(lim.day_max);
+    var pct = lim.day_max ? (lim.day_left / lim.day_max) * 100 : 0;
+    $("qBar").style.width = Math.max(0, Math.min(100, pct)) + "%";
+    $("qBar").style.background = pct <= 20 ? "var(--amber)" : "var(--accent)";
+    $("qNote").textContent = S("quotaNote");
+  }
+
+  function render(res, fast){
+    if (!res || res.type === "error"){
+      scrollToTopOf(bot("<p class='lead'>" + esc((res && res.lead) || S("netErr")) + "</p>", "plain"));
+      return;
+    }
+    if (res.session_id) sid = res.session_id;
+    res._fast = fast;
+
+    var node;
+    if (res.type === "answer" && res.card){
+      node = bot(answerHTML(res));
+    } else {
+      var tag = res.type === "clarify"
+        ? "<div class='tagline ask'><i></i>" + esc(S("decC")) + "</div>"
+        : res.type === "no_info"
+          ? "<div class='tagline no'><i></i>" + esc(S("decR")) + "</div>" : "";
+      node = bot(tag + "<p class='lead'>" + esc(res.lead || "") + "</p>", "plain");
+    }
+    paint(res.trace);
+    paintQuota(res.limit);
+    chips(res.chips);
+    roomToScroll();
+    scrollToTopOf(node);
+  }
+
+  /* ── trace panel ── */
+  function setKV(id, v){ var n = $(id); n.textContent = v || "—"; n.className = v ? "" : "dim"; }
+  function paint(tr){
+    $("cThr").textContent = S("thr") + " " + ((meta && meta.threshold) || 0.62);
+    if (!tr){
+      setKV("sDom",null); setKV("sSub",null); setKV("sFld",null);
+      $("slots").innerHTML = "<div class='kv'><span class='dim'>" + esc(S("slotEmpty")) + "</span></div>";
+      $("bar").style.width = "0%"; $("cVal").textContent = "0.00"; $("cNote").textContent = "";
+      $("hits").innerHTML = "<div class='hit'><b>—</b><span></span></div>";
+      $("dec").innerHTML = "<span class='verdict c'>" + esc(S("decW")) + "</span>";
+      $("decNote").textContent = S("decWNote");
+      return;
+    }
+    setKV("sDom",tr.domain); setKV("sSub",tr.subtype); setKV("sFld",tr.field);
+
+    var box = $("slots"); box.innerHTML = "";
+    var keys = Object.keys(tr.slots || {});
+    if (!keys.length) box.innerHTML = "<div class='kv'><span class='dim'>" + esc(S("slotEmpty")) + "</span></div>";
+    else keys.forEach(function(k){
+      var v = tr.slots[k];
+      box.appendChild(el("div","kv","<span>" + esc(k) + "</span><span" + (v?"":" class='dim'") + ">" +
+        esc(v || S("unknown")) + "</span>"));
+    });
+
+    var c = tr.conf || 0, thr = tr.threshold || 0.62;
+    $("bar").style.width = Math.round(Math.max(0,Math.min(1,c))*100) + "%";
+    $("bar").style.background = c < thr ? "var(--alert)" : "var(--accent)";
+    $("cVal").textContent = c.toFixed(2);
+    $("cNote").textContent = c < thr ? S("confLow") : S("confHigh");
+
+    var hb = $("hits"); hb.innerHTML = "";
+    if (!tr.hits || !tr.hits.length) hb.innerHTML = "<div class='hit'><b>" + esc(S("noHits")) + "</b><span></span></div>";
+    else tr.hits.forEach(function(h){
+      hb.appendChild(el("div","hit","<b>" + esc(h[0]) + "</b><span>" + Number(h[1]).toFixed(2) + "</span>"));
+    });
+
+    var map = {answer:["a",S("decA")], clarify:["c",S("decC")], reject:["r",S("decR")]};
+    var d = map[tr.decision] || map.clarify;
+    $("dec").innerHTML = "<span class='verdict " + d[0] + "'>" + esc(d[1]) + "</span>";
+    $("decNote").textContent = tr.note || "";
+  }
+
+  /* ── send ── */
+  function send(body, path){
+    if (busy) return;
+    busy = true; $("send").disabled = true;
+    var fast = path === "/api/action";
+    var ghost = typing();
+    post(path, body)
+      .then(function(res){ ghost.remove(); render(res, fast); })
+      .catch(function(){
+        ghost.remove();
+        scrollToTopOf(bot("<p class='lead'>" + esc(S("netErr")) + "</p>", "plain"));
+        setStatus("bad", S("failed"));
+      })
+      .then(function(){ busy = false; $("send").disabled = false; });
+  }
+  function act(action, label){
+    var old = col.querySelector(".chips"); if (old) old.remove();
+    closeAll(); me(label); send({action:action}, "/api/action");
+  }
+
+  /* ── "add to home screen" ──
+     Chrome/Edge hand us a deferred prompt; iOS Safari has no such API, so there
+     we show the manual steps instead of a dead button. */
+  var deferredInstall = null;
+  var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  var standalone = window.matchMedia("(display-mode: standalone)").matches ||
+                   window.navigator.standalone === true;
+
+  function refreshInstall(){
+    var box = $("install");
+    if (standalone){ box.classList.remove("on"); return; }
+    if (deferredInstall){
+      box.classList.add("on");
+      $("installBtn").hidden = false;
+      $("installIos").hidden = true;
+    } else if (isIOS){
+      box.classList.add("on");
+      $("installBtn").hidden = true;
+      $("installIos").hidden = false;
+    } else {
+      box.classList.remove("on");
+    }
+  }
+  window.addEventListener("beforeinstallprompt", function(e){
+    e.preventDefault(); deferredInstall = e; refreshInstall();
+  });
+  window.addEventListener("appinstalled", function(){
+    deferredInstall = null; standalone = true; refreshInstall();
+  });
+  $("installBtn").addEventListener("click", function(){
+    if (!deferredInstall) return;
+    deferredInstall.prompt();
+    deferredInstall.userChoice.then(function(){
+      deferredInstall = null; refreshInstall();
+    });
+  });
+
+  /* ── drawer ── */
+  function buildDrawer(){
+    var body = $("drawerBody"); body.innerHTML = "";
+    if (!meta) return;
+    Object.keys(meta.taxonomy).forEach(function(dom){
+      var d = meta.taxonomy[dom], g = el("div","grp");
+      g.appendChild(el("div","grp-h" + (dom === "licence" ? " l" : ""),
+        "<i></i>" + esc(d["label_" + lang])));
+      Object.keys(d.subtypes).forEach(function(sub){
+        var b = el("button","nav", esc(d.subtypes[sub][lang])); b.type = "button";
+        b.addEventListener("click", function(){
+          act({domain:dom, subtype:sub}, d.subtypes[sub][lang]);
+        });
+        g.appendChild(b);
+      });
+      body.appendChild(g);
+    });
+    var set = el("div","grp");
+    set.appendChild(el("div","grp-h","<i style='background:var(--ink-3)'></i>" + esc(S("settings"))));
+    var row = el("div","kbinfo");
+    row.style.cssText = "display:flex;gap:8px;flex-wrap:wrap;padding-top:2px";
+    ["bn","en"].forEach(function(code){
+      var b = el("button","pillbtn", code === "bn" ? "বাংলা" : "English");
+      b.type = "button";
+      b.setAttribute("aria-pressed", String(lang === code));
+      b.addEventListener("click", function(){ setLang(code); });
+      row.appendChild(b);
+    });
+    set.appendChild(row);
+    body.appendChild(set);
+
+    var s = meta.stats || {}, info = el("div","grp");
+    info.appendChild(el("div","grp-h","<i style='background:var(--ink-3)'></i>" + esc(S("kb"))));
+    info.appendChild(el("div","kbinfo",
+      esc(s.total || 0) + " " + esc(S("entries")) + " · " + esc(s.verified || 0) + " " + esc(S("verified")) +
+      (s.unverified ? " · " + esc(s.unverified) + " " + esc(S("unverified")) : "") +
+      "<br>epassport.gov.bd · brta.gov.bd"));
+    body.appendChild(info);
+  }
+
+  /* ── welcome ── */
+  function welcome(){
+    col.innerHTML = "";
+    col.style.paddingBottom = "10px";
+    var w = el("div","hello");
+    w.innerHTML = "<h1>" + esc(S("greet")) + "</h1><p>" + esc(S("intro")) + "</p>";
+    col.appendChild(w);
+
+    var cards = el("div","cards");
+    cards.innerHTML =
+      "<button class='card' type='button' data-d='passport'><span class='ic'>" +
+        "<svg width='19' height='19' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='2' width='16' height='20' rx='2.5'/><circle cx='12' cy='10' r='3'/><path d='M8.5 17h7'/></svg>" +
+        "</span><b>" + esc(S("dPass")) + "</b><span>" + esc(S("dPassSub")) + "</span></button>" +
+      "<button class='card l' type='button' data-d='licence'><span class='ic'>" +
+        "<svg width='19' height='19' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='5' width='20' height='14' rx='2.5'/><circle cx='8' cy='12' r='2.2'/><path d='M14 10h4M14 14h4'/></svg>" +
+        "</span><b>" + esc(S("dLic")) + "</b><span>" + esc(S("dLicSub")) + "</span></button>";
+    col.appendChild(cards);
+    cards.querySelectorAll(".card").forEach(function(b){
+      b.addEventListener("click", function(){
+        act({domain:b.dataset.d}, b.querySelector("b").textContent);
+      });
+    });
+
+    col.appendChild(el("p","hint", esc(S("or"))));
+    chips([
+      {label:S("ex1"), grey:true, action:{domain:"passport", subtype:"new", field:"documents"}},
+      {label:S("ex2"), grey:true, action:{domain:"licence", subtype:"learner", field:"fee"}},
+      {label:S("ex3"), grey:true, action:{}}
+    ]);
+    paint(null);
+  }
+
+  /* ── language ── */
+  function applyLang(){
+    document.body.setAttribute("data-lang", lang);
+    document.documentElement.setAttribute("lang", lang);
+    document.querySelectorAll("[data-t]").forEach(function(n){
+      var k = n.getAttribute("data-t");
+      if (L[lang][k] != null) n.textContent = L[lang][k];
+    });
+    $("msg").placeholder = serverReady ? S("placeholder") : S("placeholderWake");
+    $("langBn").setAttribute("aria-pressed", String(lang === "bn"));
+    $("langEn").setAttribute("aria-pressed", String(lang === "en"));
+    paintTheme();
+    buildDrawer();
+  }
+  function setLang(next){
+    if (next === lang) return;
+    lang = next; applyLang(); welcome();
+    post("/api/reset", {}).catch(function(){});
+  }
+  $("themeBtn").addEventListener("click", function(){
+    var next = currentTheme() === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+    paintTheme();
+  });
+  $("langBn").addEventListener("click", function(){ setLang("bn"); });
+  $("langEn").addEventListener("click", function(){ setLang("en"); });
+
+  /* ── composer ── */
+  $("composer").addEventListener("submit", function(e){
+    e.preventDefault();
+    var t = $("msg").value.trim();
+    if (!t || busy) return;
+    var old = col.querySelector(".chips"); if (old) old.remove();
+    $("msg").value = ""; me(t); send({message:t}, "/api/chat");
+  });
+  $("resetBtn").addEventListener("click", function(){
+    post("/api/reset", {}).catch(function(){});
+    sid = crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random());
+    closeAll(); welcome();
+  });
+
+  /* ── boot ── */
+  /* Only on a real deployment. During development a service worker can hand
+     back yesterday's page and send you hunting for a bug you already fixed. */
+  var isLocal = /^(localhost|127\.|0\.0\.0\.0|192\.168\.|10\.)/.test(location.hostname);
+  if ("serviceWorker" in navigator && location.protocol === "https:" && !isLocal) {
+    navigator.serviceWorker.register("sw.js")
+      .then(function(reg){ reg.update(); })
+      .catch(function(){});
+  } else if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.getRegistrations()
+      .then(function(rs){ rs.forEach(function(r){ r.unregister(); }); })
+      .catch(function(){});
+  }
+
+  wake();
+  applyLang(); paintTheme(); refreshInstall(); welcome();
+  fetch(API + "/api/meta").then(function(r){ return r.json(); })
+    .then(function(m){
+      meta = m;
+      if (serverReady) setStatus("ok", (m.llm_ready ? m.model : m.model + " · " + S("offline")));
+      applyLang(); welcome();
+    })
+    .catch(function(){});
+})();
+</script>
+</body>
+</html>
