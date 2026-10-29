@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<title>সেবা সহায়ক — System Architecture & Engineering Specification</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#e8f5e9',
+      primaryTextColor: '#1b5e20',
+      primaryBorderColor: '#2e7d32',
+      lineColor: '#37474f',
+      secondaryColor: '#f3e5f5',
+      tertiaryColor: '#e1f5fe',
+      fontFamily: 'Inter, "Noto Sans Bengali", sans-serif',
+      fontSize: '13px'
+    }
+  });
+</script>
+<style>
+  :root {
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --bg-page: #ffffff;
+    --bg-card: #f8fafc;
+    --bg-card-border: #e2e8f0;
+    --primary: #059669;
+    --primary-dark: #047857;
+    --primary-light: #d1fae5;
+    --accent: #0284c7;
+    --border-color: #cbd5e1;
+    --code-bg: #0f172a;
+    --code-text: #f1f5f9;
+  }
+
+  @page {
+    size: A4;
+    margin: 14mm 14mm 14mm 14mm;
+    @bottom-right {
+      content: counter(page);
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    font-family: 'Inter', 'Noto Sans Bengali', -apple-system, sans-serif;
+    color: var(--text-primary);
+    background: var(--bg-page);
+    line-height: 1.55;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Document Header / Cover */
+  .doc-header {
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+  .doc-badge-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .badge-primary { background: var(--primary-light); color: var(--primary-dark); }
+  .badge-secondary { background: #e0f2fe; color: #0369a1; }
+  .badge-gray { background: #f1f5f9; color: #475569; }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin: 0 0 12px 0;
+    font-weight: 500;
+  }
+  .academic-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    border-left: 4px solid var(--primary);
+    padding-left: 10px;
+    margin: 26px 0 12px 0;
+    letter-spacing: -0.01em;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 18px 0 8px 0;
+    page-break-after: avoid;
+  }
+  p {
+    margin: 0 0 10px 0;
+    color: var(--text-secondary);
+  }
+
+  /* Key Highlight Cards */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--bg-card-border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    page-break-inside: avoid;
+  }
+  .card-title {
+    font-weight: 700;
+    font-size: 12.5px;
+    color: var(--primary-dark);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .card p {
+    font-size: 11.5px;
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  /* Diagrams */
+  .diagram-container {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 14px 0 20px 0;
+    text-align: center;
+    page-break-inside: avoid;
+  }
+  .diagram-caption {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 16px 0;
+    font-size: 12px;
+    page-break-inside: avoid;
+  }
+  th {
+    background: #f1f5f9;
+    color: #334155;
+    text-align: left;
+    padding: 8px 10px;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+  }
+  td {
+    padding: 8px 10px;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td {
+    background: #fafafa;
+  }
+
+  /* Code blocks */
+  pre {
+    background: var(--code-bg);
+    color: var(--code-text);
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    page-break-inside: avoid;
+    margin: 10px 0;
+  }
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: #e2e8f0;
+    color: #0f172a;
+    padding: 2px 5px;
+    border-radius: 4px;
+  }
+  pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+  }
+
+  .formula-box {
+    background: #f8fafc;
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    margin: 12px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    border-radius: 0 6px 6px 0;
+    page-break-inside: avoid;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="doc-header">
+    <div class="doc-badge-group">
+      <span class="badge badge-primary">Goal-Based AI Agent</span>
+      <span class="badge badge-secondary">RAG Architecture</span>
+      <span class="badge badge-gray">FastAPI + Gemini + NumPy</span>
+      <span class="badge badge-gray">BAUST CSE 3202</span>
+    </div>
+    <h1>সেবা সহায়ক (Seba Sohayok) — System Architecture</h1>
+    <div class="subtitle">Engineering & Architectural Specification for Automated Citizen Service Assistant</div>
+    <div class="academic-meta">Course: CSE 3202 — Artificial Intelligence Sessional | Scope: Passport & Driving Licence Services (Bangladesh)</div>
+  </div>
+
+  <!-- Executive Summary -->
+  <h2>1. Executive Summary & Design Principles</h2>
+  <p>
+    <strong>Seba Sohayok</strong> is a goal-based conversational agent engineered to navigate citizens through administrative government procedures in Bangladesh (Passport and Driving Licence services). Unlike traditional chatbots that generate speculative responses, this system is governed by three architectural invariant rules:
+  </p>
+
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-title">🛡️ 1. Zero Hallucination</div>
+      <p>The LLM (Gemini) is strictly forbidden from generating fees, deadlines, documents, or office names. All factual cards are rendered verbatim from verified JSON knowledge entries.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">⚡ 2. Bimodal Speed Paths</div>
+      <p>Action chip clicks bypass the LLM completely, fetching answers directly from memory in ~5ms. Free-text uses an intent-and-slot extractor with conversation clarification.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🎯 3. Confidence Refusal</div>
+      <p>If semantic retrieval scores below the confidence threshold (<code>CONF_THRESHOLD = 0.62</code>), the agent explicitly refuses rather than generating an unreliable guess.</p>
+    </div>
+  </div>
+
+  <!-- System Topology Diagram -->
+  <h2>2. End-to-End System Architecture</h2>
+  <div class="diagram-container">
+    <div class="mermaid">
+flowchart TD
+    User["Citizen Browser (Client Console)"]
+
+    subgraph Frontend ["Client Presentation Layer (web/)"]
+        UI["Glassmorphism Web UI (index.html)"]
+        Chips["Action Chips & Suggestion Pills"]
+        FreeText["Free-text Chat Input"]
+    end
+
+    subgraph Gateway ["API & Edge Layer"]
+        CF["Cloudflare Public Tunnel / Edge"]
+        FastAPI["FastAPI App (app/main.py)"]
+        RateLimiter["In-Memory Rate Limiter (limits.py)"]
+    end
+
+    subgraph AgentCore ["Goal-Based Agent Engine (app/agent.py)"]
+        Guard["Scope & Smalltalk Regex Filter"]
+        Session["In-Memory Session Context (session.py)"]
+        IntentExtractor["Gemini Intent & Slot Parser (llm.py)"]
+        Clarifier{"Subtype Ambiguous?"}
+        IntroGen["1-Sentence Intro Generator (Gemini)"]
+    end
+
+    subgraph RetrievalEngine ["Retrieval Engine (app/retriever.py)"]
+        Retriever["Hybrid Scorer (Cosine + Keyword Boost)"]
+        VectorMatrix["Precomputed Embeddings (embeddings.npz)"]
+        KnowledgeBase["Curated KB (data/passport.json, licence.json)"]
+    end
+
+    User --> UI
+    Chips -->|POST /api/action| FastAPI
+    FreeText -->|POST /api/chat| FastAPI
+    CF -.-> FastAPI
+
+    FastAPI --> RateLimiter --> Guard
+
+    %% Fast-Path
+    FastAPI -->|Direct Action Request| Retriever
+
+    %% Free-text flow
+    Guard -->|Out of scope / Social| UI
+    Guard -->|Legitimate Service Query| IntentExtractor
+    IntentExtractor --> Session
+    IntentExtractor --> Clarifier
+    Clarifier -->|Yes: Ask Clarification| UI
+    Clarifier -->|No: Goal Settled| Retriever
+
+    Retriever --> VectorMatrix
+    Retriever --> KnowledgeBase
+    Retriever -->|Score >= 0.62| IntroGen
+    Retriever -->|Score < 0.62: Refuse| UI
+    IntroGen --> UI
+    </div>
+    <div class="diagram-caption">Figure 1: High-level architectural data flow showing dual-path execution (Fast Action vs. Cognitive Chat).</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Sequence Diagrams -->
+  <h2>3. Execution Sequence Diagrams</h2>
+
+  <h3>3.1 Fast-Path Execution (Action / Chip Click — Sub-10ms)</h3>
+  <p>When a citizen clicks an action chip, the intent and slot are already unambiguous. The LLM is bypassed completely:</p>
+  <div class="diagram-container">
+    <div class="mermaid">
+sequenceDiagram
+    autonumber
+    actor User as Citizen
+    participant Client as Web UI (index.html)
+    participant API as FastAPI (/api/action)
+    participant Ret as Retriever (app/retriever.py)
+    participant KB as Knowledge Base (JSON)
+
+    User->>Client: Clicks action chip (e.g., "পাসপোর্ট ফি কত?")
+    Client->>API: POST /api/action {id: "passport.new.fees"}
+    API->>Ret: Query exact entry by record ID
+    Ret->>KB: Read verified JSON record
+    KB-->>Ret: Return record (bilingual, source_url, verified_on)
+    Ret-->>API: Format official facts card
+    API-->>Client: 200 OK (Instant payload)
+    Client-->>User: Render card immediately (~5ms)
+    </div>
+    <div class="diagram-caption">Figure 2: Deterministic, LLM-free fast path for direct action clicks.</div>
+  </div>
+
+  <h3>3.2 Cognitive Free-Text Reasoning & RAG Retrieval Flow</h3>
+  <p>Unstructured citizen queries undergo regex filtering, LLM intent parsing, clarification check, vector retrieval, and verbatim facts assembling:</p>
+  <div class="diagram-container">
+    <div class="mermaid">
+sequenceDiagram
+    autonumber
+    actor User as Citizen
+    participant Client as Web UI (index.html)
+    participant Agent as Agent Core (app/agent.py)
+    participant LLM as Gemini API (app/llm.py)
+    participant Ret as Retriever (app/retriever.py)
+    participant KB as Knowledge Base (data/*.json)
+
+    User->>Client: Types: "জরুরি পাসপোর্ট করতে কত টাকা লাগবে?"
+    Client->>Agent: POST /api/chat {message, session_id}
+    Agent->>Agent: 1. Regex Guardrails (Check Out-of-Scope & Smalltalk)
+    Agent->>LLM: 2. Parse Intent & Extract Slots (JSON Mode)
+    LLM-->>Agent: {domain: "passport", subtype: "new", field: "fees"}
+
+    alt Subtype is ambiguous (e.g. citizen said only "পাসপোর্ট করব")
+        Agent-->>Client: Return Clarification Question + Choice Chips
+    else Subtype & Field resolved
+        Agent->>LLM: 3. Generate Query Vector (gemini-embedding-001)
+        LLM-->>Agent: 3072-dimensional normalized float32 vector
+        Agent->>Ret: Perform Cosine Scan over Matrix + Keyword Boost
+        Ret->>KB: Retrieve candidate records & compute similarity scores
+
+        alt Confidence Score < 0.62 (Unknown or vague question)
+            Ret-->>Agent: Match below confidence threshold
+            Agent-->>Client: Refusal Card ("কোনো যাচাইকৃত তথ্য পাওয়া যায়নি")
+        else Confidence Score >= 0.62
+            Ret-->>Agent: Verified Record (passport.new.fees)
+            Agent->>LLM: 4. Compose 1 connecting intro sentence (Language-aligned)
+            LLM-->>Agent: "ই-পাসপোর্টের নির্ধারিত ফি ও বিতরণের সময়সীমা নিচে দেওয়া হলো:"
+            Agent->>Agent: Attach verbatim facts body + official source link
+            Agent-->>Client: 200 OK (Intro text + Verified facts card)
+            Client-->>User: Render verified response card
+        end
+    end
+    </div>
+    <div class="diagram-caption">Figure 3: Cognitive RAG flow with strict hallucination barriers and confidence gating.</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- Mathematical Formulation & Component Details -->
+  <h2>4. Mathematical Scoring & Retrieval Mechanism</h2>
+  <p>
+    Because the curated knowledge base consists of ~70 focused entries across 14 sub-types and 5 fields, an approximate-nearest-neighbor index (e.g. Chroma, FAISS, Pinecone) would introduce unnecessary cold-start latency and external operational dependencies. 
+  </p>
+  <p>
+    <strong>Seba Sohayok</strong> implements an in-memory <strong>NumPy vectorized cosine similarity scan</strong> combined with a lexical keyword boost:
+  </p>
+
+  <div class="formula-box">
+    Score(q, d) = cos(e_q, e_d) + &beta; &times; KeywordBoost(q, d)
+    <br><br>
+    where cos(e_q, e_d) = (e_q &middot; e_d) / (||e_q|| &times; ||e_d||)
+  </div>
+
+  <p>
+    Where:
+  </p>
+  <ul>
+    <li><code>e_q</code>: 3072-dimensional embedding vector of the citizen query (via <code>gemini-embedding-001</code>).</li>
+    <li><code>e_d</code>: Pre-computed normalized embedding vector stored in <code>data/embeddings.npz</code>.</li>
+    <li><code>KeywordBoost(q, d)</code>: Exact substring matching weight covering multilingual keywords (Bangla, English, and phonetic Banglish).</li>
+    <li><code>&beta;</code>: Heuristic boost factor ensuring high-frequency administrative terms reliably surface exact domain fields.</li>
+  </ul>
+
+  <h2>5. Component Breakdown & Module Matrix</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 22%;">Module</th>
+        <th style="width: 25%;">Component</th>
+        <th>Responsibility & Invariant Guarantees</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>app/main.py</code></td>
+        <td>FastAPI Application</td>
+        <td>HTTP routing, CORS negotiation, static file mounting, session dispatch, and OpenAPI schema exposure.</td>
+      </tr>
+      <tr>
+        <td><code>app/agent.py</code></td>
+        <td>Goal-Based Agent Core</td>
+        <td>State tracking, regex guardrails, clarification logic, answer card assembly, and multilingual translation stitching.</td>
+      </tr>
+      <tr>
+        <td><code>app/retriever.py</code></td>
+        <td>Vector Retrieval Engine</td>
+        <td>Direct NumPy matrix cosine scanning, keyword boosting, threshold filtering, and offline embedding index generation.</td>
+      </tr>
+      <tr>
+        <td><code>app/llm.py</code></td>
+        <td>Gemini Client Gateway</td>
+        <td>Official <code>google-genai</code> wrapper, structured JSON output enforcement, transient error retries, and rate handling.</td>
+      </tr>
+      <tr>
+        <td><code>app/kb.py</code></td>
+        <td>Taxonomy & Data Contract</td>
+        <td>Validates 14 sub-types and 5 slot fields; parses, normalizes, and loads JSON datasets into runtime memory.</td>
+      </tr>
+      <tr>
+        <td><code>app/admin.py</code></td>
+        <td>Human-in-the-Loop Admin</td>
+        <td>Drafts new entries from raw gazette text, manages <code>pending.json</code>, and updates KB on official human sign-off.</td>
+      </tr>
+      <tr>
+        <td><code>app/limits.py</code></td>
+        <td>Rate Limiting</td>
+        <td>In-memory per-IP token bucket preventing API quota exhaustion (20 req/min, 200 req/day).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>6. Academic Formulation (Russell & Norvig PEAS Specification)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 28%;">PEAS Dimension</th>
+        <th>System Specification</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Performance Measure (P)</strong></td>
+        <td>Zero hallucination rate on numerical/procedural facts; precision &ge; 95% at confidence threshold 0.62; turn latency &lt; 800ms (free-text) and &lt; 10ms (action chips).</td>
+      </tr>
+      <tr>
+        <td><strong>Environment (E)</strong></td>
+        <td>Bilingual public web client; asynchronous HTTP REST server; curated government administrative knowledge base.</td>
+      </tr>
+      <tr>
+        <td><strong>Actuators (A)</strong></td>
+        <td>HTTP JSON responses, structured UI cards, dynamic clarification suggestion chips, and verified external source citations.</td>
+      </tr>
+      <tr>
+        <td><strong>Sensors (S)</strong></td>
+        <td>Client HTTP requests (natural language strings, action identifiers, and session tokens).</td>
+      </tr>
+      <tr>
+        <td><strong>Environment Properties</strong></td>
+        <td>Partially Observable, Single-Agent, Sequential, Static (within turn), Discrete, and Predominantly Deterministic.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>7. Knowledge Base Data Contract</h2>
+  <pre><code>{
+  "id": "passport.new.fees",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "fees",
+  "title_bn": "ই-পাসপোর্ট ফি ও বিতরণ সময়",
+  "title_en": "e-Passport Fees & Delivery Timeframe",
+  "content_bn": "৪৮ পৃষ্ঠা ৫ বছর মেয়াদ: নিয়মিত ৪,০২৫ টাকা, জরুরি ৬,৩২৫ টাকা...",
+  "content_en": "48 pages 5 years: Regular 4,025 BDT, Urgent 6,325 BDT...",
+  "source_url": "https://www.epassport.gov.bd/instructions/passport-fees",
+  "verified_on": "2026-09-18",
+  "keywords": ["ফি", "টাকা", "খরচ", "fee", "cost", "taka", "khoroch", "urgent"]
+}</code></pre>
+
+</body>
+</html>
