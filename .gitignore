@@ -13,3 +13,5 @@ data/embeddings.npz
 cloudflared.exe
 cloudflared.log
 .codeatlas/
+*.db
+data/*.db
