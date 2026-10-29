@@ -1,0 +1,709 @@
+[
+ {
+  "id": 1,
+  "cat": "clear_bn",
+  "q": "নতুন পাসপোর্ট করতে কী কী কাগজ লাগে?",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "documents",
+  "expect": "answer"
+ },
+ {
+  "id": 2,
+  "cat": "clear_bn",
+  "q": "পাসপোর্ট নবায়ন করতে কী লাগে?",
+  "domain": "passport",
+  "subtype": "reissue",
+  "field": "documents",
+  "expect": "answer"
+ },
+ {
+  "id": 3,
+  "cat": "clear_bn",
+  "q": "পাসপোর্ট হারিয়ে গেলে কী করব?",
+  "domain": "passport",
+  "subtype": "lost",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 4,
+  "cat": "clear_bn",
+  "q": "পাসপোর্টে নামের বানান ভুল, সংশোধন কীভাবে?",
+  "domain": "passport",
+  "subtype": "correction",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 5,
+  "cat": "clear_bn",
+  "q": "এমআরপি থেকে ই-পাসপোর্ট করব কীভাবে?",
+  "domain": "passport",
+  "subtype": "mrp_to_epp",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 6,
+  "cat": "clear_bn",
+  "q": "পাসপোর্টের জন্য পুলিশ ভেরিফিকেশন লাগে?",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "verification",
+  "expect": "answer"
+ },
+ {
+  "id": 7,
+  "cat": "clear_bn",
+  "q": "বাচ্চার পাসপোর্ট করতে কী কী লাগবে?",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "minor",
+  "expect": "answer"
+ },
+ {
+  "id": 8,
+  "cat": "clear_bn",
+  "q": "পাসপোর্ট কোথা থেকে সংগ্রহ করব?",
+  "domain": "passport",
+  "subtype": "delivery",
+  "field": "collection",
+  "expect": "answer"
+ },
+ {
+  "id": 9,
+  "cat": "clear_bn",
+  "q": "পাসপোর্টের ফি কীভাবে দেব?",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "payment",
+  "expect": "answer"
+ },
+ {
+  "id": 10,
+  "cat": "clear_bn",
+  "q": "অ্যাপয়েন্টমেন্ট কীভাবে নেব?",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "appointment",
+  "expect": "answer"
+ },
+ {
+  "id": 11,
+  "cat": "clear_bn",
+  "q": "আবেদনের অবস্থা কীভাবে দেখব?",
+  "domain": "passport",
+  "subtype": "status",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 12,
+  "cat": "clear_bn",
+  "q": "শিক্ষানবিশ ড্রাইভিং লাইসেন্স করতে কী কী লাগে?",
+  "domain": "licence",
+  "subtype": "learner",
+  "field": "documents",
+  "expect": "answer"
+ },
+ {
+  "id": 13,
+  "cat": "clear_bn",
+  "q": "ড্রাইভিং পরীক্ষায় কী কী হয়?",
+  "domain": "licence",
+  "subtype": "exam",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 14,
+  "cat": "clear_bn",
+  "q": "লাইসেন্স হারিয়ে গেলে ডুপ্লিকেট কীভাবে পাব?",
+  "domain": "licence",
+  "subtype": "duplicate",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 15,
+  "cat": "clear_bn",
+  "q": "পেশাদার লাইসেন্সের জন্য বয়স কত লাগে?",
+  "domain": "licence",
+  "subtype": null,
+  "field": "eligibility",
+  "expect": "answer"
+ },
+ {
+  "id": 16,
+  "cat": "clear_bn",
+  "q": "লাইসেন্স নবায়নে কত দিন লাগে?",
+  "domain": "licence",
+  "subtype": "renewal",
+  "field": "timeline",
+  "expect": "answer"
+ },
+ {
+  "id": 17,
+  "cat": "clear_bn",
+  "q": "আন্তর্জাতিক ড্রাইভিং পারমিট কী?",
+  "domain": "licence",
+  "subtype": "idp",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 18,
+  "cat": "clear_bn",
+  "q": "স্মার্ট কার্ড কবে হাতে পাব?",
+  "domain": "licence",
+  "subtype": "smartcard_new",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 19,
+  "cat": "clear_en",
+  "q": "What documents do I need for a new e-passport?",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "documents",
+  "expect": "answer"
+ },
+ {
+  "id": 20,
+  "cat": "clear_en",
+  "q": "How do I renew an expired driving licence?",
+  "domain": "licence",
+  "subtype": "renewal",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 21,
+  "cat": "clear_en",
+  "q": "Do I need police verification for a passport?",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "verification",
+  "expect": "answer"
+ },
+ {
+  "id": 22,
+  "cat": "clear_en",
+  "q": "What documents for my child's passport?",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "minor",
+  "expect": "answer"
+ },
+ {
+  "id": 23,
+  "cat": "clear_en",
+  "q": "Where do I collect my passport?",
+  "domain": "passport",
+  "subtype": "delivery",
+  "field": "collection",
+  "expect": "answer"
+ },
+ {
+  "id": 24,
+  "cat": "clear_en",
+  "q": "How do I pay the passport fee?",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "payment",
+  "expect": "answer"
+ },
+ {
+  "id": 25,
+  "cat": "clear_en",
+  "q": "Minimum age for a driving licence?",
+  "domain": "licence",
+  "subtype": null,
+  "field": "eligibility",
+  "expect": "answer"
+ },
+ {
+  "id": 26,
+  "cat": "clear_en",
+  "q": "I lost my passport, what should I do first?",
+  "domain": "passport",
+  "subtype": "lost",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 27,
+  "cat": "clear_en",
+  "q": "How long does a super express passport take?",
+  "domain": "passport",
+  "subtype": null,
+  "field": "timeline",
+  "expect": "answer"
+ },
+ {
+  "id": 28,
+  "cat": "clear_en",
+  "q": "What is an international driving permit?",
+  "domain": "licence",
+  "subtype": "idp",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 29,
+  "cat": "clear_en",
+  "q": "How many years is a passport valid for?",
+  "domain": "passport",
+  "subtype": null,
+  "field": "validity",
+  "expect": "answer"
+ },
+ {
+  "id": 30,
+  "cat": "clear_en",
+  "q": "What happens in the driving test?",
+  "domain": "licence",
+  "subtype": "exam",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 31,
+  "cat": "banglish",
+  "q": "notun passport korte ki ki lagbe?",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "documents",
+  "expect": "answer"
+ },
+ {
+  "id": 32,
+  "cat": "banglish",
+  "q": "amar akta passport haray gese",
+  "domain": "passport",
+  "subtype": "lost",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 33,
+  "cat": "banglish",
+  "q": "amar licence haray gese",
+  "domain": "licence",
+  "subtype": "duplicate",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 34,
+  "cat": "banglish",
+  "q": "passport er meyad sesh hoye gese",
+  "domain": "passport",
+  "subtype": "reissue",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 35,
+  "cat": "banglish",
+  "q": "passport e nam vul ache thik korte chai",
+  "domain": "passport",
+  "subtype": "correction",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 36,
+  "cat": "banglish",
+  "q": "learner license er fee koto?",
+  "domain": "licence",
+  "subtype": "learner",
+  "field": "fee",
+  "expect": "answer"
+ },
+ {
+  "id": 37,
+  "cat": "banglish",
+  "q": "police verification lagbe ki",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "verification",
+  "expect": "answer"
+ },
+ {
+  "id": 38,
+  "cat": "banglish",
+  "q": "bacchar passport korte ki lagbe",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "minor",
+  "expect": "answer"
+ },
+ {
+  "id": 39,
+  "cat": "banglish",
+  "q": "passport kothay theke tulbo",
+  "domain": "passport",
+  "subtype": "delivery",
+  "field": "collection",
+  "expect": "answer"
+ },
+ {
+  "id": 40,
+  "cat": "banglish",
+  "q": "passport er fee kivabe dibo",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "payment",
+  "expect": "answer"
+ },
+ {
+  "id": 41,
+  "cat": "banglish",
+  "q": "appointment kivabe nibo",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "appointment",
+  "expect": "answer"
+ },
+ {
+  "id": 42,
+  "cat": "banglish",
+  "q": "licence er meyad koto bochor",
+  "domain": "licence",
+  "subtype": "smartcard_new",
+  "field": "validity",
+  "expect": "answer"
+ },
+ {
+  "id": 43,
+  "cat": "banglish",
+  "q": "bhari gari chalanor licence kivabe pabo",
+  "domain": "licence",
+  "subtype": "category_change",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 44,
+  "cat": "banglish",
+  "q": "porikkhar din ki ki nite hobe",
+  "domain": "licence",
+  "subtype": "exam",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 45,
+  "cat": "banglish",
+  "q": "smart card kobe pabo",
+  "domain": "licence",
+  "subtype": "smartcard_new",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 46,
+  "cat": "banglish",
+  "q": "passport status kivabe dekhbo",
+  "domain": "passport",
+  "subtype": "status",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 47,
+  "cat": "banglish",
+  "q": "idp kivabe pabo",
+  "domain": "licence",
+  "subtype": "idp",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 48,
+  "cat": "banglish",
+  "q": "MRP theke e-passport kivabe korbo",
+  "domain": "passport",
+  "subtype": "mrp_to_epp",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 49,
+  "cat": "banglish",
+  "q": "passport office e jogajog korbo kivabe",
+  "domain": "passport",
+  "subtype": "status",
+  "field": "helpline",
+  "expect": "answer"
+ },
+ {
+  "id": 50,
+  "cat": "banglish",
+  "q": "driving test e ki ki ase",
+  "domain": "licence",
+  "subtype": "exam",
+  "field": null,
+  "expect": "answer"
+ },
+ {
+  "id": 51,
+  "cat": "ambiguous",
+  "q": "পাসপোর্ট",
+  "domain": "passport",
+  "subtype": null,
+  "field": null,
+  "expect": "clarify"
+ },
+ {
+  "id": 52,
+  "cat": "ambiguous",
+  "q": "license",
+  "domain": "licence",
+  "subtype": null,
+  "field": null,
+  "expect": "clarify"
+ },
+ {
+  "id": 53,
+  "cat": "ambiguous",
+  "q": "নবায়ন",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "clarify"
+ },
+ {
+  "id": 54,
+  "cat": "ambiguous",
+  "q": "fee koto",
+  "domain": null,
+  "subtype": null,
+  "field": "fee",
+  "expect": "clarify"
+ },
+ {
+  "id": 55,
+  "cat": "ambiguous",
+  "q": "কাগজপত্র কী লাগবে?",
+  "domain": null,
+  "subtype": null,
+  "field": "documents",
+  "expect": "clarify"
+ },
+ {
+  "id": 56,
+  "cat": "ambiguous",
+  "q": "সংশোধন",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "clarify"
+ },
+ {
+  "id": 57,
+  "cat": "ambiguous",
+  "q": "ami passport nite cai",
+  "domain": "passport",
+  "subtype": null,
+  "field": null,
+  "expect": "clarify"
+ },
+ {
+  "id": 58,
+  "cat": "ambiguous",
+  "q": "koto din lage",
+  "domain": null,
+  "subtype": null,
+  "field": "timeline",
+  "expect": "clarify"
+ },
+ {
+  "id": 59,
+  "cat": "followup",
+  "q": "নতুন পাসপোর্ট করতে কী লাগে?",
+  "domain": "passport",
+  "subtype": "new",
+  "field": "timeline",
+  "expect": "answer",
+  "then": "আর কত দিন লাগবে?"
+ },
+ {
+  "id": 60,
+  "cat": "followup",
+  "q": "শিক্ষানবিশ লাইসেন্স",
+  "domain": "licence",
+  "subtype": "learner",
+  "field": "office",
+  "expect": "answer",
+  "then": "কোথায় যেতে হবে?"
+ },
+ {
+  "id": 61,
+  "cat": "followup",
+  "q": "হারানো পাসপোর্ট",
+  "domain": "passport",
+  "subtype": "lost",
+  "field": null,
+  "expect": "answer",
+  "then": "GD লাগবে কি?"
+ },
+ {
+  "id": 62,
+  "cat": "followup",
+  "q": "ড্রাইভিং পরীক্ষা",
+  "domain": "licence",
+  "subtype": "exam",
+  "field": "timeline",
+  "expect": "answer",
+  "then": "ফল কবে পাব?"
+ },
+ {
+  "id": 63,
+  "cat": "followup",
+  "q": "passport reissue",
+  "domain": "passport",
+  "subtype": "reissue",
+  "field": "validity",
+  "expect": "answer",
+  "then": "koto bochor er meyad?"
+ },
+ {
+  "id": 64,
+  "cat": "smalltalk",
+  "q": "assalamu alaikum",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "chat"
+ },
+ {
+  "id": 65,
+  "cat": "smalltalk",
+  "q": "hello",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "chat"
+ },
+ {
+  "id": 66,
+  "cat": "smalltalk",
+  "q": "ami nabil",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "chat"
+ },
+ {
+  "id": 67,
+  "cat": "smalltalk",
+  "q": "tumi ke?",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "chat"
+ },
+ {
+  "id": 68,
+  "cat": "smalltalk",
+  "q": "ki ki korte paro",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "chat"
+ },
+ {
+  "id": 69,
+  "cat": "smalltalk",
+  "q": "kemon acho",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "chat"
+ },
+ {
+  "id": 70,
+  "cat": "smalltalk",
+  "q": "ধন্যবাদ",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "chat"
+ },
+ {
+  "id": 71,
+  "cat": "smalltalk",
+  "q": "thank you",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "chat"
+ },
+ {
+  "id": 72,
+  "cat": "smalltalk",
+  "q": "allah hafez",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "chat"
+ },
+ {
+  "id": 73,
+  "cat": "smalltalk",
+  "q": "আসসালামু আলাইকুম",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "chat"
+ },
+ {
+  "id": 74,
+  "cat": "out_scope",
+  "q": "জমির খতিয়ান কীভাবে পাব?",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "no_info"
+ },
+ {
+  "id": 75,
+  "cat": "out_scope",
+  "q": "NID সংশোধন করতে কী লাগে?",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "no_info"
+ },
+ {
+  "id": 76,
+  "cat": "out_scope",
+  "q": "How do I pay my land tax online?",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "no_info"
+ },
+ {
+  "id": 77,
+  "cat": "out_scope",
+  "q": "jomir namjari kivabe korbo",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "no_info"
+ },
+ {
+  "id": 78,
+  "cat": "out_scope",
+  "q": "birth certificate korte ki lagbe",
+  "domain": null,
+  "subtype": null,
+  "field": null,
+  "expect": "no_info"
+ }
+]
