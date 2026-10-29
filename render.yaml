@@ -1,0 +1,28 @@
+# Render blueprint. Push this repo to GitHub, then in Render:
+#   New  →  Blueprint  →  pick the repo.
+# Set GEMINI_API_KEY and ADMIN_PASSWORD in the dashboard (they are marked sync:false
+# so they are never read from this file, and never end up in git).
+services:
+  - type: web
+    name: seba-sohayok
+    runtime: python
+    plan: free
+    region: singapore          # closest option to Bangladesh
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: CHAT_MODEL
+        value: gemini-3.6-flash
+      - key: EMBED_MODEL
+        value: gemini-embedding-001
+      - key: ALLOWED_ORIGINS
+        value: "*"
+      - key: CONF_THRESHOLD
+        value: "0.62"
+      - key: PYTHON_VERSION
+        value: "3.11.9"

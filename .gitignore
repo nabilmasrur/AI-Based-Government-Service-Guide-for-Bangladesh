@@ -1,0 +1,15 @@
+.env
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.DS_Store
+.idea/
+.vscode/
+
+# Rebuilt by `python -m app.index`; no need to version it.
+data/embeddings.npz
+cloudflared.exe
+cloudflared.log
+.codeatlas/
