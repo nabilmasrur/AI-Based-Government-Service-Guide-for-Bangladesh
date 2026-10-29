@@ -1,0 +1,26 @@
+{
+  "name": "সেবা সহায়ক — Government Service Assistant",
+  "short_name": "সেবা সহায়ক",
+  "description": "পাসপোর্ট ও ড্রাইভিং লাইসেন্স সেবার তথ্য। অনানুষ্ঠানিক একাডেমিক প্রকল্প।",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FBFBFA",
+  "theme_color": "#00875A",
+  "lang": "bn",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='34' fill='%230B3D2E'/%3E%3Cg fill='none' stroke='%235CC69B' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M96 36 44 60v40c0 30 21 56 52 66 31-10 52-36 52-66V60L96 36z'/%3E%3Cpath d='M76 97l14 14 26-30'/%3E%3C/g%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='34' fill='%230B3D2E'/%3E%3Cg fill='none' stroke='%235CC69B' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M96 36 44 60v40c0 30 21 56 52 66 31-10 52-36 52-66V60L96 36z'/%3E%3Cpath d='M76 97l14 14 26-30'/%3E%3C/g%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "scope": "./",
+  "orientation": "portrait-primary"
+}

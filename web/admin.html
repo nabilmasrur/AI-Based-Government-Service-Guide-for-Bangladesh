@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>সেবা সহায়ক — অ্যাডমিন</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400&family=Noto+Sans+Bengali:wght@400;600&display=swap">
+<style>
+:root{
+  --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --surface: rgba(255, 255, 255, 0.85);
+  --raised: rgba(255, 255, 255, 0.95);
+  --panel: rgba(255, 255, 255, 0.8);
+  --panel-2: rgba(255, 255, 255, 0.5);
+  --ink:#17191C;
+  --ink-2:#55585E;
+  --ink-3:#8A8E95;
+  --hair: rgba(0, 0, 0, 0.1);
+  --hair-2: rgba(0, 0, 0, 0.08);
+  --accent:#00875A;
+  --accent-ink:#006946;
+  --accent-soft:#E4F3ED;
+  --amber:#9A6510;
+  --amber-soft:#FBF1DF;
+  --alert:#B03A20;
+  --alert-soft:#FCEDE8;
+  --shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg-gradient: radial-gradient(circle at 15% 50%, #1e1e24, #121214 25%, #080808 100%);
+    --surface: rgba(28, 30, 36, 0.6);
+    --raised: rgba(45, 48, 56, 0.8);
+    --panel: rgba(28, 30, 36, 0.7);
+    --panel-2: rgba(255, 255, 255, 0.03);
+    --ink:#ECEDEE;
+    --ink-2:#A9ADB3;
+    --ink-3:#787D85;
+    --hair: rgba(255, 255, 255, 0.15);
+    --hair-2: rgba(255, 255, 255, 0.1);
+    --accent:#35C892;
+    --accent-ink:#5FD8AA;
+    --accent-soft: rgba(53, 200, 146, 0.15);
+    --amber:#D8A85A;
+    --amber-soft: rgba(216, 168, 90, 0.15);
+    --alert:#E8846A;
+    --alert-soft: rgba(232, 132, 106, 0.15);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  color:var(--ink);
+  font-family:"Noto Sans Bengali",Archivo,Arial,sans-serif;
+  font-size:14.5px;
+  line-height:1.6;
+}
+.page{max-width:820px;margin:0 auto;padding-block:28px 60px; padding-inline: 16px;}
+h1{font-family:Archivo,"Noto Sans Bengali",sans-serif;font-size:28px;margin:0 0 8px;letter-spacing:-.01em;}
+.dek{color:var(--ink-2);font-size:15px;margin:0 0 26px}
+.card{
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--hair);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+label{display:block;font-family:Archivo,"Noto Sans Bengali",sans-serif;font-size:11.5px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
+input,textarea{width:100%;font-family:inherit;font-size:14.5px;color:var(--ink);
+  background:var(--panel-2);
+  border:1px solid var(--hair-2);border-radius:6px;padding:10px 14px;margin-bottom:16px;
+  transition: border-color 0.2s;}
+input:focus, textarea:focus { outline: none; border-color: var(--accent); }
+textarea{min-height:190px;resize:vertical;font-family:"IBM Plex Mono",monospace;font-size:13.5px;line-height:1.6}
+button{
+  font-family:Archivo,"Noto Sans Bengali",sans-serif;font-size:14px;font-weight:600;padding:10px 20px;
+  border:none;border-radius:6px;background:var(--accent);color:#fff;cursor:pointer;
+  transition: transform 0.15s, opacity 0.15s;
+}
+button:hover{ transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,135,90,0.3); }
+button.ghost{background:var(--panel-2);color:var(--ink);border:1px solid var(--hair); box-shadow: none;}
+button.ghost:hover{background:var(--raised);}
+button[disabled]{opacity:.55;cursor:default;transform: none;box-shadow:none;}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.draft{
+  border:1px solid var(--hair);border-radius:12px;margin-bottom:16px;overflow:hidden;
+  background:var(--surface); backdrop-filter: blur(16px); box-shadow: var(--shadow);
+}
+.draft h3{font-family:Archivo,"Noto Sans Bengali",sans-serif;font-size:14.5px;margin:0;padding:12px 16px;
+  background:var(--accent-soft);color:var(--accent-ink);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.draft .id{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);font-weight:400}
+.draft .body{padding:16px}
+.draft textarea{min-height:90px;margin-bottom:12px}
+.note{background:var(--amber-soft);color:var(--amber);border-radius:8px;padding:12px 16px;font-size:14px;margin-bottom:20px;border: 1px solid var(--hair-2);}
+.err{background:var(--alert-soft);color:var(--alert);border-radius:8px;padding:12px 16px;font-size:14px;margin-bottom:16px;border: 1px solid var(--hair-2);}
+.ok{background:var(--accent-soft);color:var(--accent-ink);border-radius:8px;padding:12px 16px;font-size:14px;margin-bottom:16px;border: 1px solid var(--hair-2);}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-3)}
+.dup{background:var(--amber-soft);color:var(--amber);font-size:11px;padding:3px 8px;border-radius:4px;
+  font-family:Archivo,sans-serif;font-weight:700;letter-spacing:.06em}
+
+/* Tabs */
+.tabs { display: flex; gap: 12px; margin-bottom: 24px; border-bottom: 1px solid var(--hair); padding-bottom: 10px; }
+.tab { background: transparent; color: var(--ink-2); border: none; font-size: 15px; cursor: pointer; padding: 6px 12px; border-radius: 6px; box-shadow: none; }
+.tab:hover { box-shadow: none; transform: none; background: var(--panel-2); }
+.tab.active { background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>অ্যাডমিন প্যানেল</h1>
+  <p class="dek">জ্ঞানভাণ্ডার (Knowledge Base) পরিচালনা করুন এবং ডেটা যাচাই করুন।</p>
+
+  <div class="tabs">
+    <button class="tab active" data-target="tab-new">নতুন এন্ট্রি যোগ করুন</button>
+    <button class="tab" data-target="tab-settings">সেটিংস ও যাচাই</button>
+  </div>
+
+  <div class="card">
+    <label for="pw">অ্যাডমিন পাসওয়ার্ড</label>
+    <input id="pw" type="password" autocomplete="current-password" placeholder="ADMIN_PASSWORD">
+  </div>
+
+  <div id="tab-new" class="tab-content active">
+    <div class="note">PDF নিজে <code>.txt</code>-তে রূপান্তর করে এখানে পেস্ট করুন। ফি বা তারিখ মডেল নিজে বসাতে পারে না — যা টেক্সটে নেই তা এন্ট্রিতেও থাকবেআগ না।</div>
+    
+    <div class="card">
+      <label for="src">নথির টেক্সট</label>
+      <textarea id="src" placeholder="সরকারি নোটিশ বা নির্দেশিকার টেক্সট এখানে পেস্ট করুন…"></textarea>
+      <div class="row">
+        <button id="go" type="button">খসড়া তৈরি করুন</button>
+        <button id="load" class="ghost" type="button">অপেক্ষমাণ খসড়া দেখুন</button>
+        <span class="mono" id="stat"></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-settings" class="tab-content">
+    <div class="card">
+      <h3>যাচাইহীন ডেটা (Unverified Data)</h3>
+      <p class="dek" style="margin-bottom: 16px;">যেসব এন্ট্রিতে এখনো `verified_on` তারিখ নেই, সেগুলো নিচে লোড করে যাচাই করুন।</p>
+      <div class="row">
+        <button id="loadUnverified" type="button">যাচাইহীন ডেটা লোড করুন</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="msg"></div>
+  <div id="drafts"></div>
+
+  <div class="card" id="approveBox" hidden>
+    <label for="vdate">যাচাইয়ের তারিখ</label>
+    <input id="vdate" type="date">
+    <div class="row">
+      <button id="approve" type="button">নির্বাচিত এন্ট্রি অনুমোদন করুন</button>
+      <span class="mono">অনুমোদনের পরেই কেবল KB-তে যুক্ত হবে</span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var API = (window.API_BASE || "").replace(/\/$/, "");
+  var drafts = [];
+  var $ = function (id) { return document.getElementById(id); };
+  $("vdate").value = new Date().toISOString().slice(0, 10);
+
+  // Tabs logic
+  document.querySelectorAll(".tab").forEach(function(t) {
+    t.addEventListener("click", function() {
+      document.querySelectorAll(".tab").forEach(function(b) { b.classList.remove("active"); });
+      document.querySelectorAll(".tab-content").forEach(function(c) { c.classList.remove("active"); });
+      t.classList.add("active");
+      $(t.getAttribute("data-target")).classList.add("active");
+      
+      // Clear drafts when switching tabs
+      drafts = [];
+      render();
+      $("msg").innerHTML = "";
+    });
+  });
+
+  function say(kind, text) { $("msg").innerHTML = "<div class='" + kind + "'>" + text + "</div>"; }
+
+  function call(path, opts) {
+    opts = opts || {};
+    opts.headers = Object.assign({ "Content-Type": "application/json", "X-Admin-Key": $("pw").value }, opts.headers || {});
+    return fetch(API + path, opts).then(function (r) {
+      if (r.status === 401) throw new Error("পাসওয়ার্ড ভুল");
+      if (r.status === 503) throw new Error("সার্ভারে ADMIN_PASSWORD সেট করা নেই");
+      return r.json();
+    });
+  }
+
+  function render() {
+    var box = $("drafts");
+    box.innerHTML = "";
+    $("approveBox").hidden = !drafts.length;
+    drafts.forEach(function (d, i) {
+      var card = document.createElement("div");
+      card.className = "draft";
+      card.innerHTML =
+        "<h3><span><input type='checkbox' data-i='" + i + "' checked> " +
+        (d.title_bn || d.id) + "</span>" +
+        (d._replaces_existing ? "<span class='dup'>বিদ্যমান এন্ট্রি বদলে যাবে</span>" : "") +
+        "<span class='id'>" + d.id + "</span></h3>" +
+        "<div class='body'>" +
+        "<label>বাংলা</label><textarea data-f='content_bn' data-i='" + i + "'>" + (d.content_bn || "") + "</textarea>" +
+        "<label>English</label><textarea data-f='content_en' data-i='" + i + "'>" + (d.content_en || "") + "</textarea>" +
+        "<label>source_url</label><input data-f='source_url' data-i='" + i + "' value='" + (d.source_url || "") + "'>" +
+        "</div>";
+      box.appendChild(card);
+    });
+    box.addEventListener("input", function (e) {
+      var f = e.target.getAttribute("data-f");
+      if (f) drafts[+e.target.getAttribute("data-i")][f] = e.target.value;
+    });
+  }
+
+  $("go").addEventListener("click", function () {
+    var text = $("src").value.trim();
+    if (text.length < 40) { say("err", "আরও টেক্সট দিন (অন্তত ৪০ অক্ষর)।"); return; }
+    say("ok", "খসড়া তৈরি হচ্ছে…");
+    this.disabled = true;
+    var btn = this;
+    call("/api/admin/propose", { method: "POST", body: JSON.stringify({ text: text }) })
+      .then(function (r) {
+        if (!r.ok) throw new Error(r.error || "ব্যর্থ");
+        drafts = r.entries || [];
+        say("ok", drafts.length + "টি খসড়া তৈরি হয়েছে" +
+          (r.rejected && r.rejected.length ? " · " + r.rejected.length + "টি বাতিল (schema মেলেনি)" : "") +
+          " — পড়ে, ঠিক করে, তারপর অনুমোদন দিন।");
+        render();
+      })
+      .catch(function (e) { say("err", e.message); })
+      .then(function () { btn.disabled = false; });
+  });
+
+  $("load").addEventListener("click", function () {
+    call("/api/admin/pending").then(function (r) {
+      drafts = r.entries || [];
+      $("stat").textContent = r.stats ? (r.stats.total + " entries · " + r.stats.verified + " verified") : "";
+      say("ok", drafts.length + "টি অপেক্ষমাণ খসড়া।");
+      render();
+    }).catch(function (e) { say("err", e.message); });
+  });
+
+  // Settings: Load Unverified Data
+  $("loadUnverified").addEventListener("click", function () {
+    var btn = this;
+    btn.disabled = true;
+    call("/api/admin/unverified").then(function (r) {
+      drafts = r.entries || [];
+      // Tag them as replacing existing so the badge shows
+      drafts.forEach(function(d) { d._replaces_existing = true; });
+      if (drafts.length === 0) {
+        say("ok", "কোনো যাচাইহীন (unverified) এন্ট্রি নেই।");
+      } else {
+        say("ok", drafts.length + "টি যাচাইহীন এন্ট্রি পাওয়া গেছে। এডিট করে অনুমোদন দিন।");
+      }
+      render();
+    }).catch(function (e) { say("err", e.message); })
+      .then(function() { btn.disabled = false; });
+  });
+
+  $("approve").addEventListener("click", function () {
+    var picked = [];
+    document.querySelectorAll("#drafts input[type=checkbox]").forEach(function (c) {
+      if (c.checked) picked.push(drafts[+c.getAttribute("data-i")]);
+    });
+    if (!picked.length) { say("err", "কোনো এন্ট্রি নির্বাচন করা হয়নি।"); return; }
+    
+    var btn = this;
+    btn.disabled = true;
+    call("/api/admin/approve", {
+      method: "POST",
+      body: JSON.stringify({ entries: picked, verified_on: $("vdate").value })
+    }).then(function (r) {
+      say("ok", (r.written || []).length + "টি এন্ট্রি যুক্ত/আপডেট হয়েছে · " +
+        (r.stats ? r.stats.total + " মোট" : "") + "<br><span class='mono'>" + (r.note || "") + "</span>");
+      drafts = [];
+      render();
+    }).catch(function (e) { say("err", e.message); })
+      .then(function() { btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
