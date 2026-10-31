@@ -3,169 +3,618 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>সেবা সহায়ক — অ্যাডমিন</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400&family=Noto+Sans+Bengali:wght@400;600&display=swap">
+<title>সেবা সহায়ক — অ্যাডমিন পোর্টাল</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap">
 <style>
 :root{
   --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  --surface: rgba(255, 255, 255, 0.85);
-  --raised: rgba(255, 255, 255, 0.95);
-  --panel: rgba(255, 255, 255, 0.8);
-  --panel-2: rgba(255, 255, 255, 0.5);
-  --ink:#17191C;
-  --ink-2:#55585E;
-  --ink-3:#8A8E95;
-  --hair: rgba(0, 0, 0, 0.1);
-  --hair-2: rgba(0, 0, 0, 0.08);
-  --accent:#00875A;
-  --accent-ink:#006946;
-  --accent-soft:#E4F3ED;
-  --amber:#9A6510;
-  --amber-soft:#FBF1DF;
-  --alert:#B03A20;
-  --alert-soft:#FCEDE8;
-  --shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --surface: rgba(255, 255, 255, 0.88);
+  --raised: rgba(255, 255, 255, 0.98);
+  --panel: rgba(255, 255, 255, 0.82);
+  --panel-2: rgba(255, 255, 255, 0.6);
+  --ink: #17191C;
+  --ink-2: #55585E;
+  --ink-3: #8A8E95;
+  --hair: rgba(0, 0, 0, 0.08);
+  --hair-2: rgba(0, 0, 0, 0.05);
+  --accent: #00875A;
+  --accent-ink: #006946;
+  --accent-soft: #E4F3ED;
+  --accent-hover: #00734c;
+  --amber: #9A6510;
+  --amber-soft: #FBF1DF;
+  --alert: #B03A20;
+  --alert-soft: #FCEDE8;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --radius: 12px;
 }
-@media (prefers-color-scheme:dark){
+@media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg-gradient: radial-gradient(circle at 15% 50%, #1e1e24, #121214 25%, #080808 100%);
-    --surface: rgba(28, 30, 36, 0.6);
-    --raised: rgba(45, 48, 56, 0.8);
-    --panel: rgba(28, 30, 36, 0.7);
-    --panel-2: rgba(255, 255, 255, 0.03);
-    --ink:#ECEDEE;
-    --ink-2:#A9ADB3;
-    --ink-3:#787D85;
-    --hair: rgba(255, 255, 255, 0.15);
-    --hair-2: rgba(255, 255, 255, 0.1);
-    --accent:#35C892;
-    --accent-ink:#5FD8AA;
-    --accent-soft: rgba(53, 200, 146, 0.15);
-    --amber:#D8A85A;
+    --bg-gradient: radial-gradient(circle at 15% 50%, #1a1b20, #121316 40%, #0a0a0c 100%);
+    --surface: rgba(26, 28, 34, 0.72);
+    --raised: rgba(38, 42, 51, 0.88);
+    --panel: rgba(26, 28, 34, 0.78);
+    --panel-2: rgba(255, 255, 255, 0.04);
+    --ink: #ECEDEE;
+    --ink-2: #A9ADB3;
+    --ink-3: #787D85;
+    --hair: rgba(255, 255, 255, 0.12);
+    --hair-2: rgba(255, 255, 255, 0.06);
+    --accent: #35C892;
+    --accent-ink: #5FD8AA;
+    --accent-soft: rgba(53, 200, 146, 0.14);
+    --accent-hover: #2db381;
+    --amber: #D8A85A;
     --amber-soft: rgba(216, 168, 90, 0.15);
-    --alert:#E8846A;
+    --alert: #E8846A;
     --alert-soft: rgba(232, 132, 106, 0.15);
-    --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --shadow: 0 12px 38px rgba(0, 0, 0, 0.45);
+    --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.3);
   }
 }
+
 *{box-sizing:border-box}
 body{
-  margin:0;
+  margin: 0;
+  min-height: 100vh;
   background: var(--bg-gradient);
   background-attachment: fixed;
-  background-size: cover;
-  color:var(--ink);
-  font-family:"Noto Sans Bengali",Archivo,Arial,sans-serif;
-  font-size:14.5px;
-  line-height:1.6;
+  color: var(--ink);
+  font-family: "Noto Sans Bengali", Archivo, -apple-system, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.6;
 }
-.page{max-width:820px;margin:0 auto;padding-block:28px 60px; padding-inline: 16px;}
-h1{font-family:Archivo,"Noto Sans Bengali",sans-serif;font-size:28px;margin:0 0 8px;letter-spacing:-.01em;}
-.dek{color:var(--ink-2);font-size:15px;margin:0 0 26px}
+
+/* Common container */
+.container{
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 36px 16px 64px;
+}
+
+/* Typography */
+h1{
+  font-family: Archivo, "Noto Sans Bengali", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: -0.015em;
+}
+.dek{
+  color: var(--ink-2);
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+
+/* Minimal Card */
 .card{
   background: var(--surface);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border: 1px solid var(--hair);
-  border-radius: 12px;
-  padding: 20px 22px;
+  border-radius: var(--radius);
+  padding: 24px 26px;
   margin-bottom: 20px;
   box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-label{display:block;font-family:Archivo,"Noto Sans Bengali",sans-serif;font-size:11.5px;font-weight:700;
-  letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
-input,textarea{width:100%;font-family:inherit;font-size:14.5px;color:var(--ink);
-  background:var(--panel-2);
-  border:1px solid var(--hair-2);border-radius:6px;padding:10px 14px;margin-bottom:16px;
-  transition: border-color 0.2s;}
-input:focus, textarea:focus { outline: none; border-color: var(--accent); }
-textarea{min-height:190px;resize:vertical;font-family:"IBM Plex Mono",monospace;font-size:13.5px;line-height:1.6}
-button{
-  font-family:Archivo,"Noto Sans Bengali",sans-serif;font-size:14px;font-weight:600;padding:10px 20px;
-  border:none;border-radius:6px;background:var(--accent);color:#fff;cursor:pointer;
-  transition: transform 0.15s, opacity 0.15s;
+
+/* Forms */
+label{
+  display: block;
+  font-family: Archivo, "Noto Sans Bengali", sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 8px;
 }
-button:hover{ transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,135,90,0.3); }
-button.ghost{background:var(--panel-2);color:var(--ink);border:1px solid var(--hair); box-shadow: none;}
-button.ghost:hover{background:var(--raised);}
-button[disabled]{opacity:.55;cursor:default;transform: none;box-shadow:none;}
-.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.draft{
-  border:1px solid var(--hair);border-radius:12px;margin-bottom:16px;overflow:hidden;
-  background:var(--surface); backdrop-filter: blur(16px); box-shadow: var(--shadow);
+.input-wrap{
+  position: relative;
+  margin-bottom: 18px;
 }
-.draft h3{font-family:Archivo,"Noto Sans Bengali",sans-serif;font-size:14.5px;margin:0;padding:12px 16px;
-  background:var(--accent-soft);color:var(--accent-ink);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
-.draft .id{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-3);font-weight:400}
-.draft .body{padding:16px}
-.draft textarea{min-height:90px;margin-bottom:12px}
-.note{background:var(--amber-soft);color:var(--amber);border-radius:8px;padding:12px 16px;font-size:14px;margin-bottom:20px;border: 1px solid var(--hair-2);}
-.err{background:var(--alert-soft);color:var(--alert);border-radius:8px;padding:12px 16px;font-size:14px;margin-bottom:16px;border: 1px solid var(--hair-2);}
-.ok{background:var(--accent-soft);color:var(--accent-ink);border-radius:8px;padding:12px 16px;font-size:14px;margin-bottom:16px;border: 1px solid var(--hair-2);}
-.mono{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-3)}
-.dup{background:var(--amber-soft);color:var(--amber);font-size:11px;padding:3px 8px;border-radius:4px;
-  font-family:Archivo,sans-serif;font-weight:700;letter-spacing:.06em}
+input, textarea{
+  width: 100%;
+  font-family: inherit;
+  font-size: 14.5px;
+  color: var(--ink);
+  background: var(--panel-2);
+  border: 1px solid var(--hair);
+  border-radius: 8px;
+  padding: 11px 14px;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+input:focus, textarea:focus{
+  outline: none;
+  background: var(--raised);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+textarea{
+  min-height: 180px;
+  resize: vertical;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+button, .btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: Archivo, "Noto Sans Bengali", sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
+}
+button:hover, .btn:hover{
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 135, 90, 0.25);
+}
+button:active, .btn:active{
+  transform: translateY(0);
+}
+button.ghost, .btn.ghost{
+  background: var(--panel-2);
+  color: var(--ink);
+  border: 1px solid var(--hair);
+  box-shadow: none;
+}
+button.ghost:hover, .btn.ghost:hover{
+  background: var(--raised);
+  box-shadow: var(--shadow-sm);
+}
+button.danger{
+  background: transparent;
+  color: var(--alert);
+  border: 1px solid var(--hair);
+  padding: 7px 13px;
+  font-size: 12.5px;
+}
+button.danger:hover{
+  background: var(--alert-soft);
+  box-shadow: none;
+}
+button[disabled]{
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.row{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ========================================================================= */
+/* Login Screen Specific Styles                                              */
+/* ========================================================================= */
+#loginSection{
+  display: flex;
+  min-height: 85vh;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.login-card{
+  width: 100%;
+  max-width: 410px;
+  padding: 34px 30px;
+  border-radius: 16px;
+  background: var(--surface);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--hair);
+  box-shadow: var(--shadow);
+}
+.login-header{
+  text-align: center;
+  margin-bottom: 26px;
+}
+.login-icon-badge{
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--hair);
+}
+.login-header h2{
+  font-family: Archivo, "Noto Sans Bengali", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+.login-header p{
+  color: var(--ink-2);
+  font-size: 13.5px;
+  margin: 0;
+}
+.login-footer-tag{
+  text-align: center;
+  margin-top: 24px;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  font-family: Archivo, sans-serif;
+  letter-spacing: 0.04em;
+}
+.toggle-pwd{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: var(--ink-3);
+  font-size: 12px;
+  box-shadow: none;
+}
+.toggle-pwd:hover{
+  background: none;
+  transform: translateY(-50%);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+/* ========================================================================= */
+/* Admin Interface Specific Styles                                           */
+/* ========================================================================= */
+#adminInterface{
+  display: none;
+}
+.top-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--hair);
+}
+.user-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  font-family: "IBM Plex Mono", monospace;
+  border: 1px solid var(--hair);
+}
 
 /* Tabs */
-.tabs { display: flex; gap: 12px; margin-bottom: 24px; border-bottom: 1px solid var(--hair); padding-bottom: 10px; }
-.tab { background: transparent; color: var(--ink-2); border: none; font-size: 15px; cursor: pointer; padding: 6px 12px; border-radius: 6px; box-shadow: none; }
-.tab:hover { box-shadow: none; transform: none; background: var(--panel-2); }
-.tab.active { background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; }
-.tab-content { display: none; }
-.tab-content.active { display: block; }
+.tabs{
+  display: flex;
+  gap: 8px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--hair);
+  padding-bottom: 10px;
+  overflow-x: auto;
+}
+.tab{
+  background: transparent;
+  color: var(--ink-2);
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 7px 14px;
+  border-radius: 8px;
+  box-shadow: none;
+  white-space: nowrap;
+}
+.tab:hover{
+  background: var(--panel-2);
+  transform: none;
+  box-shadow: none;
+}
+.tab.active{
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+.tab-content{
+  display: none;
+}
+.tab-content.active{
+  display: block;
+}
+
+/* Alerts / Banners */
+.alert-box{
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 13.5px;
+  margin-bottom: 18px;
+  border: 1px solid var(--hair);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.alert-box.err{
+  background: var(--alert-soft);
+  color: var(--alert);
+  border-color: rgba(176, 58, 32, 0.2);
+}
+.alert-box.ok{
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border-color: rgba(0, 135, 90, 0.2);
+}
+.alert-box.warn{
+  background: var(--amber-soft);
+  color: var(--amber);
+  border-color: rgba(154, 101, 16, 0.2);
+}
+
+/* Draft Cards */
+.draft{
+  border: 1px solid var(--hair);
+  border-radius: var(--radius);
+  margin-bottom: 18px;
+  overflow: hidden;
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-sm);
+}
+.draft h3{
+  font-family: Archivo, "Noto Sans Bengali", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 12px 18px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--hair);
+  color: var(--ink);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.draft .id{
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  font-weight: 400;
+}
+.draft .body{
+  padding: 18px;
+}
+.draft textarea{
+  min-height: 95px;
+  margin-bottom: 14px;
+}
+.dup-badge{
+  background: var(--amber-soft);
+  color: var(--amber);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.mono{
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+/* Stat Grid */
+.stat-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.stat-card{
+  background: var(--panel-2);
+  border: 1px solid var(--hair);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+.stat-num{
+  font-family: Archivo, "IBM Plex Mono", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+.stat-label{
+  font-size: 11.5px;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
 </style>
 </head>
 <body>
-<div class="page">
-  <h1>অ্যাডমিন প্যানেল</h1>
-  <p class="dek">জ্ঞানভাণ্ডার (Knowledge Base) পরিচালনা করুন এবং ডেটা যাচাই করুন।</p>
 
-  <div class="tabs">
-    <button class="tab active" data-target="tab-new">নতুন এন্ট্রি যোগ করুন</button>
-    <button class="tab" data-target="tab-settings">সেটিংস ও যাচাই</button>
+<!-- ═════════════════════════════════════════════════════════════════════════ -->
+<!-- 1. LOGIN SCREEN (AUTHENTICATION WALL)                                      -->
+<!-- ═════════════════════════════════════════════════════════════════════════ -->
+<section id="loginSection">
+  <div class="login-card">
+    <div class="login-header">
+      <div class="login-icon-badge">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </div>
+      <h2>অ্যাডমিন লগইন</h2>
+      <p>সেবা সহায়ক প্রশাসনিক পোর্টালে প্রবেশ করুন</p>
+    </div>
+
+    <div id="loginAlert" style="display:none;" class="alert-box err">
+      <span id="loginAlertText"></span>
+    </div>
+
+    <form id="loginForm" onsubmit="return false;">
+      <label for="loginUser">ইউজারনেম (Username)</label>
+      <div class="input-wrap">
+        <input id="loginUser" type="text" placeholder="admin" autocomplete="username" required>
+      </div>
+
+      <label for="loginPass">পাসওয়ার্ড (Password)</label>
+      <div class="input-wrap">
+        <input id="loginPass" type="password" placeholder="••••••••" autocomplete="current-password" required>
+        <button type="button" class="toggle-pwd" id="togglePassBtn" title="পাসওয়ার্ড দেখুন/লুকান">
+          <svg id="eyeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </button>
+      </div>
+
+      <button id="loginSubmitBtn" type="submit" style="width:100%; margin-top:8px;">
+        <span id="loginBtnText">লগইন করুন</span>
+      </button>
+    </form>
+
+    <div style="text-align:center; margin-top:18px;">
+      <a href="/" style="color:var(--ink-2); font-size:12.5px; text-decoration:none;">← মূল সহায়ক সাইটে ফিরে যান</a>
+    </div>
+
+    <div class="login-footer-tag">
+      CSE 3202 • AI Sessional, BAUST
+    </div>
   </div>
+</section>
 
-  <div class="card">
-    <label for="pw">অ্যাডমিন পাসওয়ার্ড</label>
-    <input id="pw" type="password" autocomplete="current-password" placeholder="ADMIN_PASSWORD">
-  </div>
-
-  <div id="tab-new" class="tab-content active">
-    <div class="note">PDF নিজে <code>.txt</code>-তে রূপান্তর করে এখানে পেস্ট করুন। ফি বা তারিখ মডেল নিজে বসাতে পারে না — যা টেক্সটে নেই তা এন্ট্রিতেও থাকবেআগ না।</div>
-    
-    <div class="card">
-      <label for="src">নথির টেক্সট</label>
-      <textarea id="src" placeholder="সরকারি নোটিশ বা নির্দেশিকার টেক্সট এখানে পেস্ট করুন…"></textarea>
+<!-- ═════════════════════════════════════════════════════════════════════════ -->
+<!-- 2. ADMIN INTERFACE (ACCESSIBLE ONLY AFTER LOGIN)                          -->
+<!-- ═════════════════════════════════════════════════════════════════════════ -->
+<main id="adminInterface">
+  <div class="container">
+    <header class="top-bar">
+      <div>
+        <h1>অ্যাডমিন প্যানেল</h1>
+        <p class="dek" style="margin-bottom:0;">জ্ঞানভাণ্ডার (Knowledge Base) পরিচালনা করুন এবং ডেটা যাচাই করুন।</p>
+      </div>
       <div class="row">
-        <button id="go" type="button">খসড়া তৈরি করুন</button>
-        <button id="load" class="ghost" type="button">অপেক্ষমাণ খসড়া দেখুন</button>
-        <span class="mono" id="stat"></span>
+        <span class="user-badge" id="userBadge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span id="adminUsernameSpan">admin</span>
+        </span>
+        <a href="/" class="btn ghost" style="font-size:12.5px; padding:6px 12px;">মূল সাইট</a>
+        <button id="logoutBtn" class="danger" type="button">লগআউট</button>
+      </div>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" data-target="tab-new">নতুন খসড়া তৈরি</button>
+      <button class="tab" data-target="tab-settings">যাচাইহীন ডেটা</button>
+      <button class="tab" data-target="tab-analytics">পরিসংখ্যান ও এনালিটিক্স</button>
+    </div>
+
+    <!-- Tab 1: New Entries -->
+    <section id="tab-new" class="tab-content active">
+      <div class="alert-box warn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <div>পিডিএফ নিজে <code>.txt</code>-তে রূপান্তর করে এখানে পেস্ট করুন। ফি বা তারিখ মডেল নিজে বানাতে পারে না — যা টেক্সটে স্পষ্টভাবে আছে কেবল তা-ই এন্ট্রিতে আসবে।</div>
+      </div>
+      
+      <div class="card">
+        <label for="src">নথির টেক্সট (Document Content)</label>
+        <textarea id="src" placeholder="সরকারি নোটিশ, নীতিমালা বা নির্দেশিকার টেক্সট এখানে পেস্ট করুন…"></textarea>
+        <div class="row" style="margin-top:4px;">
+          <button id="go" type="button">খসড়া তৈরি করুন (AI Extract)</button>
+          <button id="load" class="ghost" type="button">অপেক্ষমাণ খসড়া দেখুন</button>
+          <span class="mono" id="stat"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 2: Settings & Unverified -->
+    <section id="tab-settings" class="tab-content">
+      <div class="card">
+        <h3 style="margin:0 0 8px; font-size:16px;">যাচাইহীন ডেটা (Unverified KB Entries)</h3>
+        <p class="dek" style="margin-bottom: 16px;">যেসব এন্ট্রিতে এখনো <code>verified_on</code> তারিখ নেই, সেগুলো লোড করে পুনরায় রিভিউ করুন।</p>
+        <div class="row">
+          <button id="loadUnverified" type="button">যাচাইহীন ডেটা লোড করুন</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 3: Analytics -->
+    <section id="tab-analytics" class="tab-content">
+      <div class="card">
+        <div class="row" style="justify-content:space-between; margin-bottom:16px;">
+          <h3 style="margin:0; font-size:16px;">সিস্টেম অ্যানালিটিক্স</h3>
+          <button id="refreshStatsBtn" class="ghost" type="button" style="padding:6px 12px; font-size:12px;">রিফ্রেশ</button>
+        </div>
+        <div class="stat-grid" id="statsGrid">
+          <div class="stat-card">
+            <div class="stat-num" id="statQueries">—</div>
+            <div class="stat-label">মোট কুয়েরি</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="statFeedback">—</div>
+            <div class="stat-label">পজিটিভ ফিডব্যাক</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="statKbTotal">—</div>
+            <div class="stat-label">KB এন্ট্রি</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="statKbVerified">—</div>
+            <div class="stat-label">যাচাইকৃত এন্ট্রি</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global feedback message inside admin -->
+    <div id="msg"></div>
+
+    <!-- Container for dynamic drafts -->
+    <div id="drafts"></div>
+
+    <!-- Approve box -->
+    <div class="card" id="approveBox" hidden>
+      <label for="vdate">যাচাইকরণের তারিখ (Verification Date)</label>
+      <input id="vdate" type="date">
+      <div class="row" style="margin-top:10px;">
+        <button id="approve" type="button">নির্বাচিত এন্ট্রি অনুমোদন করুন</button>
+        <span class="mono">অনুমোদনের পরেই কেবল মূল নলেজবেসে যুক্ত হবে</span>
       </div>
     </div>
   </div>
-
-  <div id="tab-settings" class="tab-content">
-    <div class="card">
-      <h3>যাচাইহীন ডেটা (Unverified Data)</h3>
-      <p class="dek" style="margin-bottom: 16px;">যেসব এন্ট্রিতে এখনো `verified_on` তারিখ নেই, সেগুলো নিচে লোড করে যাচাই করুন।</p>
-      <div class="row">
-        <button id="loadUnverified" type="button">যাচাইহীন ডেটা লোড করুন</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="msg"></div>
-  <div id="drafts"></div>
-
-  <div class="card" id="approveBox" hidden>
-    <label for="vdate">যাচাইয়ের তারিখ</label>
-    <input id="vdate" type="date">
-    <div class="row">
-      <button id="approve" type="button">নির্বাচিত এন্ট্রি অনুমোদন করুন</button>
-      <span class="mono">অনুমোদনের পরেই কেবল KB-তে যুক্ত হবে</span>
-    </div>
-  </div>
-</div>
+</main>
 
 <script>
 (function () {
@@ -173,31 +622,162 @@ button[disabled]{opacity:.55;cursor:default;transform: none;box-shadow:none;}
   var API = (window.API_BASE || "").replace(/\/$/, "");
   var drafts = [];
   var $ = function (id) { return document.getElementById(id); };
+
   $("vdate").value = new Date().toISOString().slice(0, 10);
 
-  // Tabs logic
-  document.querySelectorAll(".tab").forEach(function(t) {
-    t.addEventListener("click", function() {
-      document.querySelectorAll(".tab").forEach(function(b) { b.classList.remove("active"); });
-      document.querySelectorAll(".tab-content").forEach(function(c) { c.classList.remove("active"); });
+  // -------------------------------------------------------------------------
+  // Authentication State Management
+  // -------------------------------------------------------------------------
+  function getToken() {
+    return sessionStorage.getItem("admin_token") || "";
+  }
+  function setSession(token, username) {
+    sessionStorage.setItem("admin_token", token);
+    sessionStorage.setItem("admin_user", username || "admin");
+  }
+  function clearSession() {
+    sessionStorage.removeItem("admin_token");
+    sessionStorage.removeItem("admin_user");
+  }
+
+  function showLogin(errText) {
+    $("loginSection").style.display = "flex";
+    $("adminInterface").style.display = "none";
+    if (errText) {
+      $("loginAlert").style.display = "flex";
+      $("loginAlertText").textContent = errText;
+    } else {
+      $("loginAlert").style.display = "none";
+    }
+  }
+
+  function showDashboard(username) {
+    $("loginSection").style.display = "none";
+    $("adminInterface").style.display = "block";
+    $("adminUsernameSpan").textContent = username || sessionStorage.getItem("admin_user") || "admin";
+  }
+
+  // Check existing session on load
+  function initAuth() {
+    var token = getToken();
+    if (!token) {
+      showLogin();
+      return;
+    }
+    // Verify token with backend
+    fetch(API + "/api/admin/verify", {
+      headers: { "X-Admin-Key": token, "Authorization": "Bearer " + token }
+    }).then(function (r) {
+      if (r.ok) {
+        return r.json().then(function (d) {
+          showDashboard(d.username);
+        });
+      } else {
+        clearSession();
+        showLogin("সেশনের মেয়াদ শেষ হয়েছে। আবার লগইন করুন।");
+      }
+    }).catch(function () {
+      clearSession();
+      showLogin();
+    });
+  }
+
+  // Password visibility toggle
+  $("togglePassBtn").addEventListener("click", function () {
+    var passIn = $("loginPass");
+    var isPass = passIn.getAttribute("type") === "password";
+    passIn.setAttribute("type", isPass ? "text" : "password");
+  });
+
+  // Login Form Submission
+  $("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var u = $("loginUser").value.trim();
+    var p = $("loginPass").value;
+    if (!u || !p) {
+      $("loginAlert").style.display = "flex";
+      $("loginAlertText").textContent = "ইউজারনেম এবং পাসওয়ার্ড দিন।";
+      return;
+    }
+
+    var btn = $("loginSubmitBtn");
+    btn.disabled = true;
+    $("loginBtnText").textContent = "যাচাই করা হচ্ছে…";
+    $("loginAlert").style.display = "none";
+
+    fetch(API + "/api/admin/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username: u, password: p })
+    }).then(function (r) {
+      if (r.status === 401) throw new Error("ইউজারনেম বা পাসওয়ার্ড সঠিক নয়।");
+      if (r.status === 503) throw new Error("সার্ভারে ADMIN_PASSWORD কনফিগার করা নেই।");
+      if (!r.ok) throw new Error("লগইন ব্যর্থ হয়েছে। স্ট্যাটাস: " + r.status);
+      return r.json();
+    }).then(function (res) {
+      setSession(res.token, res.username);
+      showDashboard(res.username);
+      $("loginPass").value = "";
+    }).catch(function (err) {
+      $("loginAlert").style.display = "flex";
+      $("loginAlertText").textContent = err.message || "লগইন ব্যর্থ হয়েছে।";
+    }).finally(function () {
+      btn.disabled = false;
+      $("loginBtnText").textContent = "লগইন করুন";
+    });
+  });
+
+  // Logout button
+  $("logoutBtn").addEventListener("click", function () {
+    clearSession();
+    drafts = [];
+    render();
+    $("msg").innerHTML = "";
+    showLogin();
+  });
+
+  // -------------------------------------------------------------------------
+  // Dashboard & Tabs
+  // -------------------------------------------------------------------------
+  document.querySelectorAll(".tab").forEach(function (t) {
+    t.addEventListener("click", function () {
+      document.querySelectorAll(".tab").forEach(function (b) { b.classList.remove("active"); });
+      document.querySelectorAll(".tab-content").forEach(function (c) { c.classList.remove("active"); });
       t.classList.add("active");
-      $(t.getAttribute("data-target")).classList.add("active");
-      
-      // Clear drafts when switching tabs
+      var targetId = t.getAttribute("data-target");
+      $(targetId).classList.add("active");
+
+      // Auto-load analytics when switching to tab-analytics
+      if (targetId === "tab-analytics") {
+        loadStats();
+      }
+
       drafts = [];
       render();
       $("msg").innerHTML = "";
     });
   });
 
-  function say(kind, text) { $("msg").innerHTML = "<div class='" + kind + "'>" + text + "</div>"; }
+  function say(kind, text) {
+    $("msg").innerHTML = "<div class='alert-box " + (kind === "err" ? "err" : "ok") + "'>" + text + "</div>";
+  }
 
   function call(path, opts) {
     opts = opts || {};
-    opts.headers = Object.assign({ "Content-Type": "application/json", "X-Admin-Key": $("pw").value }, opts.headers || {});
+    var token = getToken();
+    opts.headers = Object.assign({
+      "Content-Type": "application/json",
+      "X-Admin-Key": token,
+      "Authorization": "Bearer " + token
+    }, opts.headers || {});
+
     return fetch(API + path, opts).then(function (r) {
-      if (r.status === 401) throw new Error("পাসওয়ার্ড ভুল");
-      if (r.status === 503) throw new Error("সার্ভারে ADMIN_PASSWORD সেট করা নেই");
+      if (r.status === 401) {
+        clearSession();
+        showLogin("সেশনের মেয়াদ শেষ হয়েছে। পুনরায় লগইন করুন।");
+        throw new Error("অননুমোদিত (401 Unauthorized)");
+      }
+      if (r.status === 503) throw new Error("সার্ভারে ADMIN_PASSWORD কনফিগার করা নেই");
       return r.json();
     });
   }
@@ -212,12 +792,12 @@ button[disabled]{opacity:.55;cursor:default;transform: none;box-shadow:none;}
       card.innerHTML =
         "<h3><span><input type='checkbox' data-i='" + i + "' checked> " +
         (d.title_bn || d.id) + "</span>" +
-        (d._replaces_existing ? "<span class='dup'>বিদ্যমান এন্ট্রি বদলে যাবে</span>" : "") +
+        (d._replaces_existing ? "<span class='dup-badge'>বিদ্যমান এন্ট্রি বদলে যাবে</span>" : "") +
         "<span class='id'>" + d.id + "</span></h3>" +
         "<div class='body'>" +
-        "<label>বাংলা</label><textarea data-f='content_bn' data-i='" + i + "'>" + (d.content_bn || "") + "</textarea>" +
-        "<label>English</label><textarea data-f='content_en' data-i='" + i + "'>" + (d.content_en || "") + "</textarea>" +
-        "<label>source_url</label><input data-f='source_url' data-i='" + i + "' value='" + (d.source_url || "") + "'>" +
+        "<label>বাংলা বিবরণ</label><textarea data-f='content_bn' data-i='" + i + "'>" + (d.content_bn || "") + "</textarea>" +
+        "<label>English Content</label><textarea data-f='content_en' data-i='" + i + "'>" + (d.content_en || "") + "</textarea>" +
+        "<label>Source URL</label><input data-f='source_url' data-i='" + i + "' value='" + (d.source_url || "") + "'>" +
         "</div>";
       box.appendChild(card);
     });
@@ -243,7 +823,7 @@ button[disabled]{opacity:.55;cursor:default;transform: none;box-shadow:none;}
         render();
       })
       .catch(function (e) { say("err", e.message); })
-      .then(function () { btn.disabled = false; });
+      .finally(function () { btn.disabled = false; });
   });
 
   $("load").addEventListener("click", function () {
@@ -255,14 +835,12 @@ button[disabled]{opacity:.55;cursor:default;transform: none;box-shadow:none;}
     }).catch(function (e) { say("err", e.message); });
   });
 
-  // Settings: Load Unverified Data
   $("loadUnverified").addEventListener("click", function () {
     var btn = this;
     btn.disabled = true;
     call("/api/admin/unverified").then(function (r) {
       drafts = r.entries || [];
-      // Tag them as replacing existing so the badge shows
-      drafts.forEach(function(d) { d._replaces_existing = true; });
+      drafts.forEach(function (d) { d._replaces_existing = true; });
       if (drafts.length === 0) {
         say("ok", "কোনো যাচাইহীন (unverified) এন্ট্রি নেই।");
       } else {
@@ -270,7 +848,7 @@ button[disabled]{opacity:.55;cursor:default;transform: none;box-shadow:none;}
       }
       render();
     }).catch(function (e) { say("err", e.message); })
-      .then(function() { btn.disabled = false; });
+      .finally(function () { btn.disabled = false; });
   });
 
   $("approve").addEventListener("click", function () {
@@ -291,8 +869,32 @@ button[disabled]{opacity:.55;cursor:default;transform: none;box-shadow:none;}
       drafts = [];
       render();
     }).catch(function (e) { say("err", e.message); })
-      .then(function() { btn.disabled = false; });
+      .finally(function () { btn.disabled = false; });
   });
+
+  function loadStats() {
+    call("/api/admin/stats").then(function (r) {
+      var s = r.stats || {};
+      $("statQueries").textContent = s.total_queries != null ? s.total_queries : 0;
+      var pos = s.positive_feedback || 0;
+      var neg = s.negative_feedback || 0;
+      var totalFb = pos + neg;
+      var pct = totalFb > 0 ? Math.round((pos / totalFb) * 100) + "%" : "—";
+      $("statFeedback").textContent = pct;
+    }).catch(function () {});
+
+    call("/api/admin/pending").then(function (r) {
+      if (r.stats) {
+        $("statKbTotal").textContent = r.stats.total || 0;
+        $("statKbVerified").textContent = r.stats.verified || 0;
+      }
+    }).catch(function () {});
+  }
+
+  $("refreshStatsBtn").addEventListener("click", loadStats);
+
+  // Initialize
+  initAuth();
 })();
 </script>
 </body>
