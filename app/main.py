@@ -5,6 +5,8 @@ Docs:          http://127.0.0.1:8000/docs
 """
 from __future__ import annotations
 
+import hashlib
+import hmac
 import logging
 import secrets
 import time
@@ -62,6 +64,11 @@ class FeedbackIn(BaseModel):
     session_id: str | None = None
     query_id: int
     is_positive: bool
+
+
+class AdminLoginIn(BaseModel):
+    username: str = Field(min_length=1, max_length=100)
+    password: str = Field(min_length=1, max_length=100)
 
 
 def _lang(value: str | None) -> str:
@@ -191,43 +198,119 @@ def feedback(payload: FeedbackIn) -> dict:
 
 
 # --------------------------------------------------------------------------- #
-# admin
+# admin authentication & helpers
 # --------------------------------------------------------------------------- #
 
-def _require_admin(password: str | None) -> None:
+def _generate_admin_token(username: str) -> str:
+    expiry = int(time.time()) + (24 * 3600)  # 24 hours
+    secret = config.ADMIN_PASSWORD.encode("utf-8")
+    payload = f"{username}:{expiry}".encode("utf-8")
+    sig = hmac.new(secret, payload, hashlib.sha256).hexdigest()
+    return f"{username}:{expiry}:{sig}"
+
+
+def _verify_admin_token(token: str) -> bool:
+    if not token or not config.ADMIN_PASSWORD:
+        return False
+    try:
+        parts = token.split(":")
+        if len(parts) != 3:
+            return False
+        username, expiry_str, sig = parts
+        if not secrets.compare_digest(username, config.ADMIN_USERNAME):
+            return False
+        expiry = int(expiry_str)
+        if time.time() > expiry:
+            return False
+        secret = config.ADMIN_PASSWORD.encode("utf-8")
+        payload = f"{username}:{expiry}".encode("utf-8")
+        expected_sig = hmac.new(secret, payload, hashlib.sha256).hexdigest()
+        return secrets.compare_digest(sig, expected_sig)
+    except Exception:
+        return False
+
+
+def _require_admin(x_admin_key: str | None = None, authorization: str | None = None) -> None:
+    token = ""
+    if authorization and authorization.startswith("Bearer "):
+        token = authorization[7:].strip()
+    elif x_admin_key:
+        token = x_admin_key.strip()
+
     if not config.ADMIN_PASSWORD:
         raise HTTPException(status_code=503, detail="ADMIN_PASSWORD is not configured")
-    if not password or not secrets.compare_digest(password, config.ADMIN_PASSWORD):
-        raise HTTPException(status_code=401, detail="wrong password")
+
+    if not token:
+        raise HTTPException(status_code=401, detail="প্রশাসনিক অনুমোদন প্রয়োজন (Authentication required)")
+
+    if _verify_admin_token(token):
+        return
+
+    if secrets.compare_digest(token, config.ADMIN_PASSWORD):
+        return
+
+    raise HTTPException(status_code=401, detail="ভুল ক্রেডেনশিয়াল বা সেশনের মেয়াদ শেষ (Invalid credentials or expired session)")
+
+
+@app.post("/api/admin/login")
+def admin_login(payload: AdminLoginIn) -> dict:
+    if not config.ADMIN_PASSWORD:
+        raise HTTPException(status_code=503, detail="ADMIN_PASSWORD is not configured")
+    valid_user = secrets.compare_digest(payload.username, config.ADMIN_USERNAME)
+    valid_pass = secrets.compare_digest(payload.password, config.ADMIN_PASSWORD)
+    if not (valid_user and valid_pass):
+        raise HTTPException(status_code=401, detail="ইউজারনেম বা পাসওয়ার্ড সঠিক নয়")
+
+    token = _generate_admin_token(config.ADMIN_USERNAME)
+    return {
+        "ok": True,
+        "token": token,
+        "username": config.ADMIN_USERNAME,
+        "expires_in": 86400,
+    }
+
+
+@app.get("/api/admin/verify")
+def admin_verify(x_admin_key: str = Header(default=""),
+                 authorization: str = Header(default="")) -> dict:
+    _require_admin(x_admin_key, authorization)
+    return {"ok": True, "username": config.ADMIN_USERNAME}
 
 
 @app.post("/api/admin/propose")
 def admin_propose(x_admin_key: str = Header(default=""),
+                  authorization: str = Header(default=""),
                   body: dict = Body(default={})) -> dict:
-    _require_admin(x_admin_key)
+    _require_admin(x_admin_key, authorization)
     return admin_mod.propose(body.get("text", ""))
 
 
 @app.get("/api/admin/pending")
-def admin_pending(x_admin_key: str = Header(default="")) -> dict:
-    _require_admin(x_admin_key)
+def admin_pending(x_admin_key: str = Header(default=""),
+                  authorization: str = Header(default="")) -> dict:
+    _require_admin(x_admin_key, authorization)
     return {"entries": admin_mod.pending(), "stats": kb.stats()}
 
+
 @app.get("/api/admin/unverified")
-def admin_unverified(x_admin_key: str = Header(default="")) -> dict:
-    _require_admin(x_admin_key)
+def admin_unverified(x_admin_key: str = Header(default=""),
+                     authorization: str = Header(default="")) -> dict:
+    _require_admin(x_admin_key, authorization)
     return {"entries": admin_mod.unverified(), "stats": kb.stats()}
 
+
 @app.get("/api/admin/stats")
-def admin_stats(x_admin_key: str = Header(default="")) -> dict:
-    _require_admin(x_admin_key)
+def admin_stats(x_admin_key: str = Header(default=""),
+                authorization: str = Header(default="")) -> dict:
+    _require_admin(x_admin_key, authorization)
     return {"stats": analytics.get_stats()}
 
 
 @app.post("/api/admin/approve")
 def admin_approve(x_admin_key: str = Header(default=""),
+                  authorization: str = Header(default=""),
                   body: dict = Body(default={})) -> dict:
-    _require_admin(x_admin_key)
+    _require_admin(x_admin_key, authorization)
     return admin_mod.approve(body.get("entries", []), body.get("verified_on"))
 
 
