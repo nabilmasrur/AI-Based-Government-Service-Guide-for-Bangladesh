@@ -28,7 +28,7 @@ def main() -> int:
     print(f"  key loaded: {key[:6]}…{key[-4:]}  (length {len(key)})")
     print(f"  chat model : {config.CHAT_MODEL}")
     print(f"  embed model: {config.EMBED_MODEL}")
-    print(f"  admin password set: {'yes' if config.ADMIN_PASSWORD else 'NO — /admin will refuse'}")
+    print(f"  admin credentials : user='{config.ADMIN_USERNAME}' password={'yes' if config.ADMIN_PASSWORD else 'NO — /admin will refuse'}")
 
     line("2. Which models does this key actually have?")
     try:
