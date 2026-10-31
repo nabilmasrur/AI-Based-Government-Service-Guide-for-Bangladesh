@@ -14,6 +14,8 @@ services:
     envVars:
       - key: GEMINI_API_KEY
         sync: false
+      - key: ADMIN_USERNAME
+        value: admin
       - key: ADMIN_PASSWORD
         sync: false
       - key: CHAT_MODEL
