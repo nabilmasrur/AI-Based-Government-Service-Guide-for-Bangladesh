@@ -512,6 +512,40 @@ body[data-lang="bn"] .steps{list-style-type:bengali}
   100% { opacity: 1; transform: translateY(0); }
 }
 
+/* Cascading progressive section glide (top to bottom) */
+.claude-sec-glide {
+  animation: claudeGlideDown 0.36s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes claudeGlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Streaming word cursor (Claude style) */
+.claude-cursor {
+  display: inline-block;
+  color: #D9663D;
+  font-weight: 700;
+  margin-left: 3px;
+  animation: claudeCursorBlink 0.65s infinite;
+  vertical-align: baseline;
+  user-select: none;
+}
+@keyframes claudeCursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.claude-tail-wrap {
+  animation: claudeGlideDown 0.36s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 @media (max-width: 560px) {
   .claude-thought-bar .c-thought-txt { max-width: 200px; }
   .claude-thinking-text { max-width: 220px; }
@@ -1256,30 +1290,152 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     $("qNote").textContent = S("quotaNote");
   }
 
-  function render(res, fast){
+  /* ── Claude-style Top-to-Bottom Progressive Streaming Reveal ── */
+  var streamTimers = [];
+  function clearStreamTimers(){
+    streamTimers.forEach(function(t){ clearTimeout(t); });
+    streamTimers = [];
+  }
+
+  function streamWords(container, text, done){
+    if (!text){
+      if (done) done();
+      return;
+    }
+    var words = text.split(" ");
+    var wIdx = 0;
+    container.textContent = "";
+
+    var cursor = el("span", "claude-cursor", "▎");
+    container.appendChild(cursor);
+
+    function tick(){
+      if (wIdx < words.length){
+        var word = words[wIdx++];
+        cursor.insertAdjacentText("beforebegin", (wIdx > 1 ? " " : "") + word);
+        scroll();
+        var delay = word.length > 6 ? 24 : 18;
+        var t = setTimeout(tick, delay);
+        streamTimers.push(t);
+      } else {
+        cursor.remove();
+        if (done) done();
+      }
+    }
+    tick();
+  }
+
+  function render(res, fast, onComplete){
+    clearStreamTimers();
+
     if (!res || res.type === "error"){
       scrollToTopOf(bot("<p class='lead'>" + esc((res && res.lead) || S("netErr")) + "</p>", "plain"));
+      if (onComplete) onComplete();
       return;
     }
     if (res.session_id) sid = res.session_id;
     res._fast = fast;
 
     var th = thoughtHTML(res, fast);
-    var node;
-    if (res.type === "answer" && res.card){
-      node = bot(th + "<div class='claude-answer-wrap'>" + answerHTML(res) + "</div>");
-    } else {
+    var botNode = bot(th + "<div class='claude-answer-wrap'></div>", res.card ? "" : "plain");
+    var wrap = botNode.querySelector(".claude-answer-wrap");
+
+    paint(res.trace);
+    paintQuota(res.limit);
+    roomToScroll();
+    scrollToTopOf(botNode);
+
+    var c = res.card;
+    if (res.type !== "answer" || !c){
       var tag = res.type === "clarify"
         ? "<div class='tagline ask'><i></i>" + esc(S("decC")) + "</div>"
         : res.type === "no_info"
           ? "<div class='tagline no'><i></i>" + esc(S("decR")) + "</div>" : "";
-      node = bot(th + "<div class='claude-answer-wrap'>" + tag + "<p class='lead'>" + esc(res.lead || "") + "</p></div>", "plain");
+      if (tag){
+        var tagEl = el("div", "", tag);
+        wrap.appendChild(tagEl);
+      }
+
+      var leadText = res.lead || "";
+      var pLead = el("p", "lead");
+      wrap.appendChild(pLead);
+      streamWords(pLead, leadText, function(){
+        chips(res.chips);
+        roomToScroll();
+        scroll();
+        if (onComplete) onComplete();
+      });
+      return;
     }
-    paint(res.trace);
-    paintQuota(res.limit);
-    chips(res.chips);
-    roomToScroll();
-    scrollToTopOf(node);
+
+    // Step 1: Badge & Highlight (top)
+    var topHtml = "";
+    topHtml += "<div class='badge" + (c.domain === "licence" ? " l" : "") + "'><i></i>" + esc(c.badge) + "</div>";
+    if (c.highlight) topHtml += "<div class='hl'>" + esc(c.highlight) + "</div>";
+    var topDiv = el("div", "claude-sec-glide", topHtml);
+    wrap.appendChild(topDiv);
+
+    // Step 2: Lead paragraph (stream words with cursor)
+    var leadText = res.lead || "";
+    var pLead = el("p", "lead");
+    wrap.appendChild(pLead);
+
+    streamWords(pLead, leadText, function(){
+      // Step 3: Sections container (revealed progressively from top to bottom)
+      var ansBox = el("div", "ans");
+      wrap.appendChild(ansBox);
+
+      var fields = c.fields || [];
+      var idx = 0;
+
+      function nextSection(){
+        if (idx < fields.length){
+          var f = fields[idx++];
+          var secHtml = "<h4>" + icon(f.key) + esc(f.label) + "</h4>" +
+                        "<div class='secbody'>" + body(f.content) + "</div>";
+          var secEl = el("div", "sec f-" + esc(f.key) + " claude-sec-glide", secHtml);
+          ansBox.appendChild(secEl);
+          scroll();
+
+          var t = setTimeout(nextSection, 180);
+          streamTimers.push(t);
+        } else {
+          // Step 4: Warnings, Foot, Stamp, Feedback
+          var tailHtml = "";
+          if (c.warn_text)
+            tailHtml += "<div class='note claude-sec-glide'><span>&#9888;</span><span>" + esc(c.warn_text) + "</span></div>";
+
+          var s = (c.sources || [])[0];
+          if (s){
+            var host = s.url; try { host = new URL(s.url).hostname.replace(/^www\./, ""); } catch(e){}
+            tailHtml += "<div class='foot claude-sec-glide'><a href='" + esc(s.url) + "' target='_blank' rel='noopener'>" +
+                   esc(S("source")) + " · " + esc(host) + "</a><span>" +
+                   (s.verified_on ? esc(S("verified")) + " " + esc(s.verified_on) : esc(S("unverified"))) +
+                   "</span></div>";
+          }
+          var ms = res.ms || 0;
+          tailHtml += "<div class='stamp claude-sec-glide'><b>" + (ms < 1000 ? ms + " ms" : (ms/1000).toFixed(1) + " s") +
+                 "</b> · " + esc(res._fast ? S("fast") : S("full")) + quotaTail(res.limit) + "</div>";
+
+          if (res.query_id) {
+            tailHtml += "<div class='fb-box claude-sec-glide'>" +
+                   "<button class='fb-btn' aria-label='Helpful' onclick='submitFeedback(this, " + res.query_id + ", true)'><svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3'></path></svg></button>" +
+                   "<button class='fb-btn' aria-label='Not Helpful' onclick='submitFeedback(this, " + res.query_id + ", false)'><svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17'></path></svg></button>" +
+                   "<span class='fb-msg'></span></div>";
+          }
+
+          var tailEl = el("div", "claude-tail-wrap", tailHtml);
+          wrap.appendChild(tailEl);
+
+          chips(res.chips);
+          roomToScroll();
+          scroll();
+          if (onComplete) onComplete();
+        }
+      }
+
+      nextSection();
+    });
   }
 
   /* ── trace panel ── */
@@ -1324,25 +1480,36 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     $("decNote").textContent = tr.note || "";
   }
 
-  /* ── send ── */
+  /* ── send with realistic AI reasoning delay & progressive streaming ── */
+  var MIN_THINK_MS = 1400; // Realistic AI reasoning delay (1.4s)
+
   function send(body, path){
     if (busy) return;
     busy = true; $("send").disabled = true;
     var fast = path === "/api/action";
     var ghost = typing();
+    var startTime = Date.now();
+
     post(path, body)
       .then(function(res){
-        if (liveThinkingTimer) { clearInterval(liveThinkingTimer); liveThinkingTimer = null; }
-        ghost.remove();
-        render(res, fast);
+        var elapsed = Date.now() - startTime;
+        var remainingWait = Math.max(0, MIN_THINK_MS - elapsed);
+
+        setTimeout(function(){
+          if (liveThinkingTimer) { clearInterval(liveThinkingTimer); liveThinkingTimer = null; }
+          ghost.remove();
+          render(res, fast, function(){
+            busy = false; $("send").disabled = false;
+          });
+        }, remainingWait);
       })
       .catch(function(){
         if (liveThinkingTimer) { clearInterval(liveThinkingTimer); liveThinkingTimer = null; }
         ghost.remove();
         scrollToTopOf(bot("<p class='lead'>" + esc(S("netErr")) + "</p>", "plain"));
         setStatus("bad", S("failed"));
-      })
-      .then(function(){ busy = false; $("send").disabled = false; });
+        busy = false; $("send").disabled = false;
+      });
   }
   function act(action, label){
     var old = col.querySelector(".chips"); if (old) old.remove();
@@ -1474,6 +1641,9 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
   }
   function setLang(next){
     if (next === lang) return;
+    clearStreamTimers();
+    if (liveThinkingTimer) { clearInterval(liveThinkingTimer); liveThinkingTimer = null; }
+    busy = false; $("send").disabled = false;
     lang = next; applyLang(); welcome();
     post("/api/reset", {}).catch(function(){});
   }
@@ -1495,6 +1665,9 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     $("msg").value = ""; me(t); send({message:t}, "/api/chat");
   });
   $("resetBtn").addEventListener("click", function(){
+    clearStreamTimers();
+    if (liveThinkingTimer) { clearInterval(liveThinkingTimer); liveThinkingTimer = null; }
+    busy = false; $("send").disabled = false;
     post("/api/reset", {}).catch(function(){});
     sid = crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random());
     closeAll(); welcome();
