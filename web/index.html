@@ -1312,6 +1312,17 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     streamTimers = [];
   }
 
+  function autoScrollFollow(targetEl){
+    if (!targetEl) return;
+    var tRect = thread.getBoundingClientRect();
+    var elRect = targetEl.getBoundingClientRect();
+    // Only scroll if the new element actually goes below the visible area
+    if (elRect.bottom > tRect.bottom - 24){
+      var diff = elRect.bottom - (tRect.bottom - 24);
+      thread.scrollTop += diff;
+    }
+  }
+
   function streamWords(container, text, done){
     if (!text){
       if (done) done();
@@ -1328,7 +1339,7 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
       if (wIdx < words.length){
         var word = words[wIdx++];
         cursor.insertAdjacentText("beforebegin", (wIdx > 1 ? " " : "") + word);
-        scroll();
+        autoScrollFollow(cursor);
         var isPunct = /[।.,?!:;]$/.test(word);
         var delay = isPunct ? 95 : (word.length > 5 ? 58 : 45);
         var t = setTimeout(tick, delay);
@@ -1361,11 +1372,12 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
           if (NUMBERED.test(line)){
             var li = el("li", "claude-step-glide", esc(line.replace(NUMBERED, "")));
             ol.appendChild(li);
+            autoScrollFollow(li);
           } else {
             var p = el("p", "claude-step-glide", esc(line));
             secbody.appendChild(p);
+            autoScrollFollow(p);
           }
-          scroll();
           var t = setTimeout(nextStep, 260);
           streamTimers.push(t);
         } else {
@@ -1379,7 +1391,7 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
           var line = lines[lIdx++];
           var p = el("p", "claude-step-glide", esc(line));
           secbody.appendChild(p);
-          scroll();
+          autoScrollFollow(p);
           var t = setTimeout(nextPara, 260);
           streamTimers.push(t);
         } else {
@@ -1427,7 +1439,7 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
       streamWords(pLead, leadText, function(){
         chips(res.chips);
         roomToScroll();
-        scroll();
+        scrollToTopOf(botNode);
         if (onComplete) onComplete();
       });
       return;
@@ -1459,7 +1471,7 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
           var secEl = el("div", "sec f-" + esc(f.key) + " claude-sec-glide");
           secEl.innerHTML = "<h4>" + icon(f.key) + esc(f.label) + "</h4><div class='secbody'></div>";
           ansBox.appendChild(secEl);
-          scroll();
+          autoScrollFollow(secEl);
 
           var secbody = secEl.querySelector(".secbody");
           var t = setTimeout(function(){
@@ -1499,7 +1511,7 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
 
           chips(res.chips);
           roomToScroll();
-          scroll();
+          scrollToTopOf(botNode);
           if (onComplete) onComplete();
         }
       }
