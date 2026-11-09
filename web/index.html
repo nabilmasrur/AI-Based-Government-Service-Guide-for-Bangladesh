@@ -519,7 +519,22 @@ body[data-lang="bn"] .steps{list-style-type:bengali}
 @keyframes claudeGlideDown {
   0% {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Individual list item / step glide */
+.claude-step-glide {
+  animation: claudeStepSlide 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes claudeStepSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
   }
   100% {
     opacity: 1;
@@ -1314,7 +1329,8 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
         var word = words[wIdx++];
         cursor.insertAdjacentText("beforebegin", (wIdx > 1 ? " " : "") + word);
         scroll();
-        var delay = word.length > 6 ? 24 : 18;
+        var isPunct = /[।.,?!:;]$/.test(word);
+        var delay = isPunct ? 95 : (word.length > 5 ? 58 : 45);
         var t = setTimeout(tick, delay);
         streamTimers.push(t);
       } else {
@@ -1323,6 +1339,55 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
       }
     }
     tick();
+  }
+
+  function renderSecContent(secbody, text, onDone){
+    var lines = String(text || "").split("\n").filter(function(l){ return l.trim(); });
+    if (!lines.length){
+      if (onDone) onDone();
+      return;
+    }
+
+    var isList = lines.filter(function(l){ return NUMBERED.test(l); }).length >= 2;
+    var lIdx = 0;
+
+    if (isList){
+      var ol = el("ol", "steps");
+      secbody.appendChild(ol);
+
+      function nextStep(){
+        if (lIdx < lines.length){
+          var line = lines[lIdx++];
+          if (NUMBERED.test(line)){
+            var li = el("li", "claude-step-glide", esc(line.replace(NUMBERED, "")));
+            ol.appendChild(li);
+          } else {
+            var p = el("p", "claude-step-glide", esc(line));
+            secbody.appendChild(p);
+          }
+          scroll();
+          var t = setTimeout(nextStep, 260);
+          streamTimers.push(t);
+        } else {
+          if (onDone) onDone();
+        }
+      }
+      nextStep();
+    } else {
+      function nextPara(){
+        if (lIdx < lines.length){
+          var line = lines[lIdx++];
+          var p = el("p", "claude-step-glide", esc(line));
+          secbody.appendChild(p);
+          scroll();
+          var t = setTimeout(nextPara, 260);
+          streamTimers.push(t);
+        } else {
+          if (onDone) onDone();
+        }
+      }
+      nextPara();
+    }
   }
 
   function render(res, fast, onComplete){
@@ -1386,18 +1451,23 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
       wrap.appendChild(ansBox);
 
       var fields = c.fields || [];
-      var idx = 0;
+      var secIdx = 0;
 
       function nextSection(){
-        if (idx < fields.length){
-          var f = fields[idx++];
-          var secHtml = "<h4>" + icon(f.key) + esc(f.label) + "</h4>" +
-                        "<div class='secbody'>" + body(f.content) + "</div>";
-          var secEl = el("div", "sec f-" + esc(f.key) + " claude-sec-glide", secHtml);
+        if (secIdx < fields.length){
+          var f = fields[secIdx++];
+          var secEl = el("div", "sec f-" + esc(f.key) + " claude-sec-glide");
+          secEl.innerHTML = "<h4>" + icon(f.key) + esc(f.label) + "</h4><div class='secbody'></div>";
           ansBox.appendChild(secEl);
           scroll();
 
-          var t = setTimeout(nextSection, 180);
+          var secbody = secEl.querySelector(".secbody");
+          var t = setTimeout(function(){
+            renderSecContent(secbody, f.content, function(){
+              var t2 = setTimeout(nextSection, 320);
+              streamTimers.push(t2);
+            });
+          }, 140);
           streamTimers.push(t);
         } else {
           // Step 4: Warnings, Foot, Stamp, Feedback
