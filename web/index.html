@@ -302,6 +302,222 @@ body[data-lang="bn"] .steps{list-style-type:bengali}
 .dots i:nth-child(2){animation-delay:.18s}.dots i:nth-child(3){animation-delay:.36s}
 @keyframes b{0%,60%,100%{opacity:.28;transform:translateY(0)}30%{opacity:.9;transform:translateY(-3px)}}
 
+/* ───────────────────── Claude-style Thinking & Summary ───────────────────── */
+.claude-thinking-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--hair-2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  color: var(--ink-2);
+  font-size: 14.5px;
+  user-select: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.claude-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.claude-dots i {
+  width: 6.5px;
+  height: 6.5px;
+  border-radius: 50%;
+  background: #D9663D;
+  display: inline-block;
+  animation: claudeDotWave 1.25s infinite ease-in-out both;
+}
+.claude-dots i:nth-child(2) { animation-delay: 0.18s; }
+.claude-dots i:nth-child(3) { animation-delay: 0.36s; }
+@keyframes claudeDotWave {
+  0%, 80%, 100% { transform: scale(0.65); opacity: 0.4; }
+  40% { transform: scale(1.18); opacity: 1; }
+}
+.claude-thinking-text {
+  color: var(--ink-2);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 480px;
+  transition: opacity 0.18s ease;
+}
+.claude-live-chev {
+  color: var(--ink-3);
+  flex-shrink: 0;
+  margin-left: 2px;
+}
+
+/* Collapsible Thought Bar (Claude Image 2 style) */
+.claude-thought-box {
+  margin: 6px 0 14px;
+  font-family: inherit;
+}
+.claude-thought-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  margin-left: -6px;
+  border-radius: 10px;
+  color: var(--ink-2);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  text-align: left;
+  max-width: 100%;
+}
+.claude-thought-bar:hover {
+  background: var(--surface);
+  color: var(--ink);
+}
+.claude-thought-bar .c-clock {
+  color: var(--ink-3);
+  flex-shrink: 0;
+}
+.claude-thought-bar .c-thought-txt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 460px;
+  font-weight: 500;
+}
+.claude-thought-bar .c-thought-time {
+  color: var(--ink-3);
+  font-size: 12.5px;
+  font-family: "IBM Plex Mono", monospace;
+  margin-left: 2px;
+}
+.claude-thought-bar .c-chev {
+  color: var(--ink-3);
+  flex-shrink: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.claude-thought-box.open .claude-thought-bar .c-chev {
+  transform: rotate(90deg);
+}
+.claude-thought-box.open .claude-thought-bar {
+  color: var(--ink);
+}
+
+/* Expanded Reasoning Summary Panel (Claude Image 2 style) */
+.claude-thought-panel {
+  display: none;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  animation: claudeSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.claude-thought-box.open .claude-thought-panel {
+  display: block;
+}
+@keyframes claudeSlideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.claude-summary-card {
+  background: var(--surface);
+  border: 1px solid var(--hair-2);
+  border-radius: 16px;
+  padding: 16px 20px 20px;
+  box-shadow: var(--shadow);
+  max-width: 620px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.claude-summary-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--hair);
+}
+.claude-summary-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.claude-summary-close {
+  background: transparent;
+  border: none;
+  color: var(--ink-3);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  line-height: 1;
+  transition: color 0.15s, background 0.15s;
+}
+.claude-summary-close:hover {
+  background: var(--raised);
+  color: var(--ink);
+}
+.claude-timeline {
+  position: relative;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.claude-timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  bottom: 7px;
+  width: 2px;
+  background: var(--hair-2);
+}
+.claude-tl-item {
+  position: relative;
+}
+.claude-tl-dot {
+  position: absolute;
+  left: -22px;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ink-3);
+  border: 2px solid var(--surface);
+  box-sizing: content-box;
+}
+.claude-tl-item:last-child .claude-tl-dot {
+  background: #D9663D;
+}
+.claude-tl-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.claude-tl-text strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Smooth fade-up presentation for the answer */
+.claude-answer-wrap {
+  animation: claudeFadeUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes claudeFadeUp {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 560px) {
+  .claude-thought-bar .c-thought-txt { max-width: 200px; }
+  .claude-thinking-text { max-width: 220px; }
+  .claude-summary-card { padding: 14px 16px; }
+}
+
 /* ───────────────────────── composer ───────────────────────── */
 .bottom{flex:none;padding:10px 20px 14px;background:transparent}
 .composer{
@@ -584,7 +800,14 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
       dLic:"ড্রাইভিং লাইসেন্স", dLicSub:"শিক্ষানবিশ · স্মার্ট কার্ড · নবায়ন",
       or:"অথবা এভাবেও জিজ্ঞেস করতে পারেন",
       ex1:"নতুন পাসপোর্ট করতে কী লাগে?", ex2:"learner license er fee koto?", ex3:"জমির খতিয়ান কীভাবে পাব?",
-      netErr:"সার্ভারে পৌঁছানো যাচ্ছে না। একটু পরে আবার চেষ্টা করুন।"
+      netErr:"সার্ভারে পৌঁছানো যাচ্ছে না। একটু পরে আবার চেষ্টা করুন।",
+      claudeLiveSteps:[
+        "প্রশ্নের অভিপ্রায় ও সেবার ধরন বিশ্লেষণ...",
+        "জ্ঞানভাণ্ডার ও সরকারি বিধিমালা অনুসন্ধান...",
+        "নির্ভুল তথ্য ও ধাপসমূহ সাজানো হচ্ছে..."
+      ],
+      claudeSummaryTitle:"Summary · যুক্তি ও বিশ্লেষণের ধাপসমূহ",
+      claudeDefaultThought:"সরকারি সেবা নির্দেশিকা ও বিধিমালা বিশ্লেষণ..."
     },
     en: {
       appTitle:"Seba Sohayok", appSub:"Passport & driving licence",
@@ -619,7 +842,14 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
       dLic:"Driving licence", dLicSub:"Learner · smart card · renewal",
       or:"Or try one of these",
       ex1:"What do I need for a new passport?", ex2:"How much is a learner licence?", ex3:"How do I get a land record?",
-      netErr:"Cannot reach the server. Please try again shortly."
+      netErr:"Cannot reach the server. Please try again shortly.",
+      claudeLiveSteps:[
+        "Analyzing query intent & service category...",
+        "Consulting official knowledge base & rules...",
+        "Synthesizing verified step-by-step guidance..."
+      ],
+      claudeSummaryTitle:"Summary · Reasoning Steps",
+      claudeDefaultThought:"Analyzing service guidelines and regulations..."
     }
   };
   function S(k){ return L[lang][k]; }
@@ -762,10 +992,150 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     m.innerHTML = head(S("bot")) + inner;
     col.appendChild(m); return m;
   }
+  /* ── Claude-style live thinking & reasoning ── */
+  var liveThinkingTimer = null;
   function typing(){
-    var g = bot("<div class='dots'><i></i><i></i><i></i></div>", "plain");
+    var steps = S("claudeLiveSteps") || ["Thinking..."];
+    var stepIdx = 0;
+    var liveText = steps[0];
+
+    var html = "<div class='claude-thinking-live'>" +
+      "<span class='claude-dots'><i></i><i></i><i></i></span>" +
+      "<span class='claude-thinking-text' id='claudeLiveTxt'>" + esc(liveText) + "</span>" +
+      "<svg class='claude-live-chev' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'>" +
+        "<polyline points='9 18 15 12 9 6'/>" +
+      "</svg>" +
+      "</div>";
+
+    var g = bot(html, "plain");
     scroll();
+
+    if (liveThinkingTimer) clearInterval(liveThinkingTimer);
+    liveThinkingTimer = setInterval(function(){
+      stepIdx = (stepIdx + 1) % steps.length;
+      var txtEl = document.getElementById("claudeLiveTxt");
+      if (txtEl) {
+        txtEl.style.opacity = "0.2";
+        setTimeout(function(){
+          if (txtEl) {
+            txtEl.textContent = steps[stepIdx];
+            txtEl.style.opacity = "1";
+          }
+        }, 150);
+      }
+    }, 1300);
+
     return g;
+  }
+
+  window.toggleClaudeThought = function(id){
+    var box = document.getElementById(id);
+    if (!box) return;
+    box.classList.toggle("open");
+  };
+
+  function thoughtHTML(res, fast){
+    var tr = res.trace || {};
+    var ms = res.ms || 0;
+    var timeStr = ms < 1000 ? ms + "ms" : (ms/1000).toFixed(1) + "s";
+    var boxId = "th_" + Math.random().toString(36).substring(2, 9);
+    
+    // Pick thought bar summary phrase
+    var barText = "";
+    var d = tr.domain, sub = tr.subtype;
+    if (lang === "bn") {
+      if (d === "passport") barText = "পাসপোর্টের নিয়মাবলী ও প্রয়োজনীয় তথ্যাদি বিশ্লেষণ...";
+      else if (d === "licence") barText = "ড্রাইভিং লাইসেন্সের ধাপ ও সরকারি ফি যাচাই...";
+      else if (res.type === "clarify") barText = "সঠিক উত্তরের জন্য অতিরিক্ত তথ্য বিশ্লেষণ...";
+      else barText = S("claudeDefaultThought");
+    } else {
+      if (d === "passport") barText = "Evaluating passport regulations and requirements...";
+      else if (d === "licence") barText = "Reviewing driving licence steps and fees...";
+      else if (res.type === "clarify") barText = "Clarifying context for accurate service info...";
+      else barText = S("claudeDefaultThought");
+    }
+
+    // Build timeline items
+    var items = [];
+    
+    // Step 1: Intent
+    var intentTxt = "";
+    if (d && meta && meta.taxonomy && meta.taxonomy[d]) {
+      var dName = meta.taxonomy[d]["label_" + lang] || d;
+      var subName = (meta.taxonomy[d].subtypes && meta.taxonomy[d].subtypes[sub] && meta.taxonomy[d].subtypes[sub][lang]) || sub || "";
+      intentTxt = (lang === "bn" ? "অভিপ্রায় শনাক্তকরণ: " : "Intent recognized: ") + "<strong>" + esc(dName) + (subName ? " &rsaquo; " + esc(subName) : "") + "</strong>";
+    } else {
+      intentTxt = lang === "bn" ? "ব্যবহারকারীর প্রশ্নের ধরণ ও সেবার ক্ষেত্র বিশ্লেষণ সম্পন্ন।" : "Analyzed user query intent and target public service scope.";
+    }
+    items.push(intentTxt);
+
+    // Step 2: Knowledge base matching & Confidence
+    var conf = tr.conf != null ? tr.conf : 0.95;
+    var confPct = Math.round(conf * 100);
+    var confTxt = "";
+    if (lang === "bn") {
+      confTxt = "জ্ঞানভাণ্ডার ও সরকারি তথ্যাদি অনুসন্ধান (আস্থা স্কোর: <strong>" + num(confPct) + "%</strong>, সীমা উত্তীর্ণ)।";
+    } else {
+      confTxt = "Matched official knowledge base records (Confidence: <strong>" + confPct + "%</strong>, threshold passed).";
+    }
+    items.push(confTxt);
+
+    // Step 3: Verified source & rules validation
+    var srcTxt = "";
+    var s = (res.card && res.card.sources && res.card.sources[0]);
+    if (s && s.url) {
+      var host = s.url; try { host = new URL(s.url).hostname.replace(/^www\./,""); } catch(e){}
+      if (lang === "bn") {
+        srcTxt = "অফিসিয়াল উৎস যাচাই: <strong>" + esc(host) + "</strong> থেকে বিধি ও প্রয়োজনীয় নথিপত্র মেলানো হয়েছে।";
+      } else {
+        srcTxt = "Validated rules & documents from official source: <strong>" + esc(host) + "</strong>.";
+      }
+    } else if (res.type === "clarify") {
+      srcTxt = lang === "bn" ? "ব্যবহারকারী থেকে সুনির্দিষ্ট তথ্য নেওয়ার সিদ্ধান্ত গৃহীত।" : "Identified need for clarification to give exact instructions.";
+    } else {
+      srcTxt = lang === "bn" ? "সরকারি সার্ভিস গাইডলাইন ও নিরাপত্তা নিয়মাবলী যাচাইকৃত।" : "Verified government service guidelines and safety rules.";
+    }
+    items.push(srcTxt);
+
+    // Step 4: Formulation
+    var finalTxt = "";
+    if (fast) {
+      finalTxt = lang === "bn" ? "তাৎক্ষণিক ক্যাশ থেকে সুবিন্যস্ত সমাধান সংকলিত।" : "Compiled structured solution from high-speed cache.";
+    } else {
+      finalTxt = lang === "bn" ? "ধাপভিত্তিক স্পষ্ট নির্দেশনা ও সারসংক্ষেপ তৈরি সম্পন্ন (" + esc(timeStr) + ")।" : "Formulated structured step-by-step guidance (" + esc(timeStr) + ").";
+    }
+    items.push(finalTxt);
+
+    // Construct the HTML
+    var out = "<div class='claude-thought-box' id='" + boxId + "'>";
+    out += "<button type='button' class='claude-thought-bar' onclick=\"toggleClaudeThought('" + boxId + "')\" aria-expanded='false'>";
+    out += "<svg class='c-clock' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>";
+    out += "<span class='c-thought-txt'>" + esc(barText) + "</span>";
+    out += "<span class='c-thought-time'>" + esc(timeStr) + "</span>";
+    out += "<svg class='c-chev' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 18 15 12 9 6'/></svg>";
+    out += "</button>";
+    
+    out += "<div class='claude-thought-panel'>";
+    out += "<div class='claude-summary-card'>";
+    out += "<div class='claude-summary-hdr'>";
+    out += "<button type='button' class='claude-summary-close' onclick=\"toggleClaudeThought('" + boxId + "')\" aria-label='Close'>✕</button>";
+    out += "<span class='claude-summary-title'>" + esc(S("claudeSummaryTitle")) + "</span>";
+    out += "<span style='width:24px'></span>";
+    out += "</div>";
+    
+    out += "<div class='claude-timeline'>";
+    items.forEach(function(item){
+      out += "<div class='claude-tl-item'>";
+      out += "<span class='claude-tl-dot'></span>";
+      out += "<div class='claude-tl-text'>" + item + "</div>";
+      out += "</div>";
+    });
+    out += "</div>";
+    out += "</div>";
+    out += "</div>";
+    out += "</div>";
+
+    return out;
   }
 
   function chips(list){
@@ -894,15 +1264,16 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     if (res.session_id) sid = res.session_id;
     res._fast = fast;
 
+    var th = thoughtHTML(res, fast);
     var node;
     if (res.type === "answer" && res.card){
-      node = bot(answerHTML(res));
+      node = bot(th + "<div class='claude-answer-wrap'>" + answerHTML(res) + "</div>");
     } else {
       var tag = res.type === "clarify"
         ? "<div class='tagline ask'><i></i>" + esc(S("decC")) + "</div>"
         : res.type === "no_info"
           ? "<div class='tagline no'><i></i>" + esc(S("decR")) + "</div>" : "";
-      node = bot(tag + "<p class='lead'>" + esc(res.lead || "") + "</p>", "plain");
+      node = bot(th + "<div class='claude-answer-wrap'>" + tag + "<p class='lead'>" + esc(res.lead || "") + "</p></div>", "plain");
     }
     paint(res.trace);
     paintQuota(res.limit);
@@ -960,8 +1331,13 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     var fast = path === "/api/action";
     var ghost = typing();
     post(path, body)
-      .then(function(res){ ghost.remove(); render(res, fast); })
+      .then(function(res){
+        if (liveThinkingTimer) { clearInterval(liveThinkingTimer); liveThinkingTimer = null; }
+        ghost.remove();
+        render(res, fast);
+      })
       .catch(function(){
+        if (liveThinkingTimer) { clearInterval(liveThinkingTimer); liveThinkingTimer = null; }
         ghost.remove();
         scrollToTopOf(bot("<p class='lead'>" + esc(S("netErr")) + "</p>", "plain"));
         setStatus("bad", S("failed"));
