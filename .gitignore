@@ -20,3 +20,5 @@ run_live.bat
 .codeatlas/
 *.db
 data/*.db
+*.pdf
+
