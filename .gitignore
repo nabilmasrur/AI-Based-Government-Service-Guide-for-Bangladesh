@@ -21,4 +21,10 @@ run_live.bat
 *.db
 data/*.db
 *.pdf
+*.docx
+*.md
+*.txt
+!README.md
+!requirements.txt
+
 
