@@ -24,6 +24,8 @@ data/*.db
 *.docx
 *.md
 *.txt
+ARCHITECTURE.html
+MASTER_NOTE_ZERO_TO_HERO.html
 !README.md
 !requirements.txt
 
