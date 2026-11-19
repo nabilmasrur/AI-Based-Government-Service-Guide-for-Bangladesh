@@ -37,7 +37,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://brta.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "office",
       "অফিস",
@@ -94,7 +94,7 @@
     "online_possible": false,
     "applies_when": {},
     "source_url": "https://brta.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "timeline",
       "সময়",
@@ -188,7 +188,7 @@
       ]
     },
     "source_url": "https://brta.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "fee",
       "ফি",
@@ -216,7 +216,7 @@
     "online_possible": false,
     "applies_when": {},
     "source_url": "https://brta.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "timeline",
       "সময়",
@@ -265,7 +265,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://brta.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "renewal",
       "নবায়ন",
@@ -320,7 +320,7 @@
     "online_possible": false,
     "applies_when": {},
     "source_url": "https://brta.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "duplicate",
       "হারানো",
@@ -370,7 +370,7 @@
       ]
     },
     "source_url": "https://brta.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "category",
       "শ্রেণি",
@@ -406,7 +406,7 @@
     "online_possible": false,
     "applies_when": {},
     "source_url": "https://brta.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "পেশাদার",
       "professional",
@@ -441,7 +441,7 @@
     "online_possible": false,
     "applies_when": {},
     "source_url": "https://brta.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "exam",
       "পরীক্ষা",
@@ -474,7 +474,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://brta.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "exam",
       "পরীক্ষা",
@@ -511,7 +511,7 @@
     "online_possible": false,
     "applies_when": {},
     "source_url": "https://brta.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "IDP",
       "আন্তর্জাতিক",
@@ -542,7 +542,7 @@
     "online_possible": false,
     "applies_when": {},
     "source_url": "https://brta.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "IDP",
       "মেয়াদ",
@@ -587,7 +587,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "licence.learner.validity",
     "subtype": "learner",
@@ -613,7 +613,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "licence.learner.payment",
     "subtype": "learner",
@@ -641,7 +641,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "licence.smartcard_new.validity",
     "subtype": "smartcard_new",
@@ -667,7 +667,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "licence.smartcard_new.collection",
     "subtype": "smartcard_new",
@@ -694,7 +694,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "licence.category_change.eligibility",
     "subtype": "category_change",
@@ -723,7 +723,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "licence.renewal.timeline",
     "subtype": "renewal",
@@ -749,7 +749,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "licence.exam.documents",
     "subtype": "exam",
