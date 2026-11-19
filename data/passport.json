@@ -13,7 +13,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "documents",
       "কাগজ",
@@ -53,7 +53,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "office",
       "অফিস",
@@ -101,7 +101,7 @@
       ]
     },
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "fee",
       "ফি",
@@ -144,7 +144,7 @@
       ]
     },
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "timeline",
       "সময়",
@@ -180,7 +180,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "online",
       "অনলাইন",
@@ -249,7 +249,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "reissue",
       "renew",
@@ -286,7 +286,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "পার্থক্য",
       "difference",
@@ -334,7 +334,7 @@
       ]
     },
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "fee",
       "ফি",
@@ -371,7 +371,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "correction",
       "সংশোধন",
@@ -408,7 +408,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "correction",
       "সংশোধন",
@@ -443,7 +443,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "lost",
       "হারানো",
@@ -488,7 +488,7 @@
     "online_possible": false,
     "applies_when": {},
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "lost",
       "হারানো",
@@ -534,7 +534,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "MRP",
       "এমআরপি",
@@ -564,7 +564,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "MRP",
       "রূপান্তর",
@@ -596,7 +596,7 @@
       ]
     },
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "delivery",
       "বিতরণ",
@@ -629,7 +629,7 @@
     "online_possible": true,
     "applies_when": {},
     "source_url": "https://www.epassport.gov.bd/",
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "keywords": [
       "status",
       "অবস্থা",
@@ -647,7 +647,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "passport.new.verification",
     "subtype": "new",
@@ -675,7 +675,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "passport.new.eligibility",
     "subtype": "new",
@@ -702,7 +702,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "passport.new.minor",
     "subtype": "new",
@@ -731,7 +731,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "passport.new.payment",
     "subtype": "new",
@@ -762,7 +762,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "passport.new.appointment",
     "subtype": "new",
@@ -789,7 +789,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "passport.new.validity",
     "subtype": "new",
@@ -817,7 +817,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "passport.delivery.collection",
     "subtype": "delivery",
@@ -845,7 +845,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "passport.status.helpline",
     "subtype": "status",
@@ -873,7 +873,7 @@
   },
   {
     "applies_when": {},
-    "verified_on": null,
+    "verified_on": "2026-11-15",
     "online_possible": null,
     "id": "passport.reissue.validity",
     "subtype": "reissue",
@@ -896,5 +896,40 @@
     "domain": "passport",
     "office_bn": "আঞ্চলিক পাসপোর্ট অফিস",
     "office_en": "Regional Passport Office"
+  },
+  {
+    "id": "passport.new.note",
+    "domain": "passport",
+    "subtype": "new",
+    "field": "note",
+    "title_bn": "ছবি ও বায়োমেট্রিক",
+    "title_en": "Photograph and biometrics",
+    "content_bn": "ছবি, আঙুলের ছাপ ও আইরিস স্ক্যান পাসপোর্ট অফিসেই নেওয়া হয় — বাইরে থেকে ছবি তুলে আনার প্রয়োজন নেই। সাদা পোশাক এড়িয়ে চলা ভালো, কারণ পটভূমি সাদা। চশমা খুলে রাখতে বলা হতে পারে।",
+    "content_en": "The photograph, fingerprints and iris scan are taken at the passport office itself — you do not need to bring your own photos. Avoid white clothing since the background is white. You may be asked to remove glasses.",
+    "online_possible": false,
+    "applies_when": {},
+    "source_url": "https://www.epassport.gov.bd/",
+    "verified_on": "2026-11-15",
+    "keywords": [
+      "ছবি",
+      "photo",
+      "picture",
+      "biometric",
+      "বায়োমেট্রিক",
+      "আঙুলের ছাপ",
+      "fingerprint",
+      "notun",
+      "new",
+      "prothom",
+      "ki korbo",
+      "kivabe",
+      "kemne",
+      "prothom bar",
+      "notun korbo",
+      "passport korbo",
+      "banabo",
+      "korte chai",
+      "nite chai"
+    ]
   }
 ]
