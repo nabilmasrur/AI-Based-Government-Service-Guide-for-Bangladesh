@@ -406,6 +406,18 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
         session.remember(state, "assistant", lead_text)
         return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
 
+    # 0.4 Lost passport GD guide
+    if locations.is_gd_query(message):
+        state["domain"] = "passport"
+        state["subtype"] = "reissue"
+        state["field"] = "docs"
+        lead_text = locations.format_gd_lead(lang)
+        card = locations.build_gd_card(lang)
+        chips = ["পাসপোর্ট রি-ইস্যু ফি কত?", "রি-ইস্যু ফরম", "জরুরি পাসপোর্ট করতে কত দিন লাগে?", "অনলাইনে আবেদন"] if lang == "bn" else ["Reissue fee", "Reissue form", "Emergency reissue time", "Online application"]
+        note = "হারানো পাসপোর্ট সংক্রান্ত সাধারণ ডায়েরি (GD) গাইড তথ্য সরাসরি প্রদান।"
+        session.remember(state, "assistant", lead_text)
+        return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
+
     # 1. District driving test / exam query handling
     is_exam = locations.is_exam_query(message) or rule.get("subtype") == "exam" or state.get("subtype") == "exam"
     is_licence = rule.get("domain") == "licence" or "লাইসেন্স" in message or "ড্রাইভিং" in message or "বিআরটিএ" in message or "brta" in message.lower() or state.get("domain") == "licence"

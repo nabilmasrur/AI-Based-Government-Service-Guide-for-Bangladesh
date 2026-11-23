@@ -523,3 +523,70 @@ def build_medical_card(lang: str = "bn") -> dict:
         "warn": None,
         "warn_text": None,
     }
+
+
+def is_gd_query(message: str) -> bool:
+    """Checks if message is asking about lost passport police GD."""
+    norm = unicodedata.normalize("NFC", message.lower())
+    has_gd = any(k in norm for k in ["জিডি", "gd", "হারিয়ে", "হারিয়ে", "হারানো", "lost", "থানা"])
+    has_passport = any(k in norm for k in ["পাসপোর্ট", "passport", "ডকুমেন্ট", "দলিল"])
+    is_explicit_lost = "হারিয়ে" in norm or "হারিয়ে" in norm or "হারানো" in norm or "lost" in norm
+    return (has_gd and has_passport) or (is_explicit_lost and "জিডি" in norm)
+
+
+def format_gd_lead(lang: str = "bn") -> str:
+    """Formats exact lost passport GD guide matching user specifications."""
+    if lang == "bn":
+        lines = [
+            "📝 হারানো পাসপোর্টের সাধারণ ডায়েরি (GD) গাইড",
+            "👮 কোথায় করবেন: যে থানা এলাকায় পাসপোর্ট হারিয়েছে সেই থানায় অথবা 'অনলাইন জিডি' অ্যাপে।",
+            "🌐 অনলাইন লিংক: [gd.police.gov.bd](https://gd.police.gov.bd)",
+            "📑 জিডিতে যা উল্লেখ করতে হবে: হারানো পাসপোর্টের নম্বর, মেয়াদ, ইস্যুর তারিখ এবং স্থান।",
+            "⚠️ পরবর্তী ধাপ: জিডির মূল সার্টিফায়েড কপি ও ফটোকপি নিয়ে রি-ইস্যু আবেদন করতে হবে।"
+        ]
+        return "\n".join(lines)
+    else:
+        lines = [
+            "📝 Lost Passport General Diary (GD) Guide",
+            "👮 Where to lodge: At the local police station where it was lost or via the 'Online GD' portal/app.",
+            "🌐 Online Portal: [gd.police.gov.bd](https://gd.police.gov.bd)",
+            "📑 Information to mention in GD: Lost passport number, expiry date, issue date, and location of loss.",
+            "⚠️ Next step: Submit the re-issue application with the original certified copy and photocopy of the GD."
+        ]
+        return "\n".join(lines)
+
+
+def build_gd_card(lang: str = "bn") -> dict:
+    badge = "পাসপোর্ট · হারানো জিডি গাইড" if lang == "bn" else "Passport · Lost GD Guide"
+    title = "হারানো পাসপোর্টের সাধারণ ডায়েরি (GD) গাইড" if lang == "bn" else "Lost Passport General Diary (GD) Guide"
+    auth = "বাংলাদেশ পুলিশ ও ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তর" if lang == "bn" else "Bangladesh Police & Department of Immigration and Passports"
+    source_url = "https://gd.police.gov.bd/"
+
+    fields = [
+        {
+            "key": "gd_info",
+            "label": "অনলাইন জিডি ও রি-ইস্যু আবেদন" if lang == "bn" else "Online GD & Re-issue Process",
+            "content": (
+                "পাসপোর্ট হারিয়ে গেলে দেরি না করে দ্রুত সংশ্লিষ্ট থানায় সাধারণ ডায়েরি (জিডি) অথবা অনলাইনে আবেদন করুন। "
+                "জিডির কপি ছাড়া নতুন রি-ইস্যু আবেদন গ্রহণ করা হবে না।"
+                if lang == "bn" else
+                "Lodge a GD immediately at the local police station or online. A certified GD copy is mandatory for passport reissue."
+            )
+        }
+    ]
+
+    return {
+        "domain": "passport",
+        "subtype": "reissue",
+        "badge": badge,
+        "title": title,
+        "ref": "PASSPORT / GD / LOST",
+        "authority": auth,
+        "office": "অনলাইন জিডি পোর্টাল ও সংশ্লিষ্ট থানা" if lang == "bn" else "Online GD Portal & Police Station",
+        "highlight_label": "পোর্টাল" if lang == "bn" else "Portal",
+        "highlight": "gd.police.gov.bd",
+        "fields": fields,
+        "sources": [{"id": "police.gd", "url": source_url, "verified_on": "2026-11-15"}],
+        "warn": None,
+        "warn_text": None,
+    }
