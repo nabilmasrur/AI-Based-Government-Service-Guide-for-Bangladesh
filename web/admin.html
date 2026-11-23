@@ -1154,7 +1154,7 @@ button[disabled]{
             "<span style='background:rgba(0,135,90,0.15); color:#34d399; font-size:11px; padding:2px 8px; border-radius:10px; font-weight:600;'>অনুমোদিত</span>" +
           "</div>" +
           "<div>" +
-            "<button class='ghost' type='button' style='padding:5px 12px; font-size:12px;' onclick='toggleApprovedEdit("" + e.id + "")'>✏️ এডিট করুন</button>" +
+            "<button class='ghost' type='button' style='padding:5px 12px; font-size:12px;' onclick=\"toggleApprovedEdit(\'' + e.id + '\')\">✏️ এডিট করুন</button>" +
           "</div>" +
         "</div>" +
         "<div class='kb-card-body' id='appr-view-" + domSafeId + "' style='padding:16px;'>" +
@@ -1179,8 +1179,8 @@ button[disabled]{
             "<div><label>দপ্তর / অফিস (Office)</label><input type='text' id='appr-e-off-" + domSafeId + "' value='" + (e.office_bn || "") + "'></div>" +
           "</div>" +
           "<div class='row' style='margin-top:14px; gap:10px;'>" +
-            "<button type='button' style='padding:6px 16px; font-size:13px;' onclick='saveApprovedEdit("" + e.id + "")'>💾 পরিবর্তন সংরক্ষণ করুন</button>" +
-            "<button type='button' class='ghost' style='padding:6px 14px; font-size:13px;' onclick='toggleApprovedEdit("" + e.id + "")'>বাতিল</button>" +
+            "<button type='button' style='padding:6px 16px; font-size:13px;' onclick=\"saveApprovedEdit(\'' + e.id + '\')\">💾 পরিবর্তন সংরক্ষণ করুন</button>" +
+            "<button type='button' class='ghost' style='padding:6px 14px; font-size:13px;' onclick=\"toggleApprovedEdit(\'' + e.id + '\')\">বাতিল</button>" +
             "<span id='appr-e-stat-" + domSafeId + "' class='mono' style='font-size:12px;'></span>" +
           "</div>" +
         "</div>";
@@ -1297,7 +1297,7 @@ button[disabled]{
         "<div class='empty-box'>" +
           "<p style='margin:0 0 10px; font-size:15px; color:var(--ink);'>বর্তমানে কোনো অপেক্ষমাণ খসড়া নেই।</p>" +
           "<p style='margin:0 0 14px; font-size:13px; color:var(--ink-2);'>নতুন সরকারি নোটিশ, নীতিমালা বা তথ্যের সার্কুলার থেকে খসড়া তৈরি করতে পারেন।</p>" +
-          "<button type='button' class='btn' onclick='switchTab("tab-new")'>+ নতুন খসড়া তৈরি করুন</button>" +
+          "<button type='button' class='btn' onclick=\"switchTab(\'tab-new\')\">+ নতুন খসড়া তৈরি করুন</button>" +
         "</div>";
       return;
     }
