@@ -361,6 +361,18 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
         session.remember(state, "assistant", lead_text)
         return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
 
+    # 0.1 Passport delivery status tracking & SMS check
+    if locations.is_tracking_query(message):
+        state["domain"] = "passport"
+        state["subtype"] = "delivery"
+        state["field"] = "timeline"
+        lead_text = locations.format_tracking_lead("passport", lang)
+        card = locations.build_tracking_card("passport", lang)
+        chips = ["নতুন পাসপোর্টের ফি কত?", "কি কি কাগজ লাগবে?", "অনলাইনে আবেদন", "অফিস কোথায়?"] if lang == "bn" else ["How much is the fee?", "Required documents", "Online application", "Where is the office?"]
+        note = "পাসপোর্ট ডেলিভারি স্ট্যাটাস ও ট্র্যাকিং তথ্য সরাসরি প্রদান।"
+        session.remember(state, "assistant", lead_text)
+        return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
+
     # 1. District driving test / exam query handling
     district_id = locations.find_district(message)
     is_exam = locations.is_exam_query(message) or rule.get("subtype") == "exam" or state.get("subtype") == "exam"

@@ -314,3 +314,65 @@ def build_challan_card(domain: str = "passport", lang: str = "bn") -> dict:
         "warn": None,
         "warn_text": None,
     }
+
+
+TRACKING_KEYWORDS = re.compile(
+    r"পাসপোর্ট\s*(হয়েছে|হয়েছে|হল|হলো)\s*কিনা|স্ট্যাটাস|ট্র্যাকিং|কখন\s*(পাব|পাওয়া|পাবো)|কবে\s*(পাব|পাওয়া|পাবো)|ডেলিভারি\s*স্ট্যাটাস"
+    r"|status|tracking|check\s*status|delivery\s*status|passport\s*status",
+    re.IGNORECASE
+)
+
+
+def is_tracking_query(text: str) -> bool:
+    """Returns True if user asks about passport status tracking or SMS check."""
+    norm = unicodedata.normalize("NFC", text or "")
+    return bool(TRACKING_KEYWORDS.search(norm))
+
+
+def format_tracking_lead(domain: str = "passport", lang: str = "bn") -> str:
+    """Formats exact passport delivery SMS and online tracking guide matching user specifications."""
+    if lang == "bn":
+        lines = [
+            "📲 পাসপোর্ট ডেলিভারি স্ট্যাটাস যাচাই",
+            "📩 এসএমএস ফরম্যাট: Epass <Application ID> লিখে পাঠিয়ে দিন 16345 নম্বরে।",
+            "🌐 অনলাইন পোর্টাল: [epassport.gov.bd/authorization/application-status](https://www.epassport.gov.bd/)",
+            "📄 প্রয়োজনীয় তথ্য: ডেলিভারি স্লিপে থাকা ওআইডি (OID) বা অ্যাপ্লিকেশন আইডি।",
+            "⏰ স্ট্যাটাস আপডেট সময়: বায়োমেট্রিক দেওয়ার সাধারণত ৩ থেকে ৭ কর্মদিবসের মধ্যে এসএমএস আসে।"
+        ]
+        return "\n".join(lines)
+    else:
+        lines = [
+            "📲 Passport Delivery Status Tracking",
+            "📩 SMS Format: Send 'Epass <Application ID>' to 16345.",
+            "🌐 Online Portal: [epassport.gov.bd/authorization/application-status](https://www.epassport.gov.bd/)",
+            "📄 Required Info: Online Registration ID (OID) or Application ID from delivery slip.",
+            "⏰ Update Time: SMS is usually received within 3 to 7 working days after biometrics."
+        ]
+        return "\n".join(lines)
+
+
+def build_tracking_card(domain: str = "passport", lang: str = "bn") -> dict:
+    badge = "পাসপোর্ট · ডেলিভারি স্ট্যাটাস যাচাই" if lang == "bn" else "Passport · Delivery Status Tracking"
+    auth = "ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তর (DIP)" if lang == "bn" else "Department of Immigration and Passports"
+    source_url = "https://www.epassport.gov.bd/authorization/application-status"
+    field_label = "স্ট্যাটাস যাচাই ও নোটিফিকেশন নির্দেশিকা" if lang == "bn" else "Status Check Instructions"
+    field_content = (
+        "ই-পাসপোর্ট পোর্টালে অ্যাপ্লিকেশন আইডি ও জন্মতারিখ দিয়ে সরাসরি পাসপোর্ট কোন পর্যায়ে রয়েছে (আবেদন গৃহীত, পুলিশ ভেরিফিকেশন, পাসপোর্ট প্রিন্টিং বা ডেলিভারির জন্য প্রস্তুত) তা লাইভ দেখা যায়।"
+        if lang == "bn" else
+        "Check your e-passport progress live using your Application ID and Date of Birth on the official portal."
+    )
+    return {
+        "domain": "passport",
+        "subtype": "delivery",
+        "badge": badge,
+        "title": "পাসপোর্ট ডেলিভারি স্ট্যাটাস যাচাই",
+        "ref": "PASSPORT / DELIVERY / STATUS",
+        "authority": auth,
+        "office": "অনলাইন পোর্টাল ও এসএমএস সেবা",
+        "highlight_label": "ট্র্যাকিং মেথড" if lang == "bn" else "Tracking Method",
+        "highlight": "এসএমএস (16345) ও অনলাইন পোর্টাল" if lang == "bn" else "SMS (16345) & Online Portal",
+        "fields": [{"key": "timeline", "label": field_label, "content": field_content}],
+        "sources": [{"id": "passport.status.tracking", "url": source_url, "verified_on": "2026-11-15"}],
+        "warn": None,
+        "warn_text": None,
+    }
