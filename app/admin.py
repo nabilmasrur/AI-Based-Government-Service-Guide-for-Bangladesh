@@ -172,6 +172,99 @@ def unverified() -> list[dict]:
     return [e for e in kb.load() if not e.get("verified_on")]
 
 
+def list_entries(domain: str | None = None, query: str | None = None) -> list[dict]:
+    """Retrieve existing KB entries with optional domain filter and search query."""
+    rows = kb.load()
+    if domain and domain != "all":
+        rows = [e for e in rows if e.get("domain") == domain]
+    if query:
+        q = query.strip().lower()
+        rows = [
+            e for e in rows
+            if q in (e.get("title_bn") or "").lower()
+            or q in (e.get("title_en") or "").lower()
+            or q in (e.get("content_bn") or "").lower()
+            or q in (e.get("content_en") or "").lower()
+            or q in (e.get("id") or "").lower()
+            or any(q in str(k).lower() for k in e.get("keywords", []))
+        ]
+    return rows
+
+
+def update_entry(entry: dict, verified_by_human: bool = True) -> dict:
+    """Update or insert a single entry into the official knowledge base files."""
+    raw_id = entry.get("id")
+    if not raw_id:
+        return {"ok": False, "error": "এন্ট্রি আইডি (id) অনুপস্থিত।"}
+
+    domain = entry.get("domain") or raw_id.split(".")[0]
+    path = config.KB_FILES.get(domain)
+    if not path or not path.exists():
+        return {"ok": False, "error": f"অজানা বা অনুপস্থিত ডোমেন: {domain}"}
+
+    ok, why = _valid(entry)
+    if not ok:
+        return {"ok": False, "error": f"ভ্যালিডেশন ত্রুটি: {why}"}
+
+    clean_entry = {k: v for k, v in entry.items() if k in ALLOWED_TOP_KEYS}
+    if verified_by_human:
+        clean_entry["verified_on"] = date.today().isoformat()
+    elif "verified_on" in entry:
+        clean_entry["verified_on"] = entry["verified_on"]
+
+    current = json.loads(path.read_text(encoding="utf-8"))
+    index = {e["id"]: i for i, e in enumerate(current)}
+    if raw_id in index:
+        current[index[raw_id]] = clean_entry
+    else:
+        current.append(clean_entry)
+
+    path.write_text(json.dumps(current, ensure_ascii=False, indent=2), encoding="utf-8")
+    retriever.reset()
+    return {"ok": True, "entry": clean_entry, "stats": kb.stats()}
+
+
+def delete_entry(entry_id: str) -> dict:
+    """Delete an entry from the knowledge base."""
+    domain = entry_id.split(".")[0] if "." in entry_id else ""
+    path = config.KB_FILES.get(domain)
+    if not path or not path.exists():
+        return {"ok": False, "error": f"অজানা ডোমেন বা ফাইল নেই: {domain}"}
+    current = json.loads(path.read_text(encoding="utf-8"))
+    filtered = [e for e in current if e.get("id") != entry_id]
+    if len(filtered) == len(current):
+        return {"ok": False, "error": "এন্ট্রি খুঁজে পাওয়া যায়নি"}
+    path.write_text(json.dumps(filtered, ensure_ascii=False, indent=2), encoding="utf-8")
+    retriever.reset()
+    return {"ok": True, "id": entry_id, "stats": kb.stats()}
+
+
+def save_pending(entry: dict) -> dict:
+    """Save or update an unapproved draft in pending.json."""
+    ok, why = _valid(entry)
+    if not ok:
+        return {"ok": False, "error": f"ভ্যালিডেশন ত্রুটি: {why}"}
+    clean_entry = _clean(entry)
+    clean_entry["verified_on"] = None
+
+    rows = _read_pending()
+    index = {e.get("id"): i for i, e in enumerate(rows)}
+    if clean_entry["id"] in index:
+        rows[index[clean_entry["id"]]] = clean_entry
+    else:
+        rows.append(clean_entry)
+    _write_pending(rows)
+    return {"ok": True, "entry": clean_entry, "count": len(rows)}
+
+
+def delete_pending(entry_id: str) -> dict:
+    """Delete an unapproved draft from pending.json."""
+    rows = _read_pending()
+    new_rows = [e for e in rows if e.get("id") != entry_id]
+    _write_pending(new_rows)
+    return {"ok": True, "count": len(new_rows)}
+
+
 def approve(entries: list[dict], verified_on: str | None = None) -> dict:
     """Step 2 — a human has edited and approved these. Only now do they enter the KB."""
     stamp = verified_on or date.today().isoformat()

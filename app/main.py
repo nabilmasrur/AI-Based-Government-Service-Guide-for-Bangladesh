@@ -127,12 +127,18 @@ def action(payload: ActionIn, request: Request) -> dict:
         
         # Log query
         trace = out.get("trace", {})
+        action_payload = payload.action or {}
+        dom = trace.get("domain") or action_payload.get("domain")
+        sub = trace.get("subtype") or action_payload.get("subtype")
+        fld = trace.get("field") or action_payload.get("field")
+        action_msg = analytics._format_query_label(str(action_payload), dom, sub, fld)
+
         query_id = analytics.log_query(
             payload.session_id, 
-            str(payload.action), 
-            trace.get("domain"), 
-            trace.get("subtype"), 
-            trace.get("field"), 
+            action_msg, 
+            dom, 
+            sub, 
+            fld, 
             trace.get("decision", "unknown")
         )
         out["query_id"] = query_id
@@ -309,6 +315,79 @@ def admin_stats(x_admin_key: str = Header(default=""),
                 authorization: str = Header(default="")) -> dict:
     _require_admin(x_admin_key, authorization)
     return {"stats": analytics.get_stats()}
+
+
+@app.get("/api/admin/entries")
+def admin_entries(
+    domain: str | None = None,
+    q: str | None = None,
+    x_admin_key: str = Header(default=""),
+    authorization: str = Header(default=""),
+) -> dict:
+    _require_admin(x_admin_key, authorization)
+    entries = admin_mod.list_entries(domain=domain, query=q)
+    return {"ok": True, "entries": entries, "count": len(entries), "stats": kb.stats()}
+
+
+@app.post("/api/admin/entries/update")
+def admin_update_entry(
+    x_admin_key: str = Header(default=""),
+    authorization: str = Header(default=""),
+    body: dict = Body(default={}),
+) -> dict:
+    _require_admin(x_admin_key, authorization)
+    entry = body.get("entry")
+    if not entry or not isinstance(entry, dict):
+        raise HTTPException(status_code=400, detail="সঠিক এন্ট্রি অবজেক্ট প্রদান করুন।")
+    res = admin_mod.update_entry(entry)
+    if not res.get("ok"):
+        raise HTTPException(status_code=400, detail=res.get("error", "আপডেট ব্যর্থ হয়েছে।"))
+    return res
+
+
+@app.post("/api/admin/entries/delete")
+def admin_delete_entry(
+    x_admin_key: str = Header(default=""),
+    authorization: str = Header(default=""),
+    body: dict = Body(default={}),
+) -> dict:
+    _require_admin(x_admin_key, authorization)
+    entry_id = body.get("id")
+    if not entry_id:
+        raise HTTPException(status_code=400, detail="এন্ট্রি আইডি প্রয়োজন।")
+    res = admin_mod.delete_entry(entry_id)
+    if not res.get("ok"):
+        raise HTTPException(status_code=400, detail=res.get("error", "মুছে ফেলা ব্যর্থ হয়েছে।"))
+    return res
+
+
+@app.post("/api/admin/pending/save")
+def admin_save_pending(
+    x_admin_key: str = Header(default=""),
+    authorization: str = Header(default=""),
+    body: dict = Body(default={}),
+) -> dict:
+    _require_admin(x_admin_key, authorization)
+    entry = body.get("entry")
+    if not entry or not isinstance(entry, dict):
+        raise HTTPException(status_code=400, detail="সঠিক খসড়া অবজেক্ট প্রদান করুন।")
+    res = admin_mod.save_pending(entry)
+    if not res.get("ok"):
+        raise HTTPException(status_code=400, detail=res.get("error", "খসড়া সংরক্ষণ ব্যর্থ হয়েছে।"))
+    return res
+
+
+@app.post("/api/admin/pending/delete")
+def admin_delete_pending(
+    x_admin_key: str = Header(default=""),
+    authorization: str = Header(default=""),
+    body: dict = Body(default={}),
+) -> dict:
+    _require_admin(x_admin_key, authorization)
+    entry_id = body.get("id")
+    if not entry_id:
+        raise HTTPException(status_code=400, detail="খসড়া আইডি প্রয়োজন।")
+    return admin_mod.delete_pending(entry_id)
 
 
 @app.post("/api/admin/approve")

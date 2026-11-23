@@ -73,6 +73,33 @@ def log_feedback(session_id: str, query_id: int, is_positive: bool, reason: Opti
         ''', (session_id, query_id, is_positive, reason))
         db.commit()
 
+def _format_query_label(msg: str | None, domain: str | None, subtype: str | None, field: str | None) -> str:
+    """Format structured chip/action payloads into human-readable Bengali labels."""
+    if not msg:
+        return "নির্দিষ্ট প্রশ্ন পাওয়া যায়নি"
+    clean_msg = msg.strip()
+    if (clean_msg.startswith("{") and clean_msg.endswith("}")) or ("'domain'" in clean_msg or '"domain"' in clean_msg):
+        dom_name = "পাসপোর্ট" if domain == "passport" else ("ড্রাইভিং লাইসেন্স" if domain == "licence" else (domain or "সরকারি সেবা"))
+        sub_map = {
+            "new": "নতুন আবেদন",
+            "reissue": "নবায়ন / রি-ইস্যু",
+            "renewal": "নবায়ন আবেদন",
+            "correction": "তথ্য সংশোধন",
+            "lost": "হারানো পাসপোর্ট",
+            "duplicate": "হারানো / ডুপ্লিকেট লাইসেন্স",
+            "learner": "শিক্ষানবিশ লাইসেন্স",
+            "smartcard_new": "স্মার্ট কার্ড লাইসেন্স",
+            "exam": "ড্রাইভিং পরীক্ষা পদ্ধতি",
+            "category_change": "শ্রেণি পরিবর্তন",
+            "mrp_to_epp": "MRP থেকে ই-পাসপোর্ট",
+            "delivery": "বিতরণ ও ফি সংক্রান্ত",
+            "status": "আবেদনের অবস্থা",
+        }
+        sub_name = sub_map.get(subtype, subtype or "")
+        return f"{dom_name} — {sub_name} (বাটন নির্বাচন)" if sub_name else f"{dom_name} সেবা নির্বাচন"
+    return clean_msg
+
+
 def get_stats() -> dict:
     """Retrieve top solved problems, feedback breakdown, and negative feedback insights."""
     db = _get_db()
@@ -120,7 +147,7 @@ def get_stats() -> dict:
             {
                 "id": row["id"],
                 "query_id": row["query_id"],
-                "query": row["query_message"] or "নির্দিষ্ট প্রশ্ন পাওয়া যায়নি",
+                "query": _format_query_label(row["query_message"], row["domain"], row["subtype"], row["field"]),
                 "domain": row["domain"] or "general",
                 "subtype": row["subtype"] or "—",
                 "reason": row["reason"] or "সাধারণ অসন্তুষ্টি",
