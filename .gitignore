@@ -17,6 +17,8 @@ tunnel_url.txt
 serve_tunnel.ps1
 run_live.py
 run_live.bat
+run_public.bat
+LIVE_PUBLIC_LINKS.*
 .codeatlas/
 *.db
 data/*.db
