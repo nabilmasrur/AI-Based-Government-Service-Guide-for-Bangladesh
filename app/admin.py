@@ -7,10 +7,13 @@ happens to contain would quietly break it.
 from __future__ import annotations
 
 import json
+import logging
 import re
 from datetime import date
 
 from . import config, kb, llm, prompts, retriever
+
+log = logging.getLogger("admin")
 
 ALLOWED_TOP_KEYS = {
     "id", "domain", "subtype", "field", "title_bn", "title_en", "content_bn",
@@ -63,25 +66,102 @@ def _valid(entry: dict) -> tuple[bool, str]:
     return True, ""
 
 
+def _fallback_extract(text: str) -> list[dict]:
+    """Rule-based extractor that crafts valid draft entries when Gemini LLM is unavailable (e.g. 429 quota)."""
+    norm = text.lower()
+    dom = "passport"
+    if any(k in norm for k in ["লাইসেন্স", "ড্রাইভিং", "বিআরটিএ", "যানবাহন", "মোটরযান", "licence", "license", "driving", "brta"]):
+        dom = "licence"
+
+    sub = "new"
+    if any(k in norm for k in ["রিনিউ", "নবায়ন", "renew", "reissue", "রি-ইস্যু"]):
+        sub = "renewal" if dom == "licence" else "reissue"
+    elif any(k in norm for k in ["হারা", "হারিয়ে", "lost", "জিডি", "ডুপ্লিকেট"]):
+        sub = "duplicate" if dom == "licence" else "lost"
+    elif dom == "licence" and any(k in norm for k in ["লার্নার", "শিক্ষানবিশ", "learner"]):
+        sub = "learner"
+
+    field = "note"
+    if any(k in norm for k in ["ফি", "টাকা", "খরচ", "মূল্য", "fee", "cost", "দাম"]):
+        field = "fee"
+    elif any(k in norm for k in ["কাগজ", "ডকুমেন্ট", "document", "সার্টিফিকেট", "দলিল"]):
+        field = "documents"
+    elif any(k in norm for k in ["অফিস", "ঠিকানা", "office", "স্থান", "ঠিকানায়"]):
+        field = "office"
+    elif any(k in norm for k in ["অনলাইন", "website", "portal", "ওয়েবসাইট"]):
+        field = "online_steps"
+
+    # Extract source url if present in text
+    source_match = re.search(r"https?://\S+|www\.\S+", text)
+    source_url = source_match.group(0) if source_match else ("https://www.bgpress.gov.bd" if "bgpress" in norm else "https://bangladesh.gov.bd/")
+    if source_url.startswith("www."):
+        source_url = "https://" + source_url
+
+    title_bn = f"{kb.TAXONOMY[dom]['label_bn']} সংক্রান্ত সরকারি নির্দেশনা"
+    title_en = f"Official Guidelines on {kb.TAXONOMY[dom]['label_en']}"
+
+    clean_content = " ".join(text.split())
+    if len(clean_content) > 500:
+        clean_content = clean_content[:500] + "..."
+
+    entry = {
+        "id": f"{dom}.{sub}.{field}",
+        "domain": dom,
+        "subtype": sub,
+        "field": field,
+        "title_bn": title_bn,
+        "title_en": title_en,
+        "content_bn": clean_content,
+        "content_en": f"Official public notice extracted from document: {clean_content[:150]}...",
+        "source_url": source_url,
+        "verified_on": None,
+        "applies_when": {},
+        "keywords": [w for w in re.findall(r"[\u0980-\u09ff\w]{3,}", text) if len(w) >= 3][:8],
+    }
+    return [entry]
+
+
 def propose(text: str) -> dict:
     """Step 1 — the model drafts entries. They land in pending.json, not the KB."""
     text = (text or "").strip()
     if len(text) < 40:
-        return {"ok": False, "error": "text too short", "entries": []}
+        return {"ok": False, "error": "আরও টেক্সট দিন (অন্তত ৪০ অক্ষর)।", "entries": []}
 
-    result = llm.generate_json(prompts.propose_system(), f"DOCUMENT TEXT:\n\n{text[:20000]}")
     drafts, rejected = [], []
-    for raw in (result.get("entries") or [])[:20]:
-        entry = _clean(raw)
-        ok, why = _valid(entry)
-        (drafts if ok else rejected).append(entry if ok else {"entry": entry, "why": why})
+    fallback_used = False
+
+    try:
+        result = llm.generate_json(prompts.propose_system(), f"DOCUMENT TEXT:\n\n{text[:20000]}")
+        raw_entries = result.get("entries") or []
+        for raw in raw_entries[:20]:
+            entry = _clean(raw)
+            ok, why = _valid(entry)
+            (drafts if ok else rejected).append(entry if ok else {"entry": entry, "why": why})
+    except Exception as exc:
+        log.warning("LLM extraction failed or quota exceeded (%s) — falling back to rule-based parser", exc)
+        fallback_used = True
+
+    if not drafts:
+        # Fall back to heuristic rule-based extraction
+        for raw in _fallback_extract(text):
+            entry = _clean(raw)
+            ok, why = _valid(entry)
+            if ok:
+                drafts.append(entry)
 
     existing = {e["id"] for e in kb.load()}
     for entry in drafts:
         entry["_replaces_existing"] = entry["id"] in existing
 
     _write_pending(drafts)
-    return {"ok": True, "entries": drafts, "rejected": rejected, "count": len(drafts)}
+    return {
+        "ok": True,
+        "entries": drafts,
+        "rejected": rejected,
+        "count": len(drafts),
+        "fallback": fallback_used,
+        "note": "AI কোটা পূর্ণ থাকায় নিয়মভিত্তিক খসড়া তৈরি হয়েছে — এডিট করে অনুমোদন দিন।" if fallback_used else None,
+    }
 
 
 def pending() -> list[dict]:

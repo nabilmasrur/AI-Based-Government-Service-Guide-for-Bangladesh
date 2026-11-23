@@ -778,7 +778,20 @@ button[disabled]{
         throw new Error("অননুমোদিত (401 Unauthorized)");
       }
       if (r.status === 503) throw new Error("সার্ভারে ADMIN_PASSWORD কনফিগার করা নেই");
-      return r.json();
+
+      return r.text().then(function (txt) {
+        var data;
+        try {
+          data = JSON.parse(txt);
+        } catch (e) {
+          if (!r.ok) throw new Error("সার্ভার ত্রুটি (" + r.status + "): " + txt.substring(0, 100));
+          throw new Error("সার্ভার থেকে সঠিক ফরম্যাটে ডেটা আসেনি।");
+        }
+        if (!r.ok) {
+          throw new Error(data.error || data.detail || ("সার্ভার ত্রুটি " + r.status));
+        }
+        return data;
+      });
     });
   }
 
@@ -817,9 +830,13 @@ button[disabled]{
       .then(function (r) {
         if (!r.ok) throw new Error(r.error || "ব্যর্থ");
         drafts = r.entries || [];
-        say("ok", drafts.length + "টি খসড়া তৈরি হয়েছে" +
+        var msg = drafts.length + "টি খসড়া তৈরি হয়েছে" +
           (r.rejected && r.rejected.length ? " · " + r.rejected.length + "টি বাতিল (schema মেলেনি)" : "") +
-          " — পড়ে, ঠিক করে, তারপর অনুমোদন দিন।");
+          " — পড়ে, ঠিক করে, তারপর অনুমোদন দিন।";
+        if (r.fallback && r.note) {
+          msg = "ℹ️ " + r.note + " (" + drafts.length + "টি খসড়া প্রস্তুত)";
+        }
+        say("ok", msg);
         render();
       })
       .catch(function (e) { say("err", e.message); })

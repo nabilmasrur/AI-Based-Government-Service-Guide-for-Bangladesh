@@ -282,7 +282,11 @@ def admin_propose(x_admin_key: str = Header(default=""),
                   authorization: str = Header(default=""),
                   body: dict = Body(default={})) -> dict:
     _require_admin(x_admin_key, authorization)
-    return admin_mod.propose(body.get("text", ""))
+    try:
+        return admin_mod.propose(body.get("text", ""))
+    except Exception as exc:
+        log.exception("propose endpoint error: %s", exc)
+        return {"ok": False, "error": f"খসড়া তৈরিতে সমস্যা হয়েছে: {str(exc)}", "entries": []}
 
 
 @app.get("/api/admin/pending")
