@@ -452,6 +452,47 @@ button[disabled]{
   letter-spacing: 0.05em;
   font-weight: 600;
 }
+
+/* Table Styles */
+.table-wrap{
+  overflow-x: auto;
+  border: 1px solid var(--hair);
+  border-radius: 10px;
+  background: var(--panel-2);
+}
+.admin-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.admin-table th{
+  background: rgba(255, 255, 255, 0.03);
+  text-align: left;
+  padding: 10px 14px;
+  color: var(--ink-2);
+  border-bottom: 1px solid var(--hair);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.admin-table td{
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--hair);
+  color: var(--ink);
+  vertical-align: middle;
+}
+.admin-table tr:last-child td{
+  border-bottom: none;
+}
+.badge-reason{
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  background: rgba(248, 113, 113, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  font-weight: 500;
+}
 </style>
 </head>
 <body>
@@ -574,7 +615,7 @@ button[disabled]{
     <section id="tab-analytics" class="tab-content">
       <div class="card">
         <div class="row" style="justify-content:space-between; margin-bottom:16px;">
-          <h3 style="margin:0; font-size:16px;">সিস্টেম অ্যানালিটিক্স</h3>
+          <h3 style="margin:0; font-size:16px;">সিস্টেম অ্যানালিটিক্স ও ফিডব্যাক মেট্রিক্স</h3>
           <button id="refreshStatsBtn" class="ghost" type="button" style="padding:6px 12px; font-size:12px;">রিফ্রেশ</button>
         </div>
         <div class="stat-grid" id="statsGrid">
@@ -587,12 +628,42 @@ button[disabled]{
             <div class="stat-label">পজিটিভ ফিডব্যাক</div>
           </div>
           <div class="stat-card">
+            <div class="stat-num" id="statNegFeedback" style="color:#f87171;">—</div>
+            <div class="stat-label">নেগেটিভ ফিডব্যাক</div>
+          </div>
+          <div class="stat-card">
             <div class="stat-num" id="statKbTotal">—</div>
             <div class="stat-label">KB এন্ট্রি</div>
           </div>
           <div class="stat-card">
             <div class="stat-num" id="statKbVerified">—</div>
             <div class="stat-label">যাচাইকৃত এন্ট্রি</div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;">
+          <div class="row" style="justify-content:space-between; margin-bottom:12px;">
+            <h4 style="margin:0; font-size:15px; font-weight:600; color:var(--ink);">নেগেটিভ ফিডব্যাক বিশ্লেষণ ও অ্যাকশন লগ</h4>
+            <span class="mono" id="negCountText">০টি রেকর্ড</span>
+          </div>
+          <p class="dek" style="margin-bottom:14px; font-size:13px; color:var(--ink-2);">
+            ব্যবহারকারীরা যেসব উত্তরে নেগেটিভ ফিডব্যাক দিয়েছেন এবং তার কারণসমূহ নিচে প্রদর্শিত হচ্ছে। এখান থেকে সমস্যা পর্যালোচনা করে সরাসরি নলেজবেসে তথ্য সংশোধন করা যাবে।
+          </p>
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th style="width:28%;">নাগরিকের প্রশ্ন</th>
+                  <th style="width:16%;">সেবা বিষয়</th>
+                  <th style="width:20%;">অসন্তুষ্টির কারণ</th>
+                  <th style="width:18%;">তারিখ ও সময়</th>
+                  <th style="width:18%; text-align:center;">সিদ্ধান্ত ও অ্যাকশন</th>
+                </tr>
+              </thead>
+              <tbody id="negTableBody">
+                <tr><td colspan="5" style="text-align:center; color:var(--ink-3); padding:24px;">কোনো নেগেটিভ ফিডব্যাক রেকর্ড নেই।</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -896,8 +967,30 @@ button[disabled]{
       var pos = s.positive_feedback || 0;
       var neg = s.negative_feedback || 0;
       var totalFb = pos + neg;
-      var pct = totalFb > 0 ? Math.round((pos / totalFb) * 100) + "%" : "—";
-      $("statFeedback").textContent = pct;
+      var posPct = totalFb > 0 ? Math.round((pos / totalFb) * 100) + "%" : "—";
+      var negPct = totalFb > 0 ? neg + " (" + Math.round((neg / totalFb) * 100) + "%)" : (neg > 0 ? neg : "০");
+      $("statFeedback").textContent = posPct;
+      $("statNegFeedback").textContent = negPct;
+
+      var negs = s.negative_details || [];
+      $("negCountText").textContent = negs.length + "টি রেকর্ড";
+      var tbody = $("negTableBody");
+      if (!negs.length) {
+        tbody.innerHTML = "<tr><td colspan='5' style='text-align:center; color:var(--ink-3); padding:24px;'>কোনো নেগেটিভ ফিডব্যাক রেকর্ড নেই।</td></tr>";
+      } else {
+        tbody.innerHTML = "";
+        negs.forEach(function (n) {
+          var tr = document.createElement("tr");
+          var qEsc = (n.query || "").replace(/'/g, "\\'").replace(/"/g, '&quot;');
+          tr.innerHTML =
+            "<td><b>" + (n.query || "—") + "</b></td>" +
+            "<td><span class='mono'>" + n.domain + (n.subtype && n.subtype !== "—" ? " / " + n.subtype : "") + "</span></td>" +
+            "<td><span class='badge-reason'>" + (n.reason || "অসন্তুষ্টি") + "</span></td>" +
+            "<td><span class='mono' style='font-size:11.5px;'>" + (n.created_at || "—") + "</span></td>" +
+            "<td style='text-align:center;'><button class='ghost' type='button' style='padding:4px 10px; font-size:11.5px;' onclick='fixFeedback(\"" + qEsc + "\")'>তথ্য সংশোধন</button></td>";
+          tbody.appendChild(tr);
+        });
+      }
     }).catch(function () {});
 
     call("/api/admin/pending").then(function (r) {
@@ -907,6 +1000,18 @@ button[disabled]{
       }
     }).catch(function () {});
   }
+
+  window.fixFeedback = function (text) {
+    document.querySelectorAll(".tab").forEach(function (b) { b.classList.remove("active"); });
+    document.querySelectorAll(".tab-content").forEach(function (c) { c.classList.remove("active"); });
+    var newTabBtn = document.querySelector("[data-target='tab-new']");
+    if (newTabBtn) newTabBtn.classList.add("active");
+    $("tab-new").classList.add("active");
+    $("src").value = "সম্পর্কিত প্রশ্ন/বিষয়: " + text + "\n\n(এখানে সঠিক সরকারি সার্কুলার বা সংশোধিত তথ্য পেস্ট করুন)";
+    $("src").focus();
+    say("ok", "সংশ্লিষ্ট প্রশ্নটি ইনপুটে লোড করা হয়েছে — সঠিক তথ্য দিয়ে খসড়া তৈরি করুন।");
+    window.scrollTo({ top: $("src").offsetTop - 100, behavior: "smooth" });
+  };
 
   $("refreshStatsBtn").addEventListener("click", loadStats);
 

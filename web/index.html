@@ -250,7 +250,7 @@ body[data-lang="bn"] .steps{list-style-type:bengali}
 }
 
 /* feedback */
-.fb-box { display: flex; gap: 8px; margin-top: 14px; align-items: center; }
+.fb-box { display: flex; gap: 8px; margin-top: 14px; align-items: center; flex-wrap: wrap; }
 .fb-btn { 
   width: 32px; height: 32px; border: 1px solid var(--hair); border-radius: 50%;
   background: var(--surface); color: var(--ink-2); display: grid; place-items: center;
@@ -260,6 +260,15 @@ body[data-lang="bn"] .steps{list-style-type:bengali}
 .fb-btn.act { background: var(--accent-soft); color: var(--accent-ink); border-color: var(--accent); }
 .fb-msg { font-size: 13px; color: var(--accent); opacity: 0; transition: opacity 0.3s; }
 .fb-msg.show { opacity: 1; }
+.fb-reasons { width: 100%; margin-top: 8px; padding: 10px 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--hair); border-radius: 8px; animation: fbFadeIn 0.2s ease; }
+.fb-reason-title { font-size: 12px; color: var(--ink-2); margin-bottom: 6px; font-weight: 500; }
+.fb-chip-row { display: flex; gap: 6px; flex-wrap: wrap; }
+.fb-chip { 
+  background: var(--surface); border: 1px solid var(--hair); border-radius: 14px; 
+  padding: 4px 10px; font-size: 12px; color: var(--ink); cursor: pointer; transition: all 0.15s;
+}
+.fb-chip:hover { background: var(--alert-soft); border-color: var(--alert); color: var(--alert); }
+@keyframes fbFadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
 /* chips */
 .chips{display:flex;flex-wrap:wrap;gap:9px;margin:-12px 0 30px}
 .chip{
@@ -1014,10 +1023,36 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     box.querySelectorAll('.fb-btn').forEach(function(b) { b.classList.remove('act'); });
     btn.classList.add('act');
     var msg = box.querySelector('.fb-msg');
-    msg.classList.add('show');
-    msg.textContent = lang === 'bn' ? "ধন্যবাদ!" : "Thank you!";
-    setTimeout(function() { msg.classList.remove('show'); }, 2000);
-    post("/api/feedback", { query_id: query_id, is_positive: is_positive });
+
+    if (is_positive) {
+      msg.classList.add('show');
+      msg.textContent = lang === 'bn' ? "ধন্যবাদ!" : "Thank you!";
+      setTimeout(function() { msg.classList.remove('show'); }, 2000);
+      post("/api/feedback", { query_id: query_id, is_positive: true });
+    } else {
+      var oldReasons = box.querySelector('.fb-reasons');
+      if (oldReasons) oldReasons.remove();
+
+      var reasonWrap = document.createElement('div');
+      reasonWrap.className = 'fb-reasons';
+      reasonWrap.innerHTML = 
+        "<div class='fb-reason-title'>" + (lang === 'bn' ? "অসন্তুষ্টির কারণ নির্বাচন করুন:" : "Why was this not helpful?") + "</div>" +
+        "<div class='fb-chip-row'>" +
+          "<button type='button' class='fb-chip' onclick='pickReason(this, " + query_id + ", \"ভুল তথ্য\")'>❌ " + (lang === 'bn' ? "ভুল তথ্য" : "Incorrect info") + "</button>" +
+          "<button type='button' class='fb-chip' onclick='pickReason(this, " + query_id + ", \"অসম্পূর্ণ উত্তর\")'>⚠️ " + (lang === 'bn' ? "অসম্পূর্ণ উত্তর" : "Incomplete") + "</button>" +
+          "<button type='button' class='fb-chip' onclick='pickReason(this, " + query_id + ", \"কাঙ্ক্ষিত সেবা মেলেনি\")'>🔍 " + (lang === 'bn' ? "কাঙ্ক্ষিত সেবা মেলেনি" : "Not relevant") + "</button>" +
+          "<button type='button' class='fb-chip' onclick='pickReason(this, " + query_id + ", \"অন্যান্য কারণ\")'>💬 " + (lang === 'bn' ? "অন্যান্য" : "Other") + "</button>" +
+        "</div>";
+      box.appendChild(reasonWrap);
+      post("/api/feedback", { query_id: query_id, is_positive: false, reason: "অসন্তুষ্ট (কারণ অনির্ধারিত)" });
+    }
+  };
+
+  window.pickReason = function(chip, query_id, reason) {
+    var wrap = chip.closest('.fb-reasons');
+    wrap.innerHTML = "<span style='color:#f87171; font-size:12px; font-weight:500;'>✓ " + (lang === 'bn' ? "ফিডব্যাক লিপিবদ্ধ করা হয়েছে: " : "Feedback recorded: ") + reason + "</span>";
+    setTimeout(function() { if (wrap) wrap.remove(); }, 3500);
+    post("/api/feedback", { query_id: query_id, is_positive: false, reason: reason });
   };
 
   /* ── messages ── */

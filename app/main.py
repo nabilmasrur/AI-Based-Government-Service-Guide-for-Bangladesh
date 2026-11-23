@@ -64,6 +64,7 @@ class FeedbackIn(BaseModel):
     session_id: str | None = None
     query_id: int
     is_positive: bool
+    reason: str | None = None
 
 
 class AdminLoginIn(BaseModel):
@@ -193,7 +194,7 @@ def reset(payload: ResetIn) -> dict:
 
 @app.post("/api/feedback")
 def feedback(payload: FeedbackIn) -> dict:
-    analytics.log_feedback(payload.session_id, payload.query_id, payload.is_positive)
+    analytics.log_feedback(payload.session_id, payload.query_id, payload.is_positive, payload.reason)
     return {"ok": True}
 
 
