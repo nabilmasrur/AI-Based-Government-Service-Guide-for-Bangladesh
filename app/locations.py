@@ -141,6 +141,100 @@ def build_office_card(district_id: str, domain: str = "passport", lang: str = "b
     }
 
 
+EXAM_KEYWORDS = re.compile(
+    r"পরীক্ষা|টেস্ট|মাঠ|ভেন্যু|ফিল্ড\s*টেস্ট|ড্রাইভিং\s*টেস্ট|ব্যবহারিক|লিখিত|মৌখিক|রোড\s*টেস্ট"
+    r"|porikkha|porikha|test|exam|venue|ground|field\s*test",
+    re.IGNORECASE
+)
+
+
+def is_exam_query(text: str) -> bool:
+    """Returns True if the text asks about driving test ground/venue/schedule."""
+    norm = unicodedata.normalize("NFC", text or "")
+    return bool(EXAM_KEYWORDS.search(norm))
+
+
+def format_exam_lead(district_id: str, lang: str = "bn") -> str:
+    """Formats exact driving exam venue details matching user specifications."""
+    info = get_district_info(district_id)
+    if not info:
+        return ""
+    dt = info.get("driving_test", {})
+    if not dt:
+        return ""
+
+    if lang == "bn":
+        name = dt.get("venue_name_bn", "")
+        loc = dt.get("location_bn", "")
+        sched = dt.get("schedule_bn", "")
+        subj = dt.get("subjects_bn", "")
+        reqs = dt.get("requirements_bn", "")
+        lines = [
+            f"🚗 {name}",
+            f"📍 পরীক্ষার স্থান: {loc}",
+            f"⏰ পরীক্ষার শিডিউল: {sched}",
+            f"📋 পরীক্ষার বিষয়সমূহ: {subj}",
+            f"⚠️ সাথে যা আনতে হবে: {reqs}"
+        ]
+        return "\n".join(lines)
+    else:
+        name = dt.get("venue_name_en", "")
+        loc = dt.get("location_en", "")
+        sched = dt.get("schedule_en", "")
+        subj = dt.get("subjects_en", "")
+        reqs = dt.get("requirements_en", "")
+        lines = [
+            f"🚗 {name}",
+            f"📍 Exam Venue: {loc}",
+            f"⏰ Schedule: {sched}",
+            f"📋 Subjects: {subj}",
+            f"⚠️ Requirements: {reqs}"
+        ]
+        return "\n".join(lines)
+
+
+def build_exam_card(district_id: str, lang: str = "bn") -> dict:
+    info = get_district_info(district_id)
+    dt = (info or {}).get("driving_test", {})
+    dist_name = (info or {}).get(f"name_{lang}", district_id.capitalize())
+
+    badge = f"ড্রাইভিং লাইসেন্স · পরীক্ষা ভেন্যু ({dist_name})" if lang == "bn" else f"Driving Licence · Exam Venue ({dist_name})"
+    auth = "বাংলাদেশ সড়ক পরিবহন কর্তৃপক্ষ (BRTA)" if lang == "bn" else "Bangladesh Road Transport Authority (BRTA)"
+    source_url = "http://www.brta.gov.bd/"
+
+    field_label = "পরীক্ষার নিয়মাবলী ও নির্দেশিকা" if lang == "bn" else "Rules & Guidelines"
+    field_content = (
+        f"{dist_name} জেলার লার্নার পারমিটধারী প্রার্থীদের নির্ধারিত তারিখে উপস্থিত হয়ে লিখিত (MCQ), "
+        f"মৌখিক এবং ব্যবহারিক পরীক্ষায় উত্তীর্ণ হতে হবে। ব্যবহারিক পরীক্ষার জন্য গাড়ি/মোটরসাইকেল নিজে নিয়ে আসা যায় অথবা মাঠে নির্ধারিত ফি দিয়ে পাওয়া যায়।"
+        if lang == "bn" else
+        f"Learner permit holders of {dist_name} must attend written, oral and practical exams on the scheduled date."
+    )
+
+    fields = [
+        {
+            "key": "exam",
+            "label": field_label,
+            "content": field_content
+        }
+    ]
+
+    return {
+        "domain": "licence",
+        "subtype": "exam",
+        "badge": badge,
+        "title": dt.get(f"venue_name_{lang}", ""),
+        "ref": f"LICENCE / EXAM / {district_id.upper()}",
+        "authority": auth,
+        "office": dt.get(f"venue_name_{lang}", ""),
+        "highlight_label": "পরীক্ষার জেলা" if lang == "bn" else "Exam District",
+        "highlight": f"{dist_name} জেলা" if lang == "bn" else f"{dist_name} District",
+        "fields": fields,
+        "sources": [{"id": f"licence.exam.{district_id}", "url": dt.get("maps_url", source_url), "verified_on": "2026-11-15"}],
+        "warn": None,
+        "warn_text": None,
+    }
+
+
 def get_popular_district_chips(domain: str = "passport", lang: str = "bn") -> list[str]:
     """Returns top division/district chips for quick office selection."""
     if lang == "bn":

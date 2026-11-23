@@ -348,8 +348,30 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
 
     rule = phrases.route(message)
 
-    # 1. District office query handling
+    # 1. District driving test / exam query handling
     district_id = locations.find_district(message)
+    is_exam = locations.is_exam_query(message) or rule.get("subtype") == "exam" or state.get("subtype") == "exam"
+    is_licence = rule.get("domain") == "licence" or "লাইসেন্স" in message or "ড্রাইভিং" in message or "বিআরটিএ" in message or "brta" in message.lower() or state.get("domain") == "licence"
+
+    if is_exam and is_licence:
+        if district_id:
+            state["domain"] = "licence"
+            state["subtype"] = "exam"
+            lead_text = locations.format_exam_lead(district_id, lang)
+            card = locations.build_exam_card(district_id, lang)
+            chips = ["পরীক্ষার সিলেবাস ও প্রশ্ন", "লার্নার কার্ডের নিয়ম", "ফি কত?", "অন্যান্য জেলা"] if lang == "bn" else ["Exam syllabus", "Learner card rules", "Fee amount", "Other districts"]
+            note = f"{district_id} জেলার বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু তথ্য সরাসরি প্রদান।"
+            session.remember(state, "assistant", lead_text)
+            return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
+        elif not district_id and len(message.split()) <= 6:
+            state["domain"] = "licence"
+            state["subtype"] = "exam"
+            lead_text = "আপনি কোন জেলার বিআরটিএ ড্রাইভিং টেস্টের মাঠ বা ভেন্যুর তথ্য জানতে চাচ্ছেন? নিচের তালিকা থেকে নির্বাচন করুন অথবা জেলার নাম লিখুন:" if lang == "bn" else "Which district driving test venue are you looking for? Select below or type a district name:"
+            chips = locations.get_popular_district_chips("licence", lang)
+            note = "ড্রাইভিং টেস্ট ভেন্যুর জন্য জেলা অনুসন্ধান।"
+            return _reply("clarify", lead_text, chips, _trace(state, [], "clarify", note), state, started=started)
+
+    # 2. District office query handling
     is_office = rule.get("field") == "office" or locations.is_office_query(message)
 
     if district_id and (is_office or state.get("field") == "office" or rule.get("domain") or len(message.split()) <= 5):
@@ -364,7 +386,7 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
         session.remember(state, "assistant", lead_text)
         return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
 
-    # 2. General office query with no district mentioned
+    # 3. General office query with no district mentioned
     if is_office and not district_id and rule.get("field") == "office" and not rule.get("subtype"):
         dom = rule.get("domain") or phrases.domain_of(message) or state.get("domain") or "passport"
         state["domain"] = dom

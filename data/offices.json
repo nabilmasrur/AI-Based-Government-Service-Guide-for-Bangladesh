@@ -31,6 +31,19 @@
       "phone_bn": "০৫২১-৬২৩৪৫",
       "phone_en": "০৫২১-৬২৩৪৫",
       "maps_url": "https://maps.google.com/?q=BRTA+Rangpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, রংপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Rangpur",
+      "location_bn": "কালেক্টরেট মাঠ / পুলিশ লাইন্স প্যারেড গ্রাউন্ড, রংপুর।",
+      "location_en": "Rangpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি মঙ্গলবার ও বৃহস্পতিবার, সকাল ৮:৩০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=Collectorate+Eidgah+Rangpur"
     }
   },
   "dinajpur": {
@@ -63,6 +76,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৫৩১-৬৩২১০",
       "phone_en": "০৫৩১-৬৩২১০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Dinajpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ দিনাজপুর ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Dinajpur",
+      "location_bn": "উপশহর বিআরটিএ টেস্ট মাঠ, দিনাজপুর।",
+      "location_en": "Dinajpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি মঙ্গলবার, সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Dinajpur"
     }
   },
@@ -97,6 +123,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৫১-৬৬৭৮৯",
       "phone_en": "০৫১-৬৬৭৮৯",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bogra"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ বগুড়া ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Bogura",
+      "location_bn": "ফুলবাড়ি বিআরটিএ সার্কেল সংলগ্ন টেস্ট মাঠ, বগুড়া।",
+      "location_en": "Bogura BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি সোমবার ও বুধবার, সকাল ৮:৩০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Bogra"
     }
   },
@@ -135,6 +174,19 @@
       "phone_bn": "০২-৫৫০৪০৫৫৫",
       "phone_en": "০২-৫৫০৪০৫৫৫",
       "maps_url": "https://maps.google.com/?q=BRTA+Mirpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ঢাকা মেট্রো ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Dhaka",
+      "location_bn": "জোয়ার সাহারা বাস ডিপো (মিরপুর) / ইকুরিয়া বিআরটিএ মাঠ (কেরানীগঞ্জ) / দিয়াবাড়ি (উত্তরা)।",
+      "location_en": "Dhaka BRTA Circle Driving Test Ground.",
+      "schedule_bn": "রবিবার - বৃহস্পতিবার, সকাল ৮:০০ টা (লার্নার স্লট অনুযায়ী)।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Mirpur+Test+Ground"
     }
   },
   "chattogram": {
@@ -171,6 +223,19 @@
       "phone_bn": "০৩১-৬৮১৮২২",
       "phone_en": "০৩১-৬৮১৮২২",
       "maps_url": "https://maps.google.com/?q=BRTA+Chattogram"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ চট্টগ্রাম ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Chattogram",
+      "location_bn": "নতুনপাড়া বিআরটিএ টেস্ট ট্র্যাক, হাটহাজারী রোড, চট্টগ্রাম।",
+      "location_en": "Chattogram BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি সোমবার ও বুধবার, সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chattogram+Test+Track"
     }
   },
   "rajshahi": {
@@ -203,6 +268,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৭২১-৭৬০৩৪০",
       "phone_en": "০৭২১-৭৬০৩৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rajshahi"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ রাজশাহী ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Rajshahi",
+      "location_bn": "শালবাগান বিআরটিএ টেস্ট ট্র্যাক, সপুরা, রাজশাহী।",
+      "location_en": "Rajshahi BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি রবিবার ও বুধবার, সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Rajshahi"
     }
   },
@@ -239,6 +317,19 @@
       "phone_bn": "০৮২১-৭১৪৫১২",
       "phone_en": "০৮২১-৭১৪৫১২",
       "maps_url": "https://maps.google.com/?q=BRTA+Sylhet"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ সিলেট ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Sylhet",
+      "location_bn": "মেন্দীবাগ বিআরটিএ সংলগ্ন টেস্ট মাঠ, সিলেট।",
+      "location_en": "Sylhet BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি মঙ্গলবার ও বৃহস্পতিবার, সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sylhet"
     }
   },
   "khulna": {
@@ -272,6 +363,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৪১-৭৬১০২১",
       "phone_en": "০৪১-৭৬১০২১",
+      "maps_url": "https://maps.google.com/?q=BRTA+Khulna"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ খুলনা ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Khulna",
+      "location_bn": "মুজগুন্নী বিআরটিএ টেস্ট ট্র্যাক, বয়রা, খুলনা।",
+      "location_en": "Khulna BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি সোমবার ও বৃহস্পতিবার, সকাল ৮:৩০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Khulna"
     }
   },
@@ -308,6 +412,19 @@
       "phone_bn": "০৪৩১-৭১২৯০",
       "phone_en": "০৪৩১-৭১২৯০",
       "maps_url": "https://maps.google.com/?q=BRTA+Barishal"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ বরিশাল ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Barishal",
+      "location_bn": "রূপাতলী সংলগ্ন বিআরটিএ টেস্ট মাঠ, বরিশাল।",
+      "location_en": "Barishal BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি বুধবার, সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Barishal"
     }
   },
   "mymensingh": {
@@ -340,6 +457,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৯১-৫৩৬৮০",
       "phone_en": "০৯১-৫৩৬৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Mymensingh"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ময়মনসিংহ",
+      "venue_name_en": "BRTA Driving Test Venue, Mymensingh",
+      "location_bn": "ময়মনসিংহ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ময়মনসিংহ সদর।",
+      "location_en": "Mymensingh BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Mymensingh"
     }
   },
@@ -375,6 +505,19 @@
       "phone_bn": "০৮১-৬৮৩২০",
       "phone_en": "০৮১-৬৮৩২০",
       "maps_url": "https://maps.google.com/?q=BRTA+Cumilla"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, কুমিল্লা",
+      "venue_name_en": "BRTA Driving Test Venue, Cumilla",
+      "location_bn": "কুমিল্লা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, কুমিল্লা সদর।",
+      "location_en": "Cumilla BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Cumilla"
     }
   },
   "gazipur": {
@@ -408,6 +551,19 @@
       "phone_bn": "০২-৯২৬৩১৫০",
       "phone_en": "০২-৯২৬৩১৫০",
       "maps_url": "https://maps.google.com/?q=BRTA+Gazipur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, গাজীপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Gazipur",
+      "location_bn": "গাজীপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, গাজীপুর সদর।",
+      "location_en": "Gazipur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Gazipur"
     }
   },
   "narayanganj": {
@@ -440,6 +596,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০২-৭৬৯৩৫০০",
       "phone_en": "০২-৭৬৯৩৫০০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Narayanganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নারায়ণগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Narayanganj",
+      "location_bn": "নারায়ণগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নারায়ণগঞ্জ সদর।",
+      "location_en": "Narayanganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Narayanganj"
     }
   },
@@ -475,6 +644,19 @@
       "phone_bn": "০৩৪১-৬৩৪৮০",
       "phone_en": "০৩৪১-৬৩৪৮০",
       "maps_url": "https://maps.google.com/?q=BRTA+Coxs+Bazar"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, কক্সবাজার",
+      "venue_name_en": "BRTA Driving Test Venue, Coxs Bazar",
+      "location_bn": "কক্সবাজার সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, কক্সবাজার সদর।",
+      "location_en": "Coxs Bazar BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Coxs+Bazar"
     }
   },
   "tangail": {
@@ -507,6 +689,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৯২১-৬৩৯১০",
       "phone_en": "০৯২১-৬৩৯১০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Tangail"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, টাঙ্গাইল",
+      "venue_name_en": "BRTA Driving Test Venue, Tangail",
+      "location_bn": "টাঙ্গাইল সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, টাঙ্গাইল সদর।",
+      "location_en": "Tangail BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Tangail"
     }
   },
@@ -542,6 +737,19 @@
       "phone_bn": "০৪২১-৬৭৪২০",
       "phone_en": "০৪২১-৬৭৪২০",
       "maps_url": "https://maps.google.com/?q=BRTA+Jashore"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, যশোর",
+      "venue_name_en": "BRTA Driving Test Venue, Jashore",
+      "location_bn": "যশোর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, যশোর সদর।",
+      "location_en": "Jashore BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jashore"
     }
   },
   "kushtia": {
@@ -574,6 +782,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৭১-৬২৫৩০",
       "phone_en": "০৭১-৬২৫৩০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Kushtia"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, কুষ্টিয়া",
+      "venue_name_en": "BRTA Driving Test Venue, Kushtia",
+      "location_bn": "কুষ্টিয়া সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, কুষ্টিয়া সদর।",
+      "location_en": "Kushtia BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Kushtia"
     }
   },
@@ -608,6 +829,19 @@
       "phone_bn": "০৭৩১-৬৪১২০",
       "phone_en": "০৭৩১-৬৪১২০",
       "maps_url": "https://maps.google.com/?q=BRTA+Pabna"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, পাবনা",
+      "venue_name_en": "BRTA Driving Test Venue, Pabna",
+      "location_bn": "পাবনা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, পাবনা সদর।",
+      "location_en": "Pabna BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Pabna"
     }
   },
   "noakhali": {
@@ -640,6 +874,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৩২১-৬২৮৪০",
       "phone_en": "০৩২১-৬২৮৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Noakhali"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নোয়াখালী",
+      "venue_name_en": "BRTA Driving Test Venue, Noakhali",
+      "location_bn": "নোয়াখালী সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নোয়াখালী সদর।",
+      "location_en": "Noakhali BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Noakhali"
     }
   },
@@ -674,6 +921,19 @@
       "phone_bn": "০৩৩১-৭৪৫২০",
       "phone_en": "০৩৩১-৭৪৫২০",
       "maps_url": "https://maps.google.com/?q=BRTA+Feni"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ফেনী",
+      "venue_name_en": "BRTA Driving Test Venue, Feni",
+      "location_bn": "ফেনী সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ফেনী সদর।",
+      "location_en": "Feni BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Feni"
     }
   },
   "sirajganj": {
@@ -706,6 +966,19 @@
       "phone_bn": "০৭৫১-৬৩১৮০",
       "phone_en": "০৭৫১-৬৩১৮০",
       "maps_url": "https://maps.google.com/?q=BRTA+Sirajganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, সিরাজগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Sirajganj",
+      "location_bn": "সিরাজগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, সিরাজগঞ্জ সদর।",
+      "location_en": "Sirajganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sirajganj"
     }
   },
   "kurigram": {
@@ -737,6 +1010,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৫৮১-৬১৪২০",
       "phone_en": "০৫৮১-৬১৪২০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Kurigram"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, কুড়িগ্রাম",
+      "venue_name_en": "BRTA Driving Test Venue, Kurigram",
+      "location_bn": "কুড়িগ্রাম সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, কুড়িগ্রাম সদর।",
+      "location_en": "Kurigram BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Kurigram"
     }
   },
@@ -771,6 +1057,19 @@
       "phone_bn": "০৫৮১৮-৫১৬২০",
       "phone_en": "০৫৮১৮-৫১৬২০",
       "maps_url": "https://maps.google.com/?q=BRTA+Nilphamari"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নীলফামারী",
+      "venue_name_en": "BRTA Driving Test Venue, Nilphamari",
+      "location_bn": "নীলফামারী সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নীলফামারী সদর।",
+      "location_en": "Nilphamari BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Nilphamari"
     }
   },
   "thakurgaon": {
@@ -802,6 +1101,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৫৬১-৫২৪৬০",
       "phone_en": "০৫৬১-৫২৪৬০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Thakurgaon"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ঠাকুরগাঁও",
+      "venue_name_en": "BRTA Driving Test Venue, Thakurgaon",
+      "location_bn": "ঠাকুরগাঁও সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ঠাকুরগাঁও সদর।",
+      "location_en": "Thakurgaon BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Thakurgaon"
     }
   },
@@ -835,6 +1147,19 @@
       "phone_bn": "০৫৬৮-৫১৬৭০",
       "phone_en": "০৫৬৮-৫১৬৭০",
       "maps_url": "https://maps.google.com/?q=BRTA+Panchagarh"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, পঞ্চগড়",
+      "venue_name_en": "BRTA Driving Test Venue, Panchagarh",
+      "location_bn": "পঞ্চগড় সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, পঞ্চগড় সদর।",
+      "location_en": "Panchagarh BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Panchagarh"
     }
   },
   "gaibandha": {
@@ -866,6 +1191,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৫৪১-৬১৮৯০",
       "phone_en": "০৫৪১-৬১৮৯০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Gaibandha"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, গাইবান্ধা",
+      "venue_name_en": "BRTA Driving Test Venue, Gaibandha",
+      "location_bn": "গাইবান্ধা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, গাইবান্ধা সদর।",
+      "location_en": "Gaibandha BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Gaibandha"
     }
   },
@@ -899,6 +1237,19 @@
       "phone_bn": "০৫৯১-৬১৯২০",
       "phone_en": "০৫৯১-৬১৯২০",
       "maps_url": "https://maps.google.com/?q=BRTA+Lalmonirhat"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, লালমনিরহাট",
+      "venue_name_en": "BRTA Driving Test Venue, Lalmonirhat",
+      "location_bn": "লালমনিরহাট সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, লালমনিরহাট সদর।",
+      "location_en": "Lalmonirhat BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Lalmonirhat"
     }
   },
   "brahmanbaria": {
@@ -930,6 +1281,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৮৫১-৫৮৪৫০",
       "phone_en": "০৮৫১-৫৮৪৫০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Brahmanbaria"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ব্রাহ্মণবাড়িয়া",
+      "venue_name_en": "BRTA Driving Test Venue, Brahmanbaria",
+      "location_bn": "ব্রাহ্মণবাড়িয়া সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ব্রাহ্মণবাড়িয়া সদর।",
+      "location_en": "Brahmanbaria BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Brahmanbaria"
     }
   },
@@ -963,6 +1327,19 @@
       "phone_bn": "০৮৪১-৬৩৮৫০",
       "phone_en": "০৮৪১-৬৩৮৫০",
       "maps_url": "https://maps.google.com/?q=BRTA+Chandpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, চাঁদপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Chandpur",
+      "location_bn": "চাঁদপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, চাঁদপুর সদর।",
+      "location_en": "Chandpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chandpur"
     }
   },
   "lakshmipur": {
@@ -994,6 +1371,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৩৮১-৬১৮৯০",
       "phone_en": "০৩৮১-৬১৮৯০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Lakshmipur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, লক্ষ্মীপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Lakshmipur",
+      "location_bn": "লক্ষ্মীপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, লক্ষ্মীপুর সদর।",
+      "location_en": "Lakshmipur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Lakshmipur"
     }
   },
@@ -1027,6 +1417,19 @@
       "phone_bn": "০৪৪১-৬২৩৪০",
       "phone_en": "০৪৪১-৬২৩৪০",
       "maps_url": "https://maps.google.com/?q=BRTA+Patuakhali"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, পটুয়াখালী",
+      "venue_name_en": "BRTA Driving Test Venue, Patuakhali",
+      "location_bn": "পটুয়াখালী সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, পটুয়াখালী সদর।",
+      "location_en": "Patuakhali BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Patuakhali"
     }
   },
   "bhola": {
@@ -1058,6 +1461,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৪৯১-৬২৬৮০",
       "phone_en": "০৪৯১-৬২৬৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bhola"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ভোলা",
+      "venue_name_en": "BRTA Driving Test Venue, Bhola",
+      "location_bn": "ভোলা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ভোলা সদর।",
+      "location_en": "Bhola BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Bhola"
     }
   },
@@ -1091,6 +1507,19 @@
       "phone_bn": "০৪৬১-৬২৬৪০",
       "phone_en": "০৪৬১-৬২৬৪০",
       "maps_url": "https://maps.google.com/?q=BRTA+Pirojpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, পিরোজপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Pirojpur",
+      "location_bn": "পিরোজপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, পিরোজপুর সদর।",
+      "location_en": "Pirojpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Pirojpur"
     }
   },
   "barguna": {
@@ -1122,6 +1551,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৪৪৮-৬২৩৮০",
       "phone_en": "০৪৪৮-৬২৩৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Barguna"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, বরগুনা",
+      "venue_name_en": "BRTA Driving Test Venue, Barguna",
+      "location_bn": "বরগুনা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, বরগুনা সদর।",
+      "location_en": "Barguna BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Barguna"
     }
   },
@@ -1156,6 +1598,19 @@
       "phone_bn": "০৪৯৮-৬২৬৯০",
       "phone_en": "০৪৯৮-৬২৬৯০",
       "maps_url": "https://maps.google.com/?q=BRTA+Jhalokati"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ঝালকাঠি",
+      "venue_name_en": "BRTA Driving Test Venue, Jhalokati",
+      "location_bn": "ঝালকাঠি সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ঝালকাঠি সদর।",
+      "location_en": "Jhalokati BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jhalokati"
     }
   },
   "kishoreganj": {
@@ -1188,6 +1643,19 @@
       "phone_bn": "০৯৪১-৬১৯২০",
       "phone_en": "০৯৪১-৬১৯২০",
       "maps_url": "https://maps.google.com/?q=BRTA+Kishoreganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, কিশোরগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Kishoreganj",
+      "location_bn": "কিশোরগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, কিশোরগঞ্জ সদর।",
+      "location_en": "Kishoreganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Kishoreganj"
     }
   },
   "manikganj": {
@@ -1219,6 +1687,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০২৯৯৬৬১১৯৮০",
       "phone_en": "০২৯৯৬৬১১৯৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Manikganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, মানিকগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Manikganj",
+      "location_bn": "মানিকগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, মানিকগঞ্জ সদর।",
+      "location_en": "Manikganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Manikganj"
     }
   },
@@ -1253,6 +1734,19 @@
       "phone_bn": "০২-৭৬১৫৫৪০",
       "phone_en": "০২-৭৬১৫৫৪০",
       "maps_url": "https://maps.google.com/?q=BRTA+Munshiganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, মুন্সিগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Munshiganj",
+      "location_bn": "মুন্সিগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, মুন্সিগঞ্জ সদর।",
+      "location_en": "Munshiganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Munshiganj"
     }
   },
   "narsingdi": {
@@ -1284,6 +1778,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০২৯৪-৬১৯৩০",
       "phone_en": "০২৯৪-৬১৯৩০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Narsingdi"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নরসিংদী",
+      "venue_name_en": "BRTA Driving Test Venue, Narsingdi",
+      "location_bn": "নরসিংদী সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নরসিংদী সদর।",
+      "location_en": "Narsingdi BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Narsingdi"
     }
   },
@@ -1317,6 +1824,19 @@
       "phone_bn": "০৬৩১-৬৩২৪০",
       "phone_en": "০৬৩১-৬৩২৪০",
       "maps_url": "https://maps.google.com/?q=BRTA+Faridpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ফরিদপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Faridpur",
+      "location_bn": "ফরিদপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ফরিদপুর সদর।",
+      "location_en": "Faridpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Faridpur"
     }
   },
   "gopalganj": {
@@ -1348,6 +1868,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০২-৬৬৮১৯৫০",
       "phone_en": "০২-৬৬৮১৯৫০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Gopalganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, গোপালগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Gopalganj",
+      "location_bn": "গোপালগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, গোপালগঞ্জ সদর।",
+      "location_en": "Gopalganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Gopalganj"
     }
   },
@@ -1381,6 +1914,19 @@
       "phone_bn": "০৬৬১-৬১৮৯০",
       "phone_en": "০৬৬১-৬১৮৯০",
       "maps_url": "https://maps.google.com/?q=BRTA+Madaripur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, মাদারীপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Madaripur",
+      "location_bn": "মাদারীপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, মাদারীপুর সদর।",
+      "location_en": "Madaripur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Madaripur"
     }
   },
   "rajbari": {
@@ -1413,6 +1959,19 @@
       "phone_bn": "০৬৪১-৬৫৪২০",
       "phone_en": "০৬৪১-৬৫৪২০",
       "maps_url": "https://maps.google.com/?q=BRTA+Rajbari"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, রাজবাড়ী",
+      "venue_name_en": "BRTA Driving Test Venue, Rajbari",
+      "location_bn": "রাজবাড়ী সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, রাজবাড়ী সদর।",
+      "location_en": "Rajbari BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rajbari"
     }
   },
   "shariatpur": {
@@ -1444,6 +2003,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৬০২-৬১৫৮০",
       "phone_en": "০৬০২-৬১৫৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Shariatpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, শরীয়তপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Shariatpur",
+      "location_bn": "শরীয়তপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, শরীয়তপুর সদর।",
+      "location_en": "Shariatpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Shariatpur"
     }
   },
@@ -1478,6 +2050,19 @@
       "phone_bn": "০৮৬১-৫২৫৬০",
       "phone_en": "০৮৬১-৫২৫৬০",
       "maps_url": "https://maps.google.com/?q=BRTA+Moulvibazar"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, মৌলভীবাজার",
+      "venue_name_en": "BRTA Driving Test Venue, Moulvibazar",
+      "location_bn": "মৌলভীবাজার সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, মৌলভীবাজার সদর।",
+      "location_en": "Moulvibazar BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Moulvibazar"
     }
   },
   "habiganj": {
@@ -1509,6 +2094,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৮৩১-৬১৮৯০",
       "phone_en": "০৮৩১-৬১৮৯০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Habiganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, হবিগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Habiganj",
+      "location_bn": "হবিগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, হবিগঞ্জ সদর।",
+      "location_en": "Habiganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Habiganj"
     }
   },
@@ -1542,6 +2140,19 @@
       "phone_bn": "০৮৭১-৬১৫৬০",
       "phone_en": "০৮৭১-৬১৫৬০",
       "maps_url": "https://maps.google.com/?q=BRTA+Sunamganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, সুনামগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Sunamganj",
+      "location_bn": "সুনামগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, সুনামগঞ্জ সদর।",
+      "location_en": "Sunamganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sunamganj"
     }
   },
   "jamalpur": {
@@ -1574,6 +2185,19 @@
       "phone_bn": "০৯৮১-৬৩৪৮০",
       "phone_en": "০৯৮১-৬৩৪৮০",
       "maps_url": "https://maps.google.com/?q=BRTA+Jamalpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, জামালপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Jamalpur",
+      "location_bn": "জামালপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, জামালপুর সদর।",
+      "location_en": "Jamalpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jamalpur"
     }
   },
   "sherpur": {
@@ -1605,6 +2229,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৯৩১-৬১৮৭০",
       "phone_en": "০৯৩১-৬১৮৭০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sherpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, শেরপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Sherpur",
+      "location_bn": "শেরপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, শেরপুর সদর।",
+      "location_en": "Sherpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Sherpur"
     }
   },
@@ -1639,6 +2276,19 @@
       "phone_bn": "০৯৫১-৬১৯২০",
       "phone_en": "০৯৫১-৬১৯২০",
       "maps_url": "https://maps.google.com/?q=BRTA+Netrokona"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নেত্রকোণা",
+      "venue_name_en": "BRTA Driving Test Venue, Netrokona",
+      "location_bn": "নেত্রকোণা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নেত্রকোণা সদর।",
+      "location_en": "Netrokona BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Netrokona"
     }
   },
   "natore": {
@@ -1671,6 +2321,19 @@
       "phone_bn": "০৭৭১-৬২৬৪০",
       "phone_en": "০৭৭১-৬২৬৪০",
       "maps_url": "https://maps.google.com/?q=BRTA+Natore"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নাটোর",
+      "venue_name_en": "BRTA Driving Test Venue, Natore",
+      "location_bn": "নাটোর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নাটোর সদর।",
+      "location_en": "Natore BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Natore"
     }
   },
   "naogaon": {
@@ -1702,6 +2365,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৭৪১-৬৩২৪০",
       "phone_en": "০৭৪১-৬৩২৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Naogaon"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নওগাঁ",
+      "venue_name_en": "BRTA Driving Test Venue, Naogaon",
+      "location_bn": "নওগাঁ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নওগাঁ সদর।",
+      "location_en": "Naogaon BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Naogaon"
     }
   },
@@ -1736,6 +2412,19 @@
       "phone_bn": "০৭৮১-৫২৭৮০",
       "phone_en": "০৭৮১-৫২৭৮০",
       "maps_url": "https://maps.google.com/?q=BRTA+Chapai+Nawabganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, চাঁপাইনবাবগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Chapai Nawabganj",
+      "location_bn": "চাঁপাইনবাবগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, চাঁপাইনবাবগঞ্জ সদর।",
+      "location_en": "Chapai Nawabganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chapai+Nawabganj"
     }
   },
   "joypurhat": {
@@ -1767,6 +2456,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৫৭১-৬২৬৩০",
       "phone_en": "০৫৭১-৬২৬৩০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Joypurhat"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, জয়পুরহাট",
+      "venue_name_en": "BRTA Driving Test Venue, Joypurhat",
+      "location_bn": "জয়পুরহাট সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, জয়পুরহাট সদর।",
+      "location_en": "Joypurhat BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Joypurhat"
     }
   },
@@ -1800,6 +2502,19 @@
       "phone_bn": "০৭৬১-৬৩২৪০",
       "phone_en": "০৭৬১-৬৩২৪০",
       "maps_url": "https://maps.google.com/?q=BRTA+Chuadanga"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, চুয়াডাঙ্গা",
+      "venue_name_en": "BRTA Driving Test Venue, Chuadanga",
+      "location_bn": "চুয়াডাঙ্গা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, চুয়াডাঙ্গা সদর।",
+      "location_en": "Chuadanga BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chuadanga"
     }
   },
   "meherpur": {
@@ -1831,6 +2546,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৭৯১-৬১৯৫০",
       "phone_en": "০৭৯১-৬১৯৫০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Meherpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, মেহেরপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Meherpur",
+      "location_bn": "মেহেরপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, মেহেরপুর সদর।",
+      "location_en": "Meherpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Meherpur"
     }
   },
@@ -1864,6 +2592,19 @@
       "phone_bn": "০৪৫১-৬৩৪৮০",
       "phone_en": "০৪৫১-৬৩৪৮০",
       "maps_url": "https://maps.google.com/?q=BRTA+Jhenaidah"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ঝিনাইদহ",
+      "venue_name_en": "BRTA Driving Test Venue, Jhenaidah",
+      "location_bn": "ঝিনাইদহ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ঝিনাইদহ সদর।",
+      "location_en": "Jhenaidah BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jhenaidah"
     }
   },
   "magura": {
@@ -1895,6 +2636,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৪৮১-৬২১৭০",
       "phone_en": "০৪৮১-৬২১৭০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Magura"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, মাগুরা",
+      "venue_name_en": "BRTA Driving Test Venue, Magura",
+      "location_bn": "মাগুরা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, মাগুরা সদর।",
+      "location_en": "Magura BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Magura"
     }
   },
@@ -1928,6 +2682,19 @@
       "phone_bn": "০৪৮১-৩২৫৪০",
       "phone_en": "০৪৮১-৩২৫৪০",
       "maps_url": "https://maps.google.com/?q=BRTA+Narail"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নড়াইল",
+      "venue_name_en": "BRTA Driving Test Venue, Narail",
+      "location_bn": "নড়াইল সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নড়াইল সদর।",
+      "location_en": "Narail BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Narail"
     }
   },
   "satkhira": {
@@ -1959,6 +2726,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৪৭১-৬৩২৪০",
       "phone_en": "০৪৭১-৬৩২৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Satkhira"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, সাতক্ষীরা",
+      "venue_name_en": "BRTA Driving Test Venue, Satkhira",
+      "location_bn": "সাতক্ষীরা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, সাতক্ষীরা সদর।",
+      "location_en": "Satkhira BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Satkhira"
     }
   },
@@ -1992,6 +2772,19 @@
       "phone_bn": "০৪৬৮-৬৩২৮০",
       "phone_en": "০৪৬৮-৬৩২৮০",
       "maps_url": "https://maps.google.com/?q=BRTA+Bagerhat"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, বাগেরহাট",
+      "venue_name_en": "BRTA Driving Test Venue, Bagerhat",
+      "location_bn": "বাগেরহাট সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, বাগেরহাট সদর।",
+      "location_en": "Bagerhat BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bagerhat"
     }
   },
   "rangamati": {
@@ -2023,6 +2816,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৩৫১-৬৩৪৮০",
       "phone_en": "০৩৫১-৬৩৪৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rangamati"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, রাঙ্গামাটি",
+      "venue_name_en": "BRTA Driving Test Venue, Rangamati",
+      "location_bn": "রাঙ্গামাটি সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, রাঙ্গামাটি সদর।",
+      "location_en": "Rangamati BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Rangamati"
     }
   },
@@ -2056,6 +2862,19 @@
       "phone_bn": "০৩৬১-৬২৫৯০",
       "phone_en": "০৩৬১-৬২৫৯০",
       "maps_url": "https://maps.google.com/?q=BRTA+Bandarban"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, বান্দরবান",
+      "venue_name_en": "BRTA Driving Test Venue, Bandarban",
+      "location_bn": "বান্দরবান সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, বান্দরবান সদর।",
+      "location_en": "Bandarban BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bandarban"
     }
   },
   "khagrachhari": {
@@ -2087,6 +2906,19 @@
       "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
       "phone_bn": "০৩৭১-৬২৬৪০",
       "phone_en": "০৩৭১-৬২৬৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Khagrachhari"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, খাগড়াছড়ি",
+      "venue_name_en": "BRTA Driving Test Venue, Khagrachhari",
+      "location_bn": "খাগড়াছড়ি সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, খাগড়াছড়ি সদর।",
+      "location_en": "Khagrachhari BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Khagrachhari"
     }
   }
