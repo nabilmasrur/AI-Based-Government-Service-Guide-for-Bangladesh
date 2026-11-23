@@ -44,11 +44,21 @@ SMALLTALK = [
         r"আল্লাহ\s*হাফেজ|খোদা\s*হাফেজ|বিদায়|\ballah\s*hafez\b|\bkhoda\s*hafez\b"
         r"|\bbye\b|good\s*bye|see\s+you", re.IGNORECASE)),
     ("chat_howareyou", re.compile(
-        r"কেমন\s*আছ|কেমন\s*আছেন|\bkemon\s*ac?h?o?\b|\bkemon\s*achen\b"
+        r"কেমন\s*(আছ|আছেন|আসো)|\bkemon\s*ac?h?[oe]?[ns]?\b|\bkmn\s*as?[oe]?\b|\bkmn\s*asen\b"
         r"|how\s+are\s+you|how\s+r\s+u", re.IGNORECASE)),
-    ("chat_greet", re.compile(
-        r"আসসালাম|আস-?সালাম|সালাম|নমস্কার|আদাব|শুভ\s*(সকাল|সন্ধ্যা|দুপুর|রাত)"
-        r"|\bassalam|\bsalam\b|\bslm\b|\bhello\b|\bhi\b|\bhey\b|good\s*(morning|evening|afternoon)", re.IGNORECASE)),
+    ("chat_personal", re.compile(
+        r"ভাত\s*(খাই|খেয়ে|খাও)|খাবার\s*(খাই|খেয়ে|খাও)|নাস্তা|লাঞ্চ|ডিনার"
+        r"|vat\s*(khai|kheye|khey|khaiso|kiaso)|vatt\s*kiaso|bhat\s*(khai|kheye|khaiso)"
+        r"|khabar\s*(khai|kheye|khaiso)|lunch|dinner"
+        r"|কি\s*কর(ছ|তেছ|েন)?|কী\s*কর(ছ|তেছ|েন)?|\bki\s*kor(o|so|sen|chen)?\b|what\s+are\s+you\s+doing"
+        r"|ঘুমাই(ছ|লে|বেন)?|ঘুমা(ও|ন)?|\bghuma(isho|iso|isen|o|ba)?\b"
+        r"|বিয়ে\s*কর(ছ|বেন)?|\bbiye\s*kor(so|sen)?\b"
+        r"|বাড়ি\s*কোথায়|বাড়ি\s*কোথায়|bari\s*kothay", re.IGNORECASE)),
+    ("chat_salam", re.compile(
+        r"আসসালাম|আস-?সালাম|সালাম|আস্‌সালাম|\bassalam|\bsalam\b|\bslm\b", re.IGNORECASE)),
+    ("chat_hello", re.compile(
+        r"\bhello\b|\bhi\b|\bhey\b|হ্যালো|হাই|হে|নমস্কার|আদাব|শুভ\s*(সকাল|সন্ধ্যা|দুপুর|রাত)"
+        r"|good\s*(morning|evening|afternoon)", re.IGNORECASE)),
     ("chat_name", re.compile(
         r"^\s*(আমি|আমার\s*নাম)\s+\S+\s*[।.!]?\s*$|^\s*(ami|amar\s*nam)\s+\w+\s*[.!]?\s*$"
         r"|^\s*(my\s+name\s+is|i\s*am|i'?m)\s+\w+\s*[.!]?\s*$", re.IGNORECASE)),
