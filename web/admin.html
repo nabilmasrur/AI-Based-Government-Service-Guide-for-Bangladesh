@@ -1135,15 +1135,19 @@ button[disabled]{
     }
 
     filtered.forEach(function (e) {
-      var domSafeId = e.id.replace(/\./g, "-");
       var isPass = e.domain === "passport";
       var icon = isPass ? "🛂" : "🚗";
       var domClass = isPass ? "badge-dom" : "badge-dom licence";
       var domLabel = isPass ? "পাসপোর্ট" : "লাইসেন্স";
 
+      var escTitleBn = (e.title_bn || "").replace(/"/g, "&quot;");
+      var escTitleEn = (e.title_en || "").replace(/"/g, "&quot;");
+      var escSource = (e.source_url || "").replace(/"/g, "&quot;");
+      var escOffice = (e.office_bn || "").replace(/"/g, "&quot;");
+
       var card = document.createElement("div");
       card.className = "kb-card";
-      card.id = "appr-card-" + domSafeId;
+      card.setAttribute("data-id", e.id);
 
       card.innerHTML =
         "<div class='kb-card-header'>" +
@@ -1154,10 +1158,10 @@ button[disabled]{
             "<span style='background:rgba(0,135,90,0.15); color:#34d399; font-size:11px; padding:2px 8px; border-radius:10px; font-weight:600;'>অনুমোদিত</span>" +
           "</div>" +
           "<div>" +
-            "<button class='ghost' type='button' style='padding:5px 12px; font-size:12px;' onclick=\"toggleApprovedEdit(\'' + e.id + '\')\">✏️ এডিট করুন</button>" +
+            "<button class='ghost btn-toggle-edit' type='button' style='padding:5px 12px; font-size:12px; cursor:pointer;'>✏️ এডিট করুন</button>" +
           "</div>" +
         "</div>" +
-        "<div class='kb-card-body' id='appr-view-" + domSafeId + "' style='padding:16px;'>" +
+        "<div class='kb-card-view' style='padding:16px;'>" +
           "<h4 style='margin:0 0 8px; font-size:15px; color:var(--ink); font-weight:600;'>" + (e.title_bn || "—") + "</h4>" +
           "<p style='margin:0 0 10px; font-size:13.5px; color:var(--ink); line-height:1.6; white-space:pre-wrap;'>" + (e.content_bn || "") + "</p>" +
           (e.content_en ? "<div style='font-size:12.5px; color:var(--ink-2); margin-bottom:10px; line-height:1.5; font-style:italic;'><b>English:</b> " + e.content_en + "</div>" : "") +
@@ -1166,79 +1170,79 @@ button[disabled]{
             (e.source_url ? "<span>🔗 <a href='" + e.source_url + "' target='_blank' style='color:var(--accent); text-decoration:none;'>সোর্স লিংক</a></span>" : "") +
           "</div>" +
         "</div>" +
-        "<div class='kb-card-edit' id='appr-edit-" + domSafeId + "' style='padding:16px; display:none; background:var(--panel-2); border-top:1px solid var(--hair);'>" +
+        "<div class='kb-card-edit' style='padding:16px; display:none; background:var(--panel-2); border-top:1px solid var(--hair);'>" +
           "<h4 style='margin:0 0 14px; font-size:14px; color:var(--accent); font-weight:600;'>অনুমোদিত তথ্য সম্পাদনা (" + e.id + ")</h4>" +
           "<div style='display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;'>" +
-            "<div><label>বাংলা শিরোনাম</label><input type='text' id='appr-e-tbn-" + domSafeId + "' value='" + (e.title_bn || "").replace(/'/g, "&#39;").replace(/"/g, "&quot;") + "'></div>" +
-            "<div><label>English Title</label><input type='text' id='appr-e-ten-" + domSafeId + "' value='" + (e.title_en || "").replace(/'/g, "&#39;").replace(/"/g, "&quot;") + "'></div>" +
+            "<div><label>বাংলা শিরোনাম</label><input type='text' class='inp-tbn' value=\"" + escTitleBn + "\"></div>" +
+            "<div><label>English Title</label><input type='text' class='inp-ten' value=\"" + escTitleEn + "\"></div>" +
           "</div>" +
-          "<label>বাংলা বিবরণ (উত্তর)</label><textarea id='appr-e-cbn-" + domSafeId + "' style='min-height:120px; font-size:13.5px;'>" + (e.content_bn || "") + "</textarea>" +
-          "<label>English Content</label><textarea id='appr-e-cen-" + domSafeId + "' style='min-height:90px; font-size:13px;'>" + (e.content_en || "") + "</textarea>" +
+          "<label>বাংলা বিবরণ (উত্তর)</label><textarea class='inp-cbn' style='min-height:120px; font-size:13.5px;'>" + (e.content_bn || "") + "</textarea>" +
+          "<label>English Content</label><textarea class='inp-cen' style='min-height:90px; font-size:13px;'>" + (e.content_en || "") + "</textarea>" +
           "<div style='display:grid; grid-template-columns:1fr 1fr; gap:12px;'>" +
-            "<div><label>সোর্স লিংক (Source URL)</label><input type='text' id='appr-e-src-" + domSafeId + "' value='" + (e.source_url || "") + "'></div>" +
-            "<div><label>দপ্তর / অফিস (Office)</label><input type='text' id='appr-e-off-" + domSafeId + "' value='" + (e.office_bn || "") + "'></div>" +
+            "<div><label>সোর্স লিংক (Source URL)</label><input type='text' class='inp-src' value=\"" + escSource + "\"></div>" +
+            "<div><label>দপ্তর / অফিস (Office)</label><input type='text' class='inp-off' value=\"" + escOffice + "\"></div>" +
           "</div>" +
           "<div class='row' style='margin-top:14px; gap:10px;'>" +
-            "<button type='button' style='padding:6px 16px; font-size:13px;' onclick=\"saveApprovedEdit(\'' + e.id + '\')\">💾 পরিবর্তন সংরক্ষণ করুন</button>" +
-            "<button type='button' class='ghost' style='padding:6px 14px; font-size:13px;' onclick=\"toggleApprovedEdit(\'' + e.id + '\')\">বাতিল</button>" +
-            "<span id='appr-e-stat-" + domSafeId + "' class='mono' style='font-size:12px;'></span>" +
+            "<button type='button' class='btn-save' style='padding:6px 16px; font-size:13px; cursor:pointer;'>💾 পরিবর্তন সংরক্ষণ করুন</button>" +
+            "<button type='button' class='ghost btn-cancel' style='padding:6px 14px; font-size:13px; cursor:pointer;'>বাতিল</button>" +
+            "<span class='card-stat mono' style='font-size:12px;'></span>" +
           "</div>" +
         "</div>";
+
+      var viewDiv = card.querySelector(".kb-card-view");
+      var editDiv = card.querySelector(".kb-card-edit");
+      var btnToggle = card.querySelector(".btn-toggle-edit");
+      var btnCancel = card.querySelector(".btn-cancel");
+      var btnSave = card.querySelector(".btn-save");
+
+      function toggleMode(openEdit) {
+        var isEditing = editDiv.style.display !== "none";
+        var willOpen = openEdit != null ? openEdit : !isEditing;
+        editDiv.style.display = willOpen ? "block" : "none";
+        viewDiv.style.display = willOpen ? "none" : "block";
+      }
+
+      btnToggle.addEventListener("click", function () {
+        toggleMode();
+      });
+
+      btnCancel.addEventListener("click", function () {
+        toggleMode(false);
+      });
+
+      btnSave.addEventListener("click", function () {
+        var stat = card.querySelector(".card-stat");
+        stat.textContent = "সংরক্ষণ হচ্ছে…";
+        btnSave.disabled = true;
+
+        var updated = Object.assign({}, e, {
+          title_bn: card.querySelector(".inp-tbn").value.trim(),
+          title_en: card.querySelector(".inp-ten").value.trim(),
+          content_bn: card.querySelector(".inp-cbn").value.trim(),
+          content_en: card.querySelector(".inp-cen").value.trim(),
+          source_url: card.querySelector(".inp-src").value.trim(),
+          office_bn: card.querySelector(".inp-off").value.trim()
+        });
+
+        call("/api/admin/entries/update", {
+          method: "POST",
+          body: JSON.stringify({ entry: updated })
+        }).then(function (r) {
+          say("ok", "✓ অনুমোদিত খসড়া '" + (updated.title_bn || e.id) + "' সফলভাবে আপডেট ও সংরক্ষিত হয়েছে!");
+          var idx = approvedEntries.findIndex(function (x) { return x.id === e.id; });
+          if (idx !== -1) approvedEntries[idx] = r.entry || updated;
+          renderApprovedEntries();
+        }).catch(function (err) {
+          stat.textContent = "ত্রুটি!";
+          say("err", err.message);
+        }).finally(function () {
+          btnSave.disabled = false;
+        });
+      });
+
       container.appendChild(card);
     });
   }
-
-  window.toggleApprovedEdit = function (id, forceOpen) {
-    var domSafeId = id.replace(/\./g, "-");
-    var viewDiv = $("appr-view-" + domSafeId);
-    var editDiv = $("appr-edit-" + domSafeId);
-    if (!viewDiv || !editDiv) return;
-    if (forceOpen === true) {
-      editDiv.style.display = "block";
-      viewDiv.style.display = "none";
-      return;
-    }
-    var isEditing = editDiv.style.display !== "none";
-    if (isEditing) {
-      editDiv.style.display = "none";
-      viewDiv.style.display = "block";
-    } else {
-      editDiv.style.display = "block";
-      viewDiv.style.display = "none";
-    }
-  };
-
-  window.saveApprovedEdit = function (id) {
-    var domSafeId = id.replace(/\./g, "-");
-    var entry = approvedEntries.find(function (x) { return x.id === id; });
-    if (!entry) return;
-
-    var updated = Object.assign({}, entry, {
-      title_bn: $("appr-e-tbn-" + domSafeId).value.trim(),
-      title_en: $("appr-e-ten-" + domSafeId).value.trim(),
-      content_bn: $("appr-e-cbn-" + domSafeId).value.trim(),
-      content_en: $("appr-e-cen-" + domSafeId).value.trim(),
-      source_url: $("appr-e-src-" + domSafeId).value.trim(),
-      office_bn: $("appr-e-off-" + domSafeId).value.trim()
-    });
-
-    var stat = $("appr-e-stat-" + domSafeId);
-    if (stat) stat.textContent = "সংরক্ষণ হচ্ছে…";
-
-    call("/api/admin/entries/update", {
-      method: "POST",
-      body: JSON.stringify({ entry: updated })
-    }).then(function (r) {
-      say("ok", "✓ অনুমোদিত খসড়া '" + (updated.title_bn || id) + "' সফলভাবে আপডেট ও সংরক্ষিত হয়েছে!");
-      var idx = approvedEntries.findIndex(function (x) { return x.id === id; });
-      if (idx !== -1) approvedEntries[idx] = r.entry || updated;
-      toggleApprovedEdit(id, false);
-      renderApprovedEntries();
-    }).catch(function (e) {
-      if (stat) stat.textContent = "ত্রুটি!";
-      say("err", e.message);
-    });
-  };
 
   // Search and Filter Listeners for Approved Entries
   if ($("approvedSearchInput")) {
@@ -1297,7 +1301,7 @@ button[disabled]{
         "<div class='empty-box'>" +
           "<p style='margin:0 0 10px; font-size:15px; color:var(--ink);'>বর্তমানে কোনো অপেক্ষমাণ খসড়া নেই।</p>" +
           "<p style='margin:0 0 14px; font-size:13px; color:var(--ink-2);'>নতুন সরকারি নোটিশ, নীতিমালা বা তথ্যের সার্কুলার থেকে খসড়া তৈরি করতে পারেন।</p>" +
-          "<button type='button' class='btn' onclick=\"switchTab(\'tab-new\')\">+ নতুন খসড়া তৈরি করুন</button>" +
+          "<button type='button' class='btn' onclick=\"switchTab('tab-new')\">+ নতুন খসড়া তৈরি করুন</button>" +
         "</div>";
       return;
     }
@@ -1324,14 +1328,14 @@ button[disabled]{
         "</h3>" +
         "<div class='body'>" +
           "<div style='display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;'>" +
-            "<div><label>বাংলা শিরোনাম</label><input type='text' data-field='title_bn' data-i='" + i + "' value='" + (d.title_bn || "").replace(/'/g, "&#39;").replace(/"/g, "&quot;") + "'></div>" +
-            "<div><label>English Title</label><input type='text' data-field='title_en' data-i='" + i + "' value='" + (d.title_en || "").replace(/'/g, "&#39;").replace(/"/g, "&quot;") + "'></div>" +
+            "<div><label>বাংলা শিরোনাম</label><input type='text' data-field='title_bn' data-i='" + i + "' value=\"" + (d.title_bn || "").replace(/"/g, "&quot;") + "\"></div>" +
+            "<div><label>English Title</label><input type='text' data-field='title_en' data-i='" + i + "' value=\"" + (d.title_en || "").replace(/"/g, "&quot;") + "\"></div>" +
           "</div>" +
           "<label>বাংলা বিবরণ (উত্তর)</label><textarea data-field='content_bn' data-i='" + i + "' style='min-height:110px;'>" + (d.content_bn || "") + "</textarea>" +
           "<label>English Content</label><textarea data-field='content_en' data-i='" + i + "' style='min-height:85px;'>" + (d.content_en || "") + "</textarea>" +
           "<div style='display:grid; grid-template-columns:1fr 1fr; gap:12px;'>" +
-            "<div><label>সোর্স লিংক (Source URL)</label><input type='text' data-field='source_url' data-i='" + i + "' value='" + (d.source_url || "") + "'></div>" +
-            "<div><label>দপ্তর / অফিস (Office)</label><input type='text' data-field='office_bn' data-i='" + i + "' value='" + (d.office_bn || "") + "'></div>" +
+            "<div><label>সোর্স লিংক (Source URL)</label><input type='text' data-field='source_url' data-i='" + i + "' value=\"" + (d.source_url || "") + "\"></div>" +
+            "<div><label>দপ্তর / অফিস (Office)</label><input type='text' data-field='office_bn' data-i='" + i + "' value=\"" + (d.office_bn || "") + "\"></div>" +
           "</div>" +
           "<div class='draft-card-actions'>" +
             "<button type='button' style='padding:6px 14px; font-size:12.5px;' onclick='savePendingDraft(" + i + ")'>💾 খসড়া সংরক্ষণ</button>" +
@@ -1510,7 +1514,6 @@ button[disabled]{
     var sub = record.subtype;
     var reason = record.reason || "অসন্তুষ্টি";
 
-    // First ensure approved entries are loaded
     call("/api/admin/entries").then(function (r) {
       approvedEntries = r.entries || [];
       switchTab("tab-approved");
@@ -1539,16 +1542,20 @@ button[disabled]{
         renderApprovedEntries();
 
         setTimeout(function () {
-          toggleApprovedEdit(matched.id, true);
-          var domSafeId = matched.id.replace(/\./g, "-");
-          var card = $("appr-card-" + domSafeId);
-          if (card) {
-            card.scrollIntoView({ behavior: "smooth", block: "center" });
-            card.style.borderColor = "#f87171";
-            card.style.boxShadow = "0 0 18px rgba(248, 113, 113, 0.4)";
+          var targetCard = document.querySelector('.kb-card[data-id="' + matched.id + '"]');
+          if (targetCard) {
+            var vDiv = targetCard.querySelector(".kb-card-view");
+            var eDiv = targetCard.querySelector(".kb-card-edit");
+            if (eDiv && vDiv) {
+              eDiv.style.display = "block";
+              vDiv.style.display = "none";
+            }
+            targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
+            targetCard.style.borderColor = "#f87171";
+            targetCard.style.boxShadow = "0 0 18px rgba(248, 113, 113, 0.4)";
             setTimeout(function () {
-              card.style.borderColor = "";
-              card.style.boxShadow = "";
+              targetCard.style.borderColor = "";
+              targetCard.style.boxShadow = "";
             }, 5000);
           }
         }, 120);
@@ -1565,7 +1572,7 @@ button[disabled]{
     });
   };
 
-  if ($("refreshStatsBtn")) {
+    if ($("refreshStatsBtn")) {
     $("refreshStatsBtn").addEventListener("click", loadStats);
   }
 
