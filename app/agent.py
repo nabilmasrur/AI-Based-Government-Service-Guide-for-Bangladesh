@@ -348,6 +348,19 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
 
     rule = phrases.route(message)
 
+    # 0. A-Challan code and authorized bank lookup
+    is_challan = locations.is_challan_query(message)
+    if is_challan and ("কোড" in message or "ব্যাংক" in message or "জমা" in message or "ফি" in message or "টাকা" in message or len(message.split()) <= 4):
+        dom = rule.get("domain") or phrases.domain_of(message) or state.get("domain") or "passport"
+        state["domain"] = dom
+        state["field"] = "payment"
+        lead_text = locations.format_challan_lead(dom, lang)
+        card = locations.build_challan_card(dom, lang)
+        chips = ["নতুন পাসপোর্টের ফি কত?", "কি কি কাগজ লাগবে?", "অনলাইনে আবেদন", "অফিস কোথায়?"] if lang == "bn" else ["How much is the fee?", "Required documents", "Online application", "Where is the office?"]
+        note = f"{dom} এ-চালান কোড ও অনুমোদিত ব্যাংকের তথ্য সরাসরি প্রদান।"
+        session.remember(state, "assistant", lead_text)
+        return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
+
     # 1. District driving test / exam query handling
     district_id = locations.find_district(message)
     is_exam = locations.is_exam_query(message) or rule.get("subtype") == "exam" or state.get("subtype") == "exam"

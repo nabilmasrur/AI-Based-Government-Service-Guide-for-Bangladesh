@@ -63,9 +63,10 @@ FIELD = {
                      r"|internet\s*e|nijei\s*kor"),
 
     "payment": (r"কীভাবে\s*(টাকা|ফি)\s*দ|কোথায়\s*(টাকা|ফি)\s*দ|পেমেন্ট|বিকাশ|নগদ|রকেট|চালান"
+                r"|কোন\s*ব্যাংক|ব্যাংক|ব্যাংকে|টাকা\s*জমা|ফি\s*জমা|চালান\s*কোড|এ-?চালান"
                 r"|ব্যাংকে\s*টাকা|কার্ড\s*দিয়ে"
                 r"|payment|pay\s+the\s+fee|how\s+(do\s+i\s+|to\s+)?pay|bkash|nagad|rocket"
-                r"|\bchallan\b|\bchalan\b|bank\s*e\s*taka|kivabe\s*(taka|fee)?\s*dib|কীভাবে\s*(টাকা|ফি)?\s*দেব|card\s*diye"),
+                r"|\bchallan\b|\bchalan\b|a-?challan|bank\s*e\s*taka|which\s*bank|\bbank\b|kivabe\s*(taka|fee)?\s*dib|কীভাবে\s*(টাকা|ফি)?\s*দেব|card\s*diye"),
 
     "verification": (r"পুলিশ\s*ভেরিফিকেশন|ভেরিফিকেশন|পুলিশ\s*আসবে|তদন্ত|থানা\s*থেকে|এসবি\b"
                      r"|police\s*verification|verification|police\s*report|\bsb\b\s*check"

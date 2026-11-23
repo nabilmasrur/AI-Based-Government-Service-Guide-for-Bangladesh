@@ -240,3 +240,77 @@ def get_popular_district_chips(domain: str = "passport", lang: str = "bn") -> li
     if lang == "bn":
         return ["রংপুর", "ঢাকা", "চট্টগ্রাম", "রাজশাহী", "সিলেট", "খুলনা", "বরিশাল", "বগুড়া"]
     return ["Rangpur", "Dhaka", "Chattogram", "Rajshahi", "Sylhet", "Khulna", "Barishal", "Bogura"]
+
+
+CHALLAN_KEYWORDS = re.compile(
+    r"চালান|চালান\s*কোড|এ-?চালান|কোন\s*ব্যাংক|ব্যাংক|ব্যাংকে|টাকা\s*জমা|ফি\s*জমা"
+    r"|challan|a-?challan|which\s*bank|bank\s*e|\bbank\b",
+    re.IGNORECASE
+)
+
+
+def is_challan_query(text: str) -> bool:
+    """Returns True if user asks about a-challan code, authorized banks or where to pay."""
+    norm = unicodedata.normalize("NFC", text or "")
+    return bool(CHALLAN_KEYWORDS.search(norm))
+
+
+def format_challan_lead(domain: str = "passport", lang: str = "bn") -> str:
+    """Formats exact A-Challan code and authorized bank guide matching user specifications."""
+    if lang == "bn":
+        lines = [
+            "🏦 পাসপোর্ট ও লাইসেন্স ফি জমাদান নির্দেশিকা",
+            "📋 ই-পাসপোর্ট এ-চালান কোড: 1-2261-0000-2091",
+            "🏛️ অনুমোদিত ব্যাংকসমূহ: সোনালী ব্যাংক, প্রিমিয়ার ব্যাংক, ওয়ান ব্যাংক, ট্রাস্ট ব্যাংক ও ঢাকা ব্যাংক।",
+            "📱 মোবাইল ব্যাংকিং: বিকাশ, নগদ, রকেটের 'গভর্নমেন্ট ফি' অপশন থেকে সরাসরি পরিশোধযোগ্য।",
+            "💡 পরামর্শ: সোনালী ব্যাংকের যেকোনো অনলাইন শাখায় চালান জমা দিয়ে মূল রসিদ সংগ্রহ করুন"
+        ]
+        return "\n".join(lines)
+    else:
+        lines = [
+            "🏦 Passport & Driving Licence Fee Payment Guide",
+            "📋 E-Passport A-Challan Code: 1-2261-0000-2091",
+            "🏛️ Authorized Banks: Sonali Bank, Premier Bank, One Bank, Trust Bank & Dhaka Bank.",
+            "📱 Mobile Banking: Pay directly via bKash, Nagad, Rocket under 'Government Fee' option.",
+            "💡 Tip: Deposit challan at any Sonali Bank online branch and collect the original receipt."
+        ]
+        return "\n".join(lines)
+
+
+def build_challan_card(domain: str = "passport", lang: str = "bn") -> dict:
+    dom_key = "licence" if domain == "licence" else "passport"
+    badge = "পাসপোর্ট ও লাইসেন্স · এ-চালান ও ব্যাংক" if lang == "bn" else "Passport & Licence · A-Challan & Bank"
+    auth = "অর্থ মন্ত্রণালয় (Ministry of Finance) ও ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তর" if lang == "bn" else "Ministry of Finance & Department of Immigration and Passports"
+    source_url = "https://www.epassport.gov.bd/"
+
+    field_label = "চালান ও অনলাইন পেমেন্ট নির্দেশিকা" if lang == "bn" else "Payment & Challan Instructions"
+    field_content = (
+        "অনলাইনে পাসপোর্ট আবেদন শেষে সরাসরি Ekpay / A-Challan গেটওয়ে ব্যবহার করে ফি জমা দেওয়া যায়। "
+        "ব্যাংকে জমা দেওয়ার ক্ষেত্রে এ-চালান কপি ডাউনলোড ও প্রিন্ট করে নির্ধারিত ব্যাংকের শাখায় জমা দিয়ে চালানের মূল রসিদ পাসপোর্ট অফিসে জমা দিতে হবে।"
+        if lang == "bn" else
+        "You can pay online via Ekpay / A-Challan gateway or print the challan form and deposit at designated bank branches."
+    )
+
+    fields = [
+        {
+            "key": "payment",
+            "label": field_label,
+            "content": field_content
+        }
+    ]
+
+    return {
+        "domain": dom_key,
+        "subtype": "new",
+        "badge": badge,
+        "title": "এ-চালান কোড ও অনুমোদিত ব্যাংক ডিরেক্টরি",
+        "ref": "PAYMENT / A-CHALLAN / BANKS",
+        "authority": auth,
+        "office": "অনুমোদিত ব্যাংকসমূহ ও এ-চালান",
+        "highlight_label": "পেমেন্ট পদ্ধতি" if lang == "bn" else "Payment Method",
+        "highlight": "এ-চালান / ব্যাংক ও মোবাইল ব্যাংকিং" if lang == "bn" else "A-Challan / Bank & Mobile Banking",
+        "fields": fields,
+        "sources": [{"id": "payment.challan.banks", "url": source_url, "verified_on": "2026-11-15"}],
+        "warn": None,
+        "warn_text": None,
+    }
