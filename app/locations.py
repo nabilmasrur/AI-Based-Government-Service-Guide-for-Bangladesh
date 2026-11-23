@@ -590,3 +590,72 @@ def build_gd_card(lang: str = "bn") -> dict:
         "warn": None,
         "warn_text": None,
     }
+
+
+def is_hotline_query(message: str) -> bool:
+    """Checks if message is asking about hotlines, helplines or call center numbers."""
+    norm = unicodedata.normalize("NFC", message.lower())
+    has_hotline_word = any(k in norm for k in ["হটলাইন", "হেল্পলাইন", "কল সেন্টার", "কলসেন্টার", "কাস্টমার কেয়ার", "কাস্টমারকেয়ার", "hotline", "helpline", "call center", "customer care"])
+    if has_hotline_word:
+        return True
+    has_num_word = any(k in norm for k in ["নম্বর", "নাম্বার", "ফোন", "হেল্প", "number", "phone"])
+    has_gov_service = any(k in norm for k in ["পাসপোর্ট", "বিআরটিএ", "ড্রাইভিং", "লাইসেন্স", "সরকারি", "জরুরি", "ইমার্জেন্সি", "passport", "brta", "license", "licence"])
+    return has_num_word and has_gov_service and ("হেল্প" in norm or "জরুরি" in norm or "টোল" in norm or "টোল-ফ্রি" in norm or "কাস্টমার" in norm)
+
+
+def format_hotline_lead(lang: str = "bn") -> str:
+    """Formats exact emergency government hotlines matching user specifications."""
+    if lang == "bn":
+        lines = [
+            "☎️ জরুরি সরকারি কাস্টমার কেয়ার নম্বর",
+            "🛂 ই-পাসপোর্ট কল সেন্টার: 16445 (টোল-ফ্রি)",
+            "🚗 বিআরটিএ হেল্পলাইন: 16107 (রবি - বৃহস্পতি, ৯টা - ৫টা)",
+            "📢 সরকারি সকল তথ্য ও সেবা: 333",
+            "🚨 জাতীয় জরুরি সেবা (পুলিশ/অ্যাম্বুলেন্স): 999"
+        ]
+        return "\n".join(lines)
+    else:
+        lines = [
+            "☎️ Emergency Government Customer Care Numbers",
+            "🛂 e-Passport Call Center: 16445 (Toll-free)",
+            "🚗 BRTA Helpline: 16107 (Sun - Thu, 9am - 5pm)",
+            "📢 All Government Information & Services: 333",
+            "🚨 National Emergency Service (Police/Ambulance): 999"
+        ]
+        return "\n".join(lines)
+
+
+def build_hotline_card(lang: str = "bn") -> dict:
+    badge = "সরকারি হেল্পলাইন ডিরেক্টরি" if lang == "bn" else "Government Helpline Directory"
+    title = "জরুরি সরকারি কাস্টমার কেয়ার নম্বর" if lang == "bn" else "Emergency Government Customer Care Numbers"
+    auth = "গণপ্রজাতন্ত্রী বাংলাদেশ সরকার" if lang == "bn" else "Government of Bangladesh"
+    source_url = "https://bangladesh.gov.bd/"
+
+    fields = [
+        {
+            "key": "hotline_info",
+            "label": "টোল-ফ্রি ও জরুরি হেল্পডেস্ক" if lang == "bn" else "Toll-Free & Emergency Helpdesks",
+            "content": (
+                "পাসপোর্ট, ড্রাইভিং লাইসেন্স এবং জাতীয় যেকোনো নাগরিক সেবা বা জরুরি সহায়তার জন্য সংশ্লিষ্ট শর্টকোডে "
+                "সরাসরি যেকোনো মোবাইল অপারেটর থেকে ডায়াল করুন।"
+                if lang == "bn" else
+                "Dial the dedicated national shortcodes from any mobile operator for emergency or citizen assistance."
+            )
+        }
+    ]
+
+    return {
+        "domain": "general",
+        "subtype": "helpline",
+        "badge": badge,
+        "title": title,
+        "ref": "GOV / HELPLINE / DIRECTORY",
+        "authority": auth,
+        "office": "জাতীয় হেল্পডেস্ক ও কল সেন্টার" if lang == "bn" else "National Helpdesk & Call Centers",
+        "highlight_label": "জরুরি হটলাইন" if lang == "bn" else "Emergency Helpline",
+        "highlight": "333 / 999 / 16445 / 16107",
+        "fields": fields,
+        "sources": [{"id": "gov.hotline", "url": source_url, "verified_on": "2026-11-15"}],
+        "warn": None,
+        "warn_text": None,
+    }

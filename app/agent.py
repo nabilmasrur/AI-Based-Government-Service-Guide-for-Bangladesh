@@ -418,6 +418,16 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
         session.remember(state, "assistant", lead_text)
         return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
 
+    # 0.5 Emergency government hotlines & customer care
+    if locations.is_hotline_query(message):
+        state["field"] = "hotline"
+        lead_text = locations.format_hotline_lead(lang)
+        card = locations.build_hotline_card(lang)
+        chips = ["পাসপোর্ট ফি কত?", "ড্রাইভিং লাইসেন্স ফি কত?", "পাসপোর্ট স্ট্যাটাস চেক", "অনলাইনে আবেদন"] if lang == "bn" else ["Passport fee", "Licence fee", "Passport status check", "Online application"]
+        note = "জরুরি সরকারি হটলাইন ও কাস্টমার কেয়ার নম্বর সরাসরি প্রদান।"
+        session.remember(state, "assistant", lead_text)
+        return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
+
     # 1. District driving test / exam query handling
     is_exam = locations.is_exam_query(message) or rule.get("subtype") == "exam" or state.get("subtype") == "exam"
     is_licence = rule.get("domain") == "licence" or "লাইসেন্স" in message or "ড্রাইভিং" in message or "বিআরটিএ" in message or "brta" in message.lower() or state.get("domain") == "licence"
