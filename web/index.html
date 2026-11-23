@@ -1266,7 +1266,7 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     }
     var ms = res.ms || 0;
     out += "<div class='stamp'><b>" + (ms < 1000 ? ms + " ms" : (ms/1000).toFixed(1) + " s") +
-           "</b> · " + esc(res._fast ? S("fast") : S("full")) + quotaTail(res.limit) + "</div>";
+           "</b>" + quotaTail(res.limit) + "</div>";
            
     if (res.query_id) {
       out += "<div class='fb-box'>" +
@@ -1494,7 +1494,7 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
           }
           var ms = res.ms || 0;
           tailHtml += "<div class='stamp claude-sec-glide'><b>" + (ms < 1000 ? ms + " ms" : (ms/1000).toFixed(1) + " s") +
-                 "</b> · " + esc(res._fast ? S("fast") : S("full")) + quotaTail(res.limit) + "</div>";
+                 "</b>" + quotaTail(res.limit) + "</div>";
 
           if (res.query_id) {
             tailHtml += "<div class='fb-box claude-sec-glide'>" +
