@@ -457,3 +457,69 @@ def build_police_card(district_id: str, lang: str = "bn") -> dict:
         "warn": None,
         "warn_text": None,
     }
+
+
+def is_medical_query(message: str) -> bool:
+    """Checks if message is asking about driving licence medical test or certificate."""
+    norm = unicodedata.normalize("NFC", message.lower())
+    has_med = any(k in norm for k in ["মেডিকেল", "মেডিক্যাল", "ডাক্তার", "ডাক্তারি", "চিকিৎসক", "রক্তের গ্রুপ", "ডিএল-১", "medical", "doctor", "dl-1"])
+    has_licence = any(k in norm for k in ["লাইসেন্স", "ড্রাইভিং", "বিআরটিএ", "লার্নার", "licence", "license", "driving", "brta", "সার্টিফিকেট", "ফরম", "টেস্ট"])
+    return has_med and has_licence
+
+
+def format_medical_lead(lang: str = "bn") -> str:
+    """Formats exact driving licence medical test guide matching user specifications."""
+    if lang == "bn":
+        lines = [
+            "🏥 ড্রাইভিং লাইসেন্স মেডিকেল টেস্ট গাইড",
+            "🏢 অনুমোদিত স্থান: সরকারি সদর হাসপাতাল / সিভিল সার্জন কার্যালয় অথবা যেকোনো রেজিস্টার্ড এমবিবিএস ডাক্তার।",
+            "📝 নির্ধারিত ফরম: বিআরটিএ মেডিকেল সার্টিফিকেট ফরম (ফর্ম ডিএল-১)।",
+            "🩸 যাচাইকৃত টেস্ট: রক্তের গ্রুপ পরীক্ষা, কালার ব্লাইন্ডনেস (দৃষ্টিশক্তি) এবং শারীরিক সক্ষমতা।",
+            "📌 ফি: সরকারি হাসপাতালে সাধারণত ৫০-১০০ টাকা সরকারি ফি প্রযোজ্য।"
+        ]
+        return "\n".join(lines)
+    else:
+        lines = [
+            "🏥 Driving Licence Medical Test Guide",
+            "🏢 Authorized Places: Government Sadar Hospital / Civil Surgeon Office or any registered MBBS doctor.",
+            "📝 Designated Form: BRTA Medical Certificate Form (Form DL-1).",
+            "🩸 Verified Tests: Blood group test, color blindness (vision), and physical fitness.",
+            "📌 Fee: Usually 50-100 BDT government fee applies at government hospitals."
+        ]
+        return "\n".join(lines)
+
+
+def build_medical_card(lang: str = "bn") -> dict:
+    badge = "ড্রাইভিং লাইসেন্স · মেডিকেল সার্টিফিকেট" if lang == "bn" else "Driving Licence · Medical Certificate"
+    title = "ড্রাইভিং লাইসেন্স মেডিকেল টেস্ট গাইড" if lang == "bn" else "Driving Licence Medical Test Guide"
+    auth = "বাংলাদেশ সড়ক পরিবহন কর্তৃপক্ষ (বিআরটিএ)" if lang == "bn" else "Bangladesh Road Transport Authority (BRTA)"
+    source_url = "http://www.brta.gov.bd/"
+
+    fields = [
+        {
+            "key": "medical_info",
+            "label": "মেডিকেল টেস্ট ও ফর্ম ডিএল-১ নির্দেশনা" if lang == "bn" else "Medical Test & Form DL-1 Guidelines",
+            "content": (
+                "বিআরটিএ শিক্ষানবিশ (লার্নার) ও মূল স্মার্টকার্ড ড্রাইভিং লাইসেন্সের জন্য রেজিস্টার্ড এমবিবিএস ডাক্তারের স্বাক্ষরিত "
+                "ফর্ম ডিএল-১ জমা দেওয়া বাধ্যতামূলক। দৃষ্টিশক্তি ও রক্তের গ্রুপ সঠিক থাকতে হবে।"
+                if lang == "bn" else
+                "Form DL-1 certified by a registered MBBS doctor is mandatory for BRTA driving licence applications."
+            )
+        }
+    ]
+
+    return {
+        "domain": "licence",
+        "subtype": "new",
+        "badge": badge,
+        "title": title,
+        "ref": "LICENCE / MEDICAL / DL-1",
+        "authority": auth,
+        "office": "বিআরটিএ ও অনুমোদিত স্বাস্থ্যকেন্দ্র" if lang == "bn" else "BRTA & Authorized Medical Centers",
+        "highlight_label": "ফরম" if lang == "bn" else "Form",
+        "highlight": "ফর্ম ডিএল-১ (মেডিকেল)" if lang == "bn" else "Form DL-1 (Medical)",
+        "fields": fields,
+        "sources": [{"id": "licence.medical", "url": source_url, "verified_on": "2026-11-15"}],
+        "warn": None,
+        "warn_text": None,
+    }

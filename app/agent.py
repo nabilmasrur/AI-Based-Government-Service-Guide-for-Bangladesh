@@ -394,6 +394,18 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
             note = "পুলিশ ভেরিফিকেশন অফিসের জন্য জেলা অনুসন্ধান।"
             return _reply("clarify", lead_text, chips, _trace(state, [], "clarify", note), state, started=started)
 
+    # 0.3 Driving licence medical certificate query
+    if locations.is_medical_query(message):
+        state["domain"] = "licence"
+        state["subtype"] = "new"
+        state["field"] = "docs"
+        lead_text = locations.format_medical_lead(lang)
+        card = locations.build_medical_card(lang)
+        chips = ["ড্রাইভিং লাইসেন্স ফি কত?", "লার্নার কার্ডের নিয়ম", "পরীক্ষার মাঠ কোথায়?", "অনলাইনে আবেদন"] if lang == "bn" else ["Licence fee", "Learner card rules", "Exam grounds", "Online application"]
+        note = "ড্রাইভিং লাইসেন্স মেডিকেল সার্টিফিকেট ও ফরম ডিএল-১ তথ্য সরাসরি প্রদান।"
+        session.remember(state, "assistant", lead_text)
+        return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
+
     # 1. District driving test / exam query handling
     is_exam = locations.is_exam_query(message) or rule.get("subtype") == "exam" or state.get("subtype") == "exam"
     is_licence = rule.get("domain") == "licence" or "লাইসেন্স" in message or "ড্রাইভিং" in message or "বিআরটিএ" in message or "brta" in message.lower() or state.get("domain") == "licence"
