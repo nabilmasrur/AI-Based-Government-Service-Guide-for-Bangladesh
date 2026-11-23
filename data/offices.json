@@ -44,6 +44,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=Collectorate+Eidgah+Rangpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), রংপুর",
+      "unit_name_en": "District Special Branch (DSB), Rangpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), রংপুর।",
+      "address_en": "Superintendent of Police Office Compound, Rangpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৫৮৯৯৬১১১১",
+      "phone_en": "০২৫৮৯৯৬১১১১",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "dinajpur": {
@@ -90,6 +102,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Dinajpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), দিনাজপুর",
+      "unit_name_en": "District Special Branch (DSB), Dinajpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), দিনাজপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Dinajpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৫৮৯৯২২১০১",
+      "phone_en": "০২৫৮৯৯২২১০১",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "bogura": {
@@ -137,6 +161,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Bogra"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), বগুড়া",
+      "unit_name_en": "District Special Branch (DSB), Bogura",
+      "address_bn": "পুলিশ সুপারের কার্যালয় কম্পাউন্ড, বগুড়া।",
+      "address_en": "Superintendent of Police Office Compound, Bogura.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৫৮৮৮১১১১১",
+      "phone_en": "০২৫৮৮৮১১১১১",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "dhaka": {
@@ -187,6 +223,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Mirpur+Test+Ground"
+    },
+    "police_verification": {
+      "unit_name_bn": "স্পেশাল ব্রাঞ্চ (SB) পাসপোর্ট শাখা, ঢাকা",
+      "unit_name_en": "District Special Branch (DSB), Dhaka",
+      "address_bn": "এসবি প্রধান কার্যালয়, মালিবাগ / সংশ্লিষ্ট থানা স্পেশাল ব্রাঞ্চ, ঢাকা।",
+      "address_en": "Superintendent of Police Office Compound, Dhaka.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২-৯৩৩৪৫৫৫",
+      "phone_en": "০২-৯৩৩৪৫৫৫",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "chattogram": {
@@ -236,6 +284,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Chattogram+Test+Track"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), চট্টগ্রাম",
+      "unit_name_en": "District Special Branch (DSB), Chattogram",
+      "address_bn": "পুলিশ সুপারের কার্যালয় / সিএমপি হেডকোয়ার্টার্স, লালদিঘী, চট্টগ্রাম।",
+      "address_en": "Superintendent of Police Office Compound, Chattogram.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩১-৬১২১১১",
+      "phone_en": "০৩১-৬১২১১১",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "rajshahi": {
@@ -282,6 +342,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Rajshahi"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), রাজশাহী",
+      "unit_name_en": "District Special Branch (DSB), Rajshahi",
+      "address_bn": "পুলিশ সুপারের কার্যালয় / আরএমপি সদর দপ্তর, রাজশাহী।",
+      "address_en": "Superintendent of Police Office Compound, Rajshahi.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৫৮৮৮৫১১১১",
+      "phone_en": "০২৫৮৮৮৫১১১১",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "sylhet": {
@@ -330,6 +402,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Sylhet"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), সিলেট",
+      "unit_name_en": "District Special Branch (DSB), Sylhet",
+      "address_bn": "পুলিশ সুপারের কার্যালয় / এসএমপি সদর দপ্তর, বন্দরবাজার, সিলেট।",
+      "address_en": "Superintendent of Police Office Compound, Sylhet.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮২১-৭১১১১১",
+      "phone_en": "০৮২১-৭১১১১১",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "khulna": {
@@ -377,6 +461,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Khulna"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), খুলনা",
+      "unit_name_en": "District Special Branch (DSB), Khulna",
+      "address_bn": "পুলিশ সুপারের কার্যালয় / কেএমপি সদর দপ্তর, খুলনা।",
+      "address_en": "Superintendent of Police Office Compound, Khulna.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৪৭৭৭০১১১১",
+      "phone_en": "০২৪৭৭৭০১১১১",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "barishal": {
@@ -425,6 +521,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Barishal"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), বরিশাল",
+      "unit_name_en": "District Special Branch (DSB), Barishal",
+      "address_bn": "পুলিশ সুপারের কার্যালয় / বিএমপি সদর দপ্তর, বরিশাল।",
+      "address_en": "Superintendent of Police Office Compound, Barishal.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৩১-২১১১১১",
+      "phone_en": "০৪৩১-২১১১১১",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "mymensingh": {
@@ -471,6 +579,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Mymensingh"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ময়মনসিংহ",
+      "unit_name_en": "District Special Branch (DSB), Mymensingh",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ময়মনসিংহ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Mymensingh.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৯১-৬৭২২২",
+      "phone_en": "০৯১-৬৭২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "cumilla": {
@@ -518,6 +638,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Cumilla"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), কুমিল্লা",
+      "unit_name_en": "District Special Branch (DSB), Cumilla",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), কুমিল্লা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Cumilla.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮১-৬২২২২",
+      "phone_en": "০৮১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "gazipur": {
@@ -564,6 +696,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Gazipur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), গাজীপুর",
+      "unit_name_en": "District Special Branch (DSB), Gazipur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), গাজীপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Gazipur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২-৪৯২৭২২২২",
+      "phone_en": "০২-৪৯২৭২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "narayanganj": {
@@ -610,6 +754,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Narayanganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নারায়ণগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Narayanganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নারায়ণগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Narayanganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২-৭৬৯২২২২",
+      "phone_en": "০২-৭৬৯২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "coxsbazar": {
@@ -657,6 +813,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Coxs+Bazar"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), কক্সবাজার",
+      "unit_name_en": "District Special Branch (DSB), Coxs Bazar",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), কক্সবাজার সদর।",
+      "address_en": "Superintendent of Police Office Compound, Coxs Bazar.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩৪১-৬২২২২",
+      "phone_en": "০৩৪১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "tangail": {
@@ -703,6 +871,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Tangail"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), টাঙ্গাইল",
+      "unit_name_en": "District Special Branch (DSB), Tangail",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), টাঙ্গাইল সদর।",
+      "address_en": "Superintendent of Police Office Compound, Tangail.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৯২১-৬২২২২",
+      "phone_en": "০৯২১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "jashore": {
@@ -750,6 +930,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Jashore"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), যশোর",
+      "unit_name_en": "District Special Branch (DSB), Jashore",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), যশোর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Jashore.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪২১-৬২২২২",
+      "phone_en": "০৪২১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "kushtia": {
@@ -796,6 +988,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Kushtia"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), কুষ্টিয়া",
+      "unit_name_en": "District Special Branch (DSB), Kushtia",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), কুষ্টিয়া সদর।",
+      "address_en": "Superintendent of Police Office Compound, Kushtia.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭১-৬২২২২",
+      "phone_en": "০৭১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "pabna": {
@@ -842,6 +1046,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Pabna"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), পাবনা",
+      "unit_name_en": "District Special Branch (DSB), Pabna",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), পাবনা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Pabna.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৩১-৬২২২২",
+      "phone_en": "০৭৩১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "noakhali": {
@@ -888,6 +1104,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Noakhali"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নোয়াখালী",
+      "unit_name_en": "District Special Branch (DSB), Noakhali",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নোয়াখালী সদর।",
+      "address_en": "Superintendent of Police Office Compound, Noakhali.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩২১-৬২২২২",
+      "phone_en": "০৩২১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "feni": {
@@ -934,6 +1162,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Feni"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ফেনী",
+      "unit_name_en": "District Special Branch (DSB), Feni",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ফেনী সদর।",
+      "address_en": "Superintendent of Police Office Compound, Feni.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩৩১-৭২২২২",
+      "phone_en": "০৩৩১-৭২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "sirajganj": {
@@ -979,6 +1219,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Sirajganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), সিরাজগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Sirajganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), সিরাজগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Sirajganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৫১-৬২২২২",
+      "phone_en": "০৭৫১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "kurigram": {
@@ -1024,6 +1276,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Kurigram"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), কুড়িগ্রাম",
+      "unit_name_en": "District Special Branch (DSB), Kurigram",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), কুড়িগ্রাম সদর।",
+      "address_en": "Superintendent of Police Office Compound, Kurigram.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৮১-৬২২২২",
+      "phone_en": "০৫৮১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "nilphamari": {
@@ -1070,6 +1334,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Nilphamari"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নীলফামারী",
+      "unit_name_en": "District Special Branch (DSB), Nilphamari",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নীলফামারী সদর।",
+      "address_en": "Superintendent of Police Office Compound, Nilphamari.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৮১৮-৫১২২২",
+      "phone_en": "০৫৮১৮-৫১২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "thakurgaon": {
@@ -1115,6 +1391,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Thakurgaon"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ঠাকুরগাঁও",
+      "unit_name_en": "District Special Branch (DSB), Thakurgaon",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ঠাকুরগাঁও সদর।",
+      "address_en": "Superintendent of Police Office Compound, Thakurgaon.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৬১-৬২২২২",
+      "phone_en": "০৫৬১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "panchagarh": {
@@ -1160,6 +1448,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Panchagarh"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), পঞ্চগড়",
+      "unit_name_en": "District Special Branch (DSB), Panchagarh",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), পঞ্চগড় সদর।",
+      "address_en": "Superintendent of Police Office Compound, Panchagarh.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৬৮-৬২২২২",
+      "phone_en": "০৫৬৮-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "gaibandha": {
@@ -1205,6 +1505,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Gaibandha"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), গাইবান্ধা",
+      "unit_name_en": "District Special Branch (DSB), Gaibandha",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), গাইবান্ধা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Gaibandha.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৪১-৬২২২২",
+      "phone_en": "০৫৪১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "lalmonirhat": {
@@ -1250,6 +1562,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Lalmonirhat"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), লালমনিরহাট",
+      "unit_name_en": "District Special Branch (DSB), Lalmonirhat",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), লালমনিরহাট সদর।",
+      "address_en": "Superintendent of Police Office Compound, Lalmonirhat.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৯১-৬২২২২",
+      "phone_en": "০৫৯১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "brahmanbaria": {
@@ -1295,6 +1619,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Brahmanbaria"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ব্রাহ্মণবাড়িয়া",
+      "unit_name_en": "District Special Branch (DSB), Brahmanbaria",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ব্রাহ্মণবাড়িয়া সদর।",
+      "address_en": "Superintendent of Police Office Compound, Brahmanbaria.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮৫১-৫৮২২২",
+      "phone_en": "০৮৫১-৫৮২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "chandpur": {
@@ -1340,6 +1676,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Chandpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), চাঁদপুর",
+      "unit_name_en": "District Special Branch (DSB), Chandpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), চাঁদপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Chandpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮৪১-৬২২২২",
+      "phone_en": "০৮৪১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "lakshmipur": {
@@ -1385,6 +1733,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Lakshmipur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), লক্ষ্মীপুর",
+      "unit_name_en": "District Special Branch (DSB), Lakshmipur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), লক্ষ্মীপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Lakshmipur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩৮১-৬২২২২",
+      "phone_en": "০৩৮১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "patuakhali": {
@@ -1430,6 +1790,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Patuakhali"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), পটুয়াখালী",
+      "unit_name_en": "District Special Branch (DSB), Patuakhali",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), পটুয়াখালী সদর।",
+      "address_en": "Superintendent of Police Office Compound, Patuakhali.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৪১-৬২২২২",
+      "phone_en": "০৪৪১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "bhola": {
@@ -1475,6 +1847,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Bhola"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ভোলা",
+      "unit_name_en": "District Special Branch (DSB), Bhola",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ভোলা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Bhola.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৯১-৬২২২২",
+      "phone_en": "০৪৯১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "pirojpur": {
@@ -1520,6 +1904,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Pirojpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), পিরোজপুর",
+      "unit_name_en": "District Special Branch (DSB), Pirojpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), পিরোজপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Pirojpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৬১-৬২২২২",
+      "phone_en": "০৪৬১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "barguna": {
@@ -1565,6 +1961,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Barguna"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), বরগুনা",
+      "unit_name_en": "District Special Branch (DSB), Barguna",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), বরগুনা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Barguna.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৪৮-৬২২২২",
+      "phone_en": "০৪৪৮-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "jhalokati": {
@@ -1611,6 +2019,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Jhalokati"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ঝালকাঠি",
+      "unit_name_en": "District Special Branch (DSB), Jhalokati",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ঝালকাঠি সদর।",
+      "address_en": "Superintendent of Police Office Compound, Jhalokati.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৯৮-৬২২২২",
+      "phone_en": "০৪৯৮-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "kishoreganj": {
@@ -1656,6 +2076,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Kishoreganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), কিশোরগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Kishoreganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), কিশোরগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Kishoreganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৯৪১-৬২২২২",
+      "phone_en": "০৯৪১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "manikganj": {
@@ -1701,6 +2133,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Manikganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), মানিকগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Manikganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), মানিকগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Manikganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৯৯৬৬১২২২২",
+      "phone_en": "০২৯৯৬৬১২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "munshiganj": {
@@ -1747,6 +2191,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Munshiganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), মুন্সিগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Munshiganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), মুন্সিগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Munshiganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২-৭৬১২২২২",
+      "phone_en": "০২-৭৬১২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "narsingdi": {
@@ -1792,6 +2248,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Narsingdi"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নরসিংদী",
+      "unit_name_en": "District Special Branch (DSB), Narsingdi",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নরসিংদী সদর।",
+      "address_en": "Superintendent of Police Office Compound, Narsingdi.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৯৪-৬২২২২",
+      "phone_en": "০২৯৪-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "faridpur": {
@@ -1837,6 +2305,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Faridpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ফরিদপুর",
+      "unit_name_en": "District Special Branch (DSB), Faridpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ফরিদপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Faridpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৬৩১-৬২২২২",
+      "phone_en": "০৬৩১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "gopalganj": {
@@ -1882,6 +2362,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Gopalganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), গোপালগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Gopalganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), গোপালগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Gopalganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২-৬৬৮২২২২",
+      "phone_en": "০২-৬৬৮২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "madaripur": {
@@ -1927,6 +2419,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Madaripur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), মাদারীপুর",
+      "unit_name_en": "District Special Branch (DSB), Madaripur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), মাদারীপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Madaripur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৬৬১-৬২২২২",
+      "phone_en": "০৬৬১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "rajbari": {
@@ -1972,6 +2476,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Rajbari"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), রাজবাড়ী",
+      "unit_name_en": "District Special Branch (DSB), Rajbari",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), রাজবাড়ী সদর।",
+      "address_en": "Superintendent of Police Office Compound, Rajbari.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৬৪১-৬২২২২",
+      "phone_en": "০৬৪১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "shariatpur": {
@@ -2017,6 +2533,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Shariatpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), শরীয়তপুর",
+      "unit_name_en": "District Special Branch (DSB), Shariatpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), শরীয়তপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Shariatpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৬০২-৬২২২২",
+      "phone_en": "০৬০২-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "moulvibazar": {
@@ -2063,6 +2591,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Moulvibazar"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), মৌলভীবাজার",
+      "unit_name_en": "District Special Branch (DSB), Moulvibazar",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), মৌলভীবাজার সদর।",
+      "address_en": "Superintendent of Police Office Compound, Moulvibazar.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮৬১-৫২২২২",
+      "phone_en": "০৮৬১-৫২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "habiganj": {
@@ -2108,6 +2648,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Habiganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), হবিগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Habiganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), হবিগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Habiganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮৩১-৬২২২২",
+      "phone_en": "০৮৩১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "sunamganj": {
@@ -2153,6 +2705,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Sunamganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), সুনামগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Sunamganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), সুনামগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Sunamganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮৭১-৬২২২২",
+      "phone_en": "০৮৭১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "jamalpur": {
@@ -2198,6 +2762,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Jamalpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), জামালপুর",
+      "unit_name_en": "District Special Branch (DSB), Jamalpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), জামালপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Jamalpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৯৮১-৬২২২২",
+      "phone_en": "০৯৮১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "sherpur": {
@@ -2243,6 +2819,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Sherpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), শেরপুর",
+      "unit_name_en": "District Special Branch (DSB), Sherpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), শেরপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Sherpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৯৩১-৬২২২২",
+      "phone_en": "০৯৩১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "netrokona": {
@@ -2289,6 +2877,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Netrokona"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নেত্রকোণা",
+      "unit_name_en": "District Special Branch (DSB), Netrokona",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নেত্রকোণা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Netrokona.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৯৫১-৬২২২২",
+      "phone_en": "০৯৫১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "natore": {
@@ -2334,6 +2934,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Natore"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নাটোর",
+      "unit_name_en": "District Special Branch (DSB), Natore",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নাটোর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Natore.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৭১-৬২২২২",
+      "phone_en": "০৭৭১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "naogaon": {
@@ -2379,6 +2991,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Naogaon"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নওগাঁ",
+      "unit_name_en": "District Special Branch (DSB), Naogaon",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নওগাঁ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Naogaon.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৪১-৬২২২২",
+      "phone_en": "০৭৪১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "chapainawabganj": {
@@ -2425,6 +3049,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Chapai+Nawabganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), চাঁপাইনবাবগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Chapai Nawabganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), চাঁপাইনবাবগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Chapai Nawabganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৮১-৫২২২২",
+      "phone_en": "০৭৮১-৫২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "joypurhat": {
@@ -2470,6 +3106,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Joypurhat"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), জয়পুরহাট",
+      "unit_name_en": "District Special Branch (DSB), Joypurhat",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), জয়পুরহাট সদর।",
+      "address_en": "Superintendent of Police Office Compound, Joypurhat.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৭১-৬২২২২",
+      "phone_en": "০৫৭১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "chuadanga": {
@@ -2515,6 +3163,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Chuadanga"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), চুয়াডাঙ্গা",
+      "unit_name_en": "District Special Branch (DSB), Chuadanga",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), চুয়াডাঙ্গা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Chuadanga.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৬১-৬২২২২",
+      "phone_en": "০৭৬১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "meherpur": {
@@ -2560,6 +3220,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Meherpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), মেহেরপুর",
+      "unit_name_en": "District Special Branch (DSB), Meherpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), মেহেরপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Meherpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৯১-৬২২২২",
+      "phone_en": "০৭৯১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "jhenaidah": {
@@ -2605,6 +3277,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Jhenaidah"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ঝিনাইদহ",
+      "unit_name_en": "District Special Branch (DSB), Jhenaidah",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ঝিনাইদহ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Jhenaidah.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৫১-৬২২২২",
+      "phone_en": "০৪৫১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "magura": {
@@ -2650,6 +3334,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Magura"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), মাগুরা",
+      "unit_name_en": "District Special Branch (DSB), Magura",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), মাগুরা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Magura.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৮১-৬২২২২",
+      "phone_en": "০৪৮১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "narail": {
@@ -2695,6 +3391,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Narail"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নড়াইল",
+      "unit_name_en": "District Special Branch (DSB), Narail",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নড়াইল সদর।",
+      "address_en": "Superintendent of Police Office Compound, Narail.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৮১-৩২২২২",
+      "phone_en": "০৪৮১-৩২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "satkhira": {
@@ -2740,6 +3448,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Satkhira"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), সাতক্ষীরা",
+      "unit_name_en": "District Special Branch (DSB), Satkhira",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), সাতক্ষীরা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Satkhira.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৭১-৬২২২২",
+      "phone_en": "০৪৭১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "bagerhat": {
@@ -2785,6 +3505,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Bagerhat"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), বাগেরহাট",
+      "unit_name_en": "District Special Branch (DSB), Bagerhat",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), বাগেরহাট সদর।",
+      "address_en": "Superintendent of Police Office Compound, Bagerhat.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৬৮-৬২২২২",
+      "phone_en": "০৪৬৮-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "rangamati": {
@@ -2830,6 +3562,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Rangamati"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), রাঙ্গামাটি",
+      "unit_name_en": "District Special Branch (DSB), Rangamati",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), রাঙ্গামাটি সদর।",
+      "address_en": "Superintendent of Police Office Compound, Rangamati.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩৫১-৬২২২২",
+      "phone_en": "০৩৫১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "bandarban": {
@@ -2875,6 +3619,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Bandarban"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), বান্দরবান",
+      "unit_name_en": "District Special Branch (DSB), Bandarban",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), বান্দরবান সদর।",
+      "address_en": "Superintendent of Police Office Compound, Bandarban.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩৬১-৬২২২২",
+      "phone_en": "০৩৬১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   },
   "khagrachhari": {
@@ -2920,6 +3676,18 @@
       "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
       "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
       "maps_url": "https://maps.google.com/?q=BRTA+Khagrachhari"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), খাগড়াছড়ি",
+      "unit_name_en": "District Special Branch (DSB), Khagrachhari",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), খাগড়াছড়ি সদর।",
+      "address_en": "Superintendent of Police Office Compound, Khagrachhari.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩৭১-৬২২২২",
+      "phone_en": "০৩৭১-৬২২২২",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
     }
   }
 }

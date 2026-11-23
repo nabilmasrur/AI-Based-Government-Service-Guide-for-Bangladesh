@@ -373,8 +373,28 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
         session.remember(state, "assistant", lead_text)
         return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
 
-    # 1. District driving test / exam query handling
+    # 0.2 District police verification DSB office query
     district_id = locations.find_district(message)
+    is_police = "পুলিশ" in message or "ভেরিফিকেশন" in message or "police" in message.lower() or "verification" in message.lower() or rule.get("field") == "verification"
+    if is_police and (rule.get("field") == "verification" or locations.is_office_query(message) or "অফিস" in message or "কোথায়" in message or "কোথায়" in message or "ঠিকানা" in message or "ভেরিফিকেশন" in message):
+        if district_id:
+            state["domain"] = "passport"
+            state["field"] = "verification"
+            lead_text = locations.format_police_lead(district_id, lang)
+            card = locations.build_police_card(district_id, lang)
+            chips = ["পাসপোর্টে কি কি কাগজ লাগবে?", "পাসপোর্ট ফি কত?", "অনলাইনে আবেদন", "অন্যান্য জেলা"] if lang == "bn" else ["Required documents", "Passport fee", "Online application", "Other districts"]
+            note = f"{district_id} জেলার পুলিশ ভেরিফিকেশন অফিসের তথ্য সরাসরি প্রদান।"
+            session.remember(state, "assistant", lead_text)
+            return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
+        elif not district_id and len(message.split()) <= 6 and ("অফিস" in message or "কোথায়" in message or "কোথায়" in message or "ঠিকানা" in message):
+            state["domain"] = "passport"
+            state["field"] = "verification"
+            lead_text = "আপনি কোন জেলার পুলিশ ভেরিফিকেশন (DSB) অফিসের তথ্য জানতে চাচ্ছেন? নিচের তালিকা থেকে নির্বাচন করুন অথবা জেলার নাম লিখুন:" if lang == "bn" else "Which district police verification (DSB) office are you looking for? Select below or type a district name:"
+            chips = locations.get_popular_district_chips("passport", lang)
+            note = "পুলিশ ভেরিফিকেশন অফিসের জন্য জেলা অনুসন্ধান।"
+            return _reply("clarify", lead_text, chips, _trace(state, [], "clarify", note), state, started=started)
+
+    # 1. District driving test / exam query handling
     is_exam = locations.is_exam_query(message) or rule.get("subtype") == "exam" or state.get("subtype") == "exam"
     is_licence = rule.get("domain") == "licence" or "লাইসেন্স" in message or "ড্রাইভিং" in message or "বিআরটিএ" in message or "brta" in message.lower() or state.get("domain") == "licence"
 

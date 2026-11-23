@@ -376,3 +376,84 @@ def build_tracking_card(domain: str = "passport", lang: str = "bn") -> dict:
         "warn": None,
         "warn_text": None,
     }
+
+
+def format_police_lead(district_id: str, lang: str = "bn") -> str:
+    """Formats exact DSB police verification office guide matching user specifications."""
+    info = get_district_info(district_id)
+    if not info:
+        return ""
+    pv = info.get("police_verification", {})
+    if not pv:
+        return ""
+
+    if lang == "bn":
+        name = pv.get("unit_name_bn", "")
+        addr = pv.get("address_bn", "")
+        docs = pv.get("documents_bn", "")
+        phone = pv.get("phone_bn", "")
+        alert = pv.get("alert_bn", "")
+        lines = [
+            f"👮 {name}",
+            f"📍 ঠিকানা: {addr}",
+            f"📑 পুলিশকে দেখাতে হবে: {docs}",
+            f"📞 ভেরিফিকেশন হেল্পলাইন: {phone}",
+            f"⚠️ জরুরি সতর্কতা: {alert}"
+        ]
+        return "\n".join(lines)
+    else:
+        name = pv.get("unit_name_en", "")
+        addr = pv.get("address_en", "")
+        docs = pv.get("documents_en", "")
+        phone = pv.get("phone_en", "")
+        alert = pv.get("alert_en", "")
+        lines = [
+            f"👮 {name}",
+            f"📍 Address: {addr}",
+            f"📑 Documents to show: {docs}",
+            f"📞 Helpline: {phone}",
+            f"⚠️ Important Note: {alert}"
+        ]
+        return "\n".join(lines)
+
+
+def build_police_card(district_id: str, lang: str = "bn") -> dict:
+    info = get_district_info(district_id)
+    pv = (info or {}).get("police_verification", {})
+    dist_name = (info or {}).get(f"name_{lang}", district_id.capitalize())
+
+    badge = f"পাসপোর্ট · পুলিশ ভেরিফিকেশন ({dist_name})" if lang == "bn" else f"Passport · Police Verification ({dist_name})"
+    auth = "বাংলাদেশ পুলিশ ও স্পেশাল ব্রাঞ্চ (SB)" if lang == "bn" else "Bangladesh Police & Special Branch (SB)"
+    source_url = "https://www.police.gov.bd/"
+
+    field_label = "ভেরিফিকেশন প্রক্রিয়া ও প্রয়োজনীয় কাগজপত্র" if lang == "bn" else "Verification Process & Documents"
+    field_content = (
+        f"{dist_name} জেলায় পাসপোর্ট আবেদনের পর স্পেশাল ব্রাঞ্চ (DSB) বা স্থানীয় থানা থেকে তদন্তকারী কর্মকর্তা নাগরিকের বর্তমান বা স্থায়ী ঠিকানা তদন্ত করবেন। "
+        f"তদন্তের সময় মূল কাগজপত্র প্রদর্শন করতে হবে।"
+        if lang == "bn" else
+        f"Special Branch (DSB) or local police will verify citizen address and background in {dist_name}."
+    )
+
+    fields = [
+        {
+            "key": "verification",
+            "label": field_label,
+            "content": field_content
+        }
+    ]
+
+    return {
+        "domain": "passport",
+        "subtype": "new",
+        "badge": badge,
+        "title": pv.get(f"unit_name_{lang}", ""),
+        "ref": f"PASSPORT / POLICE / {district_id.upper()}",
+        "authority": auth,
+        "office": pv.get(f"unit_name_{lang}", ""),
+        "highlight_label": "ভেরিফিকেশন এলাকা" if lang == "bn" else "Verification Area",
+        "highlight": f"{dist_name} জেলা" if lang == "bn" else f"{dist_name} District",
+        "fields": fields,
+        "sources": [{"id": f"passport.police.{district_id}", "url": source_url, "verified_on": "2026-11-15"}],
+        "warn": None,
+        "warn_text": None,
+    }
