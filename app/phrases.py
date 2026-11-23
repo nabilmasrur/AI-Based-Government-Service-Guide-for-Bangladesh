@@ -20,6 +20,7 @@ however the writer feels that day — haray / harai / hariye / haraise).
 from __future__ import annotations
 
 import re
+import unicodedata
 
 # --------------------------------------------------------------------------- #
 # domain
@@ -53,7 +54,7 @@ FIELD = {
                  r"|how\s+long|how\s+many\s+days|duration|when\s+will\s+i\s+(get|receive)"
                  r"|processing\s+time|koydin"),
 
-    "office": (r"কোথায়\s*যা|কোথায়\s*গিয়ে|কোন\s*অফিস|কোথায়\s*করব|কোথায়\s*আবেদন|ঠিকানা|অফিস\s*কোথায়"
+    "office": (r"কোথায়|কোথায়|কোন\s*অফিস|অফিস|ঠিকানা|লোকেশন|শাখা|যেতে\s*হবে"
                r"|kothay|kothae|kon\s*office|kothai|\boffice\b|where\s+(do\s+i|should\s+i|to)"
                r"|which\s+office|address|location"),
 
@@ -181,11 +182,13 @@ FIELD_PRIORITY = [
 def domain_of(message: str) -> str | None:
     """Only when exactly one domain is named — a message mentioning both is
     genuinely ambiguous and should be asked about, not guessed."""
+    message = unicodedata.normalize("NFC", message or "")
     hits = [d for d, rx in _DOMAIN_RX.items() if rx.search(message)]
     return hits[0] if len(hits) == 1 else None
 
 
 def field_of(message: str) -> str | None:
+    message = unicodedata.normalize("NFC", message or "")
     hits = {f for f, rx in _FIELD_RX.items() if rx.search(message)}
     for field in FIELD_PRIORITY:
         if field in hits:
@@ -196,6 +199,7 @@ def field_of(message: str) -> str | None:
 def subtype_of(message: str, domain: str | None) -> str | None:
     if not domain or domain not in _SUBTYPE_RX:
         return None
+    message = unicodedata.normalize("NFC", message or "")
     for sub, rx in _SUBTYPE_RX[domain]:
         if rx.search(message):
             return sub
@@ -272,7 +276,7 @@ def _domain_from_subtype(message: str) -> str | None:
 def route(message: str) -> dict:
     """Best-effort reading of one message. Any key may be None; the caller layers
     the model and retrieval on top of whatever is missing."""
-    message = message or ""
+    message = unicodedata.normalize("NFC", message or "")
     domain = domain_of(message)
     field = field_of(message)
     if not domain:

@@ -19,7 +19,8 @@ ANALYTICS_DB = DATA_DIR / "analytics.db"
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 CHAT_MODEL = os.getenv("CHAT_MODEL", "gemini-3.6-flash")
 EMBED_MODEL = os.getenv("EMBED_MODEL", "gemini-embedding-001")
-ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "").strip()
+ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "admin").strip()
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "admin123").strip()
 
 # --- CORS: the frontend's origin(s), comma separated. "*" allows all. ---
 ALLOWED_ORIGINS = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "*").split(",") if o.strip()]

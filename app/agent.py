@@ -13,7 +13,7 @@ import logging
 import re
 import time
 
-from . import config, kb, llm, phrases, prompts, retriever, session, texts
+from . import config, kb, llm, phrases, prompts, retriever, session, texts, locations
 
 # Services this version deliberately does not cover. Checked without the LLM so the
 # scope boundary holds even when Gemini is slow, rate limited, or returns bad JSON.
@@ -296,6 +296,19 @@ def _no_info(state: dict, hits: list[dict], lang: str, started: float,
 def handle_action(state: dict, action: dict, lang: str) -> dict:
     """Fast path — a chip was clicked, so the intent is already structured."""
     started = time.time()
+    if action.get("district"):
+        district_id = action["district"]
+        dom = action.get("domain") or state.get("domain") or "passport"
+        state["domain"] = dom
+        state["subtype"] = "new"
+        state["field"] = "office"
+        lead_text = locations.format_office_lead(district_id, dom, lang)
+        card = locations.build_office_card(district_id, dom, lang)
+        chips = ["ফি কত?", "কি কি কাগজ লাগবে?", "অনলাইনে আবেদন", "অন্যান্য জেলা"] if lang == "bn" else ["How much is the fee?", "Required documents", "Online application", "Other districts"]
+        note = f"{district_id} জেলার {dom} অফিসের তথ্য সরাসরি প্রদান।"
+        session.remember(state, "assistant", lead_text)
+        return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
+
     if action.get("domain"):
         if action["domain"] != state["domain"]:
             state.update(subtype=None, field=None, slots={}, asked=[])
@@ -334,6 +347,32 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
                       _trace(state, [], "chat", note), state, started=started)
 
     rule = phrases.route(message)
+
+    # 1. District office query handling
+    district_id = locations.find_district(message)
+    is_office = rule.get("field") == "office" or locations.is_office_query(message)
+
+    if district_id and (is_office or state.get("field") == "office" or rule.get("domain") or len(message.split()) <= 5):
+        dom = rule.get("domain") or phrases.domain_of(message) or state.get("domain") or "passport"
+        state["domain"] = dom
+        state["subtype"] = "new"
+        state["field"] = "office"
+        lead_text = locations.format_office_lead(district_id, dom, lang)
+        card = locations.build_office_card(district_id, dom, lang)
+        chips = ["ফি কত?", "কি কি কাগজ লাগবে?", "অনলাইনে আবেদন", "অন্যান্য জেলা"] if lang == "bn" else ["How much is the fee?", "Required documents", "Online application", "Other districts"]
+        note = f"{district_id} জেলার {dom} অফিসের তথ্য সরাসরি প্রদান।"
+        session.remember(state, "assistant", lead_text)
+        return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
+
+    # 2. General office query with no district mentioned
+    if is_office and not district_id and rule.get("field") == "office" and not rule.get("subtype"):
+        dom = rule.get("domain") or phrases.domain_of(message) or state.get("domain") or "passport"
+        state["domain"] = dom
+        state["field"] = "office"
+        lead_text = "আপনি কোন জেলার অফিসের ঠিকানা জানতে চাচ্ছেন? নিচের তালিকা থেকে নির্বাচন করুন অথবা জেলার নাম লিখুন:" if lang == "bn" else "Which district office location are you looking for? Select below or type a district name:"
+        chips = locations.get_popular_district_chips(dom, lang)
+        note = "অফিস অনুসন্ধানের জন্য জেলা জিজ্ঞাসা করা হয়েছে।"
+        return _reply("clarify", lead_text, chips, _trace(state, [], "clarify", note), state, started=started)
 
     intent, degraded = {}, False
     try:

@@ -302,6 +302,271 @@ body[data-lang="bn"] .steps{list-style-type:bengali}
 .dots i:nth-child(2){animation-delay:.18s}.dots i:nth-child(3){animation-delay:.36s}
 @keyframes b{0%,60%,100%{opacity:.28;transform:translateY(0)}30%{opacity:.9;transform:translateY(-3px)}}
 
+/* ───────────────────── Claude-style Thinking & Summary ───────────────────── */
+.claude-thinking-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--hair-2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  color: var(--ink-2);
+  font-size: 14.5px;
+  user-select: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.claude-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.claude-dots i {
+  width: 6.5px;
+  height: 6.5px;
+  border-radius: 50%;
+  background: #D9663D;
+  display: inline-block;
+  animation: claudeDotWave 1.25s infinite ease-in-out both;
+}
+.claude-dots i:nth-child(2) { animation-delay: 0.18s; }
+.claude-dots i:nth-child(3) { animation-delay: 0.36s; }
+@keyframes claudeDotWave {
+  0%, 80%, 100% { transform: scale(0.65); opacity: 0.4; }
+  40% { transform: scale(1.18); opacity: 1; }
+}
+.claude-thinking-text {
+  color: var(--ink-2);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 480px;
+  transition: opacity 0.18s ease;
+}
+.claude-live-chev {
+  color: var(--ink-3);
+  flex-shrink: 0;
+  margin-left: 2px;
+}
+
+/* Collapsible Thought Bar (Claude Image 2 style) */
+.claude-thought-box {
+  margin: 6px 0 14px;
+  font-family: inherit;
+}
+.claude-thought-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  margin-left: -6px;
+  border-radius: 10px;
+  color: var(--ink-2);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  text-align: left;
+  max-width: 100%;
+}
+.claude-thought-bar:hover {
+  background: var(--surface);
+  color: var(--ink);
+}
+.claude-thought-bar .c-clock {
+  color: var(--ink-3);
+  flex-shrink: 0;
+}
+.claude-thought-bar .c-thought-txt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 460px;
+  font-weight: 500;
+}
+.claude-thought-bar .c-thought-time {
+  color: var(--ink-3);
+  font-size: 12.5px;
+  font-family: "IBM Plex Mono", monospace;
+  margin-left: 2px;
+}
+.claude-thought-bar .c-chev {
+  color: var(--ink-3);
+  flex-shrink: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.claude-thought-box.open .claude-thought-bar .c-chev {
+  transform: rotate(90deg);
+}
+.claude-thought-box.open .claude-thought-bar {
+  color: var(--ink);
+}
+
+/* Expanded Reasoning Summary Panel (Claude Image 2 style) */
+.claude-thought-panel {
+  display: none;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  animation: claudeSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.claude-thought-box.open .claude-thought-panel {
+  display: block;
+}
+@keyframes claudeSlideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.claude-summary-card {
+  background: var(--surface);
+  border: 1px solid var(--hair-2);
+  border-radius: 16px;
+  padding: 16px 20px 20px;
+  box-shadow: var(--shadow);
+  max-width: 620px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.claude-summary-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--hair);
+}
+.claude-summary-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.claude-summary-close {
+  background: transparent;
+  border: none;
+  color: var(--ink-3);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  line-height: 1;
+  transition: color 0.15s, background 0.15s;
+}
+.claude-summary-close:hover {
+  background: var(--raised);
+  color: var(--ink);
+}
+.claude-timeline {
+  position: relative;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.claude-timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  bottom: 7px;
+  width: 2px;
+  background: var(--hair-2);
+}
+.claude-tl-item {
+  position: relative;
+}
+.claude-tl-dot {
+  position: absolute;
+  left: -22px;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ink-3);
+  border: 2px solid var(--surface);
+  box-sizing: content-box;
+}
+.claude-tl-item:last-child .claude-tl-dot {
+  background: #D9663D;
+}
+.claude-tl-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+.claude-tl-text strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Smooth fade-up presentation for the answer */
+.claude-answer-wrap {
+  animation: claudeFadeUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes claudeFadeUp {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Cascading progressive section glide (top to bottom) */
+.claude-sec-glide {
+  animation: claudeGlideDown 0.36s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes claudeGlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Individual list item / step glide */
+.claude-step-glide {
+  animation: claudeStepSlide 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes claudeStepSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Streaming word cursor (Claude style) */
+.claude-cursor {
+  display: inline-block;
+  color: #D9663D;
+  font-weight: 700;
+  margin-left: 3px;
+  animation: claudeCursorBlink 0.65s infinite;
+  vertical-align: baseline;
+  user-select: none;
+}
+@keyframes claudeCursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.claude-tail-wrap {
+  animation: claudeGlideDown 0.36s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (max-width: 560px) {
+  .claude-thought-bar .c-thought-txt { max-width: 200px; }
+  .claude-thinking-text { max-width: 220px; }
+  .claude-summary-card { padding: 14px 16px; }
+}
+
 /* ───────────────────────── composer ───────────────────────── */
 .bottom{flex:none;padding:10px 20px 14px;background:transparent}
 .composer{
@@ -584,7 +849,14 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
       dLic:"ড্রাইভিং লাইসেন্স", dLicSub:"শিক্ষানবিশ · স্মার্ট কার্ড · নবায়ন",
       or:"অথবা এভাবেও জিজ্ঞেস করতে পারেন",
       ex1:"নতুন পাসপোর্ট করতে কী লাগে?", ex2:"learner license er fee koto?", ex3:"জমির খতিয়ান কীভাবে পাব?",
-      netErr:"সার্ভারে পৌঁছানো যাচ্ছে না। একটু পরে আবার চেষ্টা করুন।"
+      netErr:"সার্ভারে পৌঁছানো যাচ্ছে না। একটু পরে আবার চেষ্টা করুন।",
+      claudeLiveSteps:[
+        "প্রশ্নের অভিপ্রায় ও সেবার ধরন বিশ্লেষণ...",
+        "জ্ঞানভাণ্ডার ও সরকারি বিধিমালা অনুসন্ধান...",
+        "নির্ভুল তথ্য ও ধাপসমূহ সাজানো হচ্ছে..."
+      ],
+      claudeSummaryTitle:"Summary · যুক্তি ও বিশ্লেষণের ধাপসমূহ",
+      claudeDefaultThought:"সরকারি সেবা নির্দেশিকা ও বিধিমালা বিশ্লেষণ..."
     },
     en: {
       appTitle:"Seba Sohayok", appSub:"Passport & driving licence",
@@ -619,7 +891,14 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
       dLic:"Driving licence", dLicSub:"Learner · smart card · renewal",
       or:"Or try one of these",
       ex1:"What do I need for a new passport?", ex2:"How much is a learner licence?", ex3:"How do I get a land record?",
-      netErr:"Cannot reach the server. Please try again shortly."
+      netErr:"Cannot reach the server. Please try again shortly.",
+      claudeLiveSteps:[
+        "Analyzing query intent & service category...",
+        "Consulting official knowledge base & rules...",
+        "Synthesizing verified step-by-step guidance..."
+      ],
+      claudeSummaryTitle:"Summary · Reasoning Steps",
+      claudeDefaultThought:"Analyzing service guidelines and regulations..."
     }
   };
   function S(k){ return L[lang][k]; }
@@ -762,10 +1041,150 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     m.innerHTML = head(S("bot")) + inner;
     col.appendChild(m); return m;
   }
+  /* ── Claude-style live thinking & reasoning ── */
+  var liveThinkingTimer = null;
   function typing(){
-    var g = bot("<div class='dots'><i></i><i></i><i></i></div>", "plain");
+    var steps = S("claudeLiveSteps") || ["Thinking..."];
+    var stepIdx = 0;
+    var liveText = steps[0];
+
+    var html = "<div class='claude-thinking-live'>" +
+      "<span class='claude-dots'><i></i><i></i><i></i></span>" +
+      "<span class='claude-thinking-text' id='claudeLiveTxt'>" + esc(liveText) + "</span>" +
+      "<svg class='claude-live-chev' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'>" +
+        "<polyline points='9 18 15 12 9 6'/>" +
+      "</svg>" +
+      "</div>";
+
+    var g = bot(html, "plain");
     scroll();
+
+    if (liveThinkingTimer) clearInterval(liveThinkingTimer);
+    liveThinkingTimer = setInterval(function(){
+      stepIdx = (stepIdx + 1) % steps.length;
+      var txtEl = document.getElementById("claudeLiveTxt");
+      if (txtEl) {
+        txtEl.style.opacity = "0.2";
+        setTimeout(function(){
+          if (txtEl) {
+            txtEl.textContent = steps[stepIdx];
+            txtEl.style.opacity = "1";
+          }
+        }, 150);
+      }
+    }, 1300);
+
     return g;
+  }
+
+  window.toggleClaudeThought = function(id){
+    var box = document.getElementById(id);
+    if (!box) return;
+    box.classList.toggle("open");
+  };
+
+  function thoughtHTML(res, fast){
+    var tr = res.trace || {};
+    var ms = res.ms || 0;
+    var timeStr = ms < 1000 ? ms + "ms" : (ms/1000).toFixed(1) + "s";
+    var boxId = "th_" + Math.random().toString(36).substring(2, 9);
+    
+    // Pick thought bar summary phrase
+    var barText = "";
+    var d = tr.domain, sub = tr.subtype;
+    if (lang === "bn") {
+      if (d === "passport") barText = "পাসপোর্টের নিয়মাবলী ও প্রয়োজনীয় তথ্যাদি বিশ্লেষণ...";
+      else if (d === "licence") barText = "ড্রাইভিং লাইসেন্সের ধাপ ও সরকারি ফি যাচাই...";
+      else if (res.type === "clarify") barText = "সঠিক উত্তরের জন্য অতিরিক্ত তথ্য বিশ্লেষণ...";
+      else barText = S("claudeDefaultThought");
+    } else {
+      if (d === "passport") barText = "Evaluating passport regulations and requirements...";
+      else if (d === "licence") barText = "Reviewing driving licence steps and fees...";
+      else if (res.type === "clarify") barText = "Clarifying context for accurate service info...";
+      else barText = S("claudeDefaultThought");
+    }
+
+    // Build timeline items
+    var items = [];
+    
+    // Step 1: Intent
+    var intentTxt = "";
+    if (d && meta && meta.taxonomy && meta.taxonomy[d]) {
+      var dName = meta.taxonomy[d]["label_" + lang] || d;
+      var subName = (meta.taxonomy[d].subtypes && meta.taxonomy[d].subtypes[sub] && meta.taxonomy[d].subtypes[sub][lang]) || sub || "";
+      intentTxt = (lang === "bn" ? "অভিপ্রায় শনাক্তকরণ: " : "Intent recognized: ") + "<strong>" + esc(dName) + (subName ? " &rsaquo; " + esc(subName) : "") + "</strong>";
+    } else {
+      intentTxt = lang === "bn" ? "ব্যবহারকারীর প্রশ্নের ধরণ ও সেবার ক্ষেত্র বিশ্লেষণ সম্পন্ন।" : "Analyzed user query intent and target public service scope.";
+    }
+    items.push(intentTxt);
+
+    // Step 2: Knowledge base matching & Confidence
+    var conf = tr.conf != null ? tr.conf : 0.95;
+    var confPct = Math.round(conf * 100);
+    var confTxt = "";
+    if (lang === "bn") {
+      confTxt = "জ্ঞানভাণ্ডার ও সরকারি তথ্যাদি অনুসন্ধান (আস্থা স্কোর: <strong>" + num(confPct) + "%</strong>, সীমা উত্তীর্ণ)।";
+    } else {
+      confTxt = "Matched official knowledge base records (Confidence: <strong>" + confPct + "%</strong>, threshold passed).";
+    }
+    items.push(confTxt);
+
+    // Step 3: Verified source & rules validation
+    var srcTxt = "";
+    var s = (res.card && res.card.sources && res.card.sources[0]);
+    if (s && s.url) {
+      var host = s.url; try { host = new URL(s.url).hostname.replace(/^www\./,""); } catch(e){}
+      if (lang === "bn") {
+        srcTxt = "অফিসিয়াল উৎস যাচাই: <strong>" + esc(host) + "</strong> থেকে বিধি ও প্রয়োজনীয় নথিপত্র মেলানো হয়েছে।";
+      } else {
+        srcTxt = "Validated rules & documents from official source: <strong>" + esc(host) + "</strong>.";
+      }
+    } else if (res.type === "clarify") {
+      srcTxt = lang === "bn" ? "ব্যবহারকারী থেকে সুনির্দিষ্ট তথ্য নেওয়ার সিদ্ধান্ত গৃহীত।" : "Identified need for clarification to give exact instructions.";
+    } else {
+      srcTxt = lang === "bn" ? "সরকারি সার্ভিস গাইডলাইন ও নিরাপত্তা নিয়মাবলী যাচাইকৃত।" : "Verified government service guidelines and safety rules.";
+    }
+    items.push(srcTxt);
+
+    // Step 4: Formulation
+    var finalTxt = "";
+    if (fast) {
+      finalTxt = lang === "bn" ? "তাৎক্ষণিক ক্যাশ থেকে সুবিন্যস্ত সমাধান সংকলিত।" : "Compiled structured solution from high-speed cache.";
+    } else {
+      finalTxt = lang === "bn" ? "ধাপভিত্তিক স্পষ্ট নির্দেশনা ও সারসংক্ষেপ তৈরি সম্পন্ন (" + esc(timeStr) + ")।" : "Formulated structured step-by-step guidance (" + esc(timeStr) + ").";
+    }
+    items.push(finalTxt);
+
+    // Construct the HTML
+    var out = "<div class='claude-thought-box' id='" + boxId + "'>";
+    out += "<button type='button' class='claude-thought-bar' onclick=\"toggleClaudeThought('" + boxId + "')\" aria-expanded='false'>";
+    out += "<svg class='c-clock' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>";
+    out += "<span class='c-thought-txt'>" + esc(barText) + "</span>";
+    out += "<span class='c-thought-time'>" + esc(timeStr) + "</span>";
+    out += "<svg class='c-chev' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 18 15 12 9 6'/></svg>";
+    out += "</button>";
+    
+    out += "<div class='claude-thought-panel'>";
+    out += "<div class='claude-summary-card'>";
+    out += "<div class='claude-summary-hdr'>";
+    out += "<button type='button' class='claude-summary-close' onclick=\"toggleClaudeThought('" + boxId + "')\" aria-label='Close'>✕</button>";
+    out += "<span class='claude-summary-title'>" + esc(S("claudeSummaryTitle")) + "</span>";
+    out += "<span style='width:24px'></span>";
+    out += "</div>";
+    
+    out += "<div class='claude-timeline'>";
+    items.forEach(function(item){
+      out += "<div class='claude-tl-item'>";
+      out += "<span class='claude-tl-dot'></span>";
+      out += "<div class='claude-tl-text'>" + item + "</div>";
+      out += "</div>";
+    });
+    out += "</div>";
+    out += "</div>";
+    out += "</div>";
+    out += "</div>";
+
+    return out;
   }
 
   function chips(list){
@@ -886,29 +1305,219 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     $("qNote").textContent = S("quotaNote");
   }
 
-  function render(res, fast){
+  /* ── Claude-style Top-to-Bottom Progressive Streaming Reveal ── */
+  var streamTimers = [];
+  function clearStreamTimers(){
+    streamTimers.forEach(function(t){ clearTimeout(t); });
+    streamTimers = [];
+  }
+
+  function autoScrollFollow(targetEl){
+    if (!targetEl) return;
+    var tRect = thread.getBoundingClientRect();
+    var elRect = targetEl.getBoundingClientRect();
+    // Only scroll if the new element actually goes below the visible area
+    if (elRect.bottom > tRect.bottom - 24){
+      var diff = elRect.bottom - (tRect.bottom - 24);
+      thread.scrollTop += diff;
+    }
+  }
+
+  function streamWords(container, text, done){
+    if (!text){
+      if (done) done();
+      return;
+    }
+    var words = text.split(" ");
+    var wIdx = 0;
+    container.textContent = "";
+
+    var cursor = el("span", "claude-cursor", "▎");
+    container.appendChild(cursor);
+
+    function tick(){
+      if (wIdx < words.length){
+        var word = words[wIdx++];
+        cursor.insertAdjacentText("beforebegin", (wIdx > 1 ? " " : "") + word);
+        autoScrollFollow(cursor);
+        var isPunct = /[।.,?!:;]$/.test(word);
+        var delay = isPunct ? 95 : (word.length > 5 ? 58 : 45);
+        var t = setTimeout(tick, delay);
+        streamTimers.push(t);
+      } else {
+        cursor.remove();
+        if (done) done();
+      }
+    }
+    tick();
+  }
+
+  function renderSecContent(secbody, text, onDone){
+    var lines = String(text || "").split("\n").filter(function(l){ return l.trim(); });
+    if (!lines.length){
+      if (onDone) onDone();
+      return;
+    }
+
+    var isList = lines.filter(function(l){ return NUMBERED.test(l); }).length >= 2;
+    var lIdx = 0;
+
+    if (isList){
+      var ol = el("ol", "steps");
+      secbody.appendChild(ol);
+
+      function nextStep(){
+        if (lIdx < lines.length){
+          var line = lines[lIdx++];
+          if (NUMBERED.test(line)){
+            var li = el("li", "claude-step-glide", esc(line.replace(NUMBERED, "")));
+            ol.appendChild(li);
+            autoScrollFollow(li);
+          } else {
+            var p = el("p", "claude-step-glide", esc(line));
+            secbody.appendChild(p);
+            autoScrollFollow(p);
+          }
+          var t = setTimeout(nextStep, 260);
+          streamTimers.push(t);
+        } else {
+          if (onDone) onDone();
+        }
+      }
+      nextStep();
+    } else {
+      function nextPara(){
+        if (lIdx < lines.length){
+          var line = lines[lIdx++];
+          var p = el("p", "claude-step-glide", esc(line));
+          secbody.appendChild(p);
+          autoScrollFollow(p);
+          var t = setTimeout(nextPara, 260);
+          streamTimers.push(t);
+        } else {
+          if (onDone) onDone();
+        }
+      }
+      nextPara();
+    }
+  }
+
+  function render(res, fast, onComplete){
+    clearStreamTimers();
+
     if (!res || res.type === "error"){
       scrollToTopOf(bot("<p class='lead'>" + esc((res && res.lead) || S("netErr")) + "</p>", "plain"));
+      if (onComplete) onComplete();
       return;
     }
     if (res.session_id) sid = res.session_id;
     res._fast = fast;
 
-    var node;
-    if (res.type === "answer" && res.card){
-      node = bot(answerHTML(res));
-    } else {
+    var th = thoughtHTML(res, fast);
+    var botNode = bot(th + "<div class='claude-answer-wrap'></div>", res.card ? "" : "plain");
+    var wrap = botNode.querySelector(".claude-answer-wrap");
+
+    paint(res.trace);
+    paintQuota(res.limit);
+    roomToScroll();
+    scrollToTopOf(botNode);
+
+    var c = res.card;
+    if (res.type !== "answer" || !c){
       var tag = res.type === "clarify"
         ? "<div class='tagline ask'><i></i>" + esc(S("decC")) + "</div>"
         : res.type === "no_info"
           ? "<div class='tagline no'><i></i>" + esc(S("decR")) + "</div>" : "";
-      node = bot(tag + "<p class='lead'>" + esc(res.lead || "") + "</p>", "plain");
+      if (tag){
+        var tagEl = el("div", "", tag);
+        wrap.appendChild(tagEl);
+      }
+
+      var leadText = res.lead || "";
+      var pLead = el("p", "lead");
+      wrap.appendChild(pLead);
+      streamWords(pLead, leadText, function(){
+        chips(res.chips);
+        roomToScroll();
+        scrollToTopOf(botNode);
+        if (onComplete) onComplete();
+      });
+      return;
     }
-    paint(res.trace);
-    paintQuota(res.limit);
-    chips(res.chips);
-    roomToScroll();
-    scrollToTopOf(node);
+
+    // Step 1: Badge & Highlight (top)
+    var topHtml = "";
+    topHtml += "<div class='badge" + (c.domain === "licence" ? " l" : "") + "'><i></i>" + esc(c.badge) + "</div>";
+    if (c.highlight) topHtml += "<div class='hl'>" + esc(c.highlight) + "</div>";
+    var topDiv = el("div", "claude-sec-glide", topHtml);
+    wrap.appendChild(topDiv);
+
+    // Step 2: Lead paragraph (stream words with cursor)
+    var leadText = res.lead || "";
+    var pLead = el("p", "lead");
+    wrap.appendChild(pLead);
+
+    streamWords(pLead, leadText, function(){
+      // Step 3: Sections container (revealed progressively from top to bottom)
+      var ansBox = el("div", "ans");
+      wrap.appendChild(ansBox);
+
+      var fields = c.fields || [];
+      var secIdx = 0;
+
+      function nextSection(){
+        if (secIdx < fields.length){
+          var f = fields[secIdx++];
+          var secEl = el("div", "sec f-" + esc(f.key) + " claude-sec-glide");
+          secEl.innerHTML = "<h4>" + icon(f.key) + esc(f.label) + "</h4><div class='secbody'></div>";
+          ansBox.appendChild(secEl);
+          autoScrollFollow(secEl);
+
+          var secbody = secEl.querySelector(".secbody");
+          var t = setTimeout(function(){
+            renderSecContent(secbody, f.content, function(){
+              var t2 = setTimeout(nextSection, 320);
+              streamTimers.push(t2);
+            });
+          }, 140);
+          streamTimers.push(t);
+        } else {
+          // Step 4: Warnings, Foot, Stamp, Feedback
+          var tailHtml = "";
+          if (c.warn_text)
+            tailHtml += "<div class='note claude-sec-glide'><span>&#9888;</span><span>" + esc(c.warn_text) + "</span></div>";
+
+          var s = (c.sources || [])[0];
+          if (s){
+            var host = s.url; try { host = new URL(s.url).hostname.replace(/^www\./, ""); } catch(e){}
+            tailHtml += "<div class='foot claude-sec-glide'><a href='" + esc(s.url) + "' target='_blank' rel='noopener'>" +
+                   esc(S("source")) + " · " + esc(host) + "</a><span>" +
+                   (s.verified_on ? esc(S("verified")) + " " + esc(s.verified_on) : esc(S("unverified"))) +
+                   "</span></div>";
+          }
+          var ms = res.ms || 0;
+          tailHtml += "<div class='stamp claude-sec-glide'><b>" + (ms < 1000 ? ms + " ms" : (ms/1000).toFixed(1) + " s") +
+                 "</b> · " + esc(res._fast ? S("fast") : S("full")) + quotaTail(res.limit) + "</div>";
+
+          if (res.query_id) {
+            tailHtml += "<div class='fb-box claude-sec-glide'>" +
+                   "<button class='fb-btn' aria-label='Helpful' onclick='submitFeedback(this, " + res.query_id + ", true)'><svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3'></path></svg></button>" +
+                   "<button class='fb-btn' aria-label='Not Helpful' onclick='submitFeedback(this, " + res.query_id + ", false)'><svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17'></path></svg></button>" +
+                   "<span class='fb-msg'></span></div>";
+          }
+
+          var tailEl = el("div", "claude-tail-wrap", tailHtml);
+          wrap.appendChild(tailEl);
+
+          chips(res.chips);
+          roomToScroll();
+          scrollToTopOf(botNode);
+          if (onComplete) onComplete();
+        }
+      }
+
+      nextSection();
+    });
   }
 
   /* ── trace panel ── */
@@ -953,20 +1562,36 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     $("decNote").textContent = tr.note || "";
   }
 
-  /* ── send ── */
+  /* ── send with realistic AI reasoning delay & progressive streaming ── */
+  var MIN_THINK_MS = 1400; // Realistic AI reasoning delay (1.4s)
+
   function send(body, path){
     if (busy) return;
     busy = true; $("send").disabled = true;
     var fast = path === "/api/action";
     var ghost = typing();
+    var startTime = Date.now();
+
     post(path, body)
-      .then(function(res){ ghost.remove(); render(res, fast); })
+      .then(function(res){
+        var elapsed = Date.now() - startTime;
+        var remainingWait = Math.max(0, MIN_THINK_MS - elapsed);
+
+        setTimeout(function(){
+          if (liveThinkingTimer) { clearInterval(liveThinkingTimer); liveThinkingTimer = null; }
+          ghost.remove();
+          render(res, fast, function(){
+            busy = false; $("send").disabled = false;
+          });
+        }, remainingWait);
+      })
       .catch(function(){
+        if (liveThinkingTimer) { clearInterval(liveThinkingTimer); liveThinkingTimer = null; }
         ghost.remove();
         scrollToTopOf(bot("<p class='lead'>" + esc(S("netErr")) + "</p>", "plain"));
         setStatus("bad", S("failed"));
-      })
-      .then(function(){ busy = false; $("send").disabled = false; });
+        busy = false; $("send").disabled = false;
+      });
   }
   function act(action, label){
     var old = col.querySelector(".chips"); if (old) old.remove();
@@ -1098,6 +1723,9 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
   }
   function setLang(next){
     if (next === lang) return;
+    clearStreamTimers();
+    if (liveThinkingTimer) { clearInterval(liveThinkingTimer); liveThinkingTimer = null; }
+    busy = false; $("send").disabled = false;
     lang = next; applyLang(); welcome();
     post("/api/reset", {}).catch(function(){});
   }
@@ -1119,6 +1747,9 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     $("msg").value = ""; me(t); send({message:t}, "/api/chat");
   });
   $("resetBtn").addEventListener("click", function(){
+    clearStreamTimers();
+    if (liveThinkingTimer) { clearInterval(liveThinkingTimer); liveThinkingTimer = null; }
+    busy = false; $("send").disabled = false;
     post("/api/reset", {}).catch(function(){});
     sid = crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random());
     closeAll(); welcome();

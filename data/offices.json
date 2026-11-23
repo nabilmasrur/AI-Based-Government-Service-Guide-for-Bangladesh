@@ -1,0 +1,2093 @@
+{
+  "rangpur": {
+    "id": "rangpur",
+    "name_bn": "রংপুর",
+    "name_en": "Rangpur",
+    "aliases": [
+      "রংপুর",
+      "রংপুরে",
+      "রংপুরের",
+      "rangpur",
+      "rongpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, রংপুর",
+      "office_name_en": "Regional Passport Office, Rangpur",
+      "address_bn": "কেরানীপাড়া (চিড়িয়াখানার বিপরীতে), রংপুর সদর, রংপুর।",
+      "address_en": "Rangpur Sadar, Rangpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৫৮৯৯৬২২২২",
+      "phone_en": "০২৫৮৯৯৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Regional+Passport+Office+Rangpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ রংপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Rangpur Circle Office",
+      "address_bn": "কালেক্টরেট ভবন কম্পাউন্ড, রংপুর।",
+      "address_en": "Rangpur Sadar, Rangpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫২১-৬২৩৪৫",
+      "phone_en": "০৫২১-৬২৩৪৫",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rangpur"
+    }
+  },
+  "dinajpur": {
+    "id": "dinajpur",
+    "name_bn": "দিনাজপুর",
+    "name_en": "Dinajpur",
+    "aliases": [
+      "দিনাজপুর",
+      "দিনাজপুরে",
+      "দিনাজপুরের",
+      "dinajpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, দিনাজপুর",
+      "office_name_en": "Regional Passport Office, Dinajpur",
+      "address_bn": "রামকৃষ্ণপুর, পুলহাট, দিনাজপুর সদর।",
+      "address_en": "Dinajpur Sadar, Dinajpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৫৮৯৯২২১০১",
+      "phone_en": "০২৫৮৯৯২২১০১",
+      "maps_url": "https://maps.google.com/?q=Regional+Passport+Office+Dinajpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ দিনাজপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Dinajpur Circle Office",
+      "address_bn": "উপশহর, দিনাজপুর সদর, দিনাজপুর।",
+      "address_en": "Dinajpur Sadar, Dinajpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৩১-৬৩২১০",
+      "phone_en": "০৫৩১-৬৩২১০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Dinajpur"
+    }
+  },
+  "bogura": {
+    "id": "bogura",
+    "name_bn": "বগুড়া",
+    "name_en": "Bogura",
+    "aliases": [
+      "বগুড়া",
+      "বগুড়ায়",
+      "বগুড়ার",
+      "bogura",
+      "bogra"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, বগুড়া",
+      "office_name_en": "Regional Passport Office, Bogura",
+      "address_bn": "উপশহর, বগুড়া সদর, বগুড়া।",
+      "address_en": "Bogura Sadar, Bogura.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৫৮৮৮১৩৩৩৩",
+      "phone_en": "০২৫৮৮৮১৩৩৩৩",
+      "maps_url": "https://maps.google.com/?q=Regional+Passport+Office+Bogra"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ বগুড়া সার্কেল অফিস",
+      "office_name_en": "BRTA Bogura Circle Office",
+      "address_bn": "ফুলবাড়ি, বগুড়া সদর, বগুড়া।",
+      "address_en": "Bogura Sadar, Bogura.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫১-৬৬৭৮৯",
+      "phone_en": "০৫১-৬৬৭৮৯",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bogra"
+    }
+  },
+  "dhaka": {
+    "id": "dhaka",
+    "name_bn": "ঢাকা",
+    "name_en": "Dhaka",
+    "aliases": [
+      "ঢাকা",
+      "ঢাকায়",
+      "ঢাকার",
+      "dhaka",
+      "dacca",
+      "আগারগাঁও",
+      "উত্তরা",
+      "যাত্রাবাড়ী"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, ঢাকা (আগারগাঁও)",
+      "office_name_en": "Regional Passport Office, Dhaka",
+      "address_bn": "ই-৮/এ, আগারগাঁও, শেরেবাংলা নগর, ঢাকা-১২০৭।",
+      "address_en": "Dhaka Sadar, Dhaka.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৮১২২০৮৬",
+      "phone_en": "০২-৮১২২০৮৬",
+      "maps_url": "https://maps.google.com/?q=Divisional+Passport+Office+Agargaon"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ঢাকা মেট্রো সার্কেল-১ (মিরপুর)",
+      "office_name_en": "BRTA Dhaka Circle Office",
+      "address_bn": "বিআরটিএ ভবন, মিরপুর-১৩, ঢাকা-১২১৬।",
+      "address_en": "Dhaka Sadar, Dhaka.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৫৫০৪০৫৫৫",
+      "phone_en": "০২-৫৫০৪০৫৫৫",
+      "maps_url": "https://maps.google.com/?q=BRTA+Mirpur"
+    }
+  },
+  "chattogram": {
+    "id": "chattogram",
+    "name_bn": "চট্টগ্রাম",
+    "name_en": "Chattogram",
+    "aliases": [
+      "চট্টগ্রাম",
+      "চট্টগ্রামে",
+      "চট্টগ্রামের",
+      "chattogram",
+      "chittagong",
+      "ctg",
+      "মনসুরাবাদ"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, চট্টগ্রাম",
+      "office_name_en": "Regional Passport Office, Chattogram",
+      "address_bn": "মনসুরাবাদ, ডবলমুরিং, চট্টগ্রাম।",
+      "address_en": "Chattogram Sadar, Chattogram.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩১-৭১২০৭২",
+      "phone_en": "০৩১-৭১২০৭২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Mansurabad+Chattogram"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ চট্টগ্রাম মেট্রো সার্কেল",
+      "office_name_en": "BRTA Chattogram Circle Office",
+      "address_bn": "নতুনপাড়া, হাটহাজারী রোড, চট্টগ্রাম।",
+      "address_en": "Chattogram Sadar, Chattogram.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩১-৬৮১৮২২",
+      "phone_en": "০৩১-৬৮১৮২২",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chattogram"
+    }
+  },
+  "rajshahi": {
+    "id": "rajshahi",
+    "name_bn": "রাজশাহী",
+    "name_en": "Rajshahi",
+    "aliases": [
+      "রাজশাহী",
+      "রাজশাহীতে",
+      "রাজশাহীর",
+      "rajshahi"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, রাজশাহী",
+      "office_name_en": "Regional Passport Office, Rajshahi",
+      "address_bn": "শালবাগান, সপুরা, রাজশাহী।",
+      "address_en": "Rajshahi Sadar, Rajshahi.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৫৮৮৮৫১২২২",
+      "phone_en": "০২৫৮৮৮৫১২২২",
+      "maps_url": "https://maps.google.com/?q=Divisional+Passport+Office+Rajshahi"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ রাজশাহী সার্কেল অফিস",
+      "office_name_en": "BRTA Rajshahi Circle Office",
+      "address_bn": "শালবাগান, সপুরা, রাজশাহী।",
+      "address_en": "Rajshahi Sadar, Rajshahi.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭২১-৭৬০৩৪০",
+      "phone_en": "০৭২১-৭৬০৩৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rajshahi"
+    }
+  },
+  "sylhet": {
+    "id": "sylhet",
+    "name_bn": "সিলেট",
+    "name_en": "Sylhet",
+    "aliases": [
+      "সিলেট",
+      "সিলেটে",
+      "সিলেটের",
+      "sylhet",
+      "silhet",
+      "মেন্দীবাগ"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, সিলেট",
+      "office_name_en": "Regional Passport Office, Sylhet",
+      "address_bn": "মেন্দীবাগ, সিলেট সদর, সিলেট।",
+      "address_en": "Sylhet Sadar, Sylhet.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮২১-৭১৬২২২",
+      "phone_en": "০৮২১-৭১৬২২২",
+      "maps_url": "https://maps.google.com/?q=Divisional+Passport+Office+Sylhet"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ সিলেট সার্কেল অফিস",
+      "office_name_en": "BRTA Sylhet Circle Office",
+      "address_bn": "মেন্দীবাগ, সিলেট সদর, সিলেট।",
+      "address_en": "Sylhet Sadar, Sylhet.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮২১-৭১৪৫১২",
+      "phone_en": "০৮২১-৭১৪৫১২",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sylhet"
+    }
+  },
+  "khulna": {
+    "id": "khulna",
+    "name_bn": "খুলনা",
+    "name_en": "Khulna",
+    "aliases": [
+      "খুলনা",
+      "খুলনায়",
+      "খুলনার",
+      "khulna",
+      "বয়রা"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, খুলনা",
+      "office_name_en": "Regional Passport Office, Khulna",
+      "address_bn": "বয়রা, খুলনা সদর, খুলনা।",
+      "address_en": "Khulna Sadar, Khulna.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৪৭৭৭০১২২২",
+      "phone_en": "০২৪৭৭৭০১২২২",
+      "maps_url": "https://maps.google.com/?q=Divisional+Passport+Office+Khulna"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ খুলনা সার্কেল অফিস",
+      "office_name_en": "BRTA Khulna Circle Office",
+      "address_bn": "বয়রা, খুলনা সদর, খুলনা।",
+      "address_en": "Khulna Sadar, Khulna.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪১-৭৬১০২১",
+      "phone_en": "০৪১-৭৬১০২১",
+      "maps_url": "https://maps.google.com/?q=BRTA+Khulna"
+    }
+  },
+  "barishal": {
+    "id": "barishal",
+    "name_bn": "বরিশাল",
+    "name_en": "Barishal",
+    "aliases": [
+      "বরিশাল",
+      "বরিশালে",
+      "বরিশালের",
+      "barishal",
+      "barisal",
+      "নথুল্লাবাদ"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, বরিশাল",
+      "office_name_en": "Regional Passport Office, Barishal",
+      "address_bn": "নথুল্লাবাদ, বরিশাল সদর, বরিশাল।",
+      "address_en": "Barishal Sadar, Barishal.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৩১-২১৭২২২",
+      "phone_en": "০৪৩১-২১৭২২২",
+      "maps_url": "https://maps.google.com/?q=Divisional+Passport+Office+Barishal"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ বরিশাল সার্কেল অফিস",
+      "office_name_en": "BRTA Barishal Circle Office",
+      "address_bn": "রূপাতলী, বরিশাল সদর, বরিশাল।",
+      "address_en": "Barishal Sadar, Barishal.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৩১-৭১২৯০",
+      "phone_en": "০৪৩১-৭১২৯০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Barishal"
+    }
+  },
+  "mymensingh": {
+    "id": "mymensingh",
+    "name_bn": "ময়মনসিংহ",
+    "name_en": "Mymensingh",
+    "aliases": [
+      "ময়মনসিংহ",
+      "ময়মনসিংহে",
+      "ময়মনসিংহের",
+      "mymensingh"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, ময়মনসিংহ",
+      "office_name_en": "Regional Passport Office, Mymensingh",
+      "address_bn": "মাসকান্দা, ময়মনসিংহ সদর, ময়মনসিংহ।",
+      "address_en": "Mymensingh Sadar, Mymensingh.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯১-৬৭২২২",
+      "phone_en": "০৯১-৬৭২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Mymensingh"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ময়মনসিংহ সার্কেল অফিস",
+      "office_name_en": "BRTA Mymensingh Circle Office",
+      "address_bn": "মাসকান্দা, ময়মনসিংহ সদর, ময়মনসিংহ।",
+      "address_en": "Mymensingh Sadar, Mymensingh.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯১-৫৩৬৮০",
+      "phone_en": "০৯১-৫৩৬৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Mymensingh"
+    }
+  },
+  "cumilla": {
+    "id": "cumilla",
+    "name_bn": "কুমিল্লা",
+    "name_en": "Cumilla",
+    "aliases": [
+      "কুমিল্লা",
+      "কুমিল্লায়",
+      "কুমিল্লার",
+      "cumilla",
+      "comilla"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, কুমিল্লা",
+      "office_name_en": "Regional Passport Office, Cumilla",
+      "address_bn": "নোয়াগাঁও, শাসনগাছা, কুমিল্লা সদর।",
+      "address_en": "Cumilla Sadar, Cumilla.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮১-৬২২২২",
+      "phone_en": "০৮১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Regional+Passport+Office+Cumilla"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ কুমিল্লা সার্কেল অফিস",
+      "office_name_en": "BRTA Cumilla Circle Office",
+      "address_bn": "শাসনগাছা, কুমিল্লা সদর।",
+      "address_en": "Cumilla Sadar, Cumilla.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮১-৬৮৩২০",
+      "phone_en": "০৮১-৬৮৩২০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Cumilla"
+    }
+  },
+  "gazipur": {
+    "id": "gazipur",
+    "name_bn": "গাজীপুর",
+    "name_en": "Gazipur",
+    "aliases": [
+      "গাজীপুর",
+      "গাজীপুরে",
+      "গাজীপুরের",
+      "gazipur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, গাজীপুর",
+      "office_name_en": "Regional Passport Office, Gazipur",
+      "address_bn": "ভাওয়াল রাজবাড়ী, জয়দেবপুর, গাজীপুর।",
+      "address_en": "Gazipur Sadar, Gazipur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৪৯২৭২২২২",
+      "phone_en": "০২-৪৯২৭২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Gazipur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ গাজীপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Gazipur Circle Office",
+      "address_bn": "জয়দেবপুর, গাজীপুর।",
+      "address_en": "Gazipur Sadar, Gazipur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৯২৬৩১৫০",
+      "phone_en": "০২-৯২৬৩১৫০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Gazipur"
+    }
+  },
+  "narayanganj": {
+    "id": "narayanganj",
+    "name_bn": "নারায়ণগঞ্জ",
+    "name_en": "Narayanganj",
+    "aliases": [
+      "নারায়ণগঞ্জ",
+      "নারায়ণগঞ্জে",
+      "narayanganj",
+      "সাইনবোর্ড"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নারায়ণগঞ্জ",
+      "office_name_en": "Regional Passport Office, Narayanganj",
+      "address_bn": "সাইনবোর্ড, সিদ্ধিরগঞ্জ, নারায়ণগঞ্জ।",
+      "address_en": "Narayanganj Sadar, Narayanganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৭৬৯২২২২",
+      "phone_en": "০২-৭৬৯২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Narayanganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নারায়ণগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Narayanganj Circle Office",
+      "address_bn": "সাইনবোর্ড, সিদ্ধিরগঞ্জ, নারায়ণগঞ্জ।",
+      "address_en": "Narayanganj Sadar, Narayanganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৭৬৯৩৫০০",
+      "phone_en": "০২-৭৬৯৩৫০০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Narayanganj"
+    }
+  },
+  "coxsbazar": {
+    "id": "coxsbazar",
+    "name_bn": "কক্সবাজার",
+    "name_en": "Coxs Bazar",
+    "aliases": [
+      "কক্সবাজার",
+      "কক্সবাজারে",
+      "কক্সবাজারের",
+      "coxsbazar",
+      "coxs bazar"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, কক্সবাজার",
+      "office_name_en": "Regional Passport Office, Coxs Bazar",
+      "address_bn": "ঝিলংজা, কক্সবাজার সদর।",
+      "address_en": "Coxs Bazar Sadar, Coxs Bazar.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৪১-৬২২২২",
+      "phone_en": "০৩৪১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Coxs+Bazar"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ কক্সবাজার সার্কেল অফিস",
+      "office_name_en": "BRTA Coxs Bazar Circle Office",
+      "address_bn": "ঝিলংজা, কক্সবাজার সদর।",
+      "address_en": "Coxs Bazar Sadar, Coxs Bazar.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৪১-৬৩৪৮০",
+      "phone_en": "০৩৪১-৬৩৪৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Coxs+Bazar"
+    }
+  },
+  "tangail": {
+    "id": "tangail",
+    "name_bn": "টাঙ্গাইল",
+    "name_en": "Tangail",
+    "aliases": [
+      "টাঙ্গাইল",
+      "টাঙ্গাইলে",
+      "টাঙ্গাইলের",
+      "tangail"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, টাঙ্গাইল",
+      "office_name_en": "Regional Passport Office, Tangail",
+      "address_bn": "আকুশতুর, টাঙ্গাইল সদর।",
+      "address_en": "Tangail Sadar, Tangail.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯২১-৬২২২২",
+      "phone_en": "০৯২১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Tangail"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ টাঙ্গাইল সার্কেল অফিস",
+      "office_name_en": "BRTA Tangail Circle Office",
+      "address_bn": "টাঙ্গাইল সদর, টাঙ্গাইল।",
+      "address_en": "Tangail Sadar, Tangail.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯২১-৬৩৯১০",
+      "phone_en": "০৯২১-৬৩৯১০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Tangail"
+    }
+  },
+  "jashore": {
+    "id": "jashore",
+    "name_bn": "যশোর",
+    "name_en": "Jashore",
+    "aliases": [
+      "যশোর",
+      "যশোরে",
+      "যশোরের",
+      "jashore",
+      "jessore"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, যশোর",
+      "office_name_en": "Regional Passport Office, Jashore",
+      "address_bn": "মনিহার, যশোর সদর, যশোর।",
+      "address_en": "Jashore Sadar, Jashore.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪২১-৬২২২২",
+      "phone_en": "০৪২১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Jashore"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ যশোর সার্কেল অফিস",
+      "office_name_en": "BRTA Jashore Circle Office",
+      "address_bn": "মনিহার, যশোর সদর।",
+      "address_en": "Jashore Sadar, Jashore.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪২১-৬৭৪২০",
+      "phone_en": "০৪২১-৬৭৪২০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jashore"
+    }
+  },
+  "kushtia": {
+    "id": "kushtia",
+    "name_bn": "কুষ্টিয়া",
+    "name_en": "Kushtia",
+    "aliases": [
+      "কুষ্টিয়া",
+      "কুষ্টিয়ায়",
+      "কুষ্টিয়ার",
+      "kushtia"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, কুষ্টিয়া",
+      "office_name_en": "Regional Passport Office, Kushtia",
+      "address_bn": "মজুপুর, কুষ্টিয়া সদর।",
+      "address_en": "Kushtia Sadar, Kushtia.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭১-৬২২২২",
+      "phone_en": "০৭১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Kushtia"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ কুষ্টিয়া সার্কেল অফিস",
+      "office_name_en": "BRTA Kushtia Circle Office",
+      "address_bn": "মজুপুর, কুষ্টিয়া সদর।",
+      "address_en": "Kushtia Sadar, Kushtia.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭১-৬২৫৩০",
+      "phone_en": "০৭১-৬২৫৩০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Kushtia"
+    }
+  },
+  "pabna": {
+    "id": "pabna",
+    "name_bn": "পাবনা",
+    "name_en": "Pabna",
+    "aliases": [
+      "পাবনা",
+      "পাবনায়",
+      "পাবনার",
+      "pabna"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, পাবনা",
+      "office_name_en": "Regional Passport Office, Pabna",
+      "address_bn": "লক্ষ্মীপুর, পাবনা সদর।",
+      "address_en": "Pabna Sadar, Pabna.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৩১-৬২২২২",
+      "phone_en": "০৭৩১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Pabna"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ পাবনা সার্কেল অফিস",
+      "office_name_en": "BRTA Pabna Circle Office",
+      "address_bn": "পাবনা সদর, পাবনা।",
+      "address_en": "Pabna Sadar, Pabna.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৩১-৬৪১২০",
+      "phone_en": "০৭৩১-৬৪১২০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Pabna"
+    }
+  },
+  "noakhali": {
+    "id": "noakhali",
+    "name_bn": "নোয়াখালী",
+    "name_en": "Noakhali",
+    "aliases": [
+      "নোয়াখালী",
+      "নোয়াখালীতে",
+      "নোয়াখালীর",
+      "noakhali"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নোয়াখালী",
+      "office_name_en": "Regional Passport Office, Noakhali",
+      "address_bn": "মাইজদী কোর্ট, নোয়াখালী সদর।",
+      "address_en": "Noakhali Sadar, Noakhali.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩২১-৬২২২২",
+      "phone_en": "০৩২১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Noakhali"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নোয়াখালী সার্কেল অফিস",
+      "office_name_en": "BRTA Noakhali Circle Office",
+      "address_bn": "মাইজদী, নোয়াখালী সদর।",
+      "address_en": "Noakhali Sadar, Noakhali.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩২১-৬২৮৪০",
+      "phone_en": "০৩২১-৬২৮৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Noakhali"
+    }
+  },
+  "feni": {
+    "id": "feni",
+    "name_bn": "ফেনী",
+    "name_en": "Feni",
+    "aliases": [
+      "ফেনী",
+      "ফেনীতে",
+      "ফেনীর",
+      "feni"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ফেনী",
+      "office_name_en": "Regional Passport Office, Feni",
+      "address_bn": "মহিপাল, ফেনী সদর।",
+      "address_en": "Feni Sadar, Feni.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৩১-৭২২২২",
+      "phone_en": "০৩৩১-৭২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Feni"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ফেনী সার্কেল অফিস",
+      "office_name_en": "BRTA Feni Circle Office",
+      "address_bn": "মহিপাল, ফেনী সদর।",
+      "address_en": "Feni Sadar, Feni.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৩১-৭৪৫২০",
+      "phone_en": "০৩৩১-৭৪৫২০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Feni"
+    }
+  },
+  "sirajganj": {
+    "id": "sirajganj",
+    "name_bn": "সিরাজগঞ্জ",
+    "name_en": "Sirajganj",
+    "aliases": [
+      "সিরাজগঞ্জ",
+      "সিরাজগঞ্জে",
+      "sirajganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, সিরাজগঞ্জ",
+      "office_name_en": "Regional Passport Office, Sirajganj",
+      "address_bn": "মালশাপাড়া, সিরাজগঞ্জ সদর।",
+      "address_en": "Sirajganj Sadar, Sirajganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৫১-৬২২২২",
+      "phone_en": "০৭৫১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Sirajganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ সিরাজগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Sirajganj Circle Office",
+      "address_bn": "সিরাজগঞ্জ সদর।",
+      "address_en": "Sirajganj Sadar, Sirajganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৫১-৬৩১৮০",
+      "phone_en": "০৭৫১-৬৩১৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sirajganj"
+    }
+  },
+  "kurigram": {
+    "id": "kurigram",
+    "name_bn": "কুড়িগ্রাম",
+    "name_en": "Kurigram",
+    "aliases": [
+      "কুড়িগ্রাম",
+      "কুড়িগ্রামে",
+      "kurigram"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, কুড়িগ্রাম",
+      "office_name_en": "Regional Passport Office, Kurigram",
+      "address_bn": "কলেজ মোড়, কুড়িগ্রাম সদর।",
+      "address_en": "Kurigram Sadar, Kurigram.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৮১-৬২২২২",
+      "phone_en": "০৫৮১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Kurigram"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ কুড়িগ্রাম সার্কেল অফিস",
+      "office_name_en": "BRTA Kurigram Circle Office",
+      "address_bn": "কুড়িগ্রাম সদর।",
+      "address_en": "Kurigram Sadar, Kurigram.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৮১-৬১৪২০",
+      "phone_en": "০৫৮১-৬১৪২০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Kurigram"
+    }
+  },
+  "nilphamari": {
+    "id": "nilphamari",
+    "name_bn": "নীলফামারী",
+    "name_en": "Nilphamari",
+    "aliases": [
+      "নীলফামারী",
+      "নীলফামারীতে",
+      "nilphamari",
+      "সৈয়দপুর"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নীলফামারী",
+      "office_name_en": "Regional Passport Office, Nilphamari",
+      "address_bn": "মুন্সিপাড়া, নীলফামারী সদর।",
+      "address_en": "Nilphamari Sadar, Nilphamari.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৮১৮-৫১২২২",
+      "phone_en": "০৫৮১৮-৫১২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Nilphamari"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নীলফামারী সার্কেল অফিস",
+      "office_name_en": "BRTA Nilphamari Circle Office",
+      "address_bn": "নীলফামারী সদর।",
+      "address_en": "Nilphamari Sadar, Nilphamari.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৮১৮-৫১৬২০",
+      "phone_en": "০৫৮১৮-৫১৬২০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Nilphamari"
+    }
+  },
+  "thakurgaon": {
+    "id": "thakurgaon",
+    "name_bn": "ঠাকুরগাঁও",
+    "name_en": "Thakurgaon",
+    "aliases": [
+      "ঠাকুরগাঁও",
+      "ঠাকুরগাঁওয়ে",
+      "thakurgaon"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ঠাকুরগাঁও",
+      "office_name_en": "Regional Passport Office, Thakurgaon",
+      "address_bn": "হাজিপাড়া, ঠাকুরগাঁও সদর।",
+      "address_en": "Thakurgaon Sadar, Thakurgaon.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৬১-৬২২২২",
+      "phone_en": "০৫৬১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Thakurgaon"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ঠাকুরগাঁও সার্কেল অফিস",
+      "office_name_en": "BRTA Thakurgaon Circle Office",
+      "address_bn": "ঠাকুরগাঁও সদর।",
+      "address_en": "Thakurgaon Sadar, Thakurgaon.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৬১-৫২৪৬০",
+      "phone_en": "০৫৬১-৫২৪৬০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Thakurgaon"
+    }
+  },
+  "panchagarh": {
+    "id": "panchagarh",
+    "name_bn": "পঞ্চগড়",
+    "name_en": "Panchagarh",
+    "aliases": [
+      "পঞ্চগড়",
+      "পঞ্চগড়ে",
+      "panchagarh"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, পঞ্চগড়",
+      "office_name_en": "Regional Passport Office, Panchagarh",
+      "address_bn": "চৌধুরীপাড়া, পঞ্চগড় সদর।",
+      "address_en": "Panchagarh Sadar, Panchagarh.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৬৮-৬২২২২",
+      "phone_en": "০৫৬৮-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Panchagarh"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ পঞ্চগড় সার্কেল অফিস",
+      "office_name_en": "BRTA Panchagarh Circle Office",
+      "address_bn": "পঞ্চগড় সদর।",
+      "address_en": "Panchagarh Sadar, Panchagarh.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৬৮-৫১৬৭০",
+      "phone_en": "০৫৬৮-৫১৬৭০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Panchagarh"
+    }
+  },
+  "gaibandha": {
+    "id": "gaibandha",
+    "name_bn": "গাইবান্ধা",
+    "name_en": "Gaibandha",
+    "aliases": [
+      "গাইবান্ধা",
+      "গাইবান্ধায়",
+      "gaibandha"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, গাইবান্ধা",
+      "office_name_en": "Regional Passport Office, Gaibandha",
+      "address_bn": "আশরাফপুর, গাইবান্ধা সদর।",
+      "address_en": "Gaibandha Sadar, Gaibandha.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৪১-৬২২২২",
+      "phone_en": "০৫৪১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Gaibandha"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ গাইবান্ধা সার্কেল অফিস",
+      "office_name_en": "BRTA Gaibandha Circle Office",
+      "address_bn": "গাইবান্ধা সদর।",
+      "address_en": "Gaibandha Sadar, Gaibandha.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৪১-৬১৮৯০",
+      "phone_en": "০৫৪১-৬১৮৯০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Gaibandha"
+    }
+  },
+  "lalmonirhat": {
+    "id": "lalmonirhat",
+    "name_bn": "লালমনিরহাট",
+    "name_en": "Lalmonirhat",
+    "aliases": [
+      "লালমনিরহাট",
+      "লালমনিরহাটে",
+      "lalmonirhat"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, লালমনিরহাট",
+      "office_name_en": "Regional Passport Office, Lalmonirhat",
+      "address_bn": "মোগলহাট রোড, লালমনিরহাট সদর।",
+      "address_en": "Lalmonirhat Sadar, Lalmonirhat.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৯১-৬২২২২",
+      "phone_en": "০৫৯১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Lalmonirhat"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ লালমনিরহাট সার্কেল অফিস",
+      "office_name_en": "BRTA Lalmonirhat Circle Office",
+      "address_bn": "লালমনিরহাট সদর।",
+      "address_en": "Lalmonirhat Sadar, Lalmonirhat.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৯১-৬১৯২০",
+      "phone_en": "০৫৯১-৬১৯২০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Lalmonirhat"
+    }
+  },
+  "brahmanbaria": {
+    "id": "brahmanbaria",
+    "name_bn": "ব্রাহ্মণবাড়িয়া",
+    "name_en": "Brahmanbaria",
+    "aliases": [
+      "ব্রাহ্মণবাড়িয়া",
+      "ব্রাহ্মণবাড়িয়ায়",
+      "brahmanbaria"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ব্রাহ্মণবাড়িয়া",
+      "office_name_en": "Regional Passport Office, Brahmanbaria",
+      "address_bn": "ঘাটুরা, ব্রাহ্মণবাড়িয়া সদর।",
+      "address_en": "Brahmanbaria Sadar, Brahmanbaria.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৫১-৫৮২২২",
+      "phone_en": "০৮৫১-৫৮২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Brahmanbaria"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ব্রাহ্মণবাড়িয়া সার্কেল অফিস",
+      "office_name_en": "BRTA Brahmanbaria Circle Office",
+      "address_bn": "ঘাটুরা, ব্রাহ্মণবাড়িয়া সদর।",
+      "address_en": "Brahmanbaria Sadar, Brahmanbaria.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৫১-৫৮৪৫০",
+      "phone_en": "০৮৫১-৫৮৪৫০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Brahmanbaria"
+    }
+  },
+  "chandpur": {
+    "id": "chandpur",
+    "name_bn": "চাঁদপুর",
+    "name_en": "Chandpur",
+    "aliases": [
+      "চাঁদপুর",
+      "চাঁদপুরে",
+      "chandpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, চাঁদপুর",
+      "office_name_en": "Regional Passport Office, Chandpur",
+      "address_bn": "ওয়ারলেস মোড়, চাঁদপুর সদর।",
+      "address_en": "Chandpur Sadar, Chandpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৪১-৬২২২২",
+      "phone_en": "০৮৪১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Chandpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ চাঁদপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Chandpur Circle Office",
+      "address_bn": "চাঁদপুর সদর।",
+      "address_en": "Chandpur Sadar, Chandpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৪১-৬৩৮৫০",
+      "phone_en": "০৮৪১-৬৩৮৫০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chandpur"
+    }
+  },
+  "lakshmipur": {
+    "id": "lakshmipur",
+    "name_bn": "লক্ষ্মীপুর",
+    "name_en": "Lakshmipur",
+    "aliases": [
+      "লক্ষ্মীপুর",
+      "লক্ষ্মীপুরে",
+      "lakshmipur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, লক্ষ্মীপুর",
+      "office_name_en": "Regional Passport Office, Lakshmipur",
+      "address_bn": "ঝুমুর সিনেমা হল এলাকা, লক্ষ্মীপুর সদর।",
+      "address_en": "Lakshmipur Sadar, Lakshmipur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৮১-৬২২২২",
+      "phone_en": "০৩৮১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Lakshmipur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ লক্ষ্মীপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Lakshmipur Circle Office",
+      "address_bn": "লক্ষ্মীপুর সদর।",
+      "address_en": "Lakshmipur Sadar, Lakshmipur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৮১-৬১৮৯০",
+      "phone_en": "০৩৮১-৬১৮৯০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Lakshmipur"
+    }
+  },
+  "patuakhali": {
+    "id": "patuakhali",
+    "name_bn": "পটুয়াখালী",
+    "name_en": "Patuakhali",
+    "aliases": [
+      "পটুয়াখালী",
+      "পটুয়াখালীতে",
+      "patuakhali"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, পটুয়াখালী",
+      "office_name_en": "Regional Passport Office, Patuakhali",
+      "address_bn": "কলেজ রোড, পটুয়াখালী সদর।",
+      "address_en": "Patuakhali Sadar, Patuakhali.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৪১-৬২২২২",
+      "phone_en": "০৪৪১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Patuakhali"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ পটুয়াখালী সার্কেল অফিস",
+      "office_name_en": "BRTA Patuakhali Circle Office",
+      "address_bn": "পটুয়াখালী সদর।",
+      "address_en": "Patuakhali Sadar, Patuakhali.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৪১-৬২৩৪০",
+      "phone_en": "০৪৪১-৬২৩৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Patuakhali"
+    }
+  },
+  "bhola": {
+    "id": "bhola",
+    "name_bn": "ভোলা",
+    "name_en": "Bhola",
+    "aliases": [
+      "ভোলা",
+      "ভোলায়",
+      "bhola"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ভোলা",
+      "office_name_en": "Regional Passport Office, Bhola",
+      "address_bn": "যুগিরঘোল, ভোলা সদর।",
+      "address_en": "Bhola Sadar, Bhola.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৯১-৬২২২২",
+      "phone_en": "০৪৯১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Bhola"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ভোলা সার্কেল অফিস",
+      "office_name_en": "BRTA Bhola Circle Office",
+      "address_bn": "ভোলা সদর।",
+      "address_en": "Bhola Sadar, Bhola.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৯১-৬২৬৮০",
+      "phone_en": "০৪৯১-৬২৬৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bhola"
+    }
+  },
+  "pirojpur": {
+    "id": "pirojpur",
+    "name_bn": "পিরোজপুর",
+    "name_en": "Pirojpur",
+    "aliases": [
+      "পিরোজপুর",
+      "পিরোজপুরে",
+      "pirojpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, পিরোজপুর",
+      "office_name_en": "Regional Passport Office, Pirojpur",
+      "address_bn": "নাজিরপুর রোড, পিরোজপুর সদর।",
+      "address_en": "Pirojpur Sadar, Pirojpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৬১-৬২২২২",
+      "phone_en": "০৪৬১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Pirojpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ পিরোজপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Pirojpur Circle Office",
+      "address_bn": "পিরোজপুর সদর।",
+      "address_en": "Pirojpur Sadar, Pirojpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৬১-৬২৬৪০",
+      "phone_en": "০৪৬১-৬২৬৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Pirojpur"
+    }
+  },
+  "barguna": {
+    "id": "barguna",
+    "name_bn": "বরগুনা",
+    "name_en": "Barguna",
+    "aliases": [
+      "বরগুনা",
+      "বরগুনায়",
+      "barguna"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, বরগুনা",
+      "office_name_en": "Regional Passport Office, Barguna",
+      "address_bn": "সার্কিট হাউজ রোড, বরগুনা সদর।",
+      "address_en": "Barguna Sadar, Barguna.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৪৮-৬২২২২",
+      "phone_en": "০৪৪৮-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Barguna"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ বরগুনা সার্কেল অফিস",
+      "office_name_en": "BRTA Barguna Circle Office",
+      "address_bn": "বরগুনা সদর।",
+      "address_en": "Barguna Sadar, Barguna.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৪৮-৬২৩৮০",
+      "phone_en": "০৪৪৮-৬২৩৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Barguna"
+    }
+  },
+  "jhalokati": {
+    "id": "jhalokati",
+    "name_bn": "ঝালকাঠি",
+    "name_en": "Jhalokati",
+    "aliases": [
+      "ঝালকাঠি",
+      "ঝালকাঠিতে",
+      "jhalokati",
+      "jhalakathi"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ঝালকাঠি",
+      "office_name_en": "Regional Passport Office, Jhalokati",
+      "address_bn": "বাসন্ডা, ঝালকাঠি সদর।",
+      "address_en": "Jhalokati Sadar, Jhalokati.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৯৮-৬২২২২",
+      "phone_en": "০৪৯৮-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Jhalokati"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ঝালকাঠি সার্কেল অফিস",
+      "office_name_en": "BRTA Jhalokati Circle Office",
+      "address_bn": "ঝালকাঠি সদর।",
+      "address_en": "Jhalokati Sadar, Jhalokati.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৯৮-৬২৬৯০",
+      "phone_en": "০৪৯৮-৬২৬৯০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jhalokati"
+    }
+  },
+  "kishoreganj": {
+    "id": "kishoreganj",
+    "name_bn": "কিশোরগঞ্জ",
+    "name_en": "Kishoreganj",
+    "aliases": [
+      "কিশোরগঞ্জ",
+      "কিশোরগঞ্জে",
+      "kishoreganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, কিশোরগঞ্জ",
+      "office_name_en": "Regional Passport Office, Kishoreganj",
+      "address_bn": "বটতলা, কিশোরগঞ্জ সদর।",
+      "address_en": "Kishoreganj Sadar, Kishoreganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৪১-৬২২২২",
+      "phone_en": "০৯৪১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Kishoreganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ কিশোরগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Kishoreganj Circle Office",
+      "address_bn": "কিশোরগঞ্জ সদর।",
+      "address_en": "Kishoreganj Sadar, Kishoreganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৪১-৬১৯২০",
+      "phone_en": "০৯৪১-৬১৯২০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Kishoreganj"
+    }
+  },
+  "manikganj": {
+    "id": "manikganj",
+    "name_bn": "মানিকগঞ্জ",
+    "name_en": "Manikganj",
+    "aliases": [
+      "মানিকগঞ্জ",
+      "মানিকগঞ্জে",
+      "manikganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, মানিকগঞ্জ",
+      "office_name_en": "Regional Passport Office, Manikganj",
+      "address_bn": "বেউথা, মানিকগঞ্জ সদর।",
+      "address_en": "Manikganj Sadar, Manikganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৯৯৬৬১২২২২",
+      "phone_en": "০২৯৯৬৬১২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Manikganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ মানিকগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Manikganj Circle Office",
+      "address_bn": "মানিকগঞ্জ সদর।",
+      "address_en": "Manikganj Sadar, Manikganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৯৯৬৬১১৯৮০",
+      "phone_en": "০২৯৯৬৬১১৯৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Manikganj"
+    }
+  },
+  "munshiganj": {
+    "id": "munshiganj",
+    "name_bn": "মুন্সিগঞ্জ",
+    "name_en": "Munshiganj",
+    "aliases": [
+      "মুন্সিগঞ্জ",
+      "মুন্সিগঞ্জে",
+      "মুন্সীগঞ্জ",
+      "munshiganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, মুন্সিগঞ্জ",
+      "office_name_en": "Regional Passport Office, Munshiganj",
+      "address_bn": "রিকাবীবাজার, মুন্সিগঞ্জ সদর।",
+      "address_en": "Munshiganj Sadar, Munshiganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৭৬১২২২২",
+      "phone_en": "০২-৭৬১২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Munshiganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ মুন্সিগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Munshiganj Circle Office",
+      "address_bn": "মুন্সিগঞ্জ সদর।",
+      "address_en": "Munshiganj Sadar, Munshiganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৭৬১৫৫৪০",
+      "phone_en": "০২-৭৬১৫৫৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Munshiganj"
+    }
+  },
+  "narsingdi": {
+    "id": "narsingdi",
+    "name_bn": "নরসিংদী",
+    "name_en": "Narsingdi",
+    "aliases": [
+      "নরসিংদী",
+      "নরসিংদীতে",
+      "narsingdi"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নরসিংদী",
+      "office_name_en": "Regional Passport Office, Narsingdi",
+      "address_bn": "ভেলানগর, নরসিংদী সদর।",
+      "address_en": "Narsingdi Sadar, Narsingdi.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৯৪-৬২২২২",
+      "phone_en": "০২৯৪-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Narsingdi"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নরসিংদী সার্কেল অফিস",
+      "office_name_en": "BRTA Narsingdi Circle Office",
+      "address_bn": "ভেলানগর, নরসিংদী।",
+      "address_en": "Narsingdi Sadar, Narsingdi.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৯৪-৬১৯৩০",
+      "phone_en": "০২৯৪-৬১৯৩০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Narsingdi"
+    }
+  },
+  "faridpur": {
+    "id": "faridpur",
+    "name_bn": "ফরিদপুর",
+    "name_en": "Faridpur",
+    "aliases": [
+      "ফরিদপুর",
+      "ফরিদপুরে",
+      "faridpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ফরিদপুর",
+      "office_name_en": "Regional Passport Office, Faridpur",
+      "address_bn": "ঝিলটুলী, ফরিদপুর সদর।",
+      "address_en": "Faridpur Sadar, Faridpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬৩১-৬২২২২",
+      "phone_en": "০৬৩১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Faridpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ফরিদপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Faridpur Circle Office",
+      "address_bn": "ফরিদপুর সদর।",
+      "address_en": "Faridpur Sadar, Faridpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬৩১-৬৩২৪০",
+      "phone_en": "০৬৩১-৬৩২৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Faridpur"
+    }
+  },
+  "gopalganj": {
+    "id": "gopalganj",
+    "name_bn": "গোপালগঞ্জ",
+    "name_en": "Gopalganj",
+    "aliases": [
+      "গোপালগঞ্জ",
+      "গোপালগঞ্জে",
+      "gopalganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, গোপালগঞ্জ",
+      "office_name_en": "Regional Passport Office, Gopalganj",
+      "address_bn": "ঘোনাপাড়া, গোপালগঞ্জ সদর।",
+      "address_en": "Gopalganj Sadar, Gopalganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৬৬৮২২২২",
+      "phone_en": "০২-৬৬৮২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Gopalganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ গোপালগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Gopalganj Circle Office",
+      "address_bn": "গোপালগঞ্জ সদর।",
+      "address_en": "Gopalganj Sadar, Gopalganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৬৬৮১৯৫০",
+      "phone_en": "০২-৬৬৮১৯৫০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Gopalganj"
+    }
+  },
+  "madaripur": {
+    "id": "madaripur",
+    "name_bn": "মাদারীপুর",
+    "name_en": "Madaripur",
+    "aliases": [
+      "মাদারীপুর",
+      "মাদারীপুরে",
+      "madaripur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, মাদারীপুর",
+      "office_name_en": "Regional Passport Office, Madaripur",
+      "address_bn": "ইটেরপুল, মাদারীপুর সদর।",
+      "address_en": "Madaripur Sadar, Madaripur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬৬১-৬২২২২",
+      "phone_en": "০৬৬১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Madaripur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ মাদারীপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Madaripur Circle Office",
+      "address_bn": "মাদারীপুর সদর।",
+      "address_en": "Madaripur Sadar, Madaripur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬৬১-৬১৮৯০",
+      "phone_en": "০৬৬১-৬১৮৯০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Madaripur"
+    }
+  },
+  "rajbari": {
+    "id": "rajbari",
+    "name_bn": "রাজবাড়ী",
+    "name_en": "Rajbari",
+    "aliases": [
+      "রাজবাড়ী",
+      "রাজবাড়ীতে",
+      "rajbari"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, রাজবাড়ী",
+      "office_name_en": "Regional Passport Office, Rajbari",
+      "address_bn": "শ্রীপুর, রাজবাড়ী সদর।",
+      "address_en": "Rajbari Sadar, Rajbari.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬৪১-৬২২২২",
+      "phone_en": "০৬৪১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Rajbari"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ রাজবাড়ী সার্কেল অফিস",
+      "office_name_en": "BRTA Rajbari Circle Office",
+      "address_bn": "রাজবাড়ী সদর।",
+      "address_en": "Rajbari Sadar, Rajbari.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬৪১-৬৫৪২০",
+      "phone_en": "০৬৪১-৬৫৪২০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rajbari"
+    }
+  },
+  "shariatpur": {
+    "id": "shariatpur",
+    "name_bn": "শরীয়তপুর",
+    "name_en": "Shariatpur",
+    "aliases": [
+      "শরীয়তপুর",
+      "শরীয়তপুরে",
+      "shariatpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, শরীয়তপুর",
+      "office_name_en": "Regional Passport Office, Shariatpur",
+      "address_bn": "আংগাড়িয়া, শরীয়তপুর সদর।",
+      "address_en": "Shariatpur Sadar, Shariatpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬০২-৬২২২২",
+      "phone_en": "০৬০২-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Shariatpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ শরীয়তপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Shariatpur Circle Office",
+      "address_bn": "শরীয়তপুর সদর।",
+      "address_en": "Shariatpur Sadar, Shariatpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬০২-৬১৫৮০",
+      "phone_en": "০৬০২-৬১৫৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Shariatpur"
+    }
+  },
+  "moulvibazar": {
+    "id": "moulvibazar",
+    "name_bn": "মৌলভীবাজার",
+    "name_en": "Moulvibazar",
+    "aliases": [
+      "মৌলভীবাজার",
+      "মৌলভীবাজারে",
+      "moulvibazar",
+      "moulvibazar"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, মৌলভীবাজার",
+      "office_name_en": "Regional Passport Office, Moulvibazar",
+      "address_bn": "বেরিরপাড়, মৌলভীবাজার সদর।",
+      "address_en": "Moulvibazar Sadar, Moulvibazar.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৬১-৫২২২২",
+      "phone_en": "০৮৬১-৫২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Moulvibazar"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ মৌলভীবাজার সার্কেল অফিস",
+      "office_name_en": "BRTA Moulvibazar Circle Office",
+      "address_bn": "মৌলভীবাজার সদর।",
+      "address_en": "Moulvibazar Sadar, Moulvibazar.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৬১-৫২৫৬০",
+      "phone_en": "০৮৬১-৫২৫৬০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Moulvibazar"
+    }
+  },
+  "habiganj": {
+    "id": "habiganj",
+    "name_bn": "হবিগঞ্জ",
+    "name_en": "Habiganj",
+    "aliases": [
+      "হবিগঞ্জ",
+      "হবিগঞ্জে",
+      "habiganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, হবিগঞ্জ",
+      "office_name_en": "Regional Passport Office, Habiganj",
+      "address_bn": "অনন্তপুর, হবিগঞ্জ সদর।",
+      "address_en": "Habiganj Sadar, Habiganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৩১-৬২২২২",
+      "phone_en": "০৮৩১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Habiganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ হবিগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Habiganj Circle Office",
+      "address_bn": "হবিগঞ্জ সদর।",
+      "address_en": "Habiganj Sadar, Habiganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৩১-৬১৮৯০",
+      "phone_en": "০৮৩১-৬১৮৯০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Habiganj"
+    }
+  },
+  "sunamganj": {
+    "id": "sunamganj",
+    "name_bn": "সুনামগঞ্জ",
+    "name_en": "Sunamganj",
+    "aliases": [
+      "সুনামগঞ্জ",
+      "সুনামগঞ্জে",
+      "sunamganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, সুনামগঞ্জ",
+      "office_name_en": "Regional Passport Office, Sunamganj",
+      "address_bn": "মোল্লাপাড়া, সুনামগঞ্জ সদর।",
+      "address_en": "Sunamganj Sadar, Sunamganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৭১-৬২২২২",
+      "phone_en": "০৮৭১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Sunamganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ সুনামগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Sunamganj Circle Office",
+      "address_bn": "সুনামগঞ্জ সদর।",
+      "address_en": "Sunamganj Sadar, Sunamganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৭১-৬১৫৬০",
+      "phone_en": "০৮৭১-৬১৫৬০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sunamganj"
+    }
+  },
+  "jamalpur": {
+    "id": "jamalpur",
+    "name_bn": "জামালপুর",
+    "name_en": "Jamalpur",
+    "aliases": [
+      "জামালপুর",
+      "জামালপুরে",
+      "jamalpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, জামালপুর",
+      "office_name_en": "Regional Passport Office, Jamalpur",
+      "address_bn": "নান্দিনা রোড, জামালপুর সদর।",
+      "address_en": "Jamalpur Sadar, Jamalpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৮১-৬২২২২",
+      "phone_en": "০৯৮১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Jamalpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ জামালপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Jamalpur Circle Office",
+      "address_bn": "জামালপুর সদর।",
+      "address_en": "Jamalpur Sadar, Jamalpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৮১-৬৩৪৮০",
+      "phone_en": "০৯৮১-৬৩৪৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jamalpur"
+    }
+  },
+  "sherpur": {
+    "id": "sherpur",
+    "name_bn": "শেরপুর",
+    "name_en": "Sherpur",
+    "aliases": [
+      "শেরপুর",
+      "শেরপুরে",
+      "sherpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, শেরপুর",
+      "office_name_en": "Regional Passport Office, Sherpur",
+      "address_bn": "নবীনগর, শেরপুর সদর।",
+      "address_en": "Sherpur Sadar, Sherpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৩১-৬২২২২",
+      "phone_en": "০৯৩১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Sherpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ শেরপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Sherpur Circle Office",
+      "address_bn": "শেরপুর সদর।",
+      "address_en": "Sherpur Sadar, Sherpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৩১-৬১৮৭০",
+      "phone_en": "০৯৩১-৬১৮৭০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sherpur"
+    }
+  },
+  "netrokona": {
+    "id": "netrokona",
+    "name_bn": "নেত্রকোণা",
+    "name_en": "Netrokona",
+    "aliases": [
+      "নেত্রকোণা",
+      "নেত্রকোণায়",
+      "নেত্রকোনা",
+      "netrokona"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নেত্রকোণা",
+      "office_name_en": "Regional Passport Office, Netrokona",
+      "address_bn": "সাতপাই, নেত্রকোণা সদর।",
+      "address_en": "Netrokona Sadar, Netrokona.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৫১-৬২২২২",
+      "phone_en": "০৯৫১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Netrokona"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নেত্রকোণা সার্কেল অফিস",
+      "office_name_en": "BRTA Netrokona Circle Office",
+      "address_bn": "সাতপাই, নেত্রকোণা সদর।",
+      "address_en": "Netrokona Sadar, Netrokona.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৫১-৬১৯২০",
+      "phone_en": "০৯৫১-৬১৯২০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Netrokona"
+    }
+  },
+  "natore": {
+    "id": "natore",
+    "name_bn": "নাটোর",
+    "name_en": "Natore",
+    "aliases": [
+      "নাটোর",
+      "নাটোরে",
+      "natore"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নাটোর",
+      "office_name_en": "Regional Passport Office, Natore",
+      "address_bn": "চকরামপুর, নাটোর সদর।",
+      "address_en": "Natore Sadar, Natore.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৭১-৬২২২২",
+      "phone_en": "০৭৭১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Natore"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নাটোর সার্কেল অফিস",
+      "office_name_en": "BRTA Natore Circle Office",
+      "address_bn": "নাটোর সদর।",
+      "address_en": "Natore Sadar, Natore.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৭১-৬২৬৪০",
+      "phone_en": "০৭৭১-৬২৬৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Natore"
+    }
+  },
+  "naogaon": {
+    "id": "naogaon",
+    "name_bn": "নওগাঁ",
+    "name_en": "Naogaon",
+    "aliases": [
+      "নওগাঁ",
+      "নওগাঁয়",
+      "naogaon"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নওগাঁ",
+      "office_name_en": "Regional Passport Office, Naogaon",
+      "address_bn": "পার-নওগাঁ, নওগাঁ সদর।",
+      "address_en": "Naogaon Sadar, Naogaon.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৪১-৬২২২২",
+      "phone_en": "০৭৪১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Naogaon"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নওগাঁ সার্কেল অফিস",
+      "office_name_en": "BRTA Naogaon Circle Office",
+      "address_bn": "নওগাঁ সদর।",
+      "address_en": "Naogaon Sadar, Naogaon.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৪১-৬৩২৪০",
+      "phone_en": "০৭৪১-৬৩২৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Naogaon"
+    }
+  },
+  "chapainawabganj": {
+    "id": "chapainawabganj",
+    "name_bn": "চাঁপাইনবাবগঞ্জ",
+    "name_en": "Chapai Nawabganj",
+    "aliases": [
+      "চাঁপাইনবাবগঞ্জ",
+      "নবাবগঞ্জ",
+      "chapainawabganj",
+      "chapai"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, চাঁপাইনবাবগঞ্জ",
+      "office_name_en": "Regional Passport Office, Chapai Nawabganj",
+      "address_bn": "শান্তিমোড়, চাঁপাইনবাবগঞ্জ সদর।",
+      "address_en": "Chapai Nawabganj Sadar, Chapai Nawabganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৮১-৫২২২২",
+      "phone_en": "০৭৮১-৫২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Chapai+Nawabganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ চাঁপাইনবাবগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Chapai Nawabganj Circle Office",
+      "address_bn": "চাঁপাইনবাবগঞ্জ সদর।",
+      "address_en": "Chapai Nawabganj Sadar, Chapai Nawabganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৮১-৫২৭৮০",
+      "phone_en": "০৭৮১-৫২৭৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chapai+Nawabganj"
+    }
+  },
+  "joypurhat": {
+    "id": "joypurhat",
+    "name_bn": "জয়পুরহাট",
+    "name_en": "Joypurhat",
+    "aliases": [
+      "জয়পুরহাট",
+      "জয়পুরহাটে",
+      "joypurhat"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, জয়পুরহাট",
+      "office_name_en": "Regional Passport Office, Joypurhat",
+      "address_bn": "শান্তিনগর, জয়পুরহাট সদর।",
+      "address_en": "Joypurhat Sadar, Joypurhat.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৭১-৬২২২২",
+      "phone_en": "০৫৭১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Joypurhat"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ জয়পুরহাট সার্কেল অফিস",
+      "office_name_en": "BRTA Joypurhat Circle Office",
+      "address_bn": "জয়পুরহাট সদর।",
+      "address_en": "Joypurhat Sadar, Joypurhat.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৭১-৬২৬৩০",
+      "phone_en": "০৫৭১-৬২৬৩০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Joypurhat"
+    }
+  },
+  "chuadanga": {
+    "id": "chuadanga",
+    "name_bn": "চুয়াডাঙ্গা",
+    "name_en": "Chuadanga",
+    "aliases": [
+      "চুয়াডাঙ্গা",
+      "চুয়াডাঙ্গায়",
+      "chuadanga"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, চুয়াডাঙ্গা",
+      "office_name_en": "Regional Passport Office, Chuadanga",
+      "address_bn": "কোর্ট রোড, চুয়াডাঙ্গা সদর।",
+      "address_en": "Chuadanga Sadar, Chuadanga.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৬১-৬২২২২",
+      "phone_en": "০৭৬১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Chuadanga"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ চুয়াডাঙ্গা সার্কেল অফিস",
+      "office_name_en": "BRTA Chuadanga Circle Office",
+      "address_bn": "চুয়াডাঙ্গা সদর।",
+      "address_en": "Chuadanga Sadar, Chuadanga.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৬১-৬৩২৪০",
+      "phone_en": "০৭৬১-৬৩২৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chuadanga"
+    }
+  },
+  "meherpur": {
+    "id": "meherpur",
+    "name_bn": "মেহেরপুর",
+    "name_en": "Meherpur",
+    "aliases": [
+      "মেহেরপুর",
+      "মেহেরপুরে",
+      "meherpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, মেহেরপুর",
+      "office_name_en": "Regional Passport Office, Meherpur",
+      "address_bn": "বাসস্ট্যান্ড রোড, মেহেরপুর সদর।",
+      "address_en": "Meherpur Sadar, Meherpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৯১-৬২২২২",
+      "phone_en": "০৭৯১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Meherpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ মেহেরপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Meherpur Circle Office",
+      "address_bn": "মেহেরপুর সদর।",
+      "address_en": "Meherpur Sadar, Meherpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৯১-৬১৯৫০",
+      "phone_en": "০৭৯১-৬১৯৫০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Meherpur"
+    }
+  },
+  "jhenaidah": {
+    "id": "jhenaidah",
+    "name_bn": "ঝিনাইদহ",
+    "name_en": "Jhenaidah",
+    "aliases": [
+      "ঝিনাইদহ",
+      "ঝিনাইদহে",
+      "jhenaidah"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ঝিনাইদহ",
+      "office_name_en": "Regional Passport Office, Jhenaidah",
+      "address_bn": "পায়রা চত্বর, ঝিনাইদহ সদর।",
+      "address_en": "Jhenaidah Sadar, Jhenaidah.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৫১-৬২২২২",
+      "phone_en": "০৪৫১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Jhenaidah"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ঝিনাইদহ সার্কেল অফিস",
+      "office_name_en": "BRTA Jhenaidah Circle Office",
+      "address_bn": "ঝিনাইদহ সদর।",
+      "address_en": "Jhenaidah Sadar, Jhenaidah.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৫১-৬৩৪৮০",
+      "phone_en": "০৪৫১-৬৩৪৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jhenaidah"
+    }
+  },
+  "magura": {
+    "id": "magura",
+    "name_bn": "মাগুরা",
+    "name_en": "Magura",
+    "aliases": [
+      "মাগুরা",
+      "মাগুরায়",
+      "magura"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, মাগুরা",
+      "office_name_en": "Regional Passport Office, Magura",
+      "address_bn": "ঢাকা রোড, মাগুরা সদর।",
+      "address_en": "Magura Sadar, Magura.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৮১-৬২২২২",
+      "phone_en": "০৪৮১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Magura"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ মাগুরা সার্কেল অফিস",
+      "office_name_en": "BRTA Magura Circle Office",
+      "address_bn": "মাগুরা সদর।",
+      "address_en": "Magura Sadar, Magura.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৮১-৬২১৭০",
+      "phone_en": "০৪৮১-৬২১৭০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Magura"
+    }
+  },
+  "narail": {
+    "id": "narail",
+    "name_bn": "নড়াইল",
+    "name_en": "Narail",
+    "aliases": [
+      "নড়াইল",
+      "নড়াইলে",
+      "narail"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নড়াইল",
+      "office_name_en": "Regional Passport Office, Narail",
+      "address_bn": "কুড়িগ্রাম রোড, নড়াইল সদর।",
+      "address_en": "Narail Sadar, Narail.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৮১-৩২২২২",
+      "phone_en": "০৪৮১-৩২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Narail"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নড়াইল সার্কেল অফিস",
+      "office_name_en": "BRTA Narail Circle Office",
+      "address_bn": "নড়াইল সদর।",
+      "address_en": "Narail Sadar, Narail.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৮১-৩২৫৪০",
+      "phone_en": "০৪৮১-৩২৫৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Narail"
+    }
+  },
+  "satkhira": {
+    "id": "satkhira",
+    "name_bn": "সাতক্ষীরা",
+    "name_en": "Satkhira",
+    "aliases": [
+      "সাতক্ষীরা",
+      "সাতক্ষীরায়",
+      "satkhira"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, সাতক্ষীরা",
+      "office_name_en": "Regional Passport Office, Satkhira",
+      "address_bn": "পলাশপোল, সাতক্ষীরা সদর।",
+      "address_en": "Satkhira Sadar, Satkhira.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৭১-৬২২২২",
+      "phone_en": "০৪৭১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Satkhira"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ সাতক্ষীরা সার্কেল অফিস",
+      "office_name_en": "BRTA Satkhira Circle Office",
+      "address_bn": "সাতক্ষীরা সদর।",
+      "address_en": "Satkhira Sadar, Satkhira.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৭১-৬৩২৪০",
+      "phone_en": "০৪৭১-৬৩২৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Satkhira"
+    }
+  },
+  "bagerhat": {
+    "id": "bagerhat",
+    "name_bn": "বাগেরহাট",
+    "name_en": "Bagerhat",
+    "aliases": [
+      "বাগেরহাট",
+      "বাগেরহাটে",
+      "bagerhat"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, বাগেরহাট",
+      "office_name_en": "Regional Passport Office, Bagerhat",
+      "address_bn": "দশানী, বাগেরহাট সদর।",
+      "address_en": "Bagerhat Sadar, Bagerhat.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৬৮-৬২২২২",
+      "phone_en": "০৪৬৮-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Bagerhat"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ বাগেরহাট সার্কেল অফিস",
+      "office_name_en": "BRTA Bagerhat Circle Office",
+      "address_bn": "বাগেরহাট সদর।",
+      "address_en": "Bagerhat Sadar, Bagerhat.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৬৮-৬৩২৮০",
+      "phone_en": "০৪৬৮-৬৩২৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bagerhat"
+    }
+  },
+  "rangamati": {
+    "id": "rangamati",
+    "name_bn": "রাঙ্গামাটি",
+    "name_en": "Rangamati",
+    "aliases": [
+      "রাঙ্গামাটি",
+      "রাঙ্গামাটিতে",
+      "rangamati"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, রাঙ্গামাটি",
+      "office_name_en": "Regional Passport Office, Rangamati",
+      "address_bn": "তবলছড়ি, রাঙ্গামাটি সদর।",
+      "address_en": "Rangamati Sadar, Rangamati.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৫১-৬২২২২",
+      "phone_en": "০৩৫১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Rangamati"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ রাঙ্গামাটি সার্কেল অফিস",
+      "office_name_en": "BRTA Rangamati Circle Office",
+      "address_bn": "তবলছড়ি, রাঙ্গামাটি।",
+      "address_en": "Rangamati Sadar, Rangamati.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৫১-৬৩৪৮০",
+      "phone_en": "০৩৫১-৬৩৪৮০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rangamati"
+    }
+  },
+  "bandarban": {
+    "id": "bandarban",
+    "name_bn": "বান্দরবান",
+    "name_en": "Bandarban",
+    "aliases": [
+      "বান্দরবান",
+      "বান্দরবানে",
+      "bandarban"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, বান্দরবান",
+      "office_name_en": "Regional Passport Office, Bandarban",
+      "address_bn": "বালাঘাটা, বান্দরবান সদর।",
+      "address_en": "Bandarban Sadar, Bandarban.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৬১-৬২২২২",
+      "phone_en": "০৩৬১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Bandarban"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ বান্দরবান সার্কেল অফিস",
+      "office_name_en": "BRTA Bandarban Circle Office",
+      "address_bn": "বালাঘাটা, বান্দরবান।",
+      "address_en": "Bandarban Sadar, Bandarban.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৬১-৬২৫৯০",
+      "phone_en": "০৩৬১-৬২৫৯০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bandarban"
+    }
+  },
+  "khagrachhari": {
+    "id": "khagrachhari",
+    "name_bn": "খাগড়াছড়ি",
+    "name_en": "Khagrachhari",
+    "aliases": [
+      "খাগড়াছড়ি",
+      "খাগড়াছড়িতে",
+      "khagrachhari"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, খাগড়াছড়ি",
+      "office_name_en": "Regional Passport Office, Khagrachhari",
+      "address_bn": "মহাজনপাড়া, খাগড়াছড়ি সদর।",
+      "address_en": "Khagrachhari Sadar, Khagrachhari.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৭১-৬২২২২",
+      "phone_en": "০৩৭১-৬২২২২",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Khagrachhari"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ খাগড়াছড়ি সার্কেল অফিস",
+      "office_name_en": "BRTA Khagrachhari Circle Office",
+      "address_bn": "খাগড়াছড়ি সদর।",
+      "address_en": "Khagrachhari Sadar, Khagrachhari.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৭১-৬২৬৪০",
+      "phone_en": "০৩৭১-৬২৬৪০",
+      "maps_url": "https://maps.google.com/?q=BRTA+Khagrachhari"
+    }
+  }
+}
