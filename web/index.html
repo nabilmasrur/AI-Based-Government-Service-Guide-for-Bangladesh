@@ -1644,6 +1644,10 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
         setTimeout(function(){
           if (liveThinkingTimer) { clearInterval(liveThinkingTimer); liveThinkingTimer = null; }
           ghost.remove();
+          if (res && res.lang && res.lang !== lang) {
+            lang = res.lang;
+            applyLang();
+          }
           render(res, fast, function(){
             busy = false; $("send").disabled = false;
           });
@@ -1808,6 +1812,17 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     var t = $("msg").value.trim();
     if (!t || busy) return;
     var old = col.querySelector(".chips"); if (old) old.remove();
+    if (!/[\u0980-\u09FF]/.test(t) && /\b(what|how|where|when|why|who|which|is|are|do|can|will|should|passport|license|licence|fee|cost|documents?|renew|lost|hi|hello|thank)\b/i.test(t)) {
+      if (lang !== "en") {
+        lang = "en";
+        applyLang();
+      }
+    } else if (/[\u0980-\u09FF]/.test(t)) {
+      if (lang !== "bn") {
+        lang = "bn";
+        applyLang();
+      }
+    }
     $("msg").value = ""; me(t); send({message:t}, "/api/chat");
   });
   $("resetBtn").addEventListener("click", function(){

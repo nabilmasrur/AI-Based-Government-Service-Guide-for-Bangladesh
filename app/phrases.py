@@ -291,3 +291,73 @@ def route(message: str) -> dict:
         "slots": slots_of(message),
         "named_domain": domain_of(message),   # stated outright, not inferred
     }
+
+
+# --------------------------------------------------------------------------- #
+# Language Detection (English vs Bangla / Banglish)
+# --------------------------------------------------------------------------- #
+
+BANGLISH_WORDS: set[str] = {
+    "koto", "ki", "lagbe", "lage", "kivabe", "kemne", "korbo", "korte", "chai",
+    "dorkar", "kagoj", "kagoz", "taka", "somoy", "kobe", "pabo", "kothay", "kothai",
+    "kon", "jete", "hobe", "hoy", "haray", "haraise", "hariye", "amra", "amar",
+    "apnar", "tader", "bhai", "bhaiya", "bolen", "dekhun", "dekhen", "jani", "ar",
+    "oita", "eita", "shob", "sob", "gesi", "gese", "achi", "ache", "achhe",
+    "parbo", "pari", "dibon", "dibo", "dibe", "keno", "kar", "shikkhanobish",
+    "sikkhanobish", "shikhanobish", "notun", "prothom", "banabo", "ite", "korle",
+    "asche", "ashce", "janan", "bolben", "shunbo", "dekhte", "pelam", "vul", "bhul",
+    "er", "te"
+}
+
+ENGLISH_WORDS: set[str] = {
+    "what", "how", "where", "when", "why", "who", "which", "whose", "whom",
+    "is", "are", "was", "were", "am", "be", "been", "being", "do", "does", "did",
+    "can", "could", "will", "would", "shall", "should", "may", "might", "must",
+    "have", "has", "had", "having", "i", "you", "he", "she", "it", "we", "they",
+    "my", "your", "his", "her", "its", "our", "their", "me", "him", "them", "us",
+    "this", "that", "these", "those", "the", "a", "an", "to", "for", "of", "in",
+    "on", "at", "by", "with", "from", "about", "into", "through", "after", "before",
+    "under", "between", "out", "off", "over", "down", "then", "so", "if", "as",
+    "but", "or", "and", "not", "no", "yes", "please", "help", "tell", "give",
+    "show", "need", "want", "get", "apply", "renew", "renewal", "lost", "fee",
+    "fees", "cost", "price", "charge", "documents", "document", "requirements",
+    "required", "paperwork", "procedure", "steps", "rules", "guideline", "guidelines",
+    "information", "details", "office", "location", "address", "branch", "status",
+    "check", "track", "delivery", "urgent", "express", "regular", "days", "time",
+    "validity", "smartcard", "license", "licence", "driving", "driver", "learner",
+    "international", "permit", "passport", "citizen", "bangladesh", "government",
+    "police", "verification", "challan", "bank", "medical", "certificate", "test",
+    "exam", "hi", "hello", "hey", "thanks", "thank", "good", "morning", "afternoon",
+    "evening", "bye", "goodbye", "much", "many", "process"
+}
+
+
+def detect_language(message: str, fallback_lang: str = "bn") -> str:
+    """Detect whether a user message is in English or Bangla/Banglish.
+    Returns 'en' when the prompt is written in English, otherwise 'bn'."""
+    text = (message or "").strip()
+    if not text:
+        return fallback_lang
+
+    # 1. Any Bengali Unicode script character -> Bangla
+    if re.search(r"[\u0980-\u09FF]", text):
+        return "bn"
+
+    # 2. Extract alphabetical words
+    words = re.findall(r"[a-zA-Z]+", text.lower())
+    if not words:
+        return fallback_lang
+
+    word_set = set(words)
+    banglish_matches = len(word_set & BANGLISH_WORDS)
+    english_matches = len(word_set & ENGLISH_WORDS)
+
+    # 3. If distinct Banglish words are present -> Bangla
+    if banglish_matches > 0:
+        return "bn"
+
+    # 4. If English indicator words are present -> English
+    if english_matches > 0:
+        return "en"
+
+    return fallback_lang

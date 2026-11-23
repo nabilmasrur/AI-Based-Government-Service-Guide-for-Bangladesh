@@ -18,7 +18,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from . import admin as admin_mod
-from . import agent, config, kb, limits, llm, session, texts, analytics
+from . import agent, config, kb, limits, llm, phrases, session, texts, analytics
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 log = logging.getLogger("app")
@@ -121,9 +121,12 @@ def action(payload: ActionIn, request: Request) -> dict:
     Gemini — and is therefore not rate limited."""
     state = session.get(payload.session_id)
     lang = _lang(payload.lang)
+    if lang != "en" and state.get("lang") == "en":
+        lang = "en"
     state["lang"] = lang
     try:
         out = agent.handle_action(state, payload.action or {}, lang)
+        out["lang"] = out.get("lang") or lang
         
         # Log query
         trace = out.get("trace", {})
@@ -155,6 +158,12 @@ def action(payload: ActionIn, request: Request) -> dict:
 def chat(payload: ChatIn, request: Request) -> dict:
     """Full path. Rate limited, because this one reaches Gemini."""
     lang = _lang(payload.lang)
+    # Automatic language detection from prompt:
+    # If the user gives a prompt in English, the reply must come in English also.
+    detected_lang = phrases.detect_language(payload.message.strip(), fallback_lang=lang)
+    if detected_lang:
+        lang = detected_lang
+
     allowed, why = limits.check(_client_ip(request))
     if not allowed:
         log.info("rate limited (%s)", why)
@@ -167,6 +176,7 @@ def chat(payload: ChatIn, request: Request) -> dict:
     state["lang"] = lang
     try:
         out = agent.handle_message(state, payload.message.strip(), lang)
+        out["lang"] = out.get("lang") or lang
         
         # Log query
         trace = out.get("trace", {})

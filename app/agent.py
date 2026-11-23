@@ -218,6 +218,7 @@ def _trace(state: dict, hits: list[dict], decision: str, note: str) -> dict:
 
 def _reply(kind: str, lead: str, chips: list, trace: dict, state: dict,
            card: dict | None = None, started: float = 0.0) -> dict:
+    lang = state.get("lang", "bn")
     return {
         "type": kind,
         "lead": lead,
@@ -226,6 +227,7 @@ def _reply(kind: str, lead: str, chips: list, trace: dict, state: dict,
         "trace": trace,
         "state": session.public(state),
         "session_id": state["session_id"],
+        "lang": lang,
         "ms": max(1, int((time.time() - started) * 1000)) if started else 0,
     }
 
@@ -305,6 +307,8 @@ def _no_info(state: dict, hits: list[dict], lang: str, started: float,
 
 def handle_action(state: dict, action: dict, lang: str) -> dict:
     """Fast path — a chip was clicked, so the intent is already structured."""
+    lang = lang if lang == "en" else state.get("lang", lang)
+    state["lang"] = lang
     started = time.time()
     if action.get("district"):
         district_id = action["district"]
@@ -346,6 +350,11 @@ def handle_action(state: dict, action: dict, lang: str) -> dict:
 
 def handle_message(state: dict, message: str, lang: str) -> dict:
     """Full path — free text in Bangla, English or Banglish."""
+    # Language detection: If the prompt is written in English, the reply must come in English also
+    detected_lang = phrases.detect_language(message, fallback_lang=lang)
+    lang = detected_lang
+    state["lang"] = lang
+
     started = time.time()
     session.remember(state, "user", message)
 
@@ -499,6 +508,9 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
     if not intent:
         log.warning("understand call returned nothing usable — retrieval only")
         degraded = True
+    elif intent.get("language") in ("en", "bn") and intent["language"] == "en" and lang != "en":
+        lang = "en"
+        state["lang"] = "en"
 
     if intent.get("smalltalk") and not rule["domain"]:
         return _reply("chat", texts.t("chat_greet", lang), texts.domain_chips(lang),
