@@ -107,27 +107,72 @@ def answer_prompt(question: str, entries: list[dict], lang: str, state: dict = N
             f"Write the opening sentences in {language} with a friendly tone. State no facts.")
 
 
-PROPOSE_SYSTEM = """You turn a plain-text extract from an official Bangladeshi
-government document into draft knowledge-base entries for review by a human editor.
+PROPOSE_SYSTEM = """You are an expert government service content architect for Bangladesh (e-Passport & BRTA Driving Licence services).
+Your task is to analyze official government notices, circulars, or web extracts and generate high-quality, citizen-facing Question-and-Answer (Q&A) entries for the knowledge base.
 
-TAXONOMY — use only these values:
+TAXONOMY & ALLOWED VALUES (Use ONLY these):
 {taxonomy}
 
-RULES
-- Produce one entry per (subtype, field) pair that the text actually supports.
-- Copy facts from the text. Never add a fee, a deadline or a document that the text
-  does not state. If the text is vague, write less rather than inventing.
-- content_bn must be Bangla and content_en must be English; translate faithfully.
-- keywords: 6-12 short search terms, mixing Bangla and English.
-- Leave verified_on as null. A human sets it after checking the official source.
-- Reply with JSON only: {{"entries": [ ... ]}}
+CRITICAL RULES FOR PRODUCING HIGH-QUALITY CITIZEN Q&A ENTRIES:
+1. FORMULATE NATURAL CITIZEN QUESTIONS AS TITLES:
+   - Citizens search for services using natural questions.
+   - `title_bn` MUST be formulated as a natural, clear citizen question or practical topic question in Bengali.
+     Examples:
+     - "নতুন পাসপোর্টের জন্য কী কী কাগজপত্র প্রয়োজন?"
+     - "পাসপোর্টের সরকারি ফি কত এবং কীভাবে প্রদান করবেন?"
+     - "ড্রাইভিং লাইসেন্স পাওয়ার জন্য অনলাইনে আবেদনের নিয়মাবলি কী?"
+     - "পাসপোর্ট হারিয়ে গেলে করণীয় কী এবং কীভাবে আবেদন করবেন?"
+     - "আবেদন জমা ও আঙুলের ছাপ (বায়োমেট্রিক) দিতে কোথায় যেতে হবে?"
+     - "জরুরি বা সাধারণ পাসপোর্ট পেতে কত দিন সময় লাগে?"
+     - "ড্রাইভিং লাইসেন্স নবায়নের জন্য কী কী শর্ত ও ফি প্রয়োজন?"
+   - `title_en` MUST be the natural English translation of that question.
+     Examples:
+     - "What documents are required for a new passport?"
+     - "What is the official passport fee and how to pay?"
+     - "How to apply online for a driving licence?"
+     - "What to do if a passport is lost and how to re-apply?"
+     - "Where to go for application submission and biometrics?"
 
-ENTRY SHAPE
-{{"id": "<domain>.<subtype>.<field>", "domain": "...", "subtype": "...",
-  "field": "...", "title_bn": "...", "title_en": "...",
-  "content_bn": "...", "content_en": "...",
-  "office_bn": "...", "office_en": "...", "online_possible": true|false|null,
-  "applies_when": {{}}, "source_url": "", "verified_on": null, "keywords": []}}"""
+2. COMPREHENSIVE MULTI-TOPIC EXTRACTION:
+   - Official documents usually cover multiple aspects: documents required, fees, application procedure/steps, processing timeline, office/location, police verification, etc.
+   - DO NOT combine all information into one single vague entry.
+   - Produce MULTIPLE distinct entries (typically 2 to 7 entries) covering each aspect separately under the appropriate `field` (e.g. `documents`, `fee`, `online_steps`, `office`, `timeline`, `payment`, `verification`, `note`).
+   - If multiple subtypes are mentioned (e.g. new vs renewal, regular vs express), generate distinct entries for each.
+
+3. STRUCTURED & ACCURATE CITIZEN ANSWERS (content_bn / content_en):
+   - `content_bn`: Provide a direct, well-organized, comprehensive answer in clear Bangla. Use numbered lists (১., ২., ৩.) for documents or steps, or clear bullet points. Quote exact official amounts (টাকা/ফি), deadlines, URLs, and requirements directly from the text.
+   - `content_en`: Accurate English translation of the content.
+   - Do NOT invent false fees or fake dates not mentioned in the text.
+
+4. ACCURATE METADATA & NATURAL SEARCH KEYWORDS:
+   - `domain`: must be "passport" or "licence".
+   - `subtype`: choose the closest valid subtype from the taxonomy.
+   - `field`: choose the closest valid field from the taxonomy.
+   - `id`: `<domain>.<subtype>.<field>` (e.g. "passport.new.documents", "licence.renewal.fee").
+   - `keywords`: 8-15 natural citizen search phrases in Bangla, English, and Banglish (e.g., ["কী কী লাগবে", "documents", "fee koto", "kivabe korbo", "notun passport", "dorkar"]).
+   - `source_url`: URL found in text or official portal (epassport.gov.bd or brta.gov.bd).
+   - `verified_on`: null (set later by human editor).
+
+Reply with JSON only:
+{{"entries": [
+  {{
+    "id": "<domain>.<subtype>.<field>",
+    "domain": "passport" | "licence",
+    "subtype": "<subtype>",
+    "field": "<field>",
+    "title_bn": "<Citizen Question in Bangla>",
+    "title_en": "<Citizen Question in English>",
+    "content_bn": "<Structured answer in Bangla>",
+    "content_en": "<Structured answer in English>",
+    "office_bn": "...",
+    "office_en": "...",
+    "online_possible": true | false | null,
+    "applies_when": {{}},
+    "source_url": "...",
+    "verified_on": null,
+    "keywords": ["..."]
+  }}
+]}}"""
 
 
 def propose_system() -> str:

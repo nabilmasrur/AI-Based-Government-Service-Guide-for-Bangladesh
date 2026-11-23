@@ -1189,8 +1189,9 @@ button[disabled]{
             (e.verified_on ? "<span class='badge-vdate'>যাচাইকৃত: " + e.verified_on + "</span>" : "<span class='dup-badge'>যাচাইহীন</span>") +
             "<span style='background:rgba(0,135,90,0.15); color:#34d399; font-size:11px; padding:2px 8px; border-radius:10px; font-weight:600;'>অনুমোদিত</span>" +
           "</div>" +
-          "<div>" +
+          "<div style='display:flex; align-items:center; gap:6px;'>" +
             "<button class='ghost btn-toggle-edit' type='button' style='padding:5px 12px; font-size:12px; cursor:pointer;'>✏️ এডিট করুন</button>" +
+            "<button class='ghost btn-del-header' type='button' style='padding:5px 12px; font-size:12px; cursor:pointer; color:var(--alert); border-color:rgba(176,58,32,0.35);' title='এন্ট্রি মুছুন'>🗑️ মুছুন</button>" +
           "</div>" +
         "</div>" +
         "<div class='kb-card-view' style='padding:16px;'>" +
@@ -1217,6 +1218,7 @@ button[disabled]{
           "<div class='row' style='margin-top:14px; gap:10px;'>" +
             "<button type='button' class='btn-save' style='padding:6px 16px; font-size:13px; cursor:pointer;'>💾 পরিবর্তন সংরক্ষণ করুন</button>" +
             "<button type='button' class='ghost btn-cancel' style='padding:6px 14px; font-size:13px; cursor:pointer;'>বাতিল</button>" +
+            "<button type='button' class='danger btn-delete-edit' style='padding:6px 14px; font-size:13px; cursor:pointer; margin-left:auto;'>🗑️ এন্ট্রি মুছুন</button>" +
             "<span class='card-stat mono' style='font-size:12px;'></span>" +
           "</div>" +
         "</div>";
@@ -1226,6 +1228,29 @@ button[disabled]{
       var btnToggle = card.querySelector(".btn-toggle-edit");
       var btnCancel = card.querySelector(".btn-cancel");
       var btnSave = card.querySelector(".btn-save");
+      var btnDelHeader = card.querySelector(".btn-del-header");
+      var btnDeleteEdit = card.querySelector(".btn-delete-edit");
+
+      function handleDelete() {
+        var title = e.title_bn || e.id;
+        if (!confirm("আপনি কি নিশ্চিতভাবে এই অনুমোদিত এন্ট্রিটি স্থায়ীভাবে মুছে ফেলতে চান?\n\n\"" + title + "\"\n\nমুছে ফেললে এটি জ্ঞানভাণ্ডার থেকে সম্পূর্ণরূপে অপসারিত হবে।")) {
+          return;
+        }
+        say("ok", "এন্ট্রি মুছে ফেলা হচ্ছে…");
+        call("/api/admin/entries/delete", {
+          method: "POST",
+          body: JSON.stringify({ id: e.id })
+        }).then(function () {
+          say("ok", "✓ এন্ট্রি '" + title + "' সফলভাবে মুছে ফেলা হয়েছে!");
+          loadApprovedEntries();
+          if (typeof loadStats === "function") loadStats();
+        }).catch(function (err) {
+          say("err", "মুছতে সমস্যা হয়েছে: " + err.message);
+        });
+      }
+
+      if (btnDelHeader) btnDelHeader.addEventListener("click", handleDelete);
+      if (btnDeleteEdit) btnDeleteEdit.addEventListener("click", handleDelete);
 
       function toggleMode(openEdit) {
         var isEditing = editDiv.style.display !== "none";
