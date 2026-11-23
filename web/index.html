@@ -1287,10 +1287,7 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
   }
 
   function quotaTail(lim){
-    if (!lim) return "";
-    var low = lim.day_left <= lim.day_max * 0.2 || lim.minute_left <= 2;
-    return " · <span class='quota" + (low ? " low" : "") + "'>" +
-           esc(S("quotaLeft").replace("{n}", num(lim.day_left))) + "</span>";
+    return "";
   }
 
   function paintQuota(lim){
