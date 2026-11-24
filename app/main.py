@@ -121,8 +121,6 @@ def action(payload: ActionIn, request: Request) -> dict:
     Gemini — and is therefore not rate limited."""
     state = session.get(payload.session_id)
     lang = _lang(payload.lang)
-    if lang != "en" and state.get("lang") == "en":
-        lang = "en"
     state["lang"] = lang
     try:
         out = agent.handle_action(state, payload.action or {}, lang)
@@ -158,11 +156,6 @@ def action(payload: ActionIn, request: Request) -> dict:
 def chat(payload: ChatIn, request: Request) -> dict:
     """Full path. Rate limited, because this one reaches Gemini."""
     lang = _lang(payload.lang)
-    # Automatic language detection from prompt:
-    # If the user gives a prompt in English, the reply must come in English also.
-    detected_lang = phrases.detect_language(payload.message.strip(), fallback_lang=lang)
-    if detected_lang:
-        lang = detected_lang
 
     allowed, why = limits.check(_client_ip(request))
     if not allowed:

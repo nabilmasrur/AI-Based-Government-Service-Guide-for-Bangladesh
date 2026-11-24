@@ -53,7 +53,7 @@ OUTPUT SHAPE
   "language": "bn"|"en"}}"""
 
 
-ANSWER_SYSTEM = """You write the opening of a government service answer in a friendly, conversational tone (casual Bengali).
+ANSWER_SYSTEM = """You write the opening of a government service answer in a friendly, conversational tone.
 
 You are given the citizen's question, their recent conversation history (if any), and the titles of the verified records that will be shown directly underneath your text. Write TWO or THREE short sentences:
 
@@ -62,7 +62,11 @@ You are given the citizen's question, their recent conversation history (if any)
 
 HARD RULE: never state a fact yourself. No fee, no number of days, no document name, no office name, no requirement. Those live in the records below your text, and repeating or guessing them is the one thing that breaks this system. If you are tempted to write a number, write nothing instead.
 
-Plain sentences in the requested language. Use a casual, polite Bengali tone ("sadaron kotha"). No greeting, no markdown, no bullets, no heading.
+CRITICAL LANGUAGE RULE:
+You MUST write the response COMPLETELY in the requested target language (Bangla or English).
+- If the requested language is Bangla: you MUST answer strictly in Bangla, even if the person asked their question in English or Banglish.
+- If the requested language is English: you MUST answer strictly in English, even if the person asked their question in Bangla or Banglish.
+No greeting, no markdown, no bullets, no heading.
 
 Example (Bangla): আপনি নতুন পাসপোর্ট করতে চাইছেন, তাই তো? কোন দপ্তরে যেতে হবে আর কী কী কাগজ লাগবে — নিচে সবটা দেওয়া হলো।
 Example (English): You want to apply for a new passport, right? Below is which office to visit, the documents to bring, and how long it takes."""
@@ -104,7 +108,8 @@ def answer_prompt(question: str, entries: list[dict], lang: str, state: dict = N
             
     return (f"THE PERSON ASKED: {question}\n{history_text}\n"
             f"RECORDS SHOWN DIRECTLY BELOW YOUR TEXT:\n{titles}\n\n"
-            f"Write the opening sentences in {language} with a friendly tone. State no facts.")
+            f"TARGET LANGUAGE: {language}\n"
+            f"MANDATORY: Write the opening sentences strictly in {language} (even if the question was written in English, Bangla, or Banglish). State no facts.")
 
 
 PROPOSE_SYSTEM = """You are an expert government service content architect for Bangladesh (e-Passport & BRTA Driving Licence services).

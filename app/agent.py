@@ -307,7 +307,7 @@ def _no_info(state: dict, hits: list[dict], lang: str, started: float,
 
 def handle_action(state: dict, action: dict, lang: str) -> dict:
     """Fast path — a chip was clicked, so the intent is already structured."""
-    lang = lang if lang == "en" else state.get("lang", lang)
+    lang = lang or state.get("lang", "bn")
     state["lang"] = lang
     started = time.time()
     if action.get("district"):
@@ -350,9 +350,6 @@ def handle_action(state: dict, action: dict, lang: str) -> dict:
 
 def handle_message(state: dict, message: str, lang: str) -> dict:
     """Full path — free text in Bangla, English or Banglish."""
-    # Language detection: If the prompt is written in English, the reply must come in English also
-    detected_lang = phrases.detect_language(message, fallback_lang=lang)
-    lang = detected_lang
     state["lang"] = lang
 
     started = time.time()
@@ -508,9 +505,6 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
     if not intent:
         log.warning("understand call returned nothing usable — retrieval only")
         degraded = True
-    elif intent.get("language") in ("en", "bn") and intent["language"] == "en" and lang != "en":
-        lang = "en"
-        state["lang"] = "en"
 
     if intent.get("smalltalk") and not rule["domain"]:
         return _reply("chat", texts.t("chat_greet", lang), texts.domain_chips(lang),
