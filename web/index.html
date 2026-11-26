@@ -1094,19 +1094,20 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
       reasonWrap.innerHTML = 
         "<div class='fb-reason-title'>" + (lang === 'bn' ? "অসন্তুষ্টির কারণ নির্বাচন করুন:" : "Why was this not helpful?") + "</div>" +
         "<div class='fb-chip-row'>" +
-          "<button type='button' class='fb-chip' onclick='pickReason(this, " + query_id + ", \"ভুল তথ্য\")'>❌ " + (lang === 'bn' ? "ভুল তথ্য" : "Incorrect info") + "</button>" +
-          "<button type='button' class='fb-chip' onclick='pickReason(this, " + query_id + ", \"অসম্পূর্ণ উত্তর\")'>⚠️ " + (lang === 'bn' ? "অসম্পূর্ণ উত্তর" : "Incomplete") + "</button>" +
-          "<button type='button' class='fb-chip' onclick='pickReason(this, " + query_id + ", \"কাঙ্ক্ষিত সেবা মেলেনি\")'>🔍 " + (lang === 'bn' ? "কাঙ্ক্ষিত সেবা মেলেনি" : "Not relevant") + "</button>" +
-          "<button type='button' class='fb-chip' onclick='pickReason(this, " + query_id + ", \"অন্যান্য কারণ\")'>💬 " + (lang === 'bn' ? "অন্যান্য" : "Other") + "</button>" +
+          "<button type='button' class='fb-chip' onclick='pickReason(this, " + query_id + ", \"ভুল তথ্য\", \"" + (lang === 'bn' ? "ভুল তথ্য" : "Incorrect info") + "\")'>❌ " + (lang === 'bn' ? "ভুল তথ্য" : "Incorrect info") + "</button>" +
+          "<button type='button' class='fb-chip' onclick='pickReason(this, " + query_id + ", \"অসম্পূর্ণ উত্তর\", \"" + (lang === 'bn' ? "অসম্পূর্ণ উত্তর" : "Incomplete") + "\")'>⚠️ " + (lang === 'bn' ? "অসম্পূর্ণ উত্তর" : "Incomplete") + "</button>" +
+          "<button type='button' class='fb-chip' onclick='pickReason(this, " + query_id + ", \"কাঙ্ক্ষিত সেবা মেলেনি\", \"" + (lang === 'bn' ? "কাঙ্ক্ষিত সেবা মেলেনি" : "Not relevant") + "\")'>🔍 " + (lang === 'bn' ? "কাঙ্ক্ষিত সেবা মেলেনি" : "Not relevant") + "</button>" +
+          "<button type='button' class='fb-chip' onclick='pickReason(this, " + query_id + ", \"অন্যান্য কারণ\", \"" + (lang === 'bn' ? "অন্যান্য" : "Other") + "\")'>💬 " + (lang === 'bn' ? "অন্যান্য" : "Other") + "</button>" +
         "</div>";
       box.appendChild(reasonWrap);
       post("/api/feedback", { query_id: query_id, is_positive: false, reason: "অসন্তুষ্ট (কারণ অনির্ধারিত)" });
     }
   };
 
-  window.pickReason = function(chip, query_id, reason) {
+  window.pickReason = function(chip, query_id, reason, displayLabel) {
     var wrap = chip.closest('.fb-reasons');
-    wrap.innerHTML = "<span style='color:#f87171; font-size:12px; font-weight:500;'>✓ " + (lang === 'bn' ? "ফিডব্যাক লিপিবদ্ধ করা হয়েছে: " : "Feedback recorded: ") + reason + "</span>";
+    var shown = displayLabel || reason;
+    wrap.innerHTML = "<span style='color:#f87171; font-size:12px; font-weight:500;'>✓ " + (lang === 'bn' ? "ফিডব্যাক লিপিবদ্ধ করা হয়েছে: " : "Feedback recorded: ") + esc(shown) + "</span>";
     setTimeout(function() { if (wrap) wrap.remove(); }, 3500);
     post("/api/feedback", { query_id: query_id, is_positive: false, reason: reason });
   };
@@ -1806,6 +1807,9 @@ window.API_BASE = "";   /* split deploy → "https://your-app.onrender.com" */
     $("msg").placeholder = serverReady ? S("placeholder") : S("placeholderWake");
     $("langBn").setAttribute("aria-pressed", String(lang === "bn"));
     $("langEn").setAttribute("aria-pressed", String(lang === "en"));
+    if (meta && serverReady) {
+      setStatus("ok", (meta.llm_ready ? meta.model : meta.model + " · " + S("offline")));
+    }
     paintTheme();
     buildDrawer();
   }

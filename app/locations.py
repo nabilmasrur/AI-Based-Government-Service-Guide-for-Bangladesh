@@ -104,7 +104,15 @@ def build_office_card(district_id: str, domain: str = "passport", lang: str = "b
     if lang == "en":
         badge = f"Passport · Regional Office ({dist_name})" if dom_key == "passport" else f"Driving Licence · BRTA ({dist_name})"
         
-    auth = "ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তর (DIP)" if dom_key == "passport" else "বাংলাদেশ সড়ক পরিবহন কর্তৃপক্ষ (BRTA)"
+    auth = (
+        "ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তর (DIP)"
+        if lang == "bn"
+        else "Department of Immigration & Passports (DIP)"
+    ) if dom_key == "passport" else (
+        "বাংলাদেশ সড়ক পরিবহন কর্তৃপক্ষ (BRTA)"
+        if lang == "bn"
+        else "Bangladesh Road Transport Authority (BRTA)"
+    )
     source_url = "https://www.epassport.gov.bd/" if dom_key == "passport" else "http://www.brta.gov.bd/"
     
     field_label = "অফিস ও সেবা অঞ্চল" if lang == "bn" else "Office & Jurisdiction"
@@ -303,10 +311,10 @@ def build_challan_card(domain: str = "passport", lang: str = "bn") -> dict:
         "domain": dom_key,
         "subtype": "new",
         "badge": badge,
-        "title": "এ-চালান কোড ও অনুমোদিত ব্যাংক ডিরেক্টরি",
+        "title": "এ-চালান কোড ও অনুমোদিত ব্যাংক ডিরেক্টরি" if lang == "bn" else "A-Challan Code & Authorized Bank Directory",
         "ref": "PAYMENT / A-CHALLAN / BANKS",
         "authority": auth,
-        "office": "অনুমোদিত ব্যাংকসমূহ ও এ-চালান",
+        "office": "অনুমোদিত ব্যাংকসমূহ ও এ-চালান" if lang == "bn" else "Authorized Banks & A-Challan",
         "highlight_label": "পেমেন্ট পদ্ধতি" if lang == "bn" else "Payment Method",
         "highlight": "এ-চালান / ব্যাংক ও মোবাইল ব্যাংকিং" if lang == "bn" else "A-Challan / Bank & Mobile Banking",
         "fields": fields,
@@ -365,10 +373,10 @@ def build_tracking_card(domain: str = "passport", lang: str = "bn") -> dict:
         "domain": "passport",
         "subtype": "delivery",
         "badge": badge,
-        "title": "পাসপোর্ট ডেলিভারি স্ট্যাটাস যাচাই",
+        "title": "পাসপোর্ট ডেলিভারি স্ট্যাটাস যাচাই" if lang == "bn" else "Passport Delivery Status Tracking",
         "ref": "PASSPORT / DELIVERY / STATUS",
         "authority": auth,
-        "office": "অনলাইন পোর্টাল ও এসএমএস সেবা",
+        "office": "অনলাইন পোর্টাল ও এসএমএস সেবা" if lang == "bn" else "Online Portal & SMS Service",
         "highlight_label": "ট্র্যাকিং মেথড" if lang == "bn" else "Tracking Method",
         "highlight": "এসএমএস (16345) ও অনলাইন পোর্টাল" if lang == "bn" else "SMS (16345) & Online Portal",
         "fields": [{"key": "timeline", "label": field_label, "content": field_content}],

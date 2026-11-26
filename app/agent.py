@@ -79,6 +79,7 @@ def _smalltalk(message: str) -> str | None:
 
 
 log = logging.getLogger(__name__)
+_BANGLA_RX = re.compile(r"[\u0980-\u09FF]")
 
 # Which slots must be known before a given (domain, field) can be answered.
 REQUIRED_SLOTS: dict[tuple[str, str | None, str], list[str]] = {
@@ -240,13 +241,22 @@ def _clarify(state: dict, lang: str, started: float, word: str | None = None) ->
     domain, subtype = state["domain"], state["subtype"]
 
     if not domain:
-        note = "কোনো domain শনাক্ত হয়নি — দুটি সেবার মধ্যে বেছে নিতে বলা হয়েছে।"
+        note = (
+            "কোনো domain শনাক্ত হয়নি — দুটি সেবার মধ্যে বেছে নিতে বলা হয়েছে।"
+            if lang == "bn"
+            else "No service domain detected — asked the user to choose between Passport and Driving licence."
+        )
         return _reply("clarify", texts.t("ask_domain", lang), texts.domain_chips(lang),
                       _trace(state, [], "clarify", note), state, started=started)
 
     if not subtype:
         hits = retriever.by_subtype(domain, next(iter(kb.TAXONOMY[domain]["subtypes"])))
-        note = f"{len(kb.TAXONOMY[domain]['subtypes'])}টি sub-type সম্ভাব্য — অনুমান না করে প্রশ্ন করা হয়েছে।"
+        n_sub = len(kb.TAXONOMY[domain]["subtypes"])
+        note = (
+            f"{n_sub}টি sub-type সম্ভাব্য — অনুমান না করে প্রশ্ন করা হয়েছে।"
+            if lang == "bn"
+            else f"{n_sub} sub-types possible — asked to clarify instead of guessing."
+        )
         question = texts.t("ask_subtype", lang,
                            dom=kb.TAXONOMY[domain][f"label_{lang}"])
         return _reply("clarify", question, texts.subtype_chips(domain, lang),
@@ -258,7 +268,11 @@ def _clarify(state: dict, lang: str, started: float, word: str | None = None) ->
     base = {"domain": domain, "subtype": subtype, "field": state["field"]}
     key = "ask_slot_more" if len(state["asked"]) > 1 else "ask_slot"
     question = texts.t(key, lang, label=texts.slot_label(slot, lang))
-    note = f"field={state['field']} জানা, কিন্তু slot '{slot}' অপূর্ণ।"
+    note = (
+        f"field={state['field']} জানা, কিন্তু slot '{slot}' অপূর্ণ।"
+        if lang == "bn"
+        else f"field={state['field']} is known, but slot '{slot}' is missing."
+    )
     hits = retriever.by_subtype(domain, subtype, state["field"])
     return _reply("clarify", question, texts.slot_chips(slot, lang, base),
                   _trace(state, hits[:3], "clarify", note), state, started=started)
@@ -277,14 +291,24 @@ def _answer(state: dict, hits: list[dict], lang: str, started: float,
                                    prompts.answer_prompt(question, hits, lang, state),
                                    temperature=0.3)
             if written:
-                lead = written.split("\n")[0].strip()
+                candidate = written.split("\n")[0].strip()
+                if lang == "en" and _BANGLA_RX.search(candidate):
+                    log.warning("LLM lead included Bangla in English mode — using English template")
+                elif candidate:
+                    lead = candidate
         except llm.LLMUnavailable as exc:
             log.warning("lead generation failed (%s) — using template", exc)
 
-    note = ("chip থেকে অভিপ্রায় জানা — কোনো LLM কল হয়নি।" if not use_llm
-            else "সব slot পূর্ণ — উদ্ধৃত entry থেকে উত্তর তৈরি।")
-    if degraded:
-        note = "Gemini-তে পৌঁছানো যায়নি — subtype শুধু retrieval দিয়ে অনুমান করা হয়েছে।"
+    if lang == "bn":
+        note = ("chip থেকে অভিপ্রায় জানা — কোনো LLM কল হয়নি।" if not use_llm
+                else "সব slot পূর্ণ — উদ্ধৃত entry থেকে উত্তর তৈরি।")
+        if degraded:
+            note = "Gemini-তে পৌঁছানো যায়নি — subtype শুধু retrieval দিয়ে অনুমান করা হয়েছে।"
+    else:
+        note = ("Intent supplied by chip — no LLM call needed." if not use_llm
+                else "All slots filled — answered from verified KB entries.")
+        if degraded:
+            note = "Gemini unavailable — subtype matched via retrieval fallback."
     shown = {f["key"] for f in card["fields"]}
     chips = texts.followup_chips(domain, subtype, lang, shown=shown)
     return _reply("answer", lead, chips, _trace(state, hits, "answer", note),
@@ -294,9 +318,13 @@ def _answer(state: dict, hits: list[dict], lang: str, started: float,
 def _no_info(state: dict, hits: list[dict], lang: str, started: float,
              out_of_scope: bool = False) -> dict:
     key = "out_of_scope" if out_of_scope else "no_info"
-    note = ("প্রশ্নটি সমর্থিত দুটি সেবার বাইরে।" if out_of_scope
-            else f"সর্বোচ্চ similarity {max((h.get('score', 0) for h in hits), default=0):.2f} "
-                 f"— সীমা {config.CONF_THRESHOLD}-এর নিচে।")
+    top_score = max((h.get("score", 0) for h in hits), default=0)
+    if lang == "bn":
+        note = ("প্রশ্নটি সমর্থিত দুটি সেবার বাইরে।" if out_of_scope
+                else f"সর্বোচ্চ similarity {top_score:.2f} — সীমা {config.CONF_THRESHOLD}-এর নিচে।")
+    else:
+        note = ("Query is outside the two supported services." if out_of_scope
+                else f"Top similarity {top_score:.2f} is below threshold {config.CONF_THRESHOLD}.")
     return _reply("no_info", texts.t(key, lang), texts.domain_chips(lang),
                   _trace(state, hits, "reject", note), state, started=started)
 
@@ -319,7 +347,11 @@ def handle_action(state: dict, action: dict, lang: str) -> dict:
         lead_text = locations.format_office_lead(district_id, dom, lang)
         card = locations.build_office_card(district_id, dom, lang)
         chips = ["ফি কত?", "কি কি কাগজ লাগবে?", "অনলাইনে আবেদন", "অন্যান্য জেলা"] if lang == "bn" else ["How much is the fee?", "Required documents", "Online application", "Other districts"]
-        note = f"{district_id} জেলার {dom} অফিসের তথ্য সরাসরি প্রদান।"
+        note = (
+            f"{district_id} জেলার {dom} অফিসের তথ্য সরাসরি প্রদান।"
+            if lang == "bn"
+            else f"Direct {dom} office info for {district_id}."
+        )
         session.remember(state, "assistant", lead_text)
         return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
 
@@ -358,7 +390,11 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
     social = _smalltalk(message)
     if social:
         chips = texts.domain_chips(lang) if social != "chat_bye" else []
-        note = f"সামাজিক বার্তা ({social}) — retrieval বা LLM কিছুই লাগেনি।"
+        note = (
+            f"সামাজিক বার্তা ({social}) — retrieval বা LLM কিছুই লাগেনি।"
+            if lang == "bn"
+            else f"Social message ({social}) — no retrieval or LLM needed."
+        )
         return _reply("chat", texts.t(social, lang), chips,
                       _trace(state, [], "chat", note), state, started=started)
 
@@ -366,14 +402,23 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
 
     # 0. A-Challan code and authorized bank lookup
     is_challan = locations.is_challan_query(message)
-    if is_challan and ("কোড" in message or "ব্যাংক" in message or "জমা" in message or "ফি" in message or "টাকা" in message or len(message.split()) <= 4):
+    msg_low = message.lower()
+    if is_challan and (
+        any(w in message for w in ("কোড", "ব্যাংক", "জমা", "ফি", "টাকা"))
+        or any(w in msg_low for w in ("code", "bank", "banks", "pay", "payment", "deposit", "fee"))
+        or len(message.split()) <= 4
+    ):
         dom = rule.get("domain") or phrases.domain_of(message) or state.get("domain") or "passport"
         state["domain"] = dom
         state["field"] = "payment"
         lead_text = locations.format_challan_lead(dom, lang)
         card = locations.build_challan_card(dom, lang)
         chips = ["নতুন পাসপোর্টের ফি কত?", "কি কি কাগজ লাগবে?", "অনলাইনে আবেদন", "অফিস কোথায়?"] if lang == "bn" else ["How much is the fee?", "Required documents", "Online application", "Where is the office?"]
-        note = f"{dom} এ-চালান কোড ও অনুমোদিত ব্যাংকের তথ্য সরাসরি প্রদান।"
+        note = (
+            f"{dom} এ-চালান কোড ও অনুমোদিত ব্যাংকের তথ্য সরাসরি প্রদান।"
+            if lang == "bn"
+            else f"Direct {dom} A-Challan code and authorized bank info."
+        )
         session.remember(state, "assistant", lead_text)
         return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
 
@@ -385,29 +430,41 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
         lead_text = locations.format_tracking_lead("passport", lang)
         card = locations.build_tracking_card("passport", lang)
         chips = ["নতুন পাসপোর্টের ফি কত?", "কি কি কাগজ লাগবে?", "অনলাইনে আবেদন", "অফিস কোথায়?"] if lang == "bn" else ["How much is the fee?", "Required documents", "Online application", "Where is the office?"]
-        note = "পাসপোর্ট ডেলিভারি স্ট্যাটাস ও ট্র্যাকিং তথ্য সরাসরি প্রদান।"
+        note = (
+            "পাসপোর্ট ডেলিভারি স্ট্যাটাস ও ট্র্যাকিং তথ্য সরাসরি প্রদান।"
+            if lang == "bn"
+            else "Direct passport delivery status & tracking info."
+        )
         session.remember(state, "assistant", lead_text)
         return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
 
     # 0.2 District police verification DSB office query
     district_id = locations.find_district(message)
-    is_police = "পুলিশ" in message or "ভেরিফিকেশন" in message or "police" in message.lower() or "verification" in message.lower() or rule.get("field") == "verification"
-    if is_police and (rule.get("field") == "verification" or locations.is_office_query(message) or "অফিস" in message or "কোথায়" in message or "কোথায়" in message or "ঠিকানা" in message or "ভেরিফিকেশন" in message):
+    is_police = "পুলিশ" in message or "ভেরিফিকেশন" in message or "police" in msg_low or "verification" in msg_low or rule.get("field") == "verification"
+    has_office_word = (
+        any(w in message for w in ("অফিস", "কোথায়", "কোথায়", "ঠিকানা", "ভেরিফিকেশন"))
+        or any(w in msg_low for w in ("office", "address", "where", "location", "verification"))
+    )
+    if is_police and (rule.get("field") == "verification" or locations.is_office_query(message) or has_office_word):
         if district_id:
             state["domain"] = "passport"
             state["field"] = "verification"
             lead_text = locations.format_police_lead(district_id, lang)
             card = locations.build_police_card(district_id, lang)
             chips = ["পাসপোর্টে কি কি কাগজ লাগবে?", "পাসপোর্ট ফি কত?", "অনলাইনে আবেদন", "অন্যান্য জেলা"] if lang == "bn" else ["Required documents", "Passport fee", "Online application", "Other districts"]
-            note = f"{district_id} জেলার পুলিশ ভেরিফিকেশন অফিসের তথ্য সরাসরি প্রদান।"
+            note = (
+                f"{district_id} জেলার পুলিশ ভেরিফিকেশন অফিসের তথ্য সরাসরি প্রদান।"
+                if lang == "bn"
+                else f"Direct {district_id} police verification office info."
+            )
             session.remember(state, "assistant", lead_text)
             return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
-        elif not district_id and len(message.split()) <= 6 and ("অফিস" in message or "কোথায়" in message or "কোথায়" in message or "ঠিকানা" in message):
+        elif not district_id and len(message.split()) <= 6 and has_office_word:
             state["domain"] = "passport"
             state["field"] = "verification"
             lead_text = "আপনি কোন জেলার পুলিশ ভেরিফিকেশন (DSB) অফিসের তথ্য জানতে চাচ্ছেন? নিচের তালিকা থেকে নির্বাচন করুন অথবা জেলার নাম লিখুন:" if lang == "bn" else "Which district police verification (DSB) office are you looking for? Select below or type a district name:"
             chips = locations.get_popular_district_chips("passport", lang)
-            note = "পুলিশ ভেরিফিকেশন অফিসের জন্য জেলা অনুসন্ধান।"
+            note = "পুলিশ ভেরিফিকেশন অফিসের জন্য জেলা অনুসন্ধান।" if lang == "bn" else "District clarification for police verification office."
             return _reply("clarify", lead_text, chips, _trace(state, [], "clarify", note), state, started=started)
 
     # 0.3 Driving licence medical certificate query
@@ -418,7 +475,7 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
         lead_text = locations.format_medical_lead(lang)
         card = locations.build_medical_card(lang)
         chips = ["ড্রাইভিং লাইসেন্স ফি কত?", "লার্নার কার্ডের নিয়ম", "পরীক্ষার মাঠ কোথায়?", "অনলাইনে আবেদন"] if lang == "bn" else ["Licence fee", "Learner card rules", "Exam grounds", "Online application"]
-        note = "ড্রাইভিং লাইসেন্স মেডিকেল সার্টিফিকেট ও ফরম ডিএল-১ তথ্য সরাসরি প্রদান।"
+        note = "ড্রাইভিং লাইসেন্স মেডিকেল সার্টিফিকেট ও ফরম ডিএল-১ তথ্য সরাসরি প্রদান।" if lang == "bn" else "Direct driving licence medical certificate & Form DL-1 info."
         session.remember(state, "assistant", lead_text)
         return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
 
@@ -430,7 +487,7 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
         lead_text = locations.format_gd_lead(lang)
         card = locations.build_gd_card(lang)
         chips = ["পাসপোর্ট রি-ইস্যু ফি কত?", "রি-ইস্যু ফরম", "জরুরি পাসপোর্ট করতে কত দিন লাগে?", "অনলাইনে আবেদন"] if lang == "bn" else ["Reissue fee", "Reissue form", "Emergency reissue time", "Online application"]
-        note = "হারানো পাসপোর্ট সংক্রান্ত সাধারণ ডায়েরি (GD) গাইড তথ্য সরাসরি প্রদান।"
+        note = "হারানো পাসপোর্ট সংক্রান্ত সাধারণ ডায়েরি (GD) গাইড তথ্য সরাসরি প্রদান।" if lang == "bn" else "Direct lost passport General Diary (GD) guide."
         session.remember(state, "assistant", lead_text)
         return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
 
@@ -440,7 +497,7 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
         lead_text = locations.format_hotline_lead(lang)
         card = locations.build_hotline_card(lang)
         chips = ["পাসপোর্ট ফি কত?", "ড্রাইভিং লাইসেন্স ফি কত?", "পাসপোর্ট স্ট্যাটাস চেক", "অনলাইনে আবেদন"] if lang == "bn" else ["Passport fee", "Licence fee", "Passport status check", "Online application"]
-        note = "জরুরি সরকারি হটলাইন ও কাস্টমার কেয়ার নম্বর সরাসরি প্রদান।"
+        note = "জরুরি সরকারি হটলাইন ও কাস্টমার কেয়ার নম্বর সরাসরি প্রদান।" if lang == "bn" else "Direct emergency government hotline numbers."
         session.remember(state, "assistant", lead_text)
         return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
 
@@ -455,7 +512,7 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
             lead_text = locations.format_exam_lead(district_id, lang)
             card = locations.build_exam_card(district_id, lang)
             chips = ["পরীক্ষার সিলেবাস ও প্রশ্ন", "লার্নার কার্ডের নিয়ম", "ফি কত?", "অন্যান্য জেলা"] if lang == "bn" else ["Exam syllabus", "Learner card rules", "Fee amount", "Other districts"]
-            note = f"{district_id} জেলার বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু তথ্য সরাসরি প্রদান।"
+            note = f"{district_id} জেলার বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু তথ্য সরাসরি প্রদান।" if lang == "bn" else f"Direct BRTA driving test venue info for {district_id}."
             session.remember(state, "assistant", lead_text)
             return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
         elif not district_id and len(message.split()) <= 6:
@@ -463,7 +520,7 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
             state["subtype"] = "exam"
             lead_text = "আপনি কোন জেলার বিআরটিএ ড্রাইভিং টেস্টের মাঠ বা ভেন্যুর তথ্য জানতে চাচ্ছেন? নিচের তালিকা থেকে নির্বাচন করুন অথবা জেলার নাম লিখুন:" if lang == "bn" else "Which district driving test venue are you looking for? Select below or type a district name:"
             chips = locations.get_popular_district_chips("licence", lang)
-            note = "ড্রাইভিং টেস্ট ভেন্যুর জন্য জেলা অনুসন্ধান।"
+            note = "ড্রাইভিং টেস্ট ভেন্যুর জন্য জেলা অনুসন্ধান।" if lang == "bn" else "District clarification for driving test venue."
             return _reply("clarify", lead_text, chips, _trace(state, [], "clarify", note), state, started=started)
 
     # 2. District office query handling
@@ -477,7 +534,11 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
         lead_text = locations.format_office_lead(district_id, dom, lang)
         card = locations.build_office_card(district_id, dom, lang)
         chips = ["ফি কত?", "কি কি কাগজ লাগবে?", "অনলাইনে আবেদন", "অন্যান্য জেলা"] if lang == "bn" else ["How much is the fee?", "Required documents", "Online application", "Other districts"]
-        note = f"{district_id} জেলার {dom} অফিসের তথ্য সরাসরি প্রদান।"
+        note = (
+            f"{district_id} জেলার {dom} অফিসের তথ্য সরাসরি প্রদান।"
+            if lang == "bn"
+            else f"Direct {dom} office info for {district_id}."
+        )
         session.remember(state, "assistant", lead_text)
         return _reply("answer", lead_text, chips, _trace(state, [], "answer", note), state, card=card, started=started)
 
@@ -488,7 +549,7 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
         state["field"] = "office"
         lead_text = "আপনি কোন জেলার অফিসের ঠিকানা জানতে চাচ্ছেন? নিচের তালিকা থেকে নির্বাচন করুন অথবা জেলার নাম লিখুন:" if lang == "bn" else "Which district office location are you looking for? Select below or type a district name:"
         chips = locations.get_popular_district_chips(dom, lang)
-        note = "অফিস অনুসন্ধানের জন্য জেলা জিজ্ঞাসা করা হয়েছে।"
+        note = "অফিস অনুসন্ধানের জন্য জেলা জিজ্ঞাসা করা হয়েছে।" if lang == "bn" else "District clarification for office lookup."
         return _reply("clarify", lead_text, chips, _trace(state, [], "clarify", note), state, started=started)
 
     intent, degraded = {}, False
@@ -507,8 +568,9 @@ def handle_message(state: dict, message: str, lang: str) -> dict:
         degraded = True
 
     if intent.get("smalltalk") and not rule["domain"]:
+        note = "মডেল একে সামাজিক বার্তা হিসেবে চিহ্নিত করেছে।" if lang == "bn" else "Classified as smalltalk by model."
         return _reply("chat", texts.t("chat_greet", lang), texts.domain_chips(lang),
-                      _trace(state, [], "chat", "মডেল একে সামাজিক বার্তা হিসেবে চিহ্নিত করেছে।"),
+                      _trace(state, [], "chat", note),
                       state, started=started)
 
     if intent.get("out_of_scope"):

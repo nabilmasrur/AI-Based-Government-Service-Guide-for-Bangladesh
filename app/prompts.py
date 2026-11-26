@@ -146,7 +146,8 @@ CRITICAL RULES FOR PRODUCING HIGH-QUALITY CITIZEN Q&A ENTRIES:
 
 3. STRUCTURED & ACCURATE CITIZEN ANSWERS (content_bn / content_en):
    - `content_bn`: Provide a direct, well-organized, comprehensive answer in clear Bangla. Use numbered lists (১., ২., ৩.) for documents or steps, or clear bullet points. Quote exact official amounts (টাকা/ফি), deadlines, URLs, and requirements directly from the text.
-   - `content_en`: Accurate English translation of the content.
+   - `content_en`: Complete, natural, accurate English translation of `content_bn`.
+     CRITICAL ENGLISH RULE: `title_en`, `content_en`, and `office_en` MUST be 100% pure English with ZERO Bengali script characters (`\u0980-\u09FF`). Never copy untranslated Bangla sentences or Banglish words into `content_en`, `title_en`, or `office_en`. Preserve all numbered steps, fees (using BDT), days, URLs, and document names (e.g. NID, GD, Form DL-1) in clean English.
    - Do NOT invent false fees or fake dates not mentioned in the text.
 
 4. ACCURATE METADATA & NATURAL SEARCH KEYWORDS:
@@ -182,3 +183,18 @@ Reply with JSON only:
 
 def propose_system() -> str:
     return PROPOSE_SYSTEM.format(taxonomy=_taxonomy_block())
+
+
+TRANSLATE_EN_SYSTEM = """You translate Bangladeshi government service Q&A fields into clean, natural English.
+
+Given a JSON object with `entries` containing `id`, `title_bn`, `content_bn`, `office_bn`, and possibly incomplete or Bangla-containing `title_en`, `content_en`, `office_en`:
+- Translate every entry's `title_en`, `content_en`, and `office_en` faithfully into natural, clear English.
+- CRITICAL: `title_en`, `content_en`, and `office_en` MUST contain ZERO Bengali script characters (\u0980-\u09FF).
+- Preserve all numbered lists, bullet structure, exact fees (BDT), working days, URLs, and official acronyms (NID, GD, BRTA, BSP, Form DL-1, e-Passport, MRP).
+- Do NOT invent facts not present in the Bangla text.
+- Reply with JSON only:
+{"entries": [{"id": "...", "title_en": "...", "content_en": "...", "office_en": "..."}]}"""
+
+
+def translate_en_system() -> str:
+    return TRANSLATE_EN_SYSTEM

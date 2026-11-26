@@ -22,6 +22,16 @@ ALLOWED_TOP_KEYS = {
     "source_url", "verified_on", "keywords",
 }
 ID_RE = re.compile(r"^[a-z_]+\.[a-z_]+\.[a-z_]+$")
+_BANGLA_RX = re.compile(r"[\u0980-\u09FF]")
+_BN_DIGITS = str.maketrans("০১২৩৪৫৬৭৮৯", "0123456789")
+
+
+def _has_bangla(text: str | None) -> bool:
+    return bool(_BANGLA_RX.search(text or ""))
+
+
+def _to_ascii_digits(text: str) -> str:
+    return (text or "").translate(_BN_DIGITS)
 
 
 # Taxonomy Aliases for robust extraction matching
@@ -173,8 +183,10 @@ def _clean(entry: dict) -> dict:
     # Add useful keywords if missing
     kw = list(out.get("keywords") or [])
     sub_bn = kb.TAXONOMY[dom]["subtypes"].get(sub, {}).get("bn", "")
+    sub_en = kb.TAXONOMY[dom]["subtypes"].get(sub, {}).get("en", "")
     fld_bn = kb.FIELDS.get(field, {}).get("bn", "")
-    for k in [dom, sub, field, sub_bn, fld_bn]:
+    fld_en = kb.FIELDS.get(field, {}).get("en", "")
+    for k in [dom, sub, field, sub_bn, sub_en, fld_bn, fld_en]:
         if k and k not in kw:
             kw.append(k)
     out["keywords"] = kw[:15]
@@ -198,30 +210,149 @@ def _valid(entry: dict) -> tuple[bool, str]:
     return True, ""
 
 
+_SUBTYPE_KEYWORDS: dict[str, dict[str, tuple[str, ...]]] = {
+    "passport": {
+        "lost": ("হারা", "হারিয়ে", "হারিয়ে", "হারানো", "খোয়া", "খোয়া", "চুরি", "lost", "stolen", "জিডি", "gd"),
+        "reissue": ("রিনিউ", "নবায়ন", "নবায়ন", "renew", "reissue", "রি-ইস্যু", "রিইস্যু", "মেয়াদ শেষ", "মেয়াদ শেষ", "মেয়াদোত্তীর্ণ"),
+        "correction": ("সংশোধন", "ভুল", "বানান", "নাম পরিবর্তন", "correction"),
+        "mrp_to_epp": ("এমআরপি", "mrp", "রূপান্তর"),
+        "delivery": ("অতি জরুরি", "সুপার এক্সপ্রেস", "বিতরণ", "delivery"),
+        "status": ("স্ট্যাটাস", "অবস্থা", "ট্র্যাক", "status", "tracking"),
+        "new": ("নতুন", "প্রথমবার", "new passport", "apply"),
+    },
+    "licence": {
+        "duplicate": ("হারা", "হারিয়ে", "হারিয়ে", "হারানো", "lost", "জিডি", "gd", "ডুপ্লিকেট", "duplicate", "চুরি", "নষ্ট"),
+        "renewal": ("রিনিউ", "নবায়ন", "নবায়ন", "renew", "renewal", "মেয়াদ শেষ", "মেয়াদ শেষ", "মেয়াদোত্তীর্ণ"),
+        "learner": ("লার্নার", "শিক্ষানবিশ", "learner"),
+        "exam": ("পরীক্ষা", "ফিল্ড টেস্ট", "লিখিত পরীক্ষা", "ড্রাইভিং টেস্ট", "practical", "exam"),
+        "category_change": ("পেশাদার", "অপেশাদার", "শ্রেণি", "ক্যাটাগরি", "category", "ভারী"),
+        "idp": ("আন্তর্জাতিক", "international", "idp"),
+        "smartcard_new": ("স্মার্ট কার্ড", "স্মার্টকার্ড", "smart card", "smartcard", "নতুন লাইসেন্স"),
+    },
+}
+
+_EN_CONCEPT_RULES: list[tuple[tuple[str, ...], str]] = [
+    (("জিডি", "সাধারণ ডায়েরি", "সাধারণ ডায়েরি", "থানা", "gd.police"), "General Diary (GD) filed at the nearest police station (or online at gd.police.gov.bd) mentioning the document number and loss details."),
+    (("হলফনামা", "নোটারি", "affidavit", "notary"), "Notarized affidavit on stamp paper stating the loss details (verify on the portal checklist whether required)."),
+    (("জাতীয় পরিচয়পত্র", "জাতীয় পরিচয়পত্র", "এনআইডি", "nid"), "National ID (NID) card original and photocopy / scanned copy."),
+    (("জন্ম নিবন্ধন", "জন্মনিবন্ধন", "জন্মসনদ", "birth"), "Birth registration certificate (where applicable)."),
+    (("ছবি", "ফটোগ্রাফ", "photo"), "Recent passport-size photographs."),
+    (("মেডিকেল", "মেডিক্যাল", "ডাক্তার", "ডিএল-১", "dl-1", "medical"), "Medical certificate (Form DL-1) certified by a registered MBBS doctor."),
+    (("ইউটিলিটি", "বিদ্যুৎ", "গ্যাস", "utility"), "Utility bill copy (if present address differs from NID address)."),
+    (("ট্রাফিক ক্লিয়ারেন্স", "ট্রাফিক ক্লিয়ারেন্স", "ক্লিয়ারেন্স", "clearance"), "Traffic clearance / police clearance report (where required)."),
+    (("পুরনো", "বিদ্যমান", "মূল কপি", "পূর্ববর্তী", "ক্ষতিগ্রস্ত", "নষ্ট", "existing", "previous"), "Original or photocopy of the existing/previous document (or damaged card, if applicable)."),
+    (("bsp.brta", "বিসপি", "পোর্টাল", "ওয়েবসাইট", "ওয়েবসাইট", "লগইন", "রেজিস্ট্রেশন", "অনলাইন", "পাসপোর্ট পোর্টাল", "portal", "login"), "Log in or register on the official online portal, complete the application form, and upload scanned copies of required documents."),
+    (("ফি", "চালান", "এ-চালান", "ব্যাংক", "বিকাশ", "নগদ", "রকেট", "রসিদ", "ট্রানজেকশন", "পেমেন্ট", "payment", "challan"), "Pay the prescribed official fee online (A-Challan / card / mobile banking) or at a designated bank branch and save the payment receipt / transaction ID."),
+    (("বায়োমেট্রিক", "বায়োমেট্রিক", "আঙুলের ছাপ", "স্বাক্ষর", "সার্কেল অফিস", "আঞ্চলিক", "biometric", "circle office"), "Visit the designated office (BRTA Circle Office / Regional Passport Office) with original documents for photograph, signature, and fingerprint biometrics."),
+    (("পুলিশ ভেরিফিকেশন", "ভেরিফিকেশন", "তদন্ত", "verification"), "Complete police verification (Special Branch / DSB) at your address if required."),
+    (("পরীক্ষা", "লিখিত", "মৌখিক", "ব্যবহারিক", "ফিল্ড টেস্ট", "test", "exam"), "Attend the scheduled written, oral, and practical driving test at the designated BRTA venue."),
+    (("ডেলিভারি স্লিপ", "সংগ্রহ", "বিতরণ", "এসএমএস", "sms", "delivery slip"), "Track application status via SMS/online portal and collect the document/card using the delivery slip and ID."),
+]
+
+
+def _detect_subtype(norm: str, dom: str) -> str:
+    default = "new" if dom == "passport" else "smartcard_new"
+    rules = _SUBTYPE_KEYWORDS.get(dom, {})
+    head = "\n".join(norm.splitlines()[:3])
+    best_sub, best_score = default, 0
+    for sub, kws in rules.items():
+        score = 0
+        for kw in kws:
+            score += norm.count(kw)
+            if kw in head:
+                score += 3
+        if score > best_score:
+            best_sub, best_score = sub, score
+    return best_sub
+
+
+def _clean_line_prefix(line: str) -> str:
+    return re.sub(r"^[\d\u09E6-\u09EF\.\-\*\•\)\s]+", "", line).strip()
+
+
+def _is_heading_line(line: str) -> bool:
+    s = line.strip()
+    return s.endswith(":") or s.endswith("ঃ")
+
+
+def _extract_english_from_lines(
+    field: str,
+    lines: list[str],
+    dom_label_en: str,
+    sub_label_en: str,
+    source_url: str,
+) -> str:
+    """Build 100% pure English content_en without ever leaking raw Bangla script."""
+    header_map = {
+        "documents": f"Required documents for {dom_label_en} ({sub_label_en}):",
+        "fee": f"Official fee and payment details for {dom_label_en} ({sub_label_en}):",
+        "online_steps": f"Online application steps for {dom_label_en} ({sub_label_en}):",
+        "office": f"Office submission and biometrics for {dom_label_en} ({sub_label_en}):",
+        "timeline": f"Processing and delivery timeline for {dom_label_en} ({sub_label_en}):",
+        "note": f"Official guidelines for {dom_label_en} ({sub_label_en}):",
+    }
+    header = header_map.get(field, f"Details for {dom_label_en} ({sub_label_en}):")
+    numbered = field in ("documents", "online_steps")
+
+    points: list[str] = []
+    seen: set[str] = set()
+
+    def _add(pt: str) -> None:
+        clean = _BANGLA_RX.sub("", _to_ascii_digits(pt)).strip()
+        clean = re.sub(r"\s{2,}", " ", clean)
+        if clean and clean not in seen:
+            seen.add(clean)
+            points.append(clean)
+
+    for raw in lines:
+        cleaned = _clean_line_prefix(raw)
+        if not cleaned or _is_heading_line(cleaned):
+            continue
+        if not _has_bangla(cleaned):
+            _add(cleaned)
+            continue
+
+        low = cleaned.lower()
+        for kws, eng_stmt in _EN_CONCEPT_RULES:
+            if any(k in low for k in kws):
+                _add(eng_stmt)
+
+        ascii_line = _to_ascii_digits(cleaned)
+        for amt in re.findall(r"(\d[\d,]*)\s*(?:টাকা|bdt|tk\b)", ascii_line, flags=re.IGNORECASE):
+            _add(f"Mentioned fee/amount: {amt} BDT (verify exact category on official portal).")
+        for dur in re.findall(r"(\d+)\s*(কর্মদিবস|দিন|বছর|মাস|working\s*days|days|years|months)", ascii_line, flags=re.IGNORECASE):
+            unit_map = {"কর্মদিবস": "working days", "দিন": "days", "বছর": "years", "মাস": "months"}
+            unit = unit_map.get(dur[1].lower(), dur[1].lower())
+            _add(f"Mentioned timeframe: {dur[0]} {unit}.")
+
+    if not points:
+        joined = " ".join(lines).lower()
+        for kws, eng_stmt in _EN_CONCEPT_RULES:
+            if any(k in joined for k in kws):
+                _add(eng_stmt)
+
+    if not points:
+        _add(f"Refer to the official government portal ({source_url}) for full English instructions on {dom_label_en} ({sub_label_en}).")
+
+    if numbered:
+        formatted = [f"{idx}. {pt}" for idx, pt in enumerate(points[:8], 1)]
+    else:
+        formatted = [f"- {pt}" for pt in points[:8]]
+    return header + "\n" + "\n".join(formatted)
+
+
 def _fallback_extract(text: str) -> list[dict]:
     """Rule-based extractor that crafts multiple valid, high-quality citizen Q&A entries
     when Gemini LLM is unavailable (e.g. 429 quota or connection timeout)."""
     norm = unicodedata.normalize("NFC", text.lower())
-    
+
     # 1. Determine domain
     dom = "passport"
     if any(k in norm for k in ["লাইসেন্স", "ড্রাইভিং", "বিআরটিএ", "যানবাহন", "মোটরযান", "licence", "license", "driving", "brta"]):
         dom = "licence"
 
-    # 2. Determine primary subtype
-    sub = "new" if dom == "passport" else "smartcard_new"
-    if any(k in norm for k in ["রিনিউ", "নবায়ন", "নবায়ন", "renew", "reissue", "রি-ইস্যু", "রিইস্যু", "মেয়াদ শেষ", "মেয়াদোত্তীর্ণ"]):
-        sub = "renewal" if dom == "licence" else "reissue"
-    elif any(k in norm for k in ["হারা", "হারিয়ে", "হারিয়ে", "lost", "জিডি", "ডুপ্লিকেট"]):
-        sub = "duplicate" if dom == "licence" else "lost"
-    elif dom == "licence" and any(k in norm for k in ["লার্নার", "শিক্ষানবিশ", "learner"]):
-        sub = "learner"
-    elif dom == "licence" and any(k in norm for k in ["পরীক্ষা", "ফিল্ড টেস্ট", "লিখিত পরীক্ষা", "ড্রাইভিং টেস্ট", "exam"]):
-        sub = "exam"
-    elif dom == "passport" and any(k in norm for k in ["সংশোধন", "নাম সংশোধন", "বয়স সংশোধন", "correction"]):
-        sub = "correction"
-    elif dom == "passport" and any(k in norm for k in ["এমআরপি", "mrp"]):
-        sub = "mrp_to_epp"
+    # 2. Determine primary subtype using weighted heading + frequency scoring
+    sub = _detect_subtype(norm, dom)
 
     sub_info = kb.TAXONOMY[dom]["subtypes"].get(sub, {"bn": sub, "en": sub})
     sub_label_bn = sub_info["bn"]
@@ -232,7 +363,7 @@ def _fallback_extract(text: str) -> list[dict]:
     # Extract source url
     source_match = re.search(r"https?://\S+|www\.\S+", text)
     if source_match:
-        source_url = source_match.group(0)
+        source_url = source_match.group(0).rstrip(".,);")
         if source_url.startswith("www."):
             source_url = "https://" + source_url
     else:
@@ -242,15 +373,17 @@ def _fallback_extract(text: str) -> list[dict]:
     raw_lines = [l.strip() for l in text.splitlines() if l.strip()]
     entries = []
 
+    def _usable_bn_lines(cands: list[str], limit: int) -> list[str]:
+        non_headings = [c for c in cands if not _is_heading_line(c)]
+        chosen = non_headings if non_headings else cands
+        return [_clean_line_prefix(c) for c in chosen[:limit] if _clean_line_prefix(c)]
+
     # Topic A: Documents / প্রয়োজনীয় কাগজপত্র
-    doc_keywords = ["কাগজ", "ডকুমেন্ট", "document", "সনদ", "ফটোকপি", "কপি", "জাতীয় পরিচয়পত্র", "nid", "ছবি", "সার্টিফিকেট", "দাখিল", "প্রয়োজনীয় কাগজপত্র", "কাগজপত্র"]
+    doc_keywords = ["কাগজ", "ডকুমেন্ট", "document", "সনদ", "ফটোকপি", "কপি", "জাতীয় পরিচয়পত্র", "জাতীয় পরিচয়পত্র", "nid", "ছবি", "সার্টিফিকেট", "দাখিল", "প্রয়োজনীয় কাগজপত্র", "প্রয়োজনীয় কাগজপত্র", "হলফনামা", "জিডি", "gd"]
     doc_lines = [l for l in raw_lines if any(k in l.lower() for k in doc_keywords)]
     if doc_lines:
-        content_bn_lines = []
-        for i, l in enumerate(doc_lines[:8], 1):
-            cleaned = re.sub(r"^[\d\.\-\*\•\s]+", "", l)
-            content_bn_lines.append(f"{i}. {cleaned}")
-        content_bn = "\n".join(content_bn_lines)
+        bn_items = _usable_bn_lines(doc_lines, 8)
+        content_bn = "\n".join(f"{i}. {l}" for i, l in enumerate(bn_items, 1))
         entries.append({
             "id": f"{dom}.{sub}.documents",
             "domain": dom,
@@ -259,7 +392,7 @@ def _fallback_extract(text: str) -> list[dict]:
             "title_bn": f"{dom_label_bn} ({sub_label_bn}) — কী কী কাগজপত্র প্রয়োজন?",
             "title_en": f"{dom_label_en} ({sub_label_en}) — What documents are required?",
             "content_bn": content_bn,
-            "content_en": f"Required documents for {dom_label_en} ({sub_label_en}):\n" + "\n".join(f"- {l}" for l in doc_lines[:6]),
+            "content_en": _extract_english_from_lines("documents", doc_lines, dom_label_en, sub_label_en, source_url),
             "office_bn": "নিজ এলাকার আঞ্চলিক অফিস" if dom == "passport" else "বিআরটিএ সার্কেল অফিস",
             "office_en": "Regional Passport Office" if dom == "passport" else "BRTA Circle Office",
             "online_possible": True,
@@ -273,7 +406,8 @@ def _fallback_extract(text: str) -> list[dict]:
     fee_keywords = ["ফি", "টাকা", "fee", "খরচ", "টাকার", "ভ্যাট", "চালান", "টেলিটক", "ব্যাংক", "tk", "bdt", "মূল্য"]
     fee_lines = [l for l in raw_lines if any(k in l.lower() for k in fee_keywords)]
     if fee_lines:
-        content_bn = "\n".join(f"• {re.sub(r'^[•\-\*\s]+', '', l)}" for l in fee_lines[:6])
+        bn_items = _usable_bn_lines(fee_lines, 6)
+        content_bn = "\n".join(f"• {l}" for l in bn_items)
         entries.append({
             "id": f"{dom}.{sub}.fee",
             "domain": dom,
@@ -282,7 +416,7 @@ def _fallback_extract(text: str) -> list[dict]:
             "title_bn": f"{dom_label_bn} ({sub_label_bn}) — সরকারি ফি কত এবং কীভাবে প্রদান করবেন?",
             "title_en": f"{dom_label_en} ({sub_label_en}) — What is the official fee and payment method?",
             "content_bn": content_bn,
-            "content_en": f"Official fee structure for {dom_label_en} ({sub_label_en}):\n" + "\n".join(f"- {l}" for l in fee_lines[:6]),
+            "content_en": _extract_english_from_lines("fee", fee_lines, dom_label_en, sub_label_en, source_url),
             "office_bn": "অনলাইন পেমেন্ট গেটওয়ে / নির্ধারিত ব্যাংক শাখা",
             "office_en": "Online Payment Gateway / Designated Bank Branch",
             "online_possible": True,
@@ -293,15 +427,12 @@ def _fallback_extract(text: str) -> list[dict]:
         })
 
     # Topic C: Online Steps / আবেদনের নিয়মাবলি
-    step_keywords = ["অনলাইন", "আবেদন", "ধাপ", "পদ্ধতি", "নিয়ম", "website", "portal", "ওয়েবসাইট", "ফরম", "প্রক্রিয়া", "লগইন", "রেজিস্ট্রেশন"]
+    step_keywords = ["অনলাইন", "আবেদন", "ধাপ", "পদ্ধতি", "নিয়ম", "নিয়ম", "website", "portal", "ওয়েবসাইট", "ওয়েবসাইট", "ফরম", "প্রক্রিয়া", "প্রক্রিয়া", "লগইন", "রেজিস্ট্রেশন"]
     step_lines = [l for l in raw_lines if any(k in l.lower() for k in step_keywords) and l not in doc_lines and l not in fee_lines]
     if step_lines or any(k in norm for k in ["online", "অনলাইন"]):
         lines_to_use = step_lines[:6] if step_lines else raw_lines[:4]
-        content_bn_steps = []
-        for i, l in enumerate(lines_to_use, 1):
-            cleaned = re.sub(r"^[\d\.\-\*\•\s]+", "", l)
-            content_bn_steps.append(f"{i}. {cleaned}")
-        content_bn = "\n".join(content_bn_steps)
+        bn_items = _usable_bn_lines(lines_to_use, 6)
+        content_bn = "\n".join(f"{i}. {l}" for i, l in enumerate(bn_items, 1))
         entries.append({
             "id": f"{dom}.{sub}.online_steps",
             "domain": dom,
@@ -310,7 +441,7 @@ def _fallback_extract(text: str) -> list[dict]:
             "title_bn": f"{dom_label_bn} ({sub_label_bn}) — কীভাবে অনলাইনে আবেদন করবেন? (আবেদন পদ্ধতি)",
             "title_en": f"{dom_label_en} ({sub_label_en}) — How to apply online? (Application Procedure)",
             "content_bn": content_bn,
-            "content_en": f"Step-by-step online application process for {dom_label_en} ({sub_label_en}):\n" + "\n".join(f"- {l}" for l in lines_to_use),
+            "content_en": _extract_english_from_lines("online_steps", lines_to_use, dom_label_en, sub_label_en, source_url),
             "office_bn": "অনলাইন পোর্টাল",
             "office_en": "Official Online Portal",
             "online_possible": True,
@@ -321,10 +452,11 @@ def _fallback_extract(text: str) -> list[dict]:
         })
 
     # Topic D: Office / কোথায় জমা দিবেন
-    office_keywords = ["অফিস", "দপ্তর", "শাখা", "উপস্থিত", "বায়োমেট্রিক", "আঙুলের ছাপ", "ছবি", "স্থান", "ঠিকানা", "সার্কেল", "office"]
+    office_keywords = ["অফিস", "দপ্তর", "শাখা", "উপস্থিত", "বায়োমেট্রিক", "বায়োমেট্রিক", "আঙুলের ছাপ", "ছবি", "স্থান", "ঠিকানা", "সার্কেল", "office"]
     office_lines = [l for l in raw_lines if any(k in l.lower() for k in office_keywords) and l not in doc_lines and l not in fee_lines]
     if office_lines:
-        content_bn = "\n".join(f"• {re.sub(r'^[•\-\*\s]+', '', l)}" for l in office_lines[:4])
+        bn_items = _usable_bn_lines(office_lines, 4)
+        content_bn = "\n".join(f"• {l}" for l in bn_items)
         entries.append({
             "id": f"{dom}.{sub}.office",
             "domain": dom,
@@ -333,7 +465,7 @@ def _fallback_extract(text: str) -> list[dict]:
             "title_bn": f"{dom_label_bn} ({sub_label_bn}) — আবেদন জমা ও বায়োমেট্রিকের জন্য কোথায় যেতে হবে?",
             "title_en": f"{dom_label_en} ({sub_label_en}) — Where to go for submission and biometrics?",
             "content_bn": content_bn,
-            "content_en": f"Office and physical submission instructions for {dom_label_en} ({sub_label_en}):\n" + "\n".join(f"- {l}" for l in office_lines[:4]),
+            "content_en": _extract_english_from_lines("office", office_lines, dom_label_en, sub_label_en, source_url),
             "office_bn": "আঞ্চলিক পাসপোর্ট অফিস" if dom == "passport" else "বিআরটিএ সার্কেল অফিস",
             "office_en": "Regional Passport Office" if dom == "passport" else "BRTA Circle Office",
             "online_possible": False,
@@ -344,10 +476,11 @@ def _fallback_extract(text: str) -> list[dict]:
         })
 
     # Topic E: Timeline / কত দিন লাগবে
-    time_keywords = ["দিন", "কর্মদিবস", "মেয়াদ", "জরুরি", "সময়", "working days", "timeline", "বিতরণ", "ডেলিভারি"]
+    time_keywords = ["দিন", "কর্মদিবস", "মেয়াদ", "মেয়াদ", "জরুরি", "সময়", "সময়", "working days", "timeline", "বিতরণ", "ডেলিভারি"]
     time_lines = [l for l in raw_lines if any(k in l.lower() for k in time_keywords) and l not in doc_lines and l not in fee_lines]
     if time_lines:
-        content_bn = "\n".join(f"• {re.sub(r'^[•\-\*\s]+', '', l)}" for l in time_lines[:4])
+        bn_items = _usable_bn_lines(time_lines, 4)
+        content_bn = "\n".join(f"• {l}" for l in bn_items)
         entries.append({
             "id": f"{dom}.{sub}.timeline",
             "domain": dom,
@@ -356,7 +489,7 @@ def _fallback_extract(text: str) -> list[dict]:
             "title_bn": f"{dom_label_bn} ({sub_label_bn}) — সেবা পেতে কত দিন সময় লাগে?",
             "title_en": f"{dom_label_en} ({sub_label_en}) — How long does it take for processing and delivery?",
             "content_bn": content_bn,
-            "content_en": f"Delivery and processing timeline for {dom_label_en} ({sub_label_en}):\n" + "\n".join(f"- {l}" for l in time_lines[:4]),
+            "content_en": _extract_english_from_lines("timeline", time_lines, dom_label_en, sub_label_en, source_url),
             "office_bn": "সংশ্লিষ্ট বিতরণ শাখা",
             "office_en": "Respective Delivery Branch",
             "online_possible": True,
@@ -379,7 +512,7 @@ def _fallback_extract(text: str) -> list[dict]:
             "title_bn": f"{dom_label_bn} ({sub_label_bn}) — প্রয়োজনীয় সরকারি নির্দেশনা ও জ্ঞাতব্য",
             "title_en": f"{dom_label_en} ({sub_label_en}) — Official Guidelines and Notice",
             "content_bn": clean_content,
-            "content_en": f"Official public notice extracted from document: {clean_content[:200]}...",
+            "content_en": _extract_english_from_lines("note", raw_lines[:8] or [clean_content], dom_label_en, sub_label_en, source_url),
             "office_bn": "সংশ্লিষ্ট সরকারি কর্তৃপক্ষ",
             "office_en": "Relevant Government Authority",
             "online_possible": True,
@@ -389,6 +522,68 @@ def _fallback_extract(text: str) -> list[dict]:
             "keywords": [dom, sub, "note", "নির্দেশনা", "নিয়মাবলি", "সরকারি নোটিশ"],
         })
 
+    return entries
+
+
+def _ensure_english_fields(entries: list[dict], try_llm: bool = True) -> list[dict]:
+    """Guarantee title_en, content_en, and office_en contain pure English (no Bangla script)."""
+    needs_fix = [
+        e for e in entries
+        if _has_bangla(e.get("title_en"))
+        or _has_bangla(e.get("content_en"))
+        or _has_bangla(e.get("office_en"))
+    ]
+    if needs_fix and try_llm:
+        payload = [
+            {
+                "id": e["id"],
+                "title_bn": e.get("title_bn", ""),
+                "content_bn": e.get("content_bn", ""),
+                "office_bn": e.get("office_bn", ""),
+                "title_en": e.get("title_en", ""),
+                "content_en": e.get("content_en", ""),
+                "office_en": e.get("office_en", ""),
+            }
+            for e in needs_fix
+        ]
+        try:
+            res = llm.generate_json(
+                prompts.translate_en_system(),
+                json.dumps({"entries": payload}, ensure_ascii=False),
+            )
+            by_id = {
+                row["id"]: row
+                for row in (res.get("entries") or [])
+                if isinstance(row, dict) and row.get("id")
+            }
+            for e in needs_fix:
+                tr = by_id.get(e["id"])
+                if not tr:
+                    continue
+                for k in ("title_en", "content_en", "office_en"):
+                    val = str(tr.get(k) or "").strip()
+                    if val and not _has_bangla(val):
+                        e[k] = val
+        except Exception as exc:
+            log.warning("English repair translation skipped (%s)", exc)
+
+    # Hard guard: never leave Bangla script in *_en fields of drafted entries
+    for e in entries:
+        dom = e.get("domain", "passport")
+        sub = e.get("subtype", "new")
+        field = e.get("field", "note")
+        dom_en = kb.TAXONOMY.get(dom, {}).get("label_en", dom)
+        sub_en = kb.TAXONOMY.get(dom, {}).get("subtypes", {}).get(sub, {}).get("en", sub)
+        fld_en = kb.FIELDS.get(field, {}).get("en", field)
+        if not e.get("title_en") or _has_bangla(e.get("title_en")):
+            e["title_en"] = f"{dom_en} ({sub_en}) — {fld_en}"
+        if not e.get("content_en") or _has_bangla(e.get("content_en")):
+            bn_lines = [l.strip() for l in str(e.get("content_bn") or "").splitlines() if l.strip()]
+            e["content_en"] = _extract_english_from_lines(
+                field, bn_lines, dom_en, sub_en, e.get("source_url") or "https://bangladesh.gov.bd/"
+            )
+        if e.get("office_en") and _has_bangla(e.get("office_en")):
+            e["office_en"] = "Regional Passport Office" if dom == "passport" else "BRTA Circle Office"
     return entries
 
 
@@ -413,12 +608,15 @@ def propose(text: str) -> dict:
         fallback_used = True
 
     if not drafts:
+        fallback_used = True
         # Fall back to heuristic rule-based extraction
         for raw in _fallback_extract(text):
             entry = _clean(raw)
             ok, why = _valid(entry)
             if ok:
                 drafts.append(entry)
+
+    drafts = _ensure_english_fields(drafts, try_llm=not fallback_used)
 
     existing = {e["id"] for e in kb.load()}
     for entry in drafts:
@@ -441,7 +639,7 @@ def propose(text: str) -> dict:
         "rejected": rejected,
         "count": len(drafts),
         "fallback": fallback_used,
-        "note": "AI কোটা পূর্ণ থাকায় নিয়মভিত্তিক বহু-প্রশ্নোত্তর খসড়া তৈরি হয়েছে — এডিট করে অনুমোদন দিন।" if fallback_used else None,
+        "note": "AI কোটা পূর্ণ বা অফলাইন থাকায় নিয়মভিত্তিক বহু-প্রশ্নোত্তর খসড়া তৈরি হয়েছে — ইংরেজি ও বাংলা অংশ দেখে অনুমোদন দিন।" if fallback_used else None,
     }
 
 
