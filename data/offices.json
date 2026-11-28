@@ -1,0 +1,3693 @@
+{
+  "rangpur": {
+    "id": "rangpur",
+    "name_bn": "রংপুর",
+    "name_en": "Rangpur",
+    "aliases": [
+      "রংপুর",
+      "রংপুরে",
+      "রংপুরের",
+      "rangpur",
+      "rongpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, রংপুর",
+      "office_name_en": "Regional Passport Office, Rangpur",
+      "address_bn": "কেরানীপাড়া (চিড়িয়াখানার বিপরীতে), রংপুর সদর, রংপুর।",
+      "address_en": "Rangpur Sadar, Rangpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৫৮৯৯৬২২২২",
+      "phone_en": "02589962222",
+      "maps_url": "https://maps.google.com/?q=Regional+Passport+Office+Rangpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ রংপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Rangpur Circle Office",
+      "address_bn": "কালেক্টরেট ভবন কম্পাউন্ড, রংপুর।",
+      "address_en": "Rangpur Sadar, Rangpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫২১-৬২৩৪৫",
+      "phone_en": "0521-62345",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rangpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, রংপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Rangpur",
+      "location_bn": "কালেক্টরেট মাঠ / পুলিশ লাইন্স প্যারেড গ্রাউন্ড, রংপুর।",
+      "location_en": "Rangpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি মঙ্গলবার ও বৃহস্পতিবার, সকাল ৮:৩০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=Collectorate+Eidgah+Rangpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), রংপুর",
+      "unit_name_en": "District Special Branch (DSB), Rangpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), রংপুর।",
+      "address_en": "Superintendent of Police Office Compound, Rangpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৫৮৯৯৬১১১১",
+      "phone_en": "02589961111",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "dinajpur": {
+    "id": "dinajpur",
+    "name_bn": "দিনাজপুর",
+    "name_en": "Dinajpur",
+    "aliases": [
+      "দিনাজপুর",
+      "দিনাজপুরে",
+      "দিনাজপুরের",
+      "dinajpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, দিনাজপুর",
+      "office_name_en": "Regional Passport Office, Dinajpur",
+      "address_bn": "রামকৃষ্ণপুর, পুলহাট, দিনাজপুর সদর।",
+      "address_en": "Dinajpur Sadar, Dinajpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৫৮৯৯২২১০১",
+      "phone_en": "02589922101",
+      "maps_url": "https://maps.google.com/?q=Regional+Passport+Office+Dinajpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ দিনাজপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Dinajpur Circle Office",
+      "address_bn": "উপশহর, দিনাজপুর সদর, দিনাজপুর।",
+      "address_en": "Dinajpur Sadar, Dinajpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৩১-৬৩২১০",
+      "phone_en": "0531-63210",
+      "maps_url": "https://maps.google.com/?q=BRTA+Dinajpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ দিনাজপুর ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Dinajpur",
+      "location_bn": "উপশহর বিআরটিএ টেস্ট মাঠ, দিনাজপুর।",
+      "location_en": "Dinajpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি মঙ্গলবার, সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Dinajpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), দিনাজপুর",
+      "unit_name_en": "District Special Branch (DSB), Dinajpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), দিনাজপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Dinajpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৫৮৯৯২২১০১",
+      "phone_en": "02589922101",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "bogura": {
+    "id": "bogura",
+    "name_bn": "বগুড়া",
+    "name_en": "Bogura",
+    "aliases": [
+      "বগুড়া",
+      "বগুড়ায়",
+      "বগুড়ার",
+      "bogura",
+      "bogra"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, বগুড়া",
+      "office_name_en": "Regional Passport Office, Bogura",
+      "address_bn": "উপশহর, বগুড়া সদর, বগুড়া।",
+      "address_en": "Bogura Sadar, Bogura.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৫৮৮৮১৩৩৩৩",
+      "phone_en": "02588813333",
+      "maps_url": "https://maps.google.com/?q=Regional+Passport+Office+Bogra"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ বগুড়া সার্কেল অফিস",
+      "office_name_en": "BRTA Bogura Circle Office",
+      "address_bn": "ফুলবাড়ি, বগুড়া সদর, বগুড়া।",
+      "address_en": "Bogura Sadar, Bogura.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫১-৬৬৭৮৯",
+      "phone_en": "051-66789",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bogra"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ বগুড়া ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Bogura",
+      "location_bn": "ফুলবাড়ি বিআরটিএ সার্কেল সংলগ্ন টেস্ট মাঠ, বগুড়া।",
+      "location_en": "Bogura BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি সোমবার ও বুধবার, সকাল ৮:৩০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bogra"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), বগুড়া",
+      "unit_name_en": "District Special Branch (DSB), Bogura",
+      "address_bn": "পুলিশ সুপারের কার্যালয় কম্পাউন্ড, বগুড়া।",
+      "address_en": "Superintendent of Police Office Compound, Bogura.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৫৮৮৮১১১১১",
+      "phone_en": "02588811111",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "dhaka": {
+    "id": "dhaka",
+    "name_bn": "ঢাকা",
+    "name_en": "Dhaka",
+    "aliases": [
+      "ঢাকা",
+      "ঢাকায়",
+      "ঢাকার",
+      "dhaka",
+      "dacca",
+      "আগারগাঁও",
+      "উত্তরা",
+      "যাত্রাবাড়ী"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, ঢাকা (আগারগাঁও)",
+      "office_name_en": "Regional Passport Office, Dhaka",
+      "address_bn": "ই-৮/এ, আগারগাঁও, শেরেবাংলা নগর, ঢাকা-১২০৭।",
+      "address_en": "Dhaka Sadar, Dhaka.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৮১২২০৮৬",
+      "phone_en": "02-8122086",
+      "maps_url": "https://maps.google.com/?q=Divisional+Passport+Office+Agargaon"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ঢাকা মেট্রো সার্কেল-১ (মিরপুর)",
+      "office_name_en": "BRTA Dhaka Circle Office",
+      "address_bn": "বিআরটিএ ভবন, মিরপুর-১৩, ঢাকা-১২১৬।",
+      "address_en": "Dhaka Sadar, Dhaka.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৫৫০৪০৫৫৫",
+      "phone_en": "02-55040555",
+      "maps_url": "https://maps.google.com/?q=BRTA+Mirpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ঢাকা মেট্রো ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Dhaka",
+      "location_bn": "জোয়ার সাহারা বাস ডিপো (মিরপুর) / ইকুরিয়া বিআরটিএ মাঠ (কেরানীগঞ্জ) / দিয়াবাড়ি (উত্তরা)।",
+      "location_en": "Dhaka BRTA Circle Driving Test Ground.",
+      "schedule_bn": "রবিবার - বৃহস্পতিবার, সকাল ৮:০০ টা (লার্নার স্লট অনুযায়ী)।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Mirpur+Test+Ground"
+    },
+    "police_verification": {
+      "unit_name_bn": "স্পেশাল ব্রাঞ্চ (SB) পাসপোর্ট শাখা, ঢাকা",
+      "unit_name_en": "District Special Branch (DSB), Dhaka",
+      "address_bn": "এসবি প্রধান কার্যালয়, মালিবাগ / সংশ্লিষ্ট থানা স্পেশাল ব্রাঞ্চ, ঢাকা।",
+      "address_en": "Superintendent of Police Office Compound, Dhaka.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২-৯৩৩৪৫৫৫",
+      "phone_en": "02-9334555",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "chattogram": {
+    "id": "chattogram",
+    "name_bn": "চট্টগ্রাম",
+    "name_en": "Chattogram",
+    "aliases": [
+      "চট্টগ্রাম",
+      "চট্টগ্রামে",
+      "চট্টগ্রামের",
+      "chattogram",
+      "chittagong",
+      "ctg",
+      "মনসুরাবাদ"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, চট্টগ্রাম",
+      "office_name_en": "Regional Passport Office, Chattogram",
+      "address_bn": "মনসুরাবাদ, ডবলমুরিং, চট্টগ্রাম।",
+      "address_en": "Chattogram Sadar, Chattogram.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩১-৭১২০৭২",
+      "phone_en": "031-712072",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Mansurabad+Chattogram"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ চট্টগ্রাম মেট্রো সার্কেল",
+      "office_name_en": "BRTA Chattogram Circle Office",
+      "address_bn": "নতুনপাড়া, হাটহাজারী রোড, চট্টগ্রাম।",
+      "address_en": "Chattogram Sadar, Chattogram.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩১-৬৮১৮২২",
+      "phone_en": "031-681822",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chattogram"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ চট্টগ্রাম ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Chattogram",
+      "location_bn": "নতুনপাড়া বিআরটিএ টেস্ট ট্র্যাক, হাটহাজারী রোড, চট্টগ্রাম।",
+      "location_en": "Chattogram BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি সোমবার ও বুধবার, সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chattogram+Test+Track"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), চট্টগ্রাম",
+      "unit_name_en": "District Special Branch (DSB), Chattogram",
+      "address_bn": "পুলিশ সুপারের কার্যালয় / সিএমপি হেডকোয়ার্টার্স, লালদিঘী, চট্টগ্রাম।",
+      "address_en": "Superintendent of Police Office Compound, Chattogram.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩১-৬১২১১১",
+      "phone_en": "031-612111",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "rajshahi": {
+    "id": "rajshahi",
+    "name_bn": "রাজশাহী",
+    "name_en": "Rajshahi",
+    "aliases": [
+      "রাজশাহী",
+      "রাজশাহীতে",
+      "রাজশাহীর",
+      "rajshahi"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, রাজশাহী",
+      "office_name_en": "Regional Passport Office, Rajshahi",
+      "address_bn": "শালবাগান, সপুরা, রাজশাহী।",
+      "address_en": "Rajshahi Sadar, Rajshahi.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৫৮৮৮৫১২২২",
+      "phone_en": "02588851222",
+      "maps_url": "https://maps.google.com/?q=Divisional+Passport+Office+Rajshahi"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ রাজশাহী সার্কেল অফিস",
+      "office_name_en": "BRTA Rajshahi Circle Office",
+      "address_bn": "শালবাগান, সপুরা, রাজশাহী।",
+      "address_en": "Rajshahi Sadar, Rajshahi.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭২১-৭৬০৩৪০",
+      "phone_en": "0721-760340",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rajshahi"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ রাজশাহী ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Rajshahi",
+      "location_bn": "শালবাগান বিআরটিএ টেস্ট ট্র্যাক, সপুরা, রাজশাহী।",
+      "location_en": "Rajshahi BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি রবিবার ও বুধবার, সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rajshahi"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), রাজশাহী",
+      "unit_name_en": "District Special Branch (DSB), Rajshahi",
+      "address_bn": "পুলিশ সুপারের কার্যালয় / আরএমপি সদর দপ্তর, রাজশাহী।",
+      "address_en": "Superintendent of Police Office Compound, Rajshahi.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৫৮৮৮৫১১১১",
+      "phone_en": "02588851111",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "sylhet": {
+    "id": "sylhet",
+    "name_bn": "সিলেট",
+    "name_en": "Sylhet",
+    "aliases": [
+      "সিলেট",
+      "সিলেটে",
+      "সিলেটের",
+      "sylhet",
+      "silhet",
+      "মেন্দীবাগ"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, সিলেট",
+      "office_name_en": "Regional Passport Office, Sylhet",
+      "address_bn": "মেন্দীবাগ, সিলেট সদর, সিলেট।",
+      "address_en": "Sylhet Sadar, Sylhet.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮২১-৭১৬২২২",
+      "phone_en": "0821-716222",
+      "maps_url": "https://maps.google.com/?q=Divisional+Passport+Office+Sylhet"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ সিলেট সার্কেল অফিস",
+      "office_name_en": "BRTA Sylhet Circle Office",
+      "address_bn": "মেন্দীবাগ, সিলেট সদর, সিলেট।",
+      "address_en": "Sylhet Sadar, Sylhet.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮২১-৭১৪৫১২",
+      "phone_en": "0821-714512",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sylhet"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ সিলেট ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Sylhet",
+      "location_bn": "মেন্দীবাগ বিআরটিএ সংলগ্ন টেস্ট মাঠ, সিলেট।",
+      "location_en": "Sylhet BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি মঙ্গলবার ও বৃহস্পতিবার, সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sylhet"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), সিলেট",
+      "unit_name_en": "District Special Branch (DSB), Sylhet",
+      "address_bn": "পুলিশ সুপারের কার্যালয় / এসএমপি সদর দপ্তর, বন্দরবাজার, সিলেট।",
+      "address_en": "Superintendent of Police Office Compound, Sylhet.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮২১-৭১১১১১",
+      "phone_en": "0821-711111",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "khulna": {
+    "id": "khulna",
+    "name_bn": "খুলনা",
+    "name_en": "Khulna",
+    "aliases": [
+      "খুলনা",
+      "খুলনায়",
+      "খুলনার",
+      "khulna",
+      "বয়রা"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, খুলনা",
+      "office_name_en": "Regional Passport Office, Khulna",
+      "address_bn": "বয়রা, খুলনা সদর, খুলনা।",
+      "address_en": "Khulna Sadar, Khulna.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৪৭৭৭০১২২২",
+      "phone_en": "02477701222",
+      "maps_url": "https://maps.google.com/?q=Divisional+Passport+Office+Khulna"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ খুলনা সার্কেল অফিস",
+      "office_name_en": "BRTA Khulna Circle Office",
+      "address_bn": "বয়রা, খুলনা সদর, খুলনা।",
+      "address_en": "Khulna Sadar, Khulna.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪১-৭৬১০২১",
+      "phone_en": "041-761021",
+      "maps_url": "https://maps.google.com/?q=BRTA+Khulna"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ খুলনা ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Khulna",
+      "location_bn": "মুজগুন্নী বিআরটিএ টেস্ট ট্র্যাক, বয়রা, খুলনা।",
+      "location_en": "Khulna BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি সোমবার ও বৃহস্পতিবার, সকাল ৮:৩০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Khulna"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), খুলনা",
+      "unit_name_en": "District Special Branch (DSB), Khulna",
+      "address_bn": "পুলিশ সুপারের কার্যালয় / কেএমপি সদর দপ্তর, খুলনা।",
+      "address_en": "Superintendent of Police Office Compound, Khulna.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৪৭৭৭০১১১১",
+      "phone_en": "02477701111",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "barishal": {
+    "id": "barishal",
+    "name_bn": "বরিশাল",
+    "name_en": "Barishal",
+    "aliases": [
+      "বরিশাল",
+      "বরিশালে",
+      "বরিশালের",
+      "barishal",
+      "barisal",
+      "নথুল্লাবাদ"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, বরিশাল",
+      "office_name_en": "Regional Passport Office, Barishal",
+      "address_bn": "নথুল্লাবাদ, বরিশাল সদর, বরিশাল।",
+      "address_en": "Barishal Sadar, Barishal.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৩১-২১৭২২২",
+      "phone_en": "0431-217222",
+      "maps_url": "https://maps.google.com/?q=Divisional+Passport+Office+Barishal"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ বরিশাল সার্কেল অফিস",
+      "office_name_en": "BRTA Barishal Circle Office",
+      "address_bn": "রূপাতলী, বরিশাল সদর, বরিশাল।",
+      "address_en": "Barishal Sadar, Barishal.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৩১-৭১২৯০",
+      "phone_en": "0431-71290",
+      "maps_url": "https://maps.google.com/?q=BRTA+Barishal"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ বরিশাল ড্রাইভিং টেস্ট ভেন্যু",
+      "venue_name_en": "BRTA Driving Test Venue, Barishal",
+      "location_bn": "রূপাতলী সংলগ্ন বিআরটিএ টেস্ট মাঠ, বরিশাল।",
+      "location_en": "Barishal BRTA Circle Driving Test Ground.",
+      "schedule_bn": "প্রতি বুধবার, সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Barishal"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), বরিশাল",
+      "unit_name_en": "District Special Branch (DSB), Barishal",
+      "address_bn": "পুলিশ সুপারের কার্যালয় / বিএমপি সদর দপ্তর, বরিশাল।",
+      "address_en": "Superintendent of Police Office Compound, Barishal.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৩১-২১১১১১",
+      "phone_en": "0431-211111",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "mymensingh": {
+    "id": "mymensingh",
+    "name_bn": "ময়মনসিংহ",
+    "name_en": "Mymensingh",
+    "aliases": [
+      "ময়মনসিংহ",
+      "ময়মনসিংহে",
+      "ময়মনসিংহের",
+      "mymensingh"
+    ],
+    "passport": {
+      "office_name_bn": "বিভাগীয় পাসপোর্ট ও ভিসা অফিস, ময়মনসিংহ",
+      "office_name_en": "Regional Passport Office, Mymensingh",
+      "address_bn": "মাসকান্দা, ময়মনসিংহ সদর, ময়মনসিংহ।",
+      "address_en": "Mymensingh Sadar, Mymensingh.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯১-৬৭২২২",
+      "phone_en": "091-67222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Mymensingh"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ময়মনসিংহ সার্কেল অফিস",
+      "office_name_en": "BRTA Mymensingh Circle Office",
+      "address_bn": "মাসকান্দা, ময়মনসিংহ সদর, ময়মনসিংহ।",
+      "address_en": "Mymensingh Sadar, Mymensingh.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯১-৫৩৬৮০",
+      "phone_en": "091-53680",
+      "maps_url": "https://maps.google.com/?q=BRTA+Mymensingh"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ময়মনসিংহ",
+      "venue_name_en": "BRTA Driving Test Venue, Mymensingh",
+      "location_bn": "ময়মনসিংহ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ময়মনসিংহ সদর।",
+      "location_en": "Mymensingh BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Mymensingh"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ময়মনসিংহ",
+      "unit_name_en": "District Special Branch (DSB), Mymensingh",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ময়মনসিংহ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Mymensingh.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৯১-৬৭২২২",
+      "phone_en": "091-67222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "cumilla": {
+    "id": "cumilla",
+    "name_bn": "কুমিল্লা",
+    "name_en": "Cumilla",
+    "aliases": [
+      "কুমিল্লা",
+      "কুমিল্লায়",
+      "কুমিল্লার",
+      "cumilla",
+      "comilla"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, কুমিল্লা",
+      "office_name_en": "Regional Passport Office, Cumilla",
+      "address_bn": "নোয়াগাঁও, শাসনগাছা, কুমিল্লা সদর।",
+      "address_en": "Cumilla Sadar, Cumilla.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮১-৬২২২২",
+      "phone_en": "081-62222",
+      "maps_url": "https://maps.google.com/?q=Regional+Passport+Office+Cumilla"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ কুমিল্লা সার্কেল অফিস",
+      "office_name_en": "BRTA Cumilla Circle Office",
+      "address_bn": "শাসনগাছা, কুমিল্লা সদর।",
+      "address_en": "Cumilla Sadar, Cumilla.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮১-৬৮৩২০",
+      "phone_en": "081-68320",
+      "maps_url": "https://maps.google.com/?q=BRTA+Cumilla"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, কুমিল্লা",
+      "venue_name_en": "BRTA Driving Test Venue, Cumilla",
+      "location_bn": "কুমিল্লা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, কুমিল্লা সদর।",
+      "location_en": "Cumilla BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Cumilla"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), কুমিল্লা",
+      "unit_name_en": "District Special Branch (DSB), Cumilla",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), কুমিল্লা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Cumilla.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮১-৬২২২২",
+      "phone_en": "081-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "gazipur": {
+    "id": "gazipur",
+    "name_bn": "গাজীপুর",
+    "name_en": "Gazipur",
+    "aliases": [
+      "গাজীপুর",
+      "গাজীপুরে",
+      "গাজীপুরের",
+      "gazipur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, গাজীপুর",
+      "office_name_en": "Regional Passport Office, Gazipur",
+      "address_bn": "ভাওয়াল রাজবাড়ী, জয়দেবপুর, গাজীপুর।",
+      "address_en": "Gazipur Sadar, Gazipur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৪৯২৭২২২২",
+      "phone_en": "02-49272222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Gazipur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ গাজীপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Gazipur Circle Office",
+      "address_bn": "জয়দেবপুর, গাজীপুর।",
+      "address_en": "Gazipur Sadar, Gazipur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৯২৬৩১৫০",
+      "phone_en": "02-9263150",
+      "maps_url": "https://maps.google.com/?q=BRTA+Gazipur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, গাজীপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Gazipur",
+      "location_bn": "গাজীপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, গাজীপুর সদর।",
+      "location_en": "Gazipur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Gazipur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), গাজীপুর",
+      "unit_name_en": "District Special Branch (DSB), Gazipur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), গাজীপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Gazipur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২-৪৯২৭২২২২",
+      "phone_en": "02-49272222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "narayanganj": {
+    "id": "narayanganj",
+    "name_bn": "নারায়ণগঞ্জ",
+    "name_en": "Narayanganj",
+    "aliases": [
+      "নারায়ণগঞ্জ",
+      "নারায়ণগঞ্জে",
+      "narayanganj",
+      "সাইনবোর্ড"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নারায়ণগঞ্জ",
+      "office_name_en": "Regional Passport Office, Narayanganj",
+      "address_bn": "সাইনবোর্ড, সিদ্ধিরগঞ্জ, নারায়ণগঞ্জ।",
+      "address_en": "Narayanganj Sadar, Narayanganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৭৬৯২২২২",
+      "phone_en": "02-7692222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Narayanganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নারায়ণগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Narayanganj Circle Office",
+      "address_bn": "সাইনবোর্ড, সিদ্ধিরগঞ্জ, নারায়ণগঞ্জ।",
+      "address_en": "Narayanganj Sadar, Narayanganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৭৬৯৩৫০০",
+      "phone_en": "02-7693500",
+      "maps_url": "https://maps.google.com/?q=BRTA+Narayanganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নারায়ণগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Narayanganj",
+      "location_bn": "নারায়ণগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নারায়ণগঞ্জ সদর।",
+      "location_en": "Narayanganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Narayanganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নারায়ণগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Narayanganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নারায়ণগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Narayanganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২-৭৬৯২২২২",
+      "phone_en": "02-7692222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "coxsbazar": {
+    "id": "coxsbazar",
+    "name_bn": "কক্সবাজার",
+    "name_en": "Coxs Bazar",
+    "aliases": [
+      "কক্সবাজার",
+      "কক্সবাজারে",
+      "কক্সবাজারের",
+      "coxsbazar",
+      "coxs bazar"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, কক্সবাজার",
+      "office_name_en": "Regional Passport Office, Coxs Bazar",
+      "address_bn": "ঝিলংজা, কক্সবাজার সদর।",
+      "address_en": "Coxs Bazar Sadar, Coxs Bazar.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৪১-৬২২২২",
+      "phone_en": "0341-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Coxs+Bazar"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ কক্সবাজার সার্কেল অফিস",
+      "office_name_en": "BRTA Coxs Bazar Circle Office",
+      "address_bn": "ঝিলংজা, কক্সবাজার সদর।",
+      "address_en": "Coxs Bazar Sadar, Coxs Bazar.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৪১-৬৩৪৮০",
+      "phone_en": "0341-63480",
+      "maps_url": "https://maps.google.com/?q=BRTA+Coxs+Bazar"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, কক্সবাজার",
+      "venue_name_en": "BRTA Driving Test Venue, Coxs Bazar",
+      "location_bn": "কক্সবাজার সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, কক্সবাজার সদর।",
+      "location_en": "Coxs Bazar BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Coxs+Bazar"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), কক্সবাজার",
+      "unit_name_en": "District Special Branch (DSB), Coxs Bazar",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), কক্সবাজার সদর।",
+      "address_en": "Superintendent of Police Office Compound, Coxs Bazar.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩৪১-৬২২২২",
+      "phone_en": "0341-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "tangail": {
+    "id": "tangail",
+    "name_bn": "টাঙ্গাইল",
+    "name_en": "Tangail",
+    "aliases": [
+      "টাঙ্গাইল",
+      "টাঙ্গাইলে",
+      "টাঙ্গাইলের",
+      "tangail"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, টাঙ্গাইল",
+      "office_name_en": "Regional Passport Office, Tangail",
+      "address_bn": "আকুশতুর, টাঙ্গাইল সদর।",
+      "address_en": "Tangail Sadar, Tangail.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯২১-৬২২২২",
+      "phone_en": "0921-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Tangail"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ টাঙ্গাইল সার্কেল অফিস",
+      "office_name_en": "BRTA Tangail Circle Office",
+      "address_bn": "টাঙ্গাইল সদর, টাঙ্গাইল।",
+      "address_en": "Tangail Sadar, Tangail.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯২১-৬৩৯১০",
+      "phone_en": "0921-63910",
+      "maps_url": "https://maps.google.com/?q=BRTA+Tangail"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, টাঙ্গাইল",
+      "venue_name_en": "BRTA Driving Test Venue, Tangail",
+      "location_bn": "টাঙ্গাইল সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, টাঙ্গাইল সদর।",
+      "location_en": "Tangail BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Tangail"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), টাঙ্গাইল",
+      "unit_name_en": "District Special Branch (DSB), Tangail",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), টাঙ্গাইল সদর।",
+      "address_en": "Superintendent of Police Office Compound, Tangail.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৯২১-৬২২২২",
+      "phone_en": "0921-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "jashore": {
+    "id": "jashore",
+    "name_bn": "যশোর",
+    "name_en": "Jashore",
+    "aliases": [
+      "যশোর",
+      "যশোরে",
+      "যশোরের",
+      "jashore",
+      "jessore"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, যশোর",
+      "office_name_en": "Regional Passport Office, Jashore",
+      "address_bn": "মনিহার, যশোর সদর, যশোর।",
+      "address_en": "Jashore Sadar, Jashore.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪২১-৬২২২২",
+      "phone_en": "0421-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Jashore"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ যশোর সার্কেল অফিস",
+      "office_name_en": "BRTA Jashore Circle Office",
+      "address_bn": "মনিহার, যশোর সদর।",
+      "address_en": "Jashore Sadar, Jashore.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪২১-৬৭৪২০",
+      "phone_en": "0421-67420",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jashore"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, যশোর",
+      "venue_name_en": "BRTA Driving Test Venue, Jashore",
+      "location_bn": "যশোর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, যশোর সদর।",
+      "location_en": "Jashore BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jashore"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), যশোর",
+      "unit_name_en": "District Special Branch (DSB), Jashore",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), যশোর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Jashore.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪২১-৬২২২২",
+      "phone_en": "0421-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "kushtia": {
+    "id": "kushtia",
+    "name_bn": "কুষ্টিয়া",
+    "name_en": "Kushtia",
+    "aliases": [
+      "কুষ্টিয়া",
+      "কুষ্টিয়ায়",
+      "কুষ্টিয়ার",
+      "kushtia"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, কুষ্টিয়া",
+      "office_name_en": "Regional Passport Office, Kushtia",
+      "address_bn": "মজুপুর, কুষ্টিয়া সদর।",
+      "address_en": "Kushtia Sadar, Kushtia.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭১-৬২২২২",
+      "phone_en": "071-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Kushtia"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ কুষ্টিয়া সার্কেল অফিস",
+      "office_name_en": "BRTA Kushtia Circle Office",
+      "address_bn": "মজুপুর, কুষ্টিয়া সদর।",
+      "address_en": "Kushtia Sadar, Kushtia.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭১-৬২৫৩০",
+      "phone_en": "071-62530",
+      "maps_url": "https://maps.google.com/?q=BRTA+Kushtia"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, কুষ্টিয়া",
+      "venue_name_en": "BRTA Driving Test Venue, Kushtia",
+      "location_bn": "কুষ্টিয়া সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, কুষ্টিয়া সদর।",
+      "location_en": "Kushtia BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Kushtia"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), কুষ্টিয়া",
+      "unit_name_en": "District Special Branch (DSB), Kushtia",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), কুষ্টিয়া সদর।",
+      "address_en": "Superintendent of Police Office Compound, Kushtia.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭১-৬২২২২",
+      "phone_en": "071-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "pabna": {
+    "id": "pabna",
+    "name_bn": "পাবনা",
+    "name_en": "Pabna",
+    "aliases": [
+      "পাবনা",
+      "পাবনায়",
+      "পাবনার",
+      "pabna"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, পাবনা",
+      "office_name_en": "Regional Passport Office, Pabna",
+      "address_bn": "লক্ষ্মীপুর, পাবনা সদর।",
+      "address_en": "Pabna Sadar, Pabna.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৩১-৬২২২২",
+      "phone_en": "0731-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Pabna"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ পাবনা সার্কেল অফিস",
+      "office_name_en": "BRTA Pabna Circle Office",
+      "address_bn": "পাবনা সদর, পাবনা।",
+      "address_en": "Pabna Sadar, Pabna.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৩১-৬৪১২০",
+      "phone_en": "0731-64120",
+      "maps_url": "https://maps.google.com/?q=BRTA+Pabna"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, পাবনা",
+      "venue_name_en": "BRTA Driving Test Venue, Pabna",
+      "location_bn": "পাবনা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, পাবনা সদর।",
+      "location_en": "Pabna BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Pabna"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), পাবনা",
+      "unit_name_en": "District Special Branch (DSB), Pabna",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), পাবনা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Pabna.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৩১-৬২২২২",
+      "phone_en": "0731-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "noakhali": {
+    "id": "noakhali",
+    "name_bn": "নোয়াখালী",
+    "name_en": "Noakhali",
+    "aliases": [
+      "নোয়াখালী",
+      "নোয়াখালীতে",
+      "নোয়াখালীর",
+      "noakhali"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নোয়াখালী",
+      "office_name_en": "Regional Passport Office, Noakhali",
+      "address_bn": "মাইজদী কোর্ট, নোয়াখালী সদর।",
+      "address_en": "Noakhali Sadar, Noakhali.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩২১-৬২২২২",
+      "phone_en": "0321-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Noakhali"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নোয়াখালী সার্কেল অফিস",
+      "office_name_en": "BRTA Noakhali Circle Office",
+      "address_bn": "মাইজদী, নোয়াখালী সদর।",
+      "address_en": "Noakhali Sadar, Noakhali.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩২১-৬২৮৪০",
+      "phone_en": "0321-62840",
+      "maps_url": "https://maps.google.com/?q=BRTA+Noakhali"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নোয়াখালী",
+      "venue_name_en": "BRTA Driving Test Venue, Noakhali",
+      "location_bn": "নোয়াখালী সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নোয়াখালী সদর।",
+      "location_en": "Noakhali BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Noakhali"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নোয়াখালী",
+      "unit_name_en": "District Special Branch (DSB), Noakhali",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নোয়াখালী সদর।",
+      "address_en": "Superintendent of Police Office Compound, Noakhali.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩২১-৬২২২২",
+      "phone_en": "0321-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "feni": {
+    "id": "feni",
+    "name_bn": "ফেনী",
+    "name_en": "Feni",
+    "aliases": [
+      "ফেনী",
+      "ফেনীতে",
+      "ফেনীর",
+      "feni"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ফেনী",
+      "office_name_en": "Regional Passport Office, Feni",
+      "address_bn": "মহিপাল, ফেনী সদর।",
+      "address_en": "Feni Sadar, Feni.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৩১-৭২২২২",
+      "phone_en": "0331-72222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Feni"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ফেনী সার্কেল অফিস",
+      "office_name_en": "BRTA Feni Circle Office",
+      "address_bn": "মহিপাল, ফেনী সদর।",
+      "address_en": "Feni Sadar, Feni.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৩১-৭৪৫২০",
+      "phone_en": "0331-74520",
+      "maps_url": "https://maps.google.com/?q=BRTA+Feni"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ফেনী",
+      "venue_name_en": "BRTA Driving Test Venue, Feni",
+      "location_bn": "ফেনী সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ফেনী সদর।",
+      "location_en": "Feni BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Feni"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ফেনী",
+      "unit_name_en": "District Special Branch (DSB), Feni",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ফেনী সদর।",
+      "address_en": "Superintendent of Police Office Compound, Feni.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩৩১-৭২২২২",
+      "phone_en": "0331-72222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "sirajganj": {
+    "id": "sirajganj",
+    "name_bn": "সিরাজগঞ্জ",
+    "name_en": "Sirajganj",
+    "aliases": [
+      "সিরাজগঞ্জ",
+      "সিরাজগঞ্জে",
+      "sirajganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, সিরাজগঞ্জ",
+      "office_name_en": "Regional Passport Office, Sirajganj",
+      "address_bn": "মালশাপাড়া, সিরাজগঞ্জ সদর।",
+      "address_en": "Sirajganj Sadar, Sirajganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৫১-৬২২২২",
+      "phone_en": "0751-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Sirajganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ সিরাজগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Sirajganj Circle Office",
+      "address_bn": "সিরাজগঞ্জ সদর।",
+      "address_en": "Sirajganj Sadar, Sirajganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৫১-৬৩১৮০",
+      "phone_en": "0751-63180",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sirajganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, সিরাজগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Sirajganj",
+      "location_bn": "সিরাজগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, সিরাজগঞ্জ সদর।",
+      "location_en": "Sirajganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sirajganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), সিরাজগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Sirajganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), সিরাজগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Sirajganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৫১-৬২২২২",
+      "phone_en": "0751-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "kurigram": {
+    "id": "kurigram",
+    "name_bn": "কুড়িগ্রাম",
+    "name_en": "Kurigram",
+    "aliases": [
+      "কুড়িগ্রাম",
+      "কুড়িগ্রামে",
+      "kurigram"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, কুড়িগ্রাম",
+      "office_name_en": "Regional Passport Office, Kurigram",
+      "address_bn": "কলেজ মোড়, কুড়িগ্রাম সদর।",
+      "address_en": "Kurigram Sadar, Kurigram.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৮১-৬২২২২",
+      "phone_en": "0581-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Kurigram"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ কুড়িগ্রাম সার্কেল অফিস",
+      "office_name_en": "BRTA Kurigram Circle Office",
+      "address_bn": "কুড়িগ্রাম সদর।",
+      "address_en": "Kurigram Sadar, Kurigram.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৮১-৬১৪২০",
+      "phone_en": "0581-61420",
+      "maps_url": "https://maps.google.com/?q=BRTA+Kurigram"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, কুড়িগ্রাম",
+      "venue_name_en": "BRTA Driving Test Venue, Kurigram",
+      "location_bn": "কুড়িগ্রাম সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, কুড়িগ্রাম সদর।",
+      "location_en": "Kurigram BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Kurigram"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), কুড়িগ্রাম",
+      "unit_name_en": "District Special Branch (DSB), Kurigram",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), কুড়িগ্রাম সদর।",
+      "address_en": "Superintendent of Police Office Compound, Kurigram.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৮১-৬২২২২",
+      "phone_en": "0581-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "nilphamari": {
+    "id": "nilphamari",
+    "name_bn": "নীলফামারী",
+    "name_en": "Nilphamari",
+    "aliases": [
+      "নীলফামারী",
+      "নীলফামারীতে",
+      "nilphamari",
+      "সৈয়দপুর"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নীলফামারী",
+      "office_name_en": "Regional Passport Office, Nilphamari",
+      "address_bn": "মুন্সিপাড়া, নীলফামারী সদর।",
+      "address_en": "Nilphamari Sadar, Nilphamari.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৮১৮-৫১২২২",
+      "phone_en": "05818-51222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Nilphamari"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নীলফামারী সার্কেল অফিস",
+      "office_name_en": "BRTA Nilphamari Circle Office",
+      "address_bn": "নীলফামারী সদর।",
+      "address_en": "Nilphamari Sadar, Nilphamari.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৮১৮-৫১৬২০",
+      "phone_en": "05818-51620",
+      "maps_url": "https://maps.google.com/?q=BRTA+Nilphamari"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নীলফামারী",
+      "venue_name_en": "BRTA Driving Test Venue, Nilphamari",
+      "location_bn": "নীলফামারী সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নীলফামারী সদর।",
+      "location_en": "Nilphamari BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Nilphamari"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নীলফামারী",
+      "unit_name_en": "District Special Branch (DSB), Nilphamari",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নীলফামারী সদর।",
+      "address_en": "Superintendent of Police Office Compound, Nilphamari.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৮১৮-৫১২২২",
+      "phone_en": "05818-51222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "thakurgaon": {
+    "id": "thakurgaon",
+    "name_bn": "ঠাকুরগাঁও",
+    "name_en": "Thakurgaon",
+    "aliases": [
+      "ঠাকুরগাঁও",
+      "ঠাকুরগাঁওয়ে",
+      "thakurgaon"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ঠাকুরগাঁও",
+      "office_name_en": "Regional Passport Office, Thakurgaon",
+      "address_bn": "হাজিপাড়া, ঠাকুরগাঁও সদর।",
+      "address_en": "Thakurgaon Sadar, Thakurgaon.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৬১-৬২২২২",
+      "phone_en": "0561-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Thakurgaon"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ঠাকুরগাঁও সার্কেল অফিস",
+      "office_name_en": "BRTA Thakurgaon Circle Office",
+      "address_bn": "ঠাকুরগাঁও সদর।",
+      "address_en": "Thakurgaon Sadar, Thakurgaon.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৬১-৫২৪৬০",
+      "phone_en": "0561-52460",
+      "maps_url": "https://maps.google.com/?q=BRTA+Thakurgaon"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ঠাকুরগাঁও",
+      "venue_name_en": "BRTA Driving Test Venue, Thakurgaon",
+      "location_bn": "ঠাকুরগাঁও সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ঠাকুরগাঁও সদর।",
+      "location_en": "Thakurgaon BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Thakurgaon"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ঠাকুরগাঁও",
+      "unit_name_en": "District Special Branch (DSB), Thakurgaon",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ঠাকুরগাঁও সদর।",
+      "address_en": "Superintendent of Police Office Compound, Thakurgaon.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৬১-৬২২২২",
+      "phone_en": "0561-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "panchagarh": {
+    "id": "panchagarh",
+    "name_bn": "পঞ্চগড়",
+    "name_en": "Panchagarh",
+    "aliases": [
+      "পঞ্চগড়",
+      "পঞ্চগড়ে",
+      "panchagarh"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, পঞ্চগড়",
+      "office_name_en": "Regional Passport Office, Panchagarh",
+      "address_bn": "চৌধুরীপাড়া, পঞ্চগড় সদর।",
+      "address_en": "Panchagarh Sadar, Panchagarh.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৬৮-৬২২২২",
+      "phone_en": "0568-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Panchagarh"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ পঞ্চগড় সার্কেল অফিস",
+      "office_name_en": "BRTA Panchagarh Circle Office",
+      "address_bn": "পঞ্চগড় সদর।",
+      "address_en": "Panchagarh Sadar, Panchagarh.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৬৮-৫১৬৭০",
+      "phone_en": "0568-51670",
+      "maps_url": "https://maps.google.com/?q=BRTA+Panchagarh"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, পঞ্চগড়",
+      "venue_name_en": "BRTA Driving Test Venue, Panchagarh",
+      "location_bn": "পঞ্চগড় সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, পঞ্চগড় সদর।",
+      "location_en": "Panchagarh BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Panchagarh"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), পঞ্চগড়",
+      "unit_name_en": "District Special Branch (DSB), Panchagarh",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), পঞ্চগড় সদর।",
+      "address_en": "Superintendent of Police Office Compound, Panchagarh.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৬৮-৬২২২২",
+      "phone_en": "0568-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "gaibandha": {
+    "id": "gaibandha",
+    "name_bn": "গাইবান্ধা",
+    "name_en": "Gaibandha",
+    "aliases": [
+      "গাইবান্ধা",
+      "গাইবান্ধায়",
+      "gaibandha"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, গাইবান্ধা",
+      "office_name_en": "Regional Passport Office, Gaibandha",
+      "address_bn": "আশরাফপুর, গাইবান্ধা সদর।",
+      "address_en": "Gaibandha Sadar, Gaibandha.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৪১-৬২২২২",
+      "phone_en": "0541-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Gaibandha"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ গাইবান্ধা সার্কেল অফিস",
+      "office_name_en": "BRTA Gaibandha Circle Office",
+      "address_bn": "গাইবান্ধা সদর।",
+      "address_en": "Gaibandha Sadar, Gaibandha.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৪১-৬১৮৯০",
+      "phone_en": "0541-61890",
+      "maps_url": "https://maps.google.com/?q=BRTA+Gaibandha"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, গাইবান্ধা",
+      "venue_name_en": "BRTA Driving Test Venue, Gaibandha",
+      "location_bn": "গাইবান্ধা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, গাইবান্ধা সদর।",
+      "location_en": "Gaibandha BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Gaibandha"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), গাইবান্ধা",
+      "unit_name_en": "District Special Branch (DSB), Gaibandha",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), গাইবান্ধা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Gaibandha.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৪১-৬২২২২",
+      "phone_en": "0541-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "lalmonirhat": {
+    "id": "lalmonirhat",
+    "name_bn": "লালমনিরহাট",
+    "name_en": "Lalmonirhat",
+    "aliases": [
+      "লালমনিরহাট",
+      "লালমনিরহাটে",
+      "lalmonirhat"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, লালমনিরহাট",
+      "office_name_en": "Regional Passport Office, Lalmonirhat",
+      "address_bn": "মোগলহাট রোড, লালমনিরহাট সদর।",
+      "address_en": "Lalmonirhat Sadar, Lalmonirhat.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৯১-৬২২২২",
+      "phone_en": "0591-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Lalmonirhat"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ লালমনিরহাট সার্কেল অফিস",
+      "office_name_en": "BRTA Lalmonirhat Circle Office",
+      "address_bn": "লালমনিরহাট সদর।",
+      "address_en": "Lalmonirhat Sadar, Lalmonirhat.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৯১-৬১৯২০",
+      "phone_en": "0591-61920",
+      "maps_url": "https://maps.google.com/?q=BRTA+Lalmonirhat"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, লালমনিরহাট",
+      "venue_name_en": "BRTA Driving Test Venue, Lalmonirhat",
+      "location_bn": "লালমনিরহাট সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, লালমনিরহাট সদর।",
+      "location_en": "Lalmonirhat BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Lalmonirhat"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), লালমনিরহাট",
+      "unit_name_en": "District Special Branch (DSB), Lalmonirhat",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), লালমনিরহাট সদর।",
+      "address_en": "Superintendent of Police Office Compound, Lalmonirhat.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৯১-৬২২২২",
+      "phone_en": "0591-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "brahmanbaria": {
+    "id": "brahmanbaria",
+    "name_bn": "ব্রাহ্মণবাড়িয়া",
+    "name_en": "Brahmanbaria",
+    "aliases": [
+      "ব্রাহ্মণবাড়িয়া",
+      "ব্রাহ্মণবাড়িয়ায়",
+      "brahmanbaria"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ব্রাহ্মণবাড়িয়া",
+      "office_name_en": "Regional Passport Office, Brahmanbaria",
+      "address_bn": "ঘাটুরা, ব্রাহ্মণবাড়িয়া সদর।",
+      "address_en": "Brahmanbaria Sadar, Brahmanbaria.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৫১-৫৮২২২",
+      "phone_en": "0851-58222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Brahmanbaria"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ব্রাহ্মণবাড়িয়া সার্কেল অফিস",
+      "office_name_en": "BRTA Brahmanbaria Circle Office",
+      "address_bn": "ঘাটুরা, ব্রাহ্মণবাড়িয়া সদর।",
+      "address_en": "Brahmanbaria Sadar, Brahmanbaria.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৫১-৫৮৪৫০",
+      "phone_en": "0851-58450",
+      "maps_url": "https://maps.google.com/?q=BRTA+Brahmanbaria"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ব্রাহ্মণবাড়িয়া",
+      "venue_name_en": "BRTA Driving Test Venue, Brahmanbaria",
+      "location_bn": "ব্রাহ্মণবাড়িয়া সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ব্রাহ্মণবাড়িয়া সদর।",
+      "location_en": "Brahmanbaria BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Brahmanbaria"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ব্রাহ্মণবাড়িয়া",
+      "unit_name_en": "District Special Branch (DSB), Brahmanbaria",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ব্রাহ্মণবাড়িয়া সদর।",
+      "address_en": "Superintendent of Police Office Compound, Brahmanbaria.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮৫১-৫৮২২২",
+      "phone_en": "0851-58222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "chandpur": {
+    "id": "chandpur",
+    "name_bn": "চাঁদপুর",
+    "name_en": "Chandpur",
+    "aliases": [
+      "চাঁদপুর",
+      "চাঁদপুরে",
+      "chandpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, চাঁদপুর",
+      "office_name_en": "Regional Passport Office, Chandpur",
+      "address_bn": "ওয়ারলেস মোড়, চাঁদপুর সদর।",
+      "address_en": "Chandpur Sadar, Chandpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৪১-৬২২২২",
+      "phone_en": "0841-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Chandpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ চাঁদপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Chandpur Circle Office",
+      "address_bn": "চাঁদপুর সদর।",
+      "address_en": "Chandpur Sadar, Chandpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৪১-৬৩৮৫০",
+      "phone_en": "0841-63850",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chandpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, চাঁদপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Chandpur",
+      "location_bn": "চাঁদপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, চাঁদপুর সদর।",
+      "location_en": "Chandpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chandpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), চাঁদপুর",
+      "unit_name_en": "District Special Branch (DSB), Chandpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), চাঁদপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Chandpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮৪১-৬২২২২",
+      "phone_en": "0841-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "lakshmipur": {
+    "id": "lakshmipur",
+    "name_bn": "লক্ষ্মীপুর",
+    "name_en": "Lakshmipur",
+    "aliases": [
+      "লক্ষ্মীপুর",
+      "লক্ষ্মীপুরে",
+      "lakshmipur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, লক্ষ্মীপুর",
+      "office_name_en": "Regional Passport Office, Lakshmipur",
+      "address_bn": "ঝুমুর সিনেমা হল এলাকা, লক্ষ্মীপুর সদর।",
+      "address_en": "Lakshmipur Sadar, Lakshmipur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৮১-৬২২২২",
+      "phone_en": "0381-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Lakshmipur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ লক্ষ্মীপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Lakshmipur Circle Office",
+      "address_bn": "লক্ষ্মীপুর সদর।",
+      "address_en": "Lakshmipur Sadar, Lakshmipur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৮১-৬১৮৯০",
+      "phone_en": "0381-61890",
+      "maps_url": "https://maps.google.com/?q=BRTA+Lakshmipur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, লক্ষ্মীপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Lakshmipur",
+      "location_bn": "লক্ষ্মীপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, লক্ষ্মীপুর সদর।",
+      "location_en": "Lakshmipur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Lakshmipur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), লক্ষ্মীপুর",
+      "unit_name_en": "District Special Branch (DSB), Lakshmipur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), লক্ষ্মীপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Lakshmipur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩৮১-৬২২২২",
+      "phone_en": "0381-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "patuakhali": {
+    "id": "patuakhali",
+    "name_bn": "পটুয়াখালী",
+    "name_en": "Patuakhali",
+    "aliases": [
+      "পটুয়াখালী",
+      "পটুয়াখালীতে",
+      "patuakhali"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, পটুয়াখালী",
+      "office_name_en": "Regional Passport Office, Patuakhali",
+      "address_bn": "কলেজ রোড, পটুয়াখালী সদর।",
+      "address_en": "Patuakhali Sadar, Patuakhali.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৪১-৬২২২২",
+      "phone_en": "0441-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Patuakhali"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ পটুয়াখালী সার্কেল অফিস",
+      "office_name_en": "BRTA Patuakhali Circle Office",
+      "address_bn": "পটুয়াখালী সদর।",
+      "address_en": "Patuakhali Sadar, Patuakhali.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৪১-৬২৩৪০",
+      "phone_en": "0441-62340",
+      "maps_url": "https://maps.google.com/?q=BRTA+Patuakhali"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, পটুয়াখালী",
+      "venue_name_en": "BRTA Driving Test Venue, Patuakhali",
+      "location_bn": "পটুয়াখালী সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, পটুয়াখালী সদর।",
+      "location_en": "Patuakhali BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Patuakhali"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), পটুয়াখালী",
+      "unit_name_en": "District Special Branch (DSB), Patuakhali",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), পটুয়াখালী সদর।",
+      "address_en": "Superintendent of Police Office Compound, Patuakhali.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৪১-৬২২২২",
+      "phone_en": "0441-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "bhola": {
+    "id": "bhola",
+    "name_bn": "ভোলা",
+    "name_en": "Bhola",
+    "aliases": [
+      "ভোলা",
+      "ভোলায়",
+      "bhola"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ভোলা",
+      "office_name_en": "Regional Passport Office, Bhola",
+      "address_bn": "যুগিরঘোল, ভোলা সদর।",
+      "address_en": "Bhola Sadar, Bhola.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৯১-৬২২২২",
+      "phone_en": "0491-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Bhola"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ভোলা সার্কেল অফিস",
+      "office_name_en": "BRTA Bhola Circle Office",
+      "address_bn": "ভোলা সদর।",
+      "address_en": "Bhola Sadar, Bhola.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৯১-৬২৬৮০",
+      "phone_en": "0491-62680",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bhola"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ভোলা",
+      "venue_name_en": "BRTA Driving Test Venue, Bhola",
+      "location_bn": "ভোলা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ভোলা সদর।",
+      "location_en": "Bhola BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bhola"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ভোলা",
+      "unit_name_en": "District Special Branch (DSB), Bhola",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ভোলা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Bhola.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৯১-৬২২২২",
+      "phone_en": "0491-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "pirojpur": {
+    "id": "pirojpur",
+    "name_bn": "পিরোজপুর",
+    "name_en": "Pirojpur",
+    "aliases": [
+      "পিরোজপুর",
+      "পিরোজপুরে",
+      "pirojpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, পিরোজপুর",
+      "office_name_en": "Regional Passport Office, Pirojpur",
+      "address_bn": "নাজিরপুর রোড, পিরোজপুর সদর।",
+      "address_en": "Pirojpur Sadar, Pirojpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৬১-৬২২২২",
+      "phone_en": "0461-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Pirojpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ পিরোজপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Pirojpur Circle Office",
+      "address_bn": "পিরোজপুর সদর।",
+      "address_en": "Pirojpur Sadar, Pirojpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৬১-৬২৬৪০",
+      "phone_en": "0461-62640",
+      "maps_url": "https://maps.google.com/?q=BRTA+Pirojpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, পিরোজপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Pirojpur",
+      "location_bn": "পিরোজপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, পিরোজপুর সদর।",
+      "location_en": "Pirojpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Pirojpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), পিরোজপুর",
+      "unit_name_en": "District Special Branch (DSB), Pirojpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), পিরোজপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Pirojpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৬১-৬২২২২",
+      "phone_en": "0461-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "barguna": {
+    "id": "barguna",
+    "name_bn": "বরগুনা",
+    "name_en": "Barguna",
+    "aliases": [
+      "বরগুনা",
+      "বরগুনায়",
+      "barguna"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, বরগুনা",
+      "office_name_en": "Regional Passport Office, Barguna",
+      "address_bn": "সার্কিট হাউজ রোড, বরগুনা সদর।",
+      "address_en": "Barguna Sadar, Barguna.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৪৮-৬২২২২",
+      "phone_en": "0448-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Barguna"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ বরগুনা সার্কেল অফিস",
+      "office_name_en": "BRTA Barguna Circle Office",
+      "address_bn": "বরগুনা সদর।",
+      "address_en": "Barguna Sadar, Barguna.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৪৮-৬২৩৮০",
+      "phone_en": "0448-62380",
+      "maps_url": "https://maps.google.com/?q=BRTA+Barguna"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, বরগুনা",
+      "venue_name_en": "BRTA Driving Test Venue, Barguna",
+      "location_bn": "বরগুনা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, বরগুনা সদর।",
+      "location_en": "Barguna BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Barguna"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), বরগুনা",
+      "unit_name_en": "District Special Branch (DSB), Barguna",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), বরগুনা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Barguna.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৪৮-৬২২২২",
+      "phone_en": "0448-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "jhalokati": {
+    "id": "jhalokati",
+    "name_bn": "ঝালকাঠি",
+    "name_en": "Jhalokati",
+    "aliases": [
+      "ঝালকাঠি",
+      "ঝালকাঠিতে",
+      "jhalokati",
+      "jhalakathi"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ঝালকাঠি",
+      "office_name_en": "Regional Passport Office, Jhalokati",
+      "address_bn": "বাসন্ডা, ঝালকাঠি সদর।",
+      "address_en": "Jhalokati Sadar, Jhalokati.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৯৮-৬২২২২",
+      "phone_en": "0498-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Jhalokati"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ঝালকাঠি সার্কেল অফিস",
+      "office_name_en": "BRTA Jhalokati Circle Office",
+      "address_bn": "ঝালকাঠি সদর।",
+      "address_en": "Jhalokati Sadar, Jhalokati.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৯৮-৬২৬৯০",
+      "phone_en": "0498-62690",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jhalokati"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ঝালকাঠি",
+      "venue_name_en": "BRTA Driving Test Venue, Jhalokati",
+      "location_bn": "ঝালকাঠি সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ঝালকাঠি সদর।",
+      "location_en": "Jhalokati BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jhalokati"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ঝালকাঠি",
+      "unit_name_en": "District Special Branch (DSB), Jhalokati",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ঝালকাঠি সদর।",
+      "address_en": "Superintendent of Police Office Compound, Jhalokati.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৯৮-৬২২২২",
+      "phone_en": "0498-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "kishoreganj": {
+    "id": "kishoreganj",
+    "name_bn": "কিশোরগঞ্জ",
+    "name_en": "Kishoreganj",
+    "aliases": [
+      "কিশোরগঞ্জ",
+      "কিশোরগঞ্জে",
+      "kishoreganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, কিশোরগঞ্জ",
+      "office_name_en": "Regional Passport Office, Kishoreganj",
+      "address_bn": "বটতলা, কিশোরগঞ্জ সদর।",
+      "address_en": "Kishoreganj Sadar, Kishoreganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৪১-৬২২২২",
+      "phone_en": "0941-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Kishoreganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ কিশোরগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Kishoreganj Circle Office",
+      "address_bn": "কিশোরগঞ্জ সদর।",
+      "address_en": "Kishoreganj Sadar, Kishoreganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৪১-৬১৯২০",
+      "phone_en": "0941-61920",
+      "maps_url": "https://maps.google.com/?q=BRTA+Kishoreganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, কিশোরগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Kishoreganj",
+      "location_bn": "কিশোরগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, কিশোরগঞ্জ সদর।",
+      "location_en": "Kishoreganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Kishoreganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), কিশোরগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Kishoreganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), কিশোরগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Kishoreganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৯৪১-৬২২২২",
+      "phone_en": "0941-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "manikganj": {
+    "id": "manikganj",
+    "name_bn": "মানিকগঞ্জ",
+    "name_en": "Manikganj",
+    "aliases": [
+      "মানিকগঞ্জ",
+      "মানিকগঞ্জে",
+      "manikganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, মানিকগঞ্জ",
+      "office_name_en": "Regional Passport Office, Manikganj",
+      "address_bn": "বেউথা, মানিকগঞ্জ সদর।",
+      "address_en": "Manikganj Sadar, Manikganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৯৯৬৬১২২২২",
+      "phone_en": "02996612222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Manikganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ মানিকগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Manikganj Circle Office",
+      "address_bn": "মানিকগঞ্জ সদর।",
+      "address_en": "Manikganj Sadar, Manikganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৯৯৬৬১১৯৮০",
+      "phone_en": "02996611980",
+      "maps_url": "https://maps.google.com/?q=BRTA+Manikganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, মানিকগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Manikganj",
+      "location_bn": "মানিকগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, মানিকগঞ্জ সদর।",
+      "location_en": "Manikganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Manikganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), মানিকগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Manikganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), মানিকগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Manikganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৯৯৬৬১২২২২",
+      "phone_en": "02996612222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "munshiganj": {
+    "id": "munshiganj",
+    "name_bn": "মুন্সিগঞ্জ",
+    "name_en": "Munshiganj",
+    "aliases": [
+      "মুন্সিগঞ্জ",
+      "মুন্সিগঞ্জে",
+      "মুন্সীগঞ্জ",
+      "munshiganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, মুন্সিগঞ্জ",
+      "office_name_en": "Regional Passport Office, Munshiganj",
+      "address_bn": "রিকাবীবাজার, মুন্সিগঞ্জ সদর।",
+      "address_en": "Munshiganj Sadar, Munshiganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৭৬১২২২২",
+      "phone_en": "02-7612222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Munshiganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ মুন্সিগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Munshiganj Circle Office",
+      "address_bn": "মুন্সিগঞ্জ সদর।",
+      "address_en": "Munshiganj Sadar, Munshiganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৭৬১৫৫৪০",
+      "phone_en": "02-7615540",
+      "maps_url": "https://maps.google.com/?q=BRTA+Munshiganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, মুন্সিগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Munshiganj",
+      "location_bn": "মুন্সিগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, মুন্সিগঞ্জ সদর।",
+      "location_en": "Munshiganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Munshiganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), মুন্সিগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Munshiganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), মুন্সিগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Munshiganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২-৭৬১২২২২",
+      "phone_en": "02-7612222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "narsingdi": {
+    "id": "narsingdi",
+    "name_bn": "নরসিংদী",
+    "name_en": "Narsingdi",
+    "aliases": [
+      "নরসিংদী",
+      "নরসিংদীতে",
+      "narsingdi"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নরসিংদী",
+      "office_name_en": "Regional Passport Office, Narsingdi",
+      "address_bn": "ভেলানগর, নরসিংদী সদর।",
+      "address_en": "Narsingdi Sadar, Narsingdi.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৯৪-৬২২২২",
+      "phone_en": "0294-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Narsingdi"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নরসিংদী সার্কেল অফিস",
+      "office_name_en": "BRTA Narsingdi Circle Office",
+      "address_bn": "ভেলানগর, নরসিংদী।",
+      "address_en": "Narsingdi Sadar, Narsingdi.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২৯৪-৬১৯৩০",
+      "phone_en": "0294-61930",
+      "maps_url": "https://maps.google.com/?q=BRTA+Narsingdi"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নরসিংদী",
+      "venue_name_en": "BRTA Driving Test Venue, Narsingdi",
+      "location_bn": "নরসিংদী সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নরসিংদী সদর।",
+      "location_en": "Narsingdi BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Narsingdi"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নরসিংদী",
+      "unit_name_en": "District Special Branch (DSB), Narsingdi",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নরসিংদী সদর।",
+      "address_en": "Superintendent of Police Office Compound, Narsingdi.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২৯৪-৬২২২২",
+      "phone_en": "0294-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "faridpur": {
+    "id": "faridpur",
+    "name_bn": "ফরিদপুর",
+    "name_en": "Faridpur",
+    "aliases": [
+      "ফরিদপুর",
+      "ফরিদপুরে",
+      "faridpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ফরিদপুর",
+      "office_name_en": "Regional Passport Office, Faridpur",
+      "address_bn": "ঝিলটুলী, ফরিদপুর সদর।",
+      "address_en": "Faridpur Sadar, Faridpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬৩১-৬২২২২",
+      "phone_en": "0631-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Faridpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ফরিদপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Faridpur Circle Office",
+      "address_bn": "ফরিদপুর সদর।",
+      "address_en": "Faridpur Sadar, Faridpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬৩১-৬৩২৪০",
+      "phone_en": "0631-63240",
+      "maps_url": "https://maps.google.com/?q=BRTA+Faridpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ফরিদপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Faridpur",
+      "location_bn": "ফরিদপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ফরিদপুর সদর।",
+      "location_en": "Faridpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Faridpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ফরিদপুর",
+      "unit_name_en": "District Special Branch (DSB), Faridpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ফরিদপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Faridpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৬৩১-৬২২২২",
+      "phone_en": "0631-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "gopalganj": {
+    "id": "gopalganj",
+    "name_bn": "গোপালগঞ্জ",
+    "name_en": "Gopalganj",
+    "aliases": [
+      "গোপালগঞ্জ",
+      "গোপালগঞ্জে",
+      "gopalganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, গোপালগঞ্জ",
+      "office_name_en": "Regional Passport Office, Gopalganj",
+      "address_bn": "ঘোনাপাড়া, গোপালগঞ্জ সদর।",
+      "address_en": "Gopalganj Sadar, Gopalganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৬৬৮২২২২",
+      "phone_en": "02-6682222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Gopalganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ গোপালগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Gopalganj Circle Office",
+      "address_bn": "গোপালগঞ্জ সদর।",
+      "address_en": "Gopalganj Sadar, Gopalganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০২-৬৬৮১৯৫০",
+      "phone_en": "02-6681950",
+      "maps_url": "https://maps.google.com/?q=BRTA+Gopalganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, গোপালগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Gopalganj",
+      "location_bn": "গোপালগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, গোপালগঞ্জ সদর।",
+      "location_en": "Gopalganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Gopalganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), গোপালগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Gopalganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), গোপালগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Gopalganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০২-৬৬৮২২২২",
+      "phone_en": "02-6682222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "madaripur": {
+    "id": "madaripur",
+    "name_bn": "মাদারীপুর",
+    "name_en": "Madaripur",
+    "aliases": [
+      "মাদারীপুর",
+      "মাদারীপুরে",
+      "madaripur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, মাদারীপুর",
+      "office_name_en": "Regional Passport Office, Madaripur",
+      "address_bn": "ইটেরপুল, মাদারীপুর সদর।",
+      "address_en": "Madaripur Sadar, Madaripur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬৬১-৬২২২২",
+      "phone_en": "0661-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Madaripur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ মাদারীপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Madaripur Circle Office",
+      "address_bn": "মাদারীপুর সদর।",
+      "address_en": "Madaripur Sadar, Madaripur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬৬১-৬১৮৯০",
+      "phone_en": "0661-61890",
+      "maps_url": "https://maps.google.com/?q=BRTA+Madaripur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, মাদারীপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Madaripur",
+      "location_bn": "মাদারীপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, মাদারীপুর সদর।",
+      "location_en": "Madaripur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Madaripur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), মাদারীপুর",
+      "unit_name_en": "District Special Branch (DSB), Madaripur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), মাদারীপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Madaripur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৬৬১-৬২২২২",
+      "phone_en": "0661-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "rajbari": {
+    "id": "rajbari",
+    "name_bn": "রাজবাড়ী",
+    "name_en": "Rajbari",
+    "aliases": [
+      "রাজবাড়ী",
+      "রাজবাড়ীতে",
+      "rajbari"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, রাজবাড়ী",
+      "office_name_en": "Regional Passport Office, Rajbari",
+      "address_bn": "শ্রীপুর, রাজবাড়ী সদর।",
+      "address_en": "Rajbari Sadar, Rajbari.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬৪১-৬২২২২",
+      "phone_en": "0641-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Rajbari"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ রাজবাড়ী সার্কেল অফিস",
+      "office_name_en": "BRTA Rajbari Circle Office",
+      "address_bn": "রাজবাড়ী সদর।",
+      "address_en": "Rajbari Sadar, Rajbari.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬৪১-৬৫৪২০",
+      "phone_en": "0641-65420",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rajbari"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, রাজবাড়ী",
+      "venue_name_en": "BRTA Driving Test Venue, Rajbari",
+      "location_bn": "রাজবাড়ী সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, রাজবাড়ী সদর।",
+      "location_en": "Rajbari BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rajbari"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), রাজবাড়ী",
+      "unit_name_en": "District Special Branch (DSB), Rajbari",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), রাজবাড়ী সদর।",
+      "address_en": "Superintendent of Police Office Compound, Rajbari.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৬৪১-৬২২২২",
+      "phone_en": "0641-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "shariatpur": {
+    "id": "shariatpur",
+    "name_bn": "শরীয়তপুর",
+    "name_en": "Shariatpur",
+    "aliases": [
+      "শরীয়তপুর",
+      "শরীয়তপুরে",
+      "shariatpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, শরীয়তপুর",
+      "office_name_en": "Regional Passport Office, Shariatpur",
+      "address_bn": "আংগাড়িয়া, শরীয়তপুর সদর।",
+      "address_en": "Shariatpur Sadar, Shariatpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬০২-৬২২২২",
+      "phone_en": "0602-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Shariatpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ শরীয়তপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Shariatpur Circle Office",
+      "address_bn": "শরীয়তপুর সদর।",
+      "address_en": "Shariatpur Sadar, Shariatpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৬০২-৬১৫৮০",
+      "phone_en": "0602-61580",
+      "maps_url": "https://maps.google.com/?q=BRTA+Shariatpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, শরীয়তপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Shariatpur",
+      "location_bn": "শরীয়তপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, শরীয়তপুর সদর।",
+      "location_en": "Shariatpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Shariatpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), শরীয়তপুর",
+      "unit_name_en": "District Special Branch (DSB), Shariatpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), শরীয়তপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Shariatpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৬০২-৬২২২২",
+      "phone_en": "0602-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "moulvibazar": {
+    "id": "moulvibazar",
+    "name_bn": "মৌলভীবাজার",
+    "name_en": "Moulvibazar",
+    "aliases": [
+      "মৌলভীবাজার",
+      "মৌলভীবাজারে",
+      "moulvibazar",
+      "moulvibazar"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, মৌলভীবাজার",
+      "office_name_en": "Regional Passport Office, Moulvibazar",
+      "address_bn": "বেরিরপাড়, মৌলভীবাজার সদর।",
+      "address_en": "Moulvibazar Sadar, Moulvibazar.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৬১-৫২২২২",
+      "phone_en": "0861-52222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Moulvibazar"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ মৌলভীবাজার সার্কেল অফিস",
+      "office_name_en": "BRTA Moulvibazar Circle Office",
+      "address_bn": "মৌলভীবাজার সদর।",
+      "address_en": "Moulvibazar Sadar, Moulvibazar.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৬১-৫২৫৬০",
+      "phone_en": "0861-52560",
+      "maps_url": "https://maps.google.com/?q=BRTA+Moulvibazar"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, মৌলভীবাজার",
+      "venue_name_en": "BRTA Driving Test Venue, Moulvibazar",
+      "location_bn": "মৌলভীবাজার সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, মৌলভীবাজার সদর।",
+      "location_en": "Moulvibazar BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Moulvibazar"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), মৌলভীবাজার",
+      "unit_name_en": "District Special Branch (DSB), Moulvibazar",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), মৌলভীবাজার সদর।",
+      "address_en": "Superintendent of Police Office Compound, Moulvibazar.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮৬১-৫২২২২",
+      "phone_en": "0861-52222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "habiganj": {
+    "id": "habiganj",
+    "name_bn": "হবিগঞ্জ",
+    "name_en": "Habiganj",
+    "aliases": [
+      "হবিগঞ্জ",
+      "হবিগঞ্জে",
+      "habiganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, হবিগঞ্জ",
+      "office_name_en": "Regional Passport Office, Habiganj",
+      "address_bn": "অনন্তপুর, হবিগঞ্জ সদর।",
+      "address_en": "Habiganj Sadar, Habiganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৩১-৬২২২২",
+      "phone_en": "0831-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Habiganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ হবিগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Habiganj Circle Office",
+      "address_bn": "হবিগঞ্জ সদর।",
+      "address_en": "Habiganj Sadar, Habiganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৩১-৬১৮৯০",
+      "phone_en": "0831-61890",
+      "maps_url": "https://maps.google.com/?q=BRTA+Habiganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, হবিগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Habiganj",
+      "location_bn": "হবিগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, হবিগঞ্জ সদর।",
+      "location_en": "Habiganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Habiganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), হবিগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Habiganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), হবিগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Habiganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮৩১-৬২২২২",
+      "phone_en": "0831-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "sunamganj": {
+    "id": "sunamganj",
+    "name_bn": "সুনামগঞ্জ",
+    "name_en": "Sunamganj",
+    "aliases": [
+      "সুনামগঞ্জ",
+      "সুনামগঞ্জে",
+      "sunamganj"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, সুনামগঞ্জ",
+      "office_name_en": "Regional Passport Office, Sunamganj",
+      "address_bn": "মোল্লাপাড়া, সুনামগঞ্জ সদর।",
+      "address_en": "Sunamganj Sadar, Sunamganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৭১-৬২২২২",
+      "phone_en": "0871-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Sunamganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ সুনামগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Sunamganj Circle Office",
+      "address_bn": "সুনামগঞ্জ সদর।",
+      "address_en": "Sunamganj Sadar, Sunamganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৮৭১-৬১৫৬০",
+      "phone_en": "0871-61560",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sunamganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, সুনামগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Sunamganj",
+      "location_bn": "সুনামগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, সুনামগঞ্জ সদর।",
+      "location_en": "Sunamganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sunamganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), সুনামগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Sunamganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), সুনামগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Sunamganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৮৭১-৬২২২২",
+      "phone_en": "0871-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "jamalpur": {
+    "id": "jamalpur",
+    "name_bn": "জামালপুর",
+    "name_en": "Jamalpur",
+    "aliases": [
+      "জামালপুর",
+      "জামালপুরে",
+      "jamalpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, জামালপুর",
+      "office_name_en": "Regional Passport Office, Jamalpur",
+      "address_bn": "নান্দিনা রোড, জামালপুর সদর।",
+      "address_en": "Jamalpur Sadar, Jamalpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৮১-৬২২২২",
+      "phone_en": "0981-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Jamalpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ জামালপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Jamalpur Circle Office",
+      "address_bn": "জামালপুর সদর।",
+      "address_en": "Jamalpur Sadar, Jamalpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৮১-৬৩৪৮০",
+      "phone_en": "0981-63480",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jamalpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, জামালপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Jamalpur",
+      "location_bn": "জামালপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, জামালপুর সদর।",
+      "location_en": "Jamalpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jamalpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), জামালপুর",
+      "unit_name_en": "District Special Branch (DSB), Jamalpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), জামালপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Jamalpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৯৮১-৬২২২২",
+      "phone_en": "0981-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "sherpur": {
+    "id": "sherpur",
+    "name_bn": "শেরপুর",
+    "name_en": "Sherpur",
+    "aliases": [
+      "শেরপুর",
+      "শেরপুরে",
+      "sherpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, শেরপুর",
+      "office_name_en": "Regional Passport Office, Sherpur",
+      "address_bn": "নবীনগর, শেরপুর সদর।",
+      "address_en": "Sherpur Sadar, Sherpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৩১-৬২২২২",
+      "phone_en": "0931-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Sherpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ শেরপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Sherpur Circle Office",
+      "address_bn": "শেরপুর সদর।",
+      "address_en": "Sherpur Sadar, Sherpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৩১-৬১৮৭০",
+      "phone_en": "0931-61870",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sherpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, শেরপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Sherpur",
+      "location_bn": "শেরপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, শেরপুর সদর।",
+      "location_en": "Sherpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Sherpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), শেরপুর",
+      "unit_name_en": "District Special Branch (DSB), Sherpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), শেরপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Sherpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৯৩১-৬২২২২",
+      "phone_en": "0931-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "netrokona": {
+    "id": "netrokona",
+    "name_bn": "নেত্রকোণা",
+    "name_en": "Netrokona",
+    "aliases": [
+      "নেত্রকোণা",
+      "নেত্রকোণায়",
+      "নেত্রকোনা",
+      "netrokona"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নেত্রকোণা",
+      "office_name_en": "Regional Passport Office, Netrokona",
+      "address_bn": "সাতপাই, নেত্রকোণা সদর।",
+      "address_en": "Netrokona Sadar, Netrokona.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৫১-৬২২২২",
+      "phone_en": "0951-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Netrokona"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নেত্রকোণা সার্কেল অফিস",
+      "office_name_en": "BRTA Netrokona Circle Office",
+      "address_bn": "সাতপাই, নেত্রকোণা সদর।",
+      "address_en": "Netrokona Sadar, Netrokona.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৯৫১-৬১৯২০",
+      "phone_en": "0951-61920",
+      "maps_url": "https://maps.google.com/?q=BRTA+Netrokona"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নেত্রকোণা",
+      "venue_name_en": "BRTA Driving Test Venue, Netrokona",
+      "location_bn": "নেত্রকোণা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নেত্রকোণা সদর।",
+      "location_en": "Netrokona BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Netrokona"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নেত্রকোণা",
+      "unit_name_en": "District Special Branch (DSB), Netrokona",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নেত্রকোণা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Netrokona.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৯৫১-৬২২২২",
+      "phone_en": "0951-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "natore": {
+    "id": "natore",
+    "name_bn": "নাটোর",
+    "name_en": "Natore",
+    "aliases": [
+      "নাটোর",
+      "নাটোরে",
+      "natore"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নাটোর",
+      "office_name_en": "Regional Passport Office, Natore",
+      "address_bn": "চকরামপুর, নাটোর সদর।",
+      "address_en": "Natore Sadar, Natore.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৭১-৬২২২২",
+      "phone_en": "0771-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Natore"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নাটোর সার্কেল অফিস",
+      "office_name_en": "BRTA Natore Circle Office",
+      "address_bn": "নাটোর সদর।",
+      "address_en": "Natore Sadar, Natore.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৭১-৬২৬৪০",
+      "phone_en": "0771-62640",
+      "maps_url": "https://maps.google.com/?q=BRTA+Natore"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নাটোর",
+      "venue_name_en": "BRTA Driving Test Venue, Natore",
+      "location_bn": "নাটোর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নাটোর সদর।",
+      "location_en": "Natore BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Natore"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নাটোর",
+      "unit_name_en": "District Special Branch (DSB), Natore",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নাটোর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Natore.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৭১-৬২২২২",
+      "phone_en": "0771-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "naogaon": {
+    "id": "naogaon",
+    "name_bn": "নওগাঁ",
+    "name_en": "Naogaon",
+    "aliases": [
+      "নওগাঁ",
+      "নওগাঁয়",
+      "naogaon"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নওগাঁ",
+      "office_name_en": "Regional Passport Office, Naogaon",
+      "address_bn": "পার-নওগাঁ, নওগাঁ সদর।",
+      "address_en": "Naogaon Sadar, Naogaon.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৪১-৬২২২২",
+      "phone_en": "0741-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Naogaon"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নওগাঁ সার্কেল অফিস",
+      "office_name_en": "BRTA Naogaon Circle Office",
+      "address_bn": "নওগাঁ সদর।",
+      "address_en": "Naogaon Sadar, Naogaon.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৪১-৬৩২৪০",
+      "phone_en": "0741-63240",
+      "maps_url": "https://maps.google.com/?q=BRTA+Naogaon"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নওগাঁ",
+      "venue_name_en": "BRTA Driving Test Venue, Naogaon",
+      "location_bn": "নওগাঁ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নওগাঁ সদর।",
+      "location_en": "Naogaon BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Naogaon"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নওগাঁ",
+      "unit_name_en": "District Special Branch (DSB), Naogaon",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নওগাঁ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Naogaon.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৪১-৬২২২২",
+      "phone_en": "0741-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "chapainawabganj": {
+    "id": "chapainawabganj",
+    "name_bn": "চাঁপাইনবাবগঞ্জ",
+    "name_en": "Chapai Nawabganj",
+    "aliases": [
+      "চাঁপাইনবাবগঞ্জ",
+      "নবাবগঞ্জ",
+      "chapainawabganj",
+      "chapai"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, চাঁপাইনবাবগঞ্জ",
+      "office_name_en": "Regional Passport Office, Chapai Nawabganj",
+      "address_bn": "শান্তিমোড়, চাঁপাইনবাবগঞ্জ সদর।",
+      "address_en": "Chapai Nawabganj Sadar, Chapai Nawabganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৮১-৫২২২২",
+      "phone_en": "0781-52222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Chapai+Nawabganj"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ চাঁপাইনবাবগঞ্জ সার্কেল অফিস",
+      "office_name_en": "BRTA Chapai Nawabganj Circle Office",
+      "address_bn": "চাঁপাইনবাবগঞ্জ সদর।",
+      "address_en": "Chapai Nawabganj Sadar, Chapai Nawabganj.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৮১-৫২৭৮০",
+      "phone_en": "0781-52780",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chapai+Nawabganj"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, চাঁপাইনবাবগঞ্জ",
+      "venue_name_en": "BRTA Driving Test Venue, Chapai Nawabganj",
+      "location_bn": "চাঁপাইনবাবগঞ্জ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, চাঁপাইনবাবগঞ্জ সদর।",
+      "location_en": "Chapai Nawabganj BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chapai+Nawabganj"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), চাঁপাইনবাবগঞ্জ",
+      "unit_name_en": "District Special Branch (DSB), Chapai Nawabganj",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), চাঁপাইনবাবগঞ্জ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Chapai Nawabganj.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৮১-৫২২২২",
+      "phone_en": "0781-52222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "joypurhat": {
+    "id": "joypurhat",
+    "name_bn": "জয়পুরহাট",
+    "name_en": "Joypurhat",
+    "aliases": [
+      "জয়পুরহাট",
+      "জয়পুরহাটে",
+      "joypurhat"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, জয়পুরহাট",
+      "office_name_en": "Regional Passport Office, Joypurhat",
+      "address_bn": "শান্তিনগর, জয়পুরহাট সদর।",
+      "address_en": "Joypurhat Sadar, Joypurhat.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৭১-৬২২২২",
+      "phone_en": "0571-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Joypurhat"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ জয়পুরহাট সার্কেল অফিস",
+      "office_name_en": "BRTA Joypurhat Circle Office",
+      "address_bn": "জয়পুরহাট সদর।",
+      "address_en": "Joypurhat Sadar, Joypurhat.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৫৭১-৬২৬৩০",
+      "phone_en": "0571-62630",
+      "maps_url": "https://maps.google.com/?q=BRTA+Joypurhat"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, জয়পুরহাট",
+      "venue_name_en": "BRTA Driving Test Venue, Joypurhat",
+      "location_bn": "জয়পুরহাট সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, জয়পুরহাট সদর।",
+      "location_en": "Joypurhat BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Joypurhat"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), জয়পুরহাট",
+      "unit_name_en": "District Special Branch (DSB), Joypurhat",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), জয়পুরহাট সদর।",
+      "address_en": "Superintendent of Police Office Compound, Joypurhat.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৫৭১-৬২২২২",
+      "phone_en": "0571-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "chuadanga": {
+    "id": "chuadanga",
+    "name_bn": "চুয়াডাঙ্গা",
+    "name_en": "Chuadanga",
+    "aliases": [
+      "চুয়াডাঙ্গা",
+      "চুয়াডাঙ্গায়",
+      "chuadanga"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, চুয়াডাঙ্গা",
+      "office_name_en": "Regional Passport Office, Chuadanga",
+      "address_bn": "কোর্ট রোড, চুয়াডাঙ্গা সদর।",
+      "address_en": "Chuadanga Sadar, Chuadanga.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৬১-৬২২২২",
+      "phone_en": "0761-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Chuadanga"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ চুয়াডাঙ্গা সার্কেল অফিস",
+      "office_name_en": "BRTA Chuadanga Circle Office",
+      "address_bn": "চুয়াডাঙ্গা সদর।",
+      "address_en": "Chuadanga Sadar, Chuadanga.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৬১-৬৩২৪০",
+      "phone_en": "0761-63240",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chuadanga"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, চুয়াডাঙ্গা",
+      "venue_name_en": "BRTA Driving Test Venue, Chuadanga",
+      "location_bn": "চুয়াডাঙ্গা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, চুয়াডাঙ্গা সদর।",
+      "location_en": "Chuadanga BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Chuadanga"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), চুয়াডাঙ্গা",
+      "unit_name_en": "District Special Branch (DSB), Chuadanga",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), চুয়াডাঙ্গা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Chuadanga.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৬১-৬২২২২",
+      "phone_en": "0761-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "meherpur": {
+    "id": "meherpur",
+    "name_bn": "মেহেরপুর",
+    "name_en": "Meherpur",
+    "aliases": [
+      "মেহেরপুর",
+      "মেহেরপুরে",
+      "meherpur"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, মেহেরপুর",
+      "office_name_en": "Regional Passport Office, Meherpur",
+      "address_bn": "বাসস্ট্যান্ড রোড, মেহেরপুর সদর।",
+      "address_en": "Meherpur Sadar, Meherpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৯১-৬২২২২",
+      "phone_en": "0791-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Meherpur"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ মেহেরপুর সার্কেল অফিস",
+      "office_name_en": "BRTA Meherpur Circle Office",
+      "address_bn": "মেহেরপুর সদর।",
+      "address_en": "Meherpur Sadar, Meherpur.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৭৯১-৬১৯৫০",
+      "phone_en": "0791-61950",
+      "maps_url": "https://maps.google.com/?q=BRTA+Meherpur"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, মেহেরপুর",
+      "venue_name_en": "BRTA Driving Test Venue, Meherpur",
+      "location_bn": "মেহেরপুর সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, মেহেরপুর সদর।",
+      "location_en": "Meherpur BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Meherpur"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), মেহেরপুর",
+      "unit_name_en": "District Special Branch (DSB), Meherpur",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), মেহেরপুর সদর।",
+      "address_en": "Superintendent of Police Office Compound, Meherpur.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৭৯১-৬২২২২",
+      "phone_en": "0791-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "jhenaidah": {
+    "id": "jhenaidah",
+    "name_bn": "ঝিনাইদহ",
+    "name_en": "Jhenaidah",
+    "aliases": [
+      "ঝিনাইদহ",
+      "ঝিনাইদহে",
+      "jhenaidah"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, ঝিনাইদহ",
+      "office_name_en": "Regional Passport Office, Jhenaidah",
+      "address_bn": "পায়রা চত্বর, ঝিনাইদহ সদর।",
+      "address_en": "Jhenaidah Sadar, Jhenaidah.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৫১-৬২২২২",
+      "phone_en": "0451-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Jhenaidah"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ ঝিনাইদহ সার্কেল অফিস",
+      "office_name_en": "BRTA Jhenaidah Circle Office",
+      "address_bn": "ঝিনাইদহ সদর।",
+      "address_en": "Jhenaidah Sadar, Jhenaidah.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৫১-৬৩৪৮০",
+      "phone_en": "0451-63480",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jhenaidah"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, ঝিনাইদহ",
+      "venue_name_en": "BRTA Driving Test Venue, Jhenaidah",
+      "location_bn": "ঝিনাইদহ সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, ঝিনাইদহ সদর।",
+      "location_en": "Jhenaidah BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Jhenaidah"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), ঝিনাইদহ",
+      "unit_name_en": "District Special Branch (DSB), Jhenaidah",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), ঝিনাইদহ সদর।",
+      "address_en": "Superintendent of Police Office Compound, Jhenaidah.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৫১-৬২২২২",
+      "phone_en": "0451-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "magura": {
+    "id": "magura",
+    "name_bn": "মাগুরা",
+    "name_en": "Magura",
+    "aliases": [
+      "মাগুরা",
+      "মাগুরায়",
+      "magura"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, মাগুরা",
+      "office_name_en": "Regional Passport Office, Magura",
+      "address_bn": "ঢাকা রোড, মাগুরা সদর।",
+      "address_en": "Magura Sadar, Magura.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৮১-৬২২২২",
+      "phone_en": "0481-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Magura"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ মাগুরা সার্কেল অফিস",
+      "office_name_en": "BRTA Magura Circle Office",
+      "address_bn": "মাগুরা সদর।",
+      "address_en": "Magura Sadar, Magura.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৮১-৬২১৭০",
+      "phone_en": "0481-62170",
+      "maps_url": "https://maps.google.com/?q=BRTA+Magura"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, মাগুরা",
+      "venue_name_en": "BRTA Driving Test Venue, Magura",
+      "location_bn": "মাগুরা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, মাগুরা সদর।",
+      "location_en": "Magura BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Magura"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), মাগুরা",
+      "unit_name_en": "District Special Branch (DSB), Magura",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), মাগুরা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Magura.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৮১-৬২২২২",
+      "phone_en": "0481-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "narail": {
+    "id": "narail",
+    "name_bn": "নড়াইল",
+    "name_en": "Narail",
+    "aliases": [
+      "নড়াইল",
+      "নড়াইলে",
+      "narail"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, নড়াইল",
+      "office_name_en": "Regional Passport Office, Narail",
+      "address_bn": "কুড়িগ্রাম রোড, নড়াইল সদর।",
+      "address_en": "Narail Sadar, Narail.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৮১-৩২২২২",
+      "phone_en": "0481-32222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Narail"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ নড়াইল সার্কেল অফিস",
+      "office_name_en": "BRTA Narail Circle Office",
+      "address_bn": "নড়াইল সদর।",
+      "address_en": "Narail Sadar, Narail.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৮১-৩২৫৪০",
+      "phone_en": "0481-32540",
+      "maps_url": "https://maps.google.com/?q=BRTA+Narail"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, নড়াইল",
+      "venue_name_en": "BRTA Driving Test Venue, Narail",
+      "location_bn": "নড়াইল সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, নড়াইল সদর।",
+      "location_en": "Narail BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Narail"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), নড়াইল",
+      "unit_name_en": "District Special Branch (DSB), Narail",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), নড়াইল সদর।",
+      "address_en": "Superintendent of Police Office Compound, Narail.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৮১-৩২২২২",
+      "phone_en": "0481-32222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "satkhira": {
+    "id": "satkhira",
+    "name_bn": "সাতক্ষীরা",
+    "name_en": "Satkhira",
+    "aliases": [
+      "সাতক্ষীরা",
+      "সাতক্ষীরায়",
+      "satkhira"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, সাতক্ষীরা",
+      "office_name_en": "Regional Passport Office, Satkhira",
+      "address_bn": "পলাশপোল, সাতক্ষীরা সদর।",
+      "address_en": "Satkhira Sadar, Satkhira.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৭১-৬২২২২",
+      "phone_en": "0471-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Satkhira"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ সাতক্ষীরা সার্কেল অফিস",
+      "office_name_en": "BRTA Satkhira Circle Office",
+      "address_bn": "সাতক্ষীরা সদর।",
+      "address_en": "Satkhira Sadar, Satkhira.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৭১-৬৩২৪০",
+      "phone_en": "0471-63240",
+      "maps_url": "https://maps.google.com/?q=BRTA+Satkhira"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, সাতক্ষীরা",
+      "venue_name_en": "BRTA Driving Test Venue, Satkhira",
+      "location_bn": "সাতক্ষীরা সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, সাতক্ষীরা সদর।",
+      "location_en": "Satkhira BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Satkhira"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), সাতক্ষীরা",
+      "unit_name_en": "District Special Branch (DSB), Satkhira",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), সাতক্ষীরা সদর।",
+      "address_en": "Superintendent of Police Office Compound, Satkhira.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৭১-৬২২২২",
+      "phone_en": "0471-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "bagerhat": {
+    "id": "bagerhat",
+    "name_bn": "বাগেরহাট",
+    "name_en": "Bagerhat",
+    "aliases": [
+      "বাগেরহাট",
+      "বাগেরহাটে",
+      "bagerhat"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, বাগেরহাট",
+      "office_name_en": "Regional Passport Office, Bagerhat",
+      "address_bn": "দশানী, বাগেরহাট সদর।",
+      "address_en": "Bagerhat Sadar, Bagerhat.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৬৮-৬২২২২",
+      "phone_en": "0468-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Bagerhat"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ বাগেরহাট সার্কেল অফিস",
+      "office_name_en": "BRTA Bagerhat Circle Office",
+      "address_bn": "বাগেরহাট সদর।",
+      "address_en": "Bagerhat Sadar, Bagerhat.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৪৬৮-৬৩২৮০",
+      "phone_en": "0468-63280",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bagerhat"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, বাগেরহাট",
+      "venue_name_en": "BRTA Driving Test Venue, Bagerhat",
+      "location_bn": "বাগেরহাট সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, বাগেরহাট সদর।",
+      "location_en": "Bagerhat BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bagerhat"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), বাগেরহাট",
+      "unit_name_en": "District Special Branch (DSB), Bagerhat",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), বাগেরহাট সদর।",
+      "address_en": "Superintendent of Police Office Compound, Bagerhat.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৪৬৮-৬২২২২",
+      "phone_en": "0468-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "rangamati": {
+    "id": "rangamati",
+    "name_bn": "রাঙ্গামাটি",
+    "name_en": "Rangamati",
+    "aliases": [
+      "রাঙ্গামাটি",
+      "রাঙ্গামাটিতে",
+      "rangamati"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, রাঙ্গামাটি",
+      "office_name_en": "Regional Passport Office, Rangamati",
+      "address_bn": "তবলছড়ি, রাঙ্গামাটি সদর।",
+      "address_en": "Rangamati Sadar, Rangamati.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৫১-৬২২২২",
+      "phone_en": "0351-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Rangamati"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ রাঙ্গামাটি সার্কেল অফিস",
+      "office_name_en": "BRTA Rangamati Circle Office",
+      "address_bn": "তবলছড়ি, রাঙ্গামাটি।",
+      "address_en": "Rangamati Sadar, Rangamati.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৫১-৬৩৪৮০",
+      "phone_en": "0351-63480",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rangamati"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, রাঙ্গামাটি",
+      "venue_name_en": "BRTA Driving Test Venue, Rangamati",
+      "location_bn": "রাঙ্গামাটি সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, রাঙ্গামাটি সদর।",
+      "location_en": "Rangamati BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Rangamati"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), রাঙ্গামাটি",
+      "unit_name_en": "District Special Branch (DSB), Rangamati",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), রাঙ্গামাটি সদর।",
+      "address_en": "Superintendent of Police Office Compound, Rangamati.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩৫১-৬২২২২",
+      "phone_en": "0351-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "bandarban": {
+    "id": "bandarban",
+    "name_bn": "বান্দরবান",
+    "name_en": "Bandarban",
+    "aliases": [
+      "বান্দরবান",
+      "বান্দরবানে",
+      "bandarban"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, বান্দরবান",
+      "office_name_en": "Regional Passport Office, Bandarban",
+      "address_bn": "বালাঘাটা, বান্দরবান সদর।",
+      "address_en": "Bandarban Sadar, Bandarban.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৬১-৬২২২২",
+      "phone_en": "0361-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Bandarban"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ বান্দরবান সার্কেল অফিস",
+      "office_name_en": "BRTA Bandarban Circle Office",
+      "address_bn": "বালাঘাটা, বান্দরবান।",
+      "address_en": "Bandarban Sadar, Bandarban.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৬১-৬২৫৯০",
+      "phone_en": "0361-62590",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bandarban"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, বান্দরবান",
+      "venue_name_en": "BRTA Driving Test Venue, Bandarban",
+      "location_bn": "বান্দরবান সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, বান্দরবান সদর।",
+      "location_en": "Bandarban BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Bandarban"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), বান্দরবান",
+      "unit_name_en": "District Special Branch (DSB), Bandarban",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), বান্দরবান সদর।",
+      "address_en": "Superintendent of Police Office Compound, Bandarban.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩৬১-৬২২২২",
+      "phone_en": "0361-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  },
+  "khagrachhari": {
+    "id": "khagrachhari",
+    "name_bn": "খাগড়াছড়ি",
+    "name_en": "Khagrachhari",
+    "aliases": [
+      "খাগড়াছড়ি",
+      "খাগড়াছড়িতে",
+      "khagrachhari"
+    ],
+    "passport": {
+      "office_name_bn": "আঞ্চলিক পাসপোর্ট অফিস, খাগড়াছড়ি",
+      "office_name_en": "Regional Passport Office, Khagrachhari",
+      "address_bn": "মহাজনপাড়া, খাগড়াছড়ি সদর।",
+      "address_en": "Khagrachhari Sadar, Khagrachhari.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৭১-৬২২২২",
+      "phone_en": "0371-62222",
+      "maps_url": "https://maps.google.com/?q=Passport+Office+Khagrachhari"
+    },
+    "licence": {
+      "office_name_bn": "বিআরটিএ খাগড়াছড়ি সার্কেল অফিস",
+      "office_name_en": "BRTA Khagrachhari Circle Office",
+      "address_bn": "খাগড়াছড়ি সদর।",
+      "address_en": "Khagrachhari Sadar, Khagrachhari.",
+      "hours_bn": "রবিবার - বৃহস্পতিবার, সকাল ৯:০০ - বিকাল ৪:০০",
+      "hours_en": "Sunday - Thursday, 9:00 AM - 4:00 PM",
+      "phone_bn": "০৩৭১-৬২৬৪০",
+      "phone_en": "0371-62640",
+      "maps_url": "https://maps.google.com/?q=BRTA+Khagrachhari"
+    },
+    "driving_test": {
+      "venue_name_bn": "বিআরটিএ ড্রাইভিং টেস্ট ভেন্যু, খাগড়াছড়ি",
+      "venue_name_en": "BRTA Driving Test Venue, Khagrachhari",
+      "location_bn": "খাগড়াছড়ি সার্কেল অফিস নির্ধারিত টেস্ট মাঠ, খাগড়াছড়ি সদর।",
+      "location_en": "Khagrachhari BRTA Circle Driving Test Ground.",
+      "schedule_bn": "নির্ধারিত কার্যদিবস (লার্নার পারমিটের উল্লেখিত তারিখ), সকাল ৯:০০ টা।",
+      "schedule_en": "Scheduled working day as per Learner Card, 9:00 AM.",
+      "subjects_bn": "লিখিত (MCQ), মৌখিক (ট্রাফিক সাইন) এবং ব্যবহারিক (জিগ-জ্যাগ ও পার্কিং টেস্ট)।",
+      "subjects_en": "Written (MCQ), Oral (Traffic Signs) and Practical (Zig-Zag & Parking Test).",
+      "requirements_bn": "মূল লার্নার পারমিট কার্ড, জাতীয় পরিচয়পত্র (NID) এবং কলম।",
+      "requirements_en": "Original Learner Permit Card, National ID (NID) and Pen.",
+      "maps_url": "https://maps.google.com/?q=BRTA+Khagrachhari"
+    },
+    "police_verification": {
+      "unit_name_bn": "জেলা স্পেশাল ব্রাঞ্চ (DSB), খাগড়াছড়ি",
+      "unit_name_en": "District Special Branch (DSB), Khagrachhari",
+      "address_bn": "পুলিশ সুপারের কার্যালয় (এসপি অফিস কম্পাউন্ড), খাগড়াছড়ি সদর।",
+      "address_en": "Superintendent of Police Office Compound, Khagrachhari.",
+      "documents_bn": "মূল এনআইডি/জন্ম সনদ, চেয়ারম্যান/কাউন্সিলর সার্টিফিকেট ও বিদ্যুৎ বিলের কপি।",
+      "documents_en": "Original NID/Birth Certificate, Chairman/Councillor Certificate & Utility Bill Copy.",
+      "phone_bn": "০৩৭১-৬২২২২",
+      "phone_en": "0371-62222",
+      "alert_bn": "পুলিশ ভেরিফিকেশনের জন্য সরকারি কোনো ফি নেই, এটি সম্পূর্ণ বিনামূল্যে হয়।",
+      "alert_en": "Police verification has no government fee, it is completely free."
+    }
+  }
+}
