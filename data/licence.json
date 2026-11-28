@@ -725,32 +725,6 @@
     "applies_when": {},
     "verified_on": "2026-11-15",
     "online_possible": null,
-    "id": "licence.renewal.timeline",
-    "subtype": "renewal",
-    "field": "timeline",
-    "title_bn": "নবায়নে কত সময়",
-    "title_en": "How long renewal takes",
-    "content_bn": "কাগজপত্র জমা ও ফি পরিশোধের পর নতুন কার্ড ছাপা ও বিতরণে সময় লাগে; সময়কাল সার্কেল অফিস ও চাহিদার উপর নির্ভর করে পরিবর্তিত হয়।\n\nএই সময়ের মধ্যে চলাচলের জন্য অস্থায়ী কাগজ দেওয়া হতে পারে। অবস্থা BSP পোর্টালে দেখা যায়।",
-    "content_en": "After the documents are submitted and the fee paid, the new card is printed and distributed; the time varies by circle office and demand.\n\nA temporary paper permit may be issued to drive on meanwhile. The status can be followed on the BSP portal.",
-    "source_url": "https://brta.gov.bd/",
-    "keywords": [
-      "কত দিন",
-      "সময়",
-      "নবায়ন",
-      "how long",
-      "timeline",
-      "renewal",
-      "koto din",
-      "somoy"
-    ],
-    "domain": "licence",
-    "office_bn": "BRTA সার্কেল অফিস",
-    "office_en": "BRTA circle office"
-  },
-  {
-    "applies_when": {},
-    "verified_on": "2026-11-15",
-    "online_possible": null,
     "id": "licence.exam.documents",
     "subtype": "exam",
     "field": "documents",
@@ -796,6 +770,32 @@
       "হালকা মধ্যম ভারী",
       "BRTA professional eligibility"
     ]
+  },
+  {
+    "applies_when": {},
+    "verified_on": "2026-11-15",
+    "online_possible": null,
+    "id": "licence.renewal.timeline",
+    "subtype": "renewal",
+    "field": "timeline",
+    "title_bn": "নবায়নে কত সময়",
+    "title_en": "How long renewal takes",
+    "content_bn": "কাগজপত্র জমা ও ফি পরিশোধের পর নতুন কার্ড ছাপা ও বিতরণে সময় লাগে; সময়কাল সার্কেল অফিস ও চাহিদার উপর নির্ভর করে পরিবর্তিত হয়।\n\nএই সময়ের মধ্যে চলাচলের জন্য অস্থায়ী কাগজ দেওয়া হতে পারে। অবস্থা BSP পোর্টালে দেখা যায়।",
+    "content_en": "After the documents are submitted and the fee paid, the new card is printed and distributed; the time varies by circle office and demand.\n\nA temporary paper permit may be issued to drive on meanwhile. The status can be followed on the BSP portal.",
+    "source_url": "https://brta.gov.bd/",
+    "keywords": [
+      "কত দিন",
+      "সময়",
+      "নবায়ন",
+      "how long",
+      "timeline",
+      "renewal",
+      "koto din",
+      "somoy"
+    ],
+    "domain": "licence",
+    "office_bn": "BRTA সার্কেল অফিস",
+    "office_en": "BRTA circle office"
   },
   {
     "id": "licence.renewal.fee",
