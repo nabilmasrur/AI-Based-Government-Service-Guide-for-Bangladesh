@@ -4,7 +4,7 @@
    serve a stale page: navigations go to the network and only fall back to the
    cache when the device is genuinely offline. API calls are never cached —
    stale government fees are the one thing this project must not show. */
-const SHELL = "seba-shell-v4";
+const SHELL = "seba-shell-v5";
 const FILES = ["./", "./index.html", "./manifest.json"];
 
 self.addEventListener("install", (e) => {
