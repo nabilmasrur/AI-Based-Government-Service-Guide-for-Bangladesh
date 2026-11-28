@@ -1,11 +1,11 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-title Seba Sohayok - Public Live Tunnel & Server
+title Seba Sohayok - Public Live Tunnel ^& Server
 
 echo ======================================================================
 echo   SEBA SOHAYOK - AI GOVERNMENT SERVICE GUIDE FOR BANGLADESH
-echo   Starting Public Live Tunnel & Server...
+echo   Starting Public Live Tunnel ^& Server...
 echo ======================================================================
 echo.
 
