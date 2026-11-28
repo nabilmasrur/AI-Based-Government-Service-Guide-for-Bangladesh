@@ -18,7 +18,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from . import admin as admin_mod
-from . import agent, config, kb, limits, llm, session, texts, analytics
+from . import agent, config, kb, limits, llm, phrases, session, texts, analytics
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 log = logging.getLogger("app")
@@ -64,6 +64,7 @@ class FeedbackIn(BaseModel):
     session_id: str | None = None
     query_id: int
     is_positive: bool
+    reason: str | None = None
 
 
 class AdminLoginIn(BaseModel):
@@ -123,15 +124,22 @@ def action(payload: ActionIn, request: Request) -> dict:
     state["lang"] = lang
     try:
         out = agent.handle_action(state, payload.action or {}, lang)
+        out["lang"] = out.get("lang") or lang
         
         # Log query
         trace = out.get("trace", {})
+        action_payload = payload.action or {}
+        dom = trace.get("domain") or action_payload.get("domain")
+        sub = trace.get("subtype") or action_payload.get("subtype")
+        fld = trace.get("field") or action_payload.get("field")
+        action_msg = analytics._format_query_label(str(action_payload), dom, sub, fld)
+
         query_id = analytics.log_query(
             payload.session_id, 
-            str(payload.action), 
-            trace.get("domain"), 
-            trace.get("subtype"), 
-            trace.get("field"), 
+            action_msg, 
+            dom, 
+            sub, 
+            fld, 
             trace.get("decision", "unknown")
         )
         out["query_id"] = query_id
@@ -148,6 +156,7 @@ def action(payload: ActionIn, request: Request) -> dict:
 def chat(payload: ChatIn, request: Request) -> dict:
     """Full path. Rate limited, because this one reaches Gemini."""
     lang = _lang(payload.lang)
+
     allowed, why = limits.check(_client_ip(request))
     if not allowed:
         log.info("rate limited (%s)", why)
@@ -160,6 +169,7 @@ def chat(payload: ChatIn, request: Request) -> dict:
     state["lang"] = lang
     try:
         out = agent.handle_message(state, payload.message.strip(), lang)
+        out["lang"] = out.get("lang") or lang
         
         # Log query
         trace = out.get("trace", {})
@@ -193,7 +203,7 @@ def reset(payload: ResetIn) -> dict:
 
 @app.post("/api/feedback")
 def feedback(payload: FeedbackIn) -> dict:
-    analytics.log_feedback(payload.session_id, payload.query_id, payload.is_positive)
+    analytics.log_feedback(payload.session_id, payload.query_id, payload.is_positive, payload.reason)
     return {"ok": True}
 
 
@@ -282,7 +292,11 @@ def admin_propose(x_admin_key: str = Header(default=""),
                   authorization: str = Header(default=""),
                   body: dict = Body(default={})) -> dict:
     _require_admin(x_admin_key, authorization)
-    return admin_mod.propose(body.get("text", ""))
+    try:
+        return admin_mod.propose(body.get("text", ""))
+    except Exception as exc:
+        log.exception("propose endpoint error: %s", exc)
+        return {"ok": False, "error": f"খসড়া তৈরিতে সমস্যা হয়েছে: {str(exc)}", "entries": []}
 
 
 @app.get("/api/admin/pending")
@@ -304,6 +318,79 @@ def admin_stats(x_admin_key: str = Header(default=""),
                 authorization: str = Header(default="")) -> dict:
     _require_admin(x_admin_key, authorization)
     return {"stats": analytics.get_stats()}
+
+
+@app.get("/api/admin/entries")
+def admin_entries(
+    domain: str | None = None,
+    q: str | None = None,
+    x_admin_key: str = Header(default=""),
+    authorization: str = Header(default=""),
+) -> dict:
+    _require_admin(x_admin_key, authorization)
+    entries = admin_mod.list_entries(domain=domain, query=q)
+    return {"ok": True, "entries": entries, "count": len(entries), "stats": kb.stats()}
+
+
+@app.post("/api/admin/entries/update")
+def admin_update_entry(
+    x_admin_key: str = Header(default=""),
+    authorization: str = Header(default=""),
+    body: dict = Body(default={}),
+) -> dict:
+    _require_admin(x_admin_key, authorization)
+    entry = body.get("entry")
+    if not entry or not isinstance(entry, dict):
+        raise HTTPException(status_code=400, detail="সঠিক এন্ট্রি অবজেক্ট প্রদান করুন।")
+    res = admin_mod.update_entry(entry)
+    if not res.get("ok"):
+        raise HTTPException(status_code=400, detail=res.get("error", "আপডেট ব্যর্থ হয়েছে।"))
+    return res
+
+
+@app.post("/api/admin/entries/delete")
+def admin_delete_entry(
+    x_admin_key: str = Header(default=""),
+    authorization: str = Header(default=""),
+    body: dict = Body(default={}),
+) -> dict:
+    _require_admin(x_admin_key, authorization)
+    entry_id = body.get("id")
+    if not entry_id:
+        raise HTTPException(status_code=400, detail="এন্ট্রি আইডি প্রয়োজন।")
+    res = admin_mod.delete_entry(entry_id)
+    if not res.get("ok"):
+        raise HTTPException(status_code=400, detail=res.get("error", "মুছে ফেলা ব্যর্থ হয়েছে।"))
+    return res
+
+
+@app.post("/api/admin/pending/save")
+def admin_save_pending(
+    x_admin_key: str = Header(default=""),
+    authorization: str = Header(default=""),
+    body: dict = Body(default={}),
+) -> dict:
+    _require_admin(x_admin_key, authorization)
+    entry = body.get("entry")
+    if not entry or not isinstance(entry, dict):
+        raise HTTPException(status_code=400, detail="সঠিক খসড়া অবজেক্ট প্রদান করুন।")
+    res = admin_mod.save_pending(entry)
+    if not res.get("ok"):
+        raise HTTPException(status_code=400, detail=res.get("error", "খসড়া সংরক্ষণ ব্যর্থ হয়েছে।"))
+    return res
+
+
+@app.post("/api/admin/pending/delete")
+def admin_delete_pending(
+    x_admin_key: str = Header(default=""),
+    authorization: str = Header(default=""),
+    body: dict = Body(default={}),
+) -> dict:
+    _require_admin(x_admin_key, authorization)
+    entry_id = body.get("id")
+    if not entry_id:
+        raise HTTPException(status_code=400, detail="খসড়া আইডি প্রয়োজন।")
+    return admin_mod.delete_pending(entry_id)
 
 
 @app.post("/api/admin/approve")
