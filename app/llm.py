@@ -16,7 +16,14 @@ _client = None
 # per-minute quota is hit. They clear on their own, so retry instead of giving up —
 # a 503 during the demo would otherwise look like a broken project.
 RETRY_CODES = (429, 500, 502, 503, 504)
-MAX_ATTEMPTS = 3
+FALLBACK_ERROR_CODES = (404, 429, 500, 502, 503, 504)
+FALLBACK_CHAT_MODELS = (
+    "gemini-3.5-flash-lite",
+    "gemini-3.5-flash",
+    "gemini-3-flash-preview",
+    "gemini-3.6-flash",
+)
+MAX_ATTEMPTS = 2
 _CODE = re.compile(r"\b(4\d\d|5\d\d)\b")
 
 
@@ -24,12 +31,24 @@ class LLMUnavailable(RuntimeError):
     """Raised when Gemini cannot be reached — callers degrade instead of crashing."""
 
 
-def _retryable(exc: Exception) -> bool:
+def _error_code(exc: Exception) -> int | None:
     code = getattr(exc, "code", None) or getattr(exc, "status_code", None)
     if code is None:
         found = _CODE.search(str(exc))
         code = int(found.group(1)) if found else None
-    return code in RETRY_CODES
+    return code
+
+
+def _retryable(exc: Exception) -> bool:
+    return _error_code(exc) in RETRY_CODES
+
+
+def _can_fallback_model(exc: Exception) -> bool:
+    code = _error_code(exc)
+    if code is None or code in FALLBACK_ERROR_CODES:
+        return True
+    msg = str(exc).lower()
+    return "timed out" in msg or "timeout" in msg or "deadline" in msg
 
 
 def _with_retry(what: str, call):
@@ -60,7 +79,7 @@ def get_client():
             from google import genai
         except ImportError as exc:                       # pragma: no cover
             raise LLMUnavailable("google-genai is not installed") from exc
-        _client = genai.Client(api_key=config.GEMINI_API_KEY)
+        _client = genai.Client(api_key=config.GEMINI_API_KEY, http_options={"timeout": 25000})
     return _client
 
 
@@ -100,9 +119,28 @@ def generate(system: str, prompt: str, as_json: bool = False, temperature: float
         temperature=temperature,
         response_mime_type="application/json" if as_json else "text/plain",
     )
-    resp = _with_retry("generate", lambda: client.models.generate_content(
-        model=config.CHAT_MODEL, contents=prompt, config=cfg))
-    return (resp.text or "").strip()
+    models_to_try = [config.CHAT_MODEL] + [
+        m for m in FALLBACK_CHAT_MODELS if m != config.CHAT_MODEL
+    ]
+    last_exc: Exception | None = None
+    for idx, model_name in enumerate(models_to_try):
+        try:
+            resp = _with_retry(
+                f"generate({model_name})",
+                lambda m=model_name: client.models.generate_content(
+                    model=m, contents=prompt, config=cfg
+                ),
+            )
+            return (resp.text or "").strip()
+        except LLMUnavailable as exc:
+            last_exc = exc
+            cause = exc.__cause__ or exc
+            if idx + 1 < len(models_to_try) and _can_fallback_model(cause):
+                log.warning("model %s unavailable (%s); trying fallback model %s",
+                            model_name, str(cause)[:120], models_to_try[idx + 1])
+                continue
+            raise
+    raise LLMUnavailable(str(last_exc)) from last_exc
 
 
 def generate_json(system: str, prompt: str) -> dict:
