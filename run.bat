@@ -39,6 +39,7 @@ if not exist "data\embeddings.npz" (
   echo.
 )
 
+python -c "import run_live; run_live.free_port_if_needed(8000)" 2>nul
 echo  Opening http://127.0.0.1:8000 in your browser...
 start "" http://127.0.0.1:8000
 echo  Press Ctrl+C in this window to stop the server.
