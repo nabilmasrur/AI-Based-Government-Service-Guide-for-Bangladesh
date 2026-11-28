@@ -3,20 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8fafc">
 <title>সেবা সহায়ক — অ্যাডমিন পোর্টাল</title>
+<script>
+(function () {
+  try {
+    var saved = localStorage.getItem("theme");
+    if (saved === "dark" || saved === "light") {
+      document.documentElement.setAttribute("data-theme", saved);
+    }
+  } catch (e) {}
+})();
+</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap">
 <style>
+@font-face {
+  font-family: 'Purno';
+  src: url('/fonts/Purno-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Purno';
+  src: url('/fonts/Purno-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Purno';
+  src: url('/fonts/Purno-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Purno';
+  src: url('/fonts/Purno-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root{
-  --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  --surface: rgba(255, 255, 255, 0.88);
-  --raised: rgba(255, 255, 255, 0.98);
-  --panel: rgba(255, 255, 255, 0.82);
-  --panel-2: rgba(255, 255, 255, 0.6);
+  color-scheme: light;
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e8eef6 100%);
+  --surface: rgba(255, 255, 255, 0.94);
+  --raised: #ffffff;
+  --panel: #f8fafc;
+  --panel-2: #f1f5f9;
   --ink: #17191C;
-  --ink-2: #55585E;
-  --ink-3: #8A8E95;
-  --hair: rgba(0, 0, 0, 0.08);
-  --hair-2: rgba(0, 0, 0, 0.05);
+  --ink-2: #4B5563;
+  --ink-3: #6B7280;
+  --hair: rgba(15, 23, 42, 0.10);
+  --hair-2: rgba(15, 23, 42, 0.06);
   --accent: #00875A;
   --accent-ink: #006946;
   --accent-soft: #E4F3ED;
@@ -25,12 +69,20 @@
   --amber-soft: #FBF1DF;
   --alert: #B03A20;
   --alert-soft: #FCEDE8;
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --badge-pass-bg: rgba(0, 135, 90, 0.11);
+  --badge-pass-ink: #006946;
+  --badge-pass-border: rgba(0, 135, 90, 0.26);
+  --badge-lic-bg: rgba(37, 99, 235, 0.10);
+  --badge-lic-ink: #1d4ed8;
+  --badge-lic-border: rgba(37, 99, 235, 0.25);
+  --table-th-bg: rgba(15, 23, 42, 0.03);
+  --shadow: 0 8px 32px rgba(15, 23, 42, 0.08);
+  --shadow-sm: 0 2px 10px rgba(15, 23, 42, 0.05);
   --radius: 12px;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
+    color-scheme: dark;
     --bg-gradient: radial-gradient(circle at 15% 50%, #1a1b20, #121316 40%, #0a0a0c 100%);
     --surface: rgba(26, 28, 34, 0.72);
     --raised: rgba(38, 42, 51, 0.88);
@@ -49,9 +101,46 @@
     --amber-soft: rgba(216, 168, 90, 0.15);
     --alert: #E8846A;
     --alert-soft: rgba(232, 132, 106, 0.15);
+    --badge-pass-bg: rgba(0, 135, 90, 0.14);
+    --badge-pass-ink: #34d399;
+    --badge-pass-border: rgba(0, 135, 90, 0.28);
+    --badge-lic-bg: rgba(59, 130, 246, 0.14);
+    --badge-lic-ink: #60a5fa;
+    --badge-lic-border: rgba(59, 130, 246, 0.28);
+    --table-th-bg: rgba(255, 255, 255, 0.03);
     --shadow: 0 12px 38px rgba(0, 0, 0, 0.45);
     --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.3);
   }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg-gradient: radial-gradient(circle at 15% 50%, #1a1b20, #121316 40%, #0a0a0c 100%);
+  --surface: rgba(26, 28, 34, 0.72);
+  --raised: rgba(38, 42, 51, 0.88);
+  --panel: rgba(26, 28, 34, 0.78);
+  --panel-2: rgba(255, 255, 255, 0.04);
+  --ink: #ECEDEE;
+  --ink-2: #A9ADB3;
+  --ink-3: #787D85;
+  --hair: rgba(255, 255, 255, 0.12);
+  --hair-2: rgba(255, 255, 255, 0.06);
+  --accent: #35C892;
+  --accent-ink: #5FD8AA;
+  --accent-soft: rgba(53, 200, 146, 0.14);
+  --accent-hover: #2db381;
+  --amber: #D8A85A;
+  --amber-soft: rgba(216, 168, 90, 0.15);
+  --alert: #E8846A;
+  --alert-soft: rgba(232, 132, 106, 0.15);
+  --badge-pass-bg: rgba(0, 135, 90, 0.14);
+  --badge-pass-ink: #34d399;
+  --badge-pass-border: rgba(0, 135, 90, 0.28);
+  --badge-lic-bg: rgba(59, 130, 246, 0.14);
+  --badge-lic-ink: #60a5fa;
+  --badge-lic-border: rgba(59, 130, 246, 0.28);
+  --table-th-bg: rgba(255, 255, 255, 0.03);
+  --shadow: 0 12px 38px rgba(0, 0, 0, 0.45);
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
 
 *{box-sizing:border-box}
@@ -61,7 +150,7 @@ body{
   background: var(--bg-gradient);
   background-attachment: fixed;
   color: var(--ink);
-  font-family: "Noto Sans Bengali", Archivo, -apple-system, sans-serif;
+  font-family: 'Purno', -apple-system, sans-serif;
   font-size: 14.5px;
   line-height: 1.6;
 }
@@ -75,7 +164,7 @@ body{
 
 /* Typography */
 h1{
-  font-family: Archivo, "Noto Sans Bengali", sans-serif;
+  font-family: 'Purno', sans-serif;
   font-size: 26px;
   font-weight: 700;
   margin: 0 0 6px;
@@ -103,7 +192,7 @@ h1{
 /* Forms */
 label{
   display: block;
-  font-family: Archivo, "Noto Sans Bengali", sans-serif;
+  font-family: 'Purno', sans-serif;
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -146,7 +235,7 @@ button, .btn{
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-family: Archivo, "Noto Sans Bengali", sans-serif;
+  font-family: 'Purno', sans-serif;
   font-size: 13.5px;
   font-weight: 600;
   padding: 10px 18px;
@@ -212,6 +301,7 @@ button[disabled]{
   padding: 20px;
 }
 .login-card{
+  position: relative;
   width: 100%;
   max-width: 410px;
   padding: 34px 30px;
@@ -221,6 +311,19 @@ button[disabled]{
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--hair);
   box-shadow: var(--shadow);
+}
+.theme-toggle-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.login-theme-wrap{
+  position: absolute;
+  top: 14px;
+  right: 14px;
 }
 .login-header{
   text-align: center;
@@ -239,7 +342,7 @@ button[disabled]{
   box-shadow: inset 0 0 0 1px var(--hair);
 }
 .login-header h2{
-  font-family: Archivo, "Noto Sans Bengali", sans-serif;
+  font-family: 'Purno', sans-serif;
   font-size: 22px;
   font-weight: 700;
   margin: 0 0 6px;
@@ -255,7 +358,7 @@ button[disabled]{
   margin-top: 24px;
   font-size: 11.5px;
   color: var(--ink-3);
-  font-family: Archivo, sans-serif;
+  font-family: 'Purno', sans-serif;
   letter-spacing: 0.04em;
 }
 .toggle-pwd{
@@ -383,7 +486,7 @@ button[disabled]{
   box-shadow: var(--shadow-sm);
 }
 .draft h3{
-  font-family: Archivo, "Noto Sans Bengali", sans-serif;
+  font-family: 'Purno', sans-serif;
   font-size: 14px;
   margin: 0;
   padding: 12px 18px;
@@ -452,6 +555,173 @@ button[disabled]{
   letter-spacing: 0.05em;
   font-weight: 600;
 }
+
+/* Table Styles */
+.table-wrap{
+  overflow-x: auto;
+  border: 1px solid var(--hair);
+  border-radius: 10px;
+  background: var(--panel-2);
+}
+.admin-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.admin-table th{
+  background: var(--table-th-bg);
+  text-align: left;
+  padding: 10px 14px;
+  color: var(--ink-2);
+  border-bottom: 1px solid var(--hair);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.admin-table td{
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--hair);
+  color: var(--ink);
+  vertical-align: middle;
+}
+.admin-table tr:last-child td{
+  border-bottom: none;
+}
+.badge-reason{
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  background: var(--alert-soft);
+  color: var(--alert);
+  border: 1px solid color-mix(in srgb, var(--alert) 25%, transparent);
+  font-weight: 500;
+}
+
+/* Tab Badge */
+.tab-badge{
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--panel-2);
+  color: var(--accent);
+  margin-left: 6px;
+  border: 1px solid var(--hair);
+}
+.tab.active .tab-badge{
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* KB & Draft Cards */
+.kb-card{
+  border: 1px solid var(--hair);
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.kb-card:hover{
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--hair));
+}
+.kb-card-header{
+  padding: 12px 16px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--hair);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.badge-dom{
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  background: var(--badge-pass-bg);
+  color: var(--badge-pass-ink);
+  border: 1px solid var(--badge-pass-border);
+}
+.badge-dom.licence{
+  background: var(--badge-lic-bg);
+  color: var(--badge-lic-ink);
+  border-color: var(--badge-lic-border);
+}
+.badge-approved{
+  background: var(--badge-pass-bg);
+  color: var(--badge-pass-ink);
+  border: 1px solid var(--badge-pass-border);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.lang-warn-badge{
+  background: var(--alert-soft);
+  color: var(--alert);
+  border: 1px solid color-mix(in srgb, var(--alert) 30%, transparent);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.badge-vdate{
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  background: var(--panel-2);
+  color: var(--ink-2);
+  border: 1px solid var(--hair);
+  font-family: "IBM Plex Mono", monospace;
+}
+.filter-pill-btn{
+  background: var(--surface);
+  border: 1px solid var(--hair);
+  color: var(--ink-2);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-pill-btn:hover{
+  border-color: var(--accent);
+  color: var(--ink);
+}
+.filter-pill-btn.active{
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.empty-box{
+  padding: 36px 20px;
+  text-align: center;
+  color: var(--ink-3);
+  background: var(--panel-2);
+  border: 1px dashed var(--hair);
+  border-radius: 10px;
+  font-size: 13.5px;
+}
+.draft-card-actions{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--hair);
+}
+
 </style>
 </head>
 <body>
@@ -461,6 +731,12 @@ button[disabled]{
 <!-- ═════════════════════════════════════════════════════════════════════════ -->
 <section id="loginSection">
   <div class="login-card">
+    <div class="login-theme-wrap">
+      <button id="loginThemeBtn" class="ghost theme-toggle-btn" type="button" aria-label="থিম পরিবর্তন">
+        <span class="theme-icon"></span>
+        <span class="theme-label"></span>
+      </button>
+    </div>
     <div class="login-header">
       <div class="login-icon-badge">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -519,6 +795,10 @@ button[disabled]{
         <p class="dek" style="margin-bottom:0;">জ্ঞানভাণ্ডার (Knowledge Base) পরিচালনা করুন এবং ডেটা যাচাই করুন।</p>
       </div>
       <div class="row">
+        <button id="adminThemeBtn" class="ghost theme-toggle-btn" type="button" aria-label="থিম পরিবর্তন">
+          <span class="theme-icon"></span>
+          <span class="theme-label"></span>
+        </button>
         <span class="user-badge" id="userBadge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -533,8 +813,10 @@ button[disabled]{
 
     <div class="tabs">
       <button class="tab active" data-target="tab-new">নতুন খসড়া তৈরি</button>
-      <button class="tab" data-target="tab-settings">যাচাইহীন ডেটা</button>
+      <button class="tab" data-target="tab-approved">অনুমোদিত খসড়া (Approved) <span id="approvedTabBadge" class="tab-badge">৫৬</span></button>
+      <button class="tab" data-target="tab-pending">অপেক্ষমাণ খসড়া <span id="pendingTabBadge" class="tab-badge" style="display:none;">০</span></button>
       <button class="tab" data-target="tab-analytics">পরিসংখ্যান ও এনালিটিক্স</button>
+      <button class="tab" data-target="tab-settings">যাচাইহীন ডেটা</button>
     </div>
 
     <!-- Tab 1: New Entries -->
@@ -553,9 +835,69 @@ button[disabled]{
         <textarea id="src" placeholder="সরকারি নোটিশ, নীতিমালা বা নির্দেশিকার টেক্সট এখানে পেস্ট করুন…"></textarea>
         <div class="row" style="margin-top:4px;">
           <button id="go" type="button">খসড়া তৈরি করুন (AI Extract)</button>
-          <button id="load" class="ghost" type="button">অপেক্ষমাণ খসড়া দেখুন</button>
+          <button id="goToPendingBtn" class="ghost" type="button">অপেক্ষমাণ খসড়া দেখুন</button>
           <span class="mono" id="stat"></span>
         </div>
+      </div>
+    </section>
+
+    <!-- Tab: Pending Drafts -->
+    <section id="tab-pending" class="tab-content">
+      <div class="card">
+        <div class="row" style="justify-content:space-between; margin-bottom:8px;">
+          <div>
+            <h3 style="margin:0 0 4px; font-size:16px;">অপেক্ষমাণ খসড়া উত্তরসমূহ (Pending Drafts)</h3>
+            <p class="dek" style="margin-bottom:0; font-size:13px;">
+              নথি ও এআই থেকে প্রস্তুতকৃত খসড়া উত্তরগুলো এখানে অপেক্ষমাণ রয়েছে। খসড়া এডিট করে সংরক্ষণ করুন অথবা সরাসরি অনুমোদন দিয়ে মূল জ্ঞানভাণ্ডারে যুক্ত করুন।
+            </p>
+          </div>
+          <button id="refreshPendingBtn" class="ghost" type="button" style="padding:6px 12px; font-size:12px; flex-shrink:0;">রিফ্রেশ</button>
+        </div>
+      </div>
+
+      <div id="pendingList" style="margin-top:16px;">
+        <div class="empty-box">অপেক্ষমাণ খসড়া লোড হচ্ছে…</div>
+      </div>
+
+      <!-- Bulk Approve Box -->
+      <div class="card" id="approveBox" style="margin-top:16px; display:none;">
+        <label for="vdate">যাচাইকরণের তারিখ (Verification Date)</label>
+        <input id="vdate" type="date">
+        <div class="row" style="margin-top:10px;">
+          <button id="approve" type="button">নির্বাচিত খসড়াগুলো অনুমোদন করুন</button>
+          <span class="mono">অনুমোদনের পরেই কেবল মূল জ্ঞানভাণ্ডারে যুক্ত হবে</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab: Live Knowledge Base (All existing answers) -->
+    <section id="tab-approved" class="tab-content">
+      <div class="card">
+        <div class="row" style="justify-content:space-between; margin-bottom:12px; align-items:flex-start;">
+          <div>
+            <h3 style="margin:0 0 4px; font-size:16px;">অনুমোদিত খসড়া ও জ্ঞানভাণ্ডার (Approved Drafts & Guidelines)</h3>
+            <p class="dek" style="margin-bottom:0; font-size:13px;">
+              সিস্টেমে অনুমোদিত ও সক্রিয় সকল সরকারি সেবার তথ্য নিচে প্রদর্শিত হচ্ছে। যেকোনো তথ্যে পরিবর্তন করতে সরাসরি 'সম্পাদনা করুন' বাটনে ক্লিক করুন।
+            </p>
+          </div>
+          <button id="refreshApprovedBtn" class="ghost" type="button" style="padding:6px 12px; font-size:12px; flex-shrink:0;">রিফ্রেশ</button>
+        </div>
+
+        <div style="display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; align-items:center;">
+          <div style="flex:1; min-width:260px;">
+            <input id="approvedSearchInput" type="text" placeholder="🔍 প্রশ্ন, বিষয়বস্তু বা কীওয়ার্ড খুঁজুন..." style="margin-bottom:0; font-size:13px;">
+          </div>
+          <div style="display:flex; gap:6px; flex-wrap:wrap;" id="approvedFilterRow">
+            <button type="button" class="filter-pill-btn active" data-filter="all">সকল উত্তর (<span id="countAll">0</span>)</button>
+            <button type="button" class="filter-pill-btn" data-filter="passport">🛂 পাসপোর্ট (<span id="countPassport">0</span>)</button>
+            <button type="button" class="filter-pill-btn" data-filter="licence">🚗 লাইসেন্স (<span id="countLicence">0</span>)</button>
+          </div>
+        </div>
+        <div style="margin-top:10px; font-size:12px; color:var(--ink-3);" id="approvedSummaryText">লোড হচ্ছে...</div>
+      </div>
+
+      <div id="approvedEntriesList" style="margin-top:16px;">
+        <div class="empty-box">জ্ঞানভাণ্ডারের উত্তর লোড হচ্ছে…</div>
       </div>
     </section>
 
@@ -574,7 +916,7 @@ button[disabled]{
     <section id="tab-analytics" class="tab-content">
       <div class="card">
         <div class="row" style="justify-content:space-between; margin-bottom:16px;">
-          <h3 style="margin:0; font-size:16px;">সিস্টেম অ্যানালিটিক্স</h3>
+          <h3 style="margin:0; font-size:16px;">সিস্টেম অ্যানালিটিক্স ও ফিডব্যাক মেট্রিক্স</h3>
           <button id="refreshStatsBtn" class="ghost" type="button" style="padding:6px 12px; font-size:12px;">রিফ্রেশ</button>
         </div>
         <div class="stat-grid" id="statsGrid">
@@ -587,6 +929,10 @@ button[disabled]{
             <div class="stat-label">পজিটিভ ফিডব্যাক</div>
           </div>
           <div class="stat-card">
+            <div class="stat-num" id="statNegFeedback" style="color:var(--alert);">—</div>
+            <div class="stat-label">নেগেটিভ ফিডব্যাক</div>
+          </div>
+          <div class="stat-card">
             <div class="stat-num" id="statKbTotal">—</div>
             <div class="stat-label">KB এন্ট্রি</div>
           </div>
@@ -595,24 +941,40 @@ button[disabled]{
             <div class="stat-label">যাচাইকৃত এন্ট্রি</div>
           </div>
         </div>
+
+        <div style="margin-top:24px;">
+          <div class="row" style="justify-content:space-between; margin-bottom:12px;">
+            <h4 style="margin:0; font-size:15px; font-weight:600; color:var(--ink);">নেগেটিভ ফিডব্যাক বিশ্লেষণ ও অ্যাকশন লগ</h4>
+            <span class="mono" id="negCountText">০টি রেকর্ড</span>
+          </div>
+          <p class="dek" style="margin-bottom:14px; font-size:13px; color:var(--ink-2);">
+            ব্যবহারকারীরা যেসব উত্তরে নেগেটিভ ফিডব্যাক দিয়েছেন এবং তার কারণসমূহ নিচে প্রদর্শিত হচ্ছে। এখান থেকে সমস্যা পর্যালোচনা করে সরাসরি নলেজবেসে তথ্য সংশোধন করা যাবে।
+          </p>
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th style="width:28%;">নাগরিকের প্রশ্ন</th>
+                  <th style="width:16%;">সেবা বিষয়</th>
+                  <th style="width:20%;">অসন্তুষ্টির কারণ</th>
+                  <th style="width:18%;">তারিখ ও সময়</th>
+                  <th style="width:18%; text-align:center;">সিদ্ধান্ত ও অ্যাকশন</th>
+                </tr>
+              </thead>
+              <tbody id="negTableBody">
+                <tr><td colspan="5" style="text-align:center; color:var(--ink-3); padding:24px;">কোনো নেগেটিভ ফিডব্যাক রেকর্ড নেই।</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Global feedback message inside admin -->
     <div id="msg"></div>
 
-    <!-- Container for dynamic drafts -->
-    <div id="drafts"></div>
-
-    <!-- Approve box -->
-    <div class="card" id="approveBox" hidden>
-      <label for="vdate">যাচাইকরণের তারিখ (Verification Date)</label>
-      <input id="vdate" type="date">
-      <div class="row" style="margin-top:10px;">
-        <button id="approve" type="button">নির্বাচিত এন্ট্রি অনুমোদন করুন</button>
-        <span class="mono">অনুমোদনের পরেই কেবল মূল নলেজবেসে যুক্ত হবে</span>
-      </div>
-    </div>
+    <!-- Container for newly generated AI drafts (under tab-new) -->
+    <div id="newDraftsBox" style="margin-top:16px;"></div>
   </div>
 </main>
 
@@ -622,6 +984,50 @@ button[disabled]{
   var API = (window.API_BASE || "").replace(/\/$/, "");
   var drafts = [];
   var $ = function (id) { return document.getElementById(id); };
+  var hasBangla = function (s) { return /[\u0980-\u09FF]/.test(String(s || "")); };
+
+  // -------------------------------------------------------------------------
+  // Dark & White (Light) Theme Toggle (synced with main site via "theme")
+  // -------------------------------------------------------------------------
+  var SUN_SVG = "<svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='4'/><path d='M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4'/></svg>";
+  var MOON_SVG = "<svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/></svg>";
+
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") ||
+      (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  }
+
+  function paintThemeButtons() {
+    var dark = currentTheme() === "dark";
+    var icon = dark ? SUN_SVG : MOON_SVG;
+    var label = dark ? "হোয়াইট মোড" : "ডার্ক মোড";
+    var aria = dark ? "হোয়াইট মোডে যান" : "ডার্ক মোডে যান";
+    ["loginThemeBtn", "adminThemeBtn"].forEach(function (id) {
+      var btn = $(id);
+      if (!btn) return;
+      btn.setAttribute("aria-label", aria);
+      btn.setAttribute("title", aria);
+      var ic = btn.querySelector(".theme-icon");
+      var lb = btn.querySelector(".theme-label");
+      if (ic) ic.innerHTML = icon;
+      if (lb) lb.textContent = label;
+    });
+    var metaTheme = document.querySelector('meta[name="theme-color"]');
+    if (metaTheme) metaTheme.setAttribute("content", dark ? "#121316" : "#f8fafc");
+  }
+
+  function toggleTheme() {
+    var next = currentTheme() === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+    paintThemeButtons();
+  }
+
+  ["loginThemeBtn", "adminThemeBtn"].forEach(function (id) {
+    var btn = $(id);
+    if (btn) btn.addEventListener("click", toggleTheme);
+  });
+  paintThemeButtons();
 
   $("vdate").value = new Date().toISOString().slice(0, 10);
 
@@ -737,29 +1143,54 @@ button[disabled]{
   });
 
   // -------------------------------------------------------------------------
-  // Dashboard & Tabs
+  // State & Variables
   // -------------------------------------------------------------------------
+  var pendingDrafts = [];
+  var approvedEntries = [];
+  var activeApprovedFilter = "all";
+  var lastStats = {};
+
+  // -------------------------------------------------------------------------
+  // Dashboard & Tabs Navigation
+  // -------------------------------------------------------------------------
+  function switchTab(targetId) {
+    document.querySelectorAll(".tab").forEach(function (b) { b.classList.remove("active"); });
+    document.querySelectorAll(".tab-content").forEach(function (c) { c.classList.remove("active"); });
+
+    var tabBtn = document.querySelector("[data-target='" + targetId + "']");
+    if (tabBtn) tabBtn.classList.add("active");
+    var targetSec = $(targetId);
+    if (targetSec) targetSec.classList.add("active");
+
+    $("msg").innerHTML = "";
+
+    if (targetId === "tab-approved") {
+      loadApprovedEntries();
+    } else if (targetId === "tab-pending") {
+      loadPending();
+    } else if (targetId === "tab-analytics") {
+      loadStats();
+    } else if (targetId === "tab-settings") {
+      loadUnverified();
+    }
+  }
+
   document.querySelectorAll(".tab").forEach(function (t) {
     t.addEventListener("click", function () {
-      document.querySelectorAll(".tab").forEach(function (b) { b.classList.remove("active"); });
-      document.querySelectorAll(".tab-content").forEach(function (c) { c.classList.remove("active"); });
-      t.classList.add("active");
       var targetId = t.getAttribute("data-target");
-      $(targetId).classList.add("active");
-
-      // Auto-load analytics when switching to tab-analytics
-      if (targetId === "tab-analytics") {
-        loadStats();
-      }
-
-      drafts = [];
-      render();
-      $("msg").innerHTML = "";
+      switchTab(targetId);
     });
   });
 
+  if ($("goToPendingBtn")) {
+    $("goToPendingBtn").addEventListener("click", function () {
+      switchTab("tab-pending");
+    });
+  }
+
   function say(kind, text) {
     $("msg").innerHTML = "<div class='alert-box " + (kind === "err" ? "err" : "ok") + "'>" + text + "</div>";
+    window.scrollTo({ top: $("msg").offsetTop - 80, behavior: "smooth" });
   }
 
   function call(path, opts) {
@@ -778,109 +1209,500 @@ button[disabled]{
         throw new Error("অননুমোদিত (401 Unauthorized)");
       }
       if (r.status === 503) throw new Error("সার্ভারে ADMIN_PASSWORD কনফিগার করা নেই");
-      return r.json();
+
+      return r.text().then(function (txt) {
+        var data;
+        try {
+          data = JSON.parse(txt);
+        } catch (e) {
+          if (!r.ok) throw new Error("সার্ভার ত্রুটি (" + r.status + "): " + txt.substring(0, 100));
+          throw new Error("সার্ভার থেকে সঠিক ফরম্যাটে ডেটা আসেনি।");
+        }
+        if (!r.ok) {
+          throw new Error(data.error || data.detail || ("সার্ভার ত্রুটি " + r.status));
+        }
+        return data;
+      });
     });
   }
 
-  function render() {
-    var box = $("drafts");
-    box.innerHTML = "";
-    $("approveBox").hidden = !drafts.length;
-    drafts.forEach(function (d, i) {
-      var card = document.createElement("div");
-      card.className = "draft";
-      card.innerHTML =
-        "<h3><span><input type='checkbox' data-i='" + i + "' checked> " +
-        (d.title_bn || d.id) + "</span>" +
-        (d._replaces_existing ? "<span class='dup-badge'>বিদ্যমান এন্ট্রি বদলে যাবে</span>" : "") +
-        "<span class='id'>" + d.id + "</span></h3>" +
-        "<div class='body'>" +
-        "<label>বাংলা বিবরণ</label><textarea data-f='content_bn' data-i='" + i + "'>" + (d.content_bn || "") + "</textarea>" +
-        "<label>English Content</label><textarea data-f='content_en' data-i='" + i + "'>" + (d.content_en || "") + "</textarea>" +
-        "<label>Source URL</label><input data-f='source_url' data-i='" + i + "' value='" + (d.source_url || "") + "'>" +
-        "</div>";
-      box.appendChild(card);
-    });
-    box.addEventListener("input", function (e) {
-      var f = e.target.getAttribute("data-f");
-      if (f) drafts[+e.target.getAttribute("data-i")][f] = e.target.value;
-    });
-  }
-
+  // -------------------------------------------------------------------------
+  // TAB 1: New Entries (AI Extraction)
+  // -------------------------------------------------------------------------
   $("go").addEventListener("click", function () {
     var text = $("src").value.trim();
     if (text.length < 40) { say("err", "আরও টেক্সট দিন (অন্তত ৪০ অক্ষর)।"); return; }
-    say("ok", "খসড়া তৈরি হচ্ছে…");
+    say("ok", "নথি বিশ্লেষণ করে খসড়া তৈরি হচ্ছে…");
     this.disabled = true;
     var btn = this;
     call("/api/admin/propose", { method: "POST", body: JSON.stringify({ text: text }) })
       .then(function (r) {
         if (!r.ok) throw new Error(r.error || "ব্যর্থ");
-        drafts = r.entries || [];
-        say("ok", drafts.length + "টি খসড়া তৈরি হয়েছে" +
-          (r.rejected && r.rejected.length ? " · " + r.rejected.length + "টি বাতিল (schema মেলেনি)" : "") +
-          " — পড়ে, ঠিক করে, তারপর অনুমোদন দিন।");
-        render();
+        var count = (r.entries || []).length;
+        var msg = count + "টি খসড়া তৈরি হয়েছে এবং 'অপেক্ষমাণ খসড়া' তালিকায় যুক্ত হয়েছে।";
+        if (r.fallback && r.note) {
+          msg = "ℹ️ " + r.note + " (" + count + "টি খসড়া প্রস্তুত)";
+        }
+        say("ok", msg);
+        setTimeout(function () {
+          switchTab("tab-pending");
+        }, 1200);
       })
       .catch(function (e) { say("err", e.message); })
       .finally(function () { btn.disabled = false; });
   });
 
-  $("load").addEventListener("click", function () {
-    call("/api/admin/pending").then(function (r) {
-      drafts = r.entries || [];
-      $("stat").textContent = r.stats ? (r.stats.total + " entries · " + r.stats.verified + " verified") : "";
-      say("ok", drafts.length + "টি অপেক্ষমাণ খসড়া।");
-      render();
-    }).catch(function (e) { say("err", e.message); });
-  });
+  // -------------------------------------------------------------------------
+  // TAB 2: Approved Drafts & Guidelines (অনুমোদিত খসড়া ও জ্ঞানভাণ্ডার)
+  // -------------------------------------------------------------------------
+  function refreshApprovedBadge() {
+    call("/api/admin/entries").then(function (r) {
+      var total = r.count || (r.entries ? r.entries.length : 0);
+      var badge = $("approvedTabBadge");
+      if (badge) badge.textContent = total;
+    }).catch(function () {});
+  }
 
-  $("loadUnverified").addEventListener("click", function () {
-    var btn = this;
-    btn.disabled = true;
-    call("/api/admin/unverified").then(function (r) {
-      drafts = r.entries || [];
-      drafts.forEach(function (d) { d._replaces_existing = true; });
-      if (drafts.length === 0) {
-        say("ok", "কোনো যাচাইহীন (unverified) এন্ট্রি নেই।");
-      } else {
-        say("ok", drafts.length + "টি যাচাইহীন এন্ট্রি পাওয়া গেছে। এডিট করে অনুমোদন দিন।");
-      }
-      render();
-    }).catch(function (e) { say("err", e.message); })
-      .finally(function () { btn.disabled = false; });
-  });
+  function loadApprovedEntries() {
+    var container = $("approvedEntriesList");
+    container.innerHTML = "<div class='empty-box'>অনুমোদিত খসড়া ও উত্তর লোড হচ্ছে…</div>";
 
-  $("approve").addEventListener("click", function () {
-    var picked = [];
-    document.querySelectorAll("#drafts input[type=checkbox]").forEach(function (c) {
-      if (c.checked) picked.push(drafts[+c.getAttribute("data-i")]);
+    call("/api/admin/entries").then(function (r) {
+      approvedEntries = r.entries || [];
+      var passCount = approvedEntries.filter(function (e) { return e.domain === "passport"; }).length;
+      var licCount = approvedEntries.filter(function (e) { return e.domain === "licence"; }).length;
+
+      if ($("countAll")) $("countAll").textContent = approvedEntries.length;
+      if ($("countPassport")) $("countPassport").textContent = passCount;
+      if ($("countLicence")) $("countLicence").textContent = licCount;
+      if ($("approvedTabBadge")) $("approvedTabBadge").textContent = approvedEntries.length;
+
+      renderApprovedEntries();
+    }).catch(function (e) {
+      container.innerHTML = "<div class='alert-box err'>লোড ব্যর্থ: " + e.message + "</div>";
     });
-    if (!picked.length) { say("err", "কোনো এন্ট্রি নির্বাচন করা হয়নি।"); return; }
-    
-    var btn = this;
-    btn.disabled = true;
+  }
+
+  function renderApprovedEntries() {
+    var container = $("approvedEntriesList");
+    container.innerHTML = "";
+    var q = ($("approvedSearchInput") ? $("approvedSearchInput").value : "").trim().toLowerCase();
+
+    var filtered = approvedEntries.filter(function (e) {
+      if (activeApprovedFilter !== "all" && e.domain !== activeApprovedFilter) return false;
+      if (!q) return true;
+      return (e.title_bn || "").toLowerCase().indexOf(q) !== -1 ||
+             (e.title_en || "").toLowerCase().indexOf(q) !== -1 ||
+             (e.content_bn || "").toLowerCase().indexOf(q) !== -1 ||
+             (e.content_en || "").toLowerCase().indexOf(q) !== -1 ||
+             (e.id || "").toLowerCase().indexOf(q) !== -1 ||
+             (e.keywords || []).some(function (k) { return String(k).toLowerCase().indexOf(q) !== -1; });
+    });
+
+    if ($("approvedSummaryText")) {
+      $("approvedSummaryText").textContent = "মোট " + filtered.length + "টি অনুমোদিত খসড়া প্রদর্শিত হচ্ছে" +
+        (q ? " ('" + q + "' এর ফলাফলে)" : "");
+    }
+
+    if (!filtered.length) {
+      container.innerHTML = "<div class='empty-box'>কোনো অনুমোদিত খসড়া খুঁজে পাওয়া যায়নি। অনুসন্ধান বা ফিল্টার পরিবর্তন করুন।</div>";
+      return;
+    }
+
+    filtered.forEach(function (e) {
+      var isPass = e.domain === "passport";
+      var icon = isPass ? "🛂" : "🚗";
+      var domClass = isPass ? "badge-dom" : "badge-dom licence";
+      var domLabel = isPass ? "পাসপোর্ট" : "লাইসেন্স";
+
+      var escTitleBn = (e.title_bn || "").replace(/"/g, "&quot;");
+      var escTitleEn = (e.title_en || "").replace(/"/g, "&quot;");
+      var escSource = (e.source_url || "").replace(/"/g, "&quot;");
+      var escOffice = (e.office_bn || "").replace(/"/g, "&quot;");
+      var escOfficeEn = (e.office_en || "").replace(/"/g, "&quot;");
+      var hasEnBangla = hasBangla(e.title_en) || hasBangla(e.content_en);
+
+      var card = document.createElement("div");
+      card.className = "kb-card";
+      card.setAttribute("data-id", e.id);
+
+      card.innerHTML =
+        "<div class='kb-card-header'>" +
+          "<div style='display:flex; align-items:center; gap:8px; flex-wrap:wrap;'>" +
+            "<span class='" + domClass + "'>" + icon + " " + domLabel + "</span>" +
+            "<span class='mono' style='font-size:12px; color:var(--ink-2); font-weight:600;'>" + e.id + "</span>" +
+            (e.verified_on ? "<span class='badge-vdate'>যাচাইকৃত: " + e.verified_on + "</span>" : "<span class='dup-badge'>যাচাইহীন</span>") +
+            "<span class='badge-approved'>অনুমোদিত</span>" +
+            (hasEnBangla ? "<span class='lang-warn-badge'>⚠️ English অংশে বাংলা রয়েছে</span>" : "") +
+          "</div>" +
+          "<div style='display:flex; align-items:center; gap:6px;'>" +
+            "<button class='ghost btn-toggle-edit' type='button' style='padding:5px 12px; font-size:12px; cursor:pointer;'>✏️ এডিট করুন</button>" +
+            "<button class='ghost btn-del-header' type='button' style='padding:5px 12px; font-size:12px; cursor:pointer; color:var(--alert); border-color:color-mix(in srgb, var(--alert) 35%, transparent);' title='এন্ট্রি মুছুন'>🗑️ মুছুন</button>" +
+          "</div>" +
+        "</div>" +
+        "<div class='kb-card-view' style='padding:16px;'>" +
+          "<h4 style='margin:0 0 8px; font-size:15px; color:var(--ink); font-weight:600;'>" + (e.title_bn || "—") + "</h4>" +
+          "<p style='margin:0 0 10px; font-size:13.5px; color:var(--ink); line-height:1.6; white-space:pre-wrap;'>" + (e.content_bn || "") + "</p>" +
+          (e.content_en ? "<div style='font-size:12.5px; color:var(--ink-2); margin-bottom:10px; line-height:1.5; font-style:italic; white-space:pre-wrap;'><b>English:</b> " + e.content_en + "</div>" : "") +
+          "<div style='display:flex; gap:16px; flex-wrap:wrap; font-size:12px; color:var(--ink-3); margin-top:8px;'>" +
+            (e.office_bn ? "<span>🏢 দপ্তর: " + e.office_bn + "</span>" : "") +
+            (e.source_url ? "<span>🔗 <a href='" + e.source_url + "' target='_blank' style='color:var(--accent); text-decoration:none;'>সোর্স লিংক</a></span>" : "") +
+          "</div>" +
+        "</div>" +
+        "<div class='kb-card-edit' style='padding:16px; display:none; background:var(--panel-2); border-top:1px solid var(--hair);'>" +
+          "<h4 style='margin:0 0 14px; font-size:14px; color:var(--accent); font-weight:600;'>অনুমোদিত তথ্য সম্পাদনা (" + e.id + ")</h4>" +
+          "<div style='display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:12px;'>" +
+            "<div><label>বাংলা শিরোনাম</label><input type='text' class='inp-tbn' value=\"" + escTitleBn + "\"></div>" +
+            "<div><label>English Title</label><input type='text' class='inp-ten' value=\"" + escTitleEn + "\"></div>" +
+          "</div>" +
+          "<label>বাংলা বিবরণ (উত্তর)</label><textarea class='inp-cbn' style='min-height:120px; font-size:13.5px;'>" + (e.content_bn || "") + "</textarea>" +
+          "<label>English Content</label><textarea class='inp-cen' style='min-height:90px; font-size:13px;'>" + (e.content_en || "") + "</textarea>" +
+          "<div style='display:grid; grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)); gap:12px;'>" +
+            "<div><label>সোর্স লিংক (Source URL)</label><input type='text' class='inp-src' value=\"" + escSource + "\"></div>" +
+            "<div><label>দপ্তর / অফিস (বাংলা)</label><input type='text' class='inp-off' value=\"" + escOffice + "\"></div>" +
+            "<div><label>Office (English)</label><input type='text' class='inp-off-en' value=\"" + escOfficeEn + "\"></div>" +
+          "</div>" +
+          "<div class='row' style='margin-top:14px; gap:10px;'>" +
+            "<button type='button' class='btn-save' style='padding:6px 16px; font-size:13px; cursor:pointer;'>💾 পরিবর্তন সংরক্ষণ করুন</button>" +
+            "<button type='button' class='ghost btn-cancel' style='padding:6px 14px; font-size:13px; cursor:pointer;'>বাতিল</button>" +
+            "<button type='button' class='danger btn-delete-edit' style='padding:6px 14px; font-size:13px; cursor:pointer; margin-left:auto;'>🗑️ এন্ট্রি মুছুন</button>" +
+            "<span class='card-stat mono' style='font-size:12px;'></span>" +
+          "</div>" +
+        "</div>";
+
+      var viewDiv = card.querySelector(".kb-card-view");
+      var editDiv = card.querySelector(".kb-card-edit");
+      var btnToggle = card.querySelector(".btn-toggle-edit");
+      var btnCancel = card.querySelector(".btn-cancel");
+      var btnSave = card.querySelector(".btn-save");
+      var btnDelHeader = card.querySelector(".btn-del-header");
+      var btnDeleteEdit = card.querySelector(".btn-delete-edit");
+
+      function handleDelete() {
+        var title = e.title_bn || e.id;
+        if (!confirm("আপনি কি নিশ্চিতভাবে এই অনুমোদিত এন্ট্রিটি স্থায়ীভাবে মুছে ফেলতে চান?\n\n\"" + title + "\"\n\nমুছে ফেললে এটি জ্ঞানভাণ্ডার থেকে সম্পূর্ণরূপে অপসারিত হবে।")) {
+          return;
+        }
+        say("ok", "এন্ট্রি মুছে ফেলা হচ্ছে…");
+        call("/api/admin/entries/delete", {
+          method: "POST",
+          body: JSON.stringify({ id: e.id })
+        }).then(function () {
+          say("ok", "✓ এন্ট্রি '" + title + "' সফলভাবে মুছে ফেলা হয়েছে!");
+          loadApprovedEntries();
+          if (typeof loadStats === "function") loadStats();
+        }).catch(function (err) {
+          say("err", "মুছতে সমস্যা হয়েছে: " + err.message);
+        });
+      }
+
+      if (btnDelHeader) btnDelHeader.addEventListener("click", handleDelete);
+      if (btnDeleteEdit) btnDeleteEdit.addEventListener("click", handleDelete);
+
+      function toggleMode(openEdit) {
+        var isEditing = editDiv.style.display !== "none";
+        var willOpen = openEdit != null ? openEdit : !isEditing;
+        editDiv.style.display = willOpen ? "block" : "none";
+        viewDiv.style.display = willOpen ? "none" : "block";
+      }
+
+      btnToggle.addEventListener("click", function () {
+        toggleMode();
+      });
+
+      btnCancel.addEventListener("click", function () {
+        toggleMode(false);
+      });
+
+      btnSave.addEventListener("click", function () {
+        var stat = card.querySelector(".card-stat");
+        stat.textContent = "সংরক্ষণ হচ্ছে…";
+        btnSave.disabled = true;
+
+        var updated = Object.assign({}, e, {
+          title_bn: card.querySelector(".inp-tbn").value.trim(),
+          title_en: card.querySelector(".inp-ten").value.trim(),
+          content_bn: card.querySelector(".inp-cbn").value.trim(),
+          content_en: card.querySelector(".inp-cen").value.trim(),
+          source_url: card.querySelector(".inp-src").value.trim(),
+          office_bn: card.querySelector(".inp-off").value.trim(),
+          office_en: card.querySelector(".inp-off-en").value.trim()
+        });
+
+        call("/api/admin/entries/update", {
+          method: "POST",
+          body: JSON.stringify({ entry: updated })
+        }).then(function (r) {
+          say("ok", "✓ অনুমোদিত খসড়া '" + (updated.title_bn || e.id) + "' সফলভাবে আপডেট ও সংরক্ষিত হয়েছে!");
+          var idx = approvedEntries.findIndex(function (x) { return x.id === e.id; });
+          if (idx !== -1) approvedEntries[idx] = r.entry || updated;
+          renderApprovedEntries();
+        }).catch(function (err) {
+          stat.textContent = "ত্রুটি!";
+          say("err", err.message);
+        }).finally(function () {
+          btnSave.disabled = false;
+        });
+      });
+
+      container.appendChild(card);
+    });
+  }
+
+  // Search and Filter Listeners for Approved Entries
+  if ($("approvedSearchInput")) {
+    $("approvedSearchInput").addEventListener("input", function () {
+      renderApprovedEntries();
+    });
+  }
+
+  document.querySelectorAll("#approvedFilterRow .filter-pill-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll("#approvedFilterRow .filter-pill-btn").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      activeApprovedFilter = btn.getAttribute("data-filter");
+      renderApprovedEntries();
+    });
+  });
+
+  if ($("refreshApprovedBtn")) {
+    $("refreshApprovedBtn").addEventListener("click", loadApprovedEntries);
+  }
+
+  // -------------------------------------------------------------------------
+  // TAB 3: Pending Drafts (অপেক্ষমাণ খসড়া উত্তরসমূহ)
+  // -------------------------------------------------------------------------
+  function updatePendingBadge(count) {
+    var badge = $("pendingTabBadge");
+    if (!badge) return;
+    if (count > 0) {
+      badge.textContent = count;
+      badge.style.display = "inline-block";
+    } else {
+      badge.style.display = "none";
+    }
+  }
+
+  function loadPending() {
+    var container = $("pendingList");
+    container.innerHTML = "<div class='empty-box'>অপেক্ষমাণ খসড়া লোড হচ্ছে…</div>";
+    call("/api/admin/pending").then(function (r) {
+      pendingDrafts = r.entries || [];
+      updatePendingBadge(pendingDrafts.length);
+      renderPending();
+    }).catch(function (e) {
+      container.innerHTML = "<div class='alert-box err'>খসড়া লোড ব্যর্থ: " + e.message + "</div>";
+    });
+  }
+
+  function renderPending() {
+    var container = $("pendingList");
+    container.innerHTML = "";
+    var approveBox = $("approveBox");
+
+    if (!pendingDrafts.length) {
+      approveBox.style.display = "none";
+      container.innerHTML =
+        "<div class='empty-box'>" +
+          "<p style='margin:0 0 10px; font-size:15px; color:var(--ink);'>বর্তমানে কোনো অপেক্ষমাণ খসড়া নেই।</p>" +
+          "<p style='margin:0 0 14px; font-size:13px; color:var(--ink-2);'>নতুন সরকারি নোটিশ, নীতিমালা বা তথ্যের সার্কুলার থেকে খসড়া তৈরি করতে পারেন।</p>" +
+          "<button type='button' class='btn' onclick=\"switchTab('tab-new')\">+ নতুন খসড়া তৈরি করুন</button>" +
+        "</div>";
+      return;
+    }
+
+    approveBox.style.display = "block";
+
+    pendingDrafts.forEach(function (d, i) {
+      var card = document.createElement("div");
+      card.className = "draft";
+      card.id = "pending-card-" + i;
+      var isPass = d.domain === "passport";
+      var domClass = isPass ? "badge-dom" : "badge-dom licence";
+      var icon = isPass ? "🛂" : "🚗";
+
+      var hasEnBangla = hasBangla(d.title_en) || hasBangla(d.content_en);
+
+      card.innerHTML =
+        "<h3>" +
+          "<span><input type='checkbox' data-i='" + i + "' checked id='chk-p-" + i + "'> " +
+          "<label for='chk-p-" + i + "' style='display:inline; margin:0; cursor:pointer; font-weight:600;'>" + (d.title_bn || d.id) + "</label></span>" +
+          "<span style='display:flex; align-items:center; gap:8px; flex-wrap:wrap;'>" +
+            "<span class='" + domClass + "'>" + icon + " " + d.domain + "</span>" +
+            (d._replaces_existing ? "<span class='dup-badge'>বিদ্যমান এন্ট্রি বদলে যাবে</span>" : "") +
+            (hasEnBangla ? "<span class='lang-warn-badge'>⚠️ English অংশে বাংলা রয়েছে</span>" : "") +
+            "<span class='id'>" + d.id + "</span>" +
+          "</span>" +
+        "</h3>" +
+        "<div class='body'>" +
+          "<div style='display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:12px;'>" +
+            "<div><label>বাংলা শিরোনাম</label><input type='text' data-field='title_bn' data-i='" + i + "' value=\"" + (d.title_bn || "").replace(/"/g, "&quot;") + "\"></div>" +
+            "<div><label>English Title</label><input type='text' data-field='title_en' data-i='" + i + "' value=\"" + (d.title_en || "").replace(/"/g, "&quot;") + "\"></div>" +
+          "</div>" +
+          "<label>বাংলা বিবরণ (উত্তর)</label><textarea data-field='content_bn' data-i='" + i + "' style='min-height:110px;'>" + (d.content_bn || "") + "</textarea>" +
+          "<label>English Content</label><textarea data-field='content_en' data-i='" + i + "' style='min-height:85px;'>" + (d.content_en || "") + "</textarea>" +
+          "<div style='display:grid; grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)); gap:12px;'>" +
+            "<div><label>সোর্স লিংক (Source URL)</label><input type='text' data-field='source_url' data-i='" + i + "' value=\"" + (d.source_url || "").replace(/"/g, "&quot;") + "\"></div>" +
+            "<div><label>দপ্তর / অফিস (বাংলা)</label><input type='text' data-field='office_bn' data-i='" + i + "' value=\"" + (d.office_bn || "").replace(/"/g, "&quot;") + "\"></div>" +
+            "<div><label>Office (English)</label><input type='text' data-field='office_en' data-i='" + i + "' value=\"" + (d.office_en || "").replace(/"/g, "&quot;") + "\"></div>" +
+          "</div>" +
+          "<div class='draft-card-actions'>" +
+            "<button type='button' style='padding:6px 14px; font-size:12.5px;' onclick='savePendingDraft(" + i + ")'>💾 খসড়া সংরক্ষণ</button>" +
+            "<button type='button' class='btn' style='padding:6px 14px; font-size:12.5px; background:var(--accent);' onclick='approveSingleDraft(" + i + ")'>✅ অনুমোদন করুন</button>" +
+            "<button type='button' class='danger' style='padding:6px 14px; font-size:12.5px;' onclick='deletePendingDraft(" + i + ")'>🗑️ মুছে ফেলুন</button>" +
+            "<span id='p-stat-" + i + "' class='mono' style='margin-left:auto; font-size:12px;'></span>" +
+          "</div>" +
+        "</div>";
+      container.appendChild(card);
+    });
+
+    container.querySelectorAll("input[data-field], textarea[data-field]").forEach(function (el) {
+      el.addEventListener("input", function (e) {
+        var idx = +e.target.getAttribute("data-i");
+        var fld = e.target.getAttribute("data-field");
+        if (pendingDrafts[idx]) {
+          pendingDrafts[idx][fld] = e.target.value;
+        }
+      });
+    });
+  }
+
+  window.savePendingDraft = function (index) {
+    var draft = pendingDrafts[index];
+    if (!draft) return;
+    var stat = $("p-stat-" + index);
+    if (stat) stat.textContent = "সংরক্ষণ হচ্ছে…";
+
+    call("/api/admin/pending/save", {
+      method: "POST",
+      body: JSON.stringify({ entry: draft })
+    }).then(function (r) {
+      if (stat) stat.textContent = "✓ সংরক্ষিত";
+      say("ok", "খসড়া '" + (draft.title_bn || draft.id) + "' সফলভাবে সংরক্ষণ করা হয়েছে।");
+      setTimeout(function () { if (stat) stat.textContent = ""; }, 3000);
+    }).catch(function (e) {
+      if (stat) stat.textContent = "ত্রুটি!";
+      say("err", e.message);
+    });
+  };
+
+  window.approveSingleDraft = function (index) {
+    var draft = pendingDrafts[index];
+    if (!draft) return;
+    var vdate = $("vdate") ? $("vdate").value : new Date().toISOString().slice(0, 10);
+    say("ok", "অনুমোদন করা হচ্ছে…");
+
     call("/api/admin/approve", {
       method: "POST",
-      body: JSON.stringify({ entries: picked, verified_on: $("vdate").value })
+      body: JSON.stringify({ entries: [draft], verified_on: vdate })
     }).then(function (r) {
-      say("ok", (r.written || []).length + "টি এন্ট্রি যুক্ত/আপডেট হয়েছে · " +
-        (r.stats ? r.stats.total + " মোট" : "") + "<br><span class='mono'>" + (r.note || "") + "</span>");
-      drafts = [];
-      render();
+      say("ok", "✓ '" + (draft.title_bn || draft.id) + "' অনুমোদন লাভ করেছে এবং মূল জ্ঞানভাণ্ডারে যুক্ত হয়েছে!");
+      loadPending();
+      refreshApprovedBadge();
+    }).catch(function (e) {
+      say("err", e.message);
+    });
+  };
+
+  window.deletePendingDraft = function (index) {
+    var draft = pendingDrafts[index];
+    if (!draft) return;
+    if (!confirm("আপনি কি নিশ্চিতভাবে এই খসড়াটি মুছে ফেলতে চান?")) return;
+
+    call("/api/admin/pending/delete", {
+      method: "POST",
+      body: JSON.stringify({ id: draft.id })
+    }).then(function () {
+      say("ok", "খসড়া মুছে ফেলা হয়েছে।");
+      loadPending();
+    }).catch(function (e) {
+      say("err", e.message);
+    });
+  };
+
+  if ($("refreshPendingBtn")) {
+    $("refreshPendingBtn").addEventListener("click", loadPending);
+  }
+
+  // Bulk Approve Handler
+  $("approve").addEventListener("click", function () {
+    var picked = [];
+    document.querySelectorAll("#pendingList input[type=checkbox]").forEach(function (c) {
+      if (c.checked) {
+        var idx = +c.getAttribute("data-i");
+        if (pendingDrafts[idx]) picked.push(pendingDrafts[idx]);
+      }
+    });
+    if (!picked.length) { say("err", "কোনো খসড়া নির্বাচন করা হয়নি।"); return; }
+
+    var btn = this;
+    btn.disabled = true;
+    var vdate = $("vdate") ? $("vdate").value : new Date().toISOString().slice(0, 10);
+
+    call("/api/admin/approve", {
+      method: "POST",
+      body: JSON.stringify({ entries: picked, verified_on: vdate })
+    }).then(function (r) {
+      say("ok", (r.written || []).length + "টি খসড়া মূল জ্ঞানভাণ্ডারে যুক্ত/আপডেট হয়েছে · " +
+        (r.stats ? r.stats.total + " মোট এন্ট্রি" : ""));
+      loadPending();
+      refreshApprovedBadge();
     }).catch(function (e) { say("err", e.message); })
       .finally(function () { btn.disabled = false; });
   });
+
+  // -------------------------------------------------------------------------
+  // TAB 4: Analytics & Actionable Negative Feedback Log
+  // -------------------------------------------------------------------------
+  function cleanQueryDisplay(msg, domain, subtype) {
+    if (!msg) return "নির্দিষ্ট প্রশ্ন পাওয়া যায়নি";
+    var s = String(msg).trim();
+    if (s.indexOf("{") !== -1 && s.indexOf("domain") !== -1) {
+      var dom = domain === "passport" ? "পাসপোর্ট" : (domain === "licence" ? "ড্রাইভিং লাইসেন্স" : (domain || "সেবা"));
+      var subMap = {
+        "new": "নতুন আবেদন", "reissue": "নবায়ন / রি-ইস্যু", "renewal": "নবায়ন আবেদন",
+        "correction": "তথ্য সংশোধন", "lost": "হারানো পাসপোর্ট", "duplicate": "হারানো / ডুপ্লিকেট লাইসেন্স",
+        "learner": "শিক্ষানবিশ লাইসেন্স", "smartcard_new": "স্মার্ট কার্ড", "exam": "ড্রাইভিং পরীক্ষা পদ্ধতি",
+        "category_change": "শ্রেণি পরিবর্তন", "mrp_to_epp": "MRP থেকে ই-পাসপোর্ট"
+      };
+      var sub = subMap[subtype] || subtype || "";
+      return dom + " — " + sub + " (বাটন নির্বাচন)";
+    }
+    return s;
+  }
 
   function loadStats() {
     call("/api/admin/stats").then(function (r) {
-      var s = r.stats || {};
+      lastStats = r.stats || {};
+      var s = lastStats;
       $("statQueries").textContent = s.total_queries != null ? s.total_queries : 0;
       var pos = s.positive_feedback || 0;
       var neg = s.negative_feedback || 0;
       var totalFb = pos + neg;
-      var pct = totalFb > 0 ? Math.round((pos / totalFb) * 100) + "%" : "—";
-      $("statFeedback").textContent = pct;
+      var posPct = totalFb > 0 ? Math.round((pos / totalFb) * 100) + "%" : "—";
+      var negPct = totalFb > 0 ? neg + " (" + Math.round((neg / totalFb) * 100) + "%)" : (neg > 0 ? neg : "০");
+      $("statFeedback").textContent = posPct;
+      $("statNegFeedback").textContent = negPct;
+
+      var negs = s.negative_details || [];
+      $("negCountText").textContent = negs.length + "টি রেকর্ড";
+      var tbody = $("negTableBody");
+      if (!negs.length) {
+        tbody.innerHTML = "<tr><td colspan='5' style='text-align:center; color:var(--ink-3); padding:24px;'>কোনো নেগেটিভ ফিডব্যাক রেকর্ড নেই।</td></tr>";
+      } else {
+        tbody.innerHTML = "";
+        negs.forEach(function (n, i) {
+          var tr = document.createElement("tr");
+          var displayQ = cleanQueryDisplay(n.query, n.domain, n.subtype);
+          tr.innerHTML =
+            "<td><b>" + displayQ + "</b></td>" +
+            "<td><span class='mono'>" + n.domain + (n.subtype && n.subtype !== "—" ? " / " + n.subtype : "") + "</span></td>" +
+            "<td><span class='badge-reason'>" + (n.reason || "অসন্তুষ্টি") + "</span></td>" +
+            "<td><span class='mono' style='font-size:11.5px;'>" + (n.created_at || "—") + "</span></td>" +
+            "<td style='text-align:center;'><button class='ghost' type='button' style='padding:5px 12px; font-size:12px; font-weight:600;' onclick='handleFixFeedback(" + i + ")'>তথ্য সংশোধন</button></td>";
+          tbody.appendChild(tr);
+        });
+      }
     }).catch(function () {});
 
     call("/api/admin/pending").then(function (r) {
@@ -891,9 +1713,110 @@ button[disabled]{
     }).catch(function () {});
   }
 
-  $("refreshStatsBtn").addEventListener("click", loadStats);
+  // Workable Decision & Fix Workflow for Negative Feedback
+  window.handleFixFeedback = function (index) {
+    var negs = (lastStats && lastStats.negative_details) ? lastStats.negative_details : [];
+    var record = negs[index];
+    if (!record) return;
 
-  // Initialize
+    var dom = record.domain;
+    var sub = record.subtype;
+    var reason = record.reason || "অসন্তুষ্টি";
+
+    call("/api/admin/entries").then(function (r) {
+      approvedEntries = r.entries || [];
+      switchTab("tab-approved");
+
+      var matched = null;
+      if (dom && dom !== "general" && sub && sub !== "—") {
+        matched = approvedEntries.find(function (e) {
+          return e.domain === dom && e.subtype === sub;
+        });
+      }
+
+      if (!matched && record.query) {
+        var ql = record.query.toLowerCase();
+        matched = approvedEntries.find(function (e) {
+          return (e.title_bn && e.title_bn.toLowerCase().indexOf(ql) !== -1) ||
+                 (e.content_bn && e.content_bn.toLowerCase().indexOf(ql) !== -1);
+        });
+      }
+
+      if (matched) {
+        activeApprovedFilter = matched.domain;
+        document.querySelectorAll("#approvedFilterRow .filter-pill-btn").forEach(function (b) {
+          b.classList.toggle("active", b.getAttribute("data-filter") === matched.domain);
+        });
+        if ($("approvedSearchInput")) $("approvedSearchInput").value = "";
+        renderApprovedEntries();
+
+        setTimeout(function () {
+          var targetCard = document.querySelector('.kb-card[data-id="' + matched.id + '"]');
+          if (targetCard) {
+            var vDiv = targetCard.querySelector(".kb-card-view");
+            var eDiv = targetCard.querySelector(".kb-card-edit");
+            if (eDiv && vDiv) {
+              eDiv.style.display = "block";
+              vDiv.style.display = "none";
+            }
+            targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
+            targetCard.style.borderColor = "#f87171";
+            targetCard.style.boxShadow = "0 0 18px rgba(248, 113, 113, 0.4)";
+            setTimeout(function () {
+              targetCard.style.borderColor = "";
+              targetCard.style.boxShadow = "";
+            }, 5000);
+          }
+        }, 120);
+
+        say("ok", "ℹ️ অসন্তুষ্টির কারণ: <b>" + reason + "</b>। সংশ্লিষ্ট অনুমোদিত খসড়াটি (<b>" + (matched.title_bn || matched.id) + "</b>) সম্পাদনার জন্য খোলা হয়েছে — তথ্য পরিবর্তন করে সংরক্ষণ করুন।");
+      } else {
+        switchTab("tab-new");
+        $("src").value = "নাগরিকের প্রশ্ন: " + record.query + "\nঅসন্তুষ্টির কারণ: " + reason + "\n\n(এখানে সঠিক সরকারি নীতিমালা বা সংশোধিত তথ্য পেস্ট করুন)";
+        $("src").focus();
+        say("ok", "নাগরিকের প্রশ্নটি খসড়া তৈরির ইনপুটে লোড করা হয়েছে — সঠিক তথ্য দিয়ে নতুন খসড়া তৈরি করুন।");
+      }
+    }).catch(function (e) {
+      say("err", "ডেটা লোড করতে সমস্যা: " + e.message);
+    });
+  };
+
+    if ($("refreshStatsBtn")) {
+    $("refreshStatsBtn").addEventListener("click", loadStats);
+  }
+
+  // -------------------------------------------------------------------------
+  // TAB 5: Unverified KB Entries
+  // -------------------------------------------------------------------------
+  function loadUnverified() {
+    var btn = $("loadUnverified");
+    if (btn) btn.disabled = true;
+    call("/api/admin/unverified").then(function (r) {
+      var unv = r.entries || [];
+      if (!unv.length) {
+        say("ok", "জ্ঞানভাণ্ডারে কোনো যাচাইহীন (unverified) এন্ট্রি নেই — সকল এন্ট্রি হালনাগাদ ও অনুমোদিত।");
+      } else {
+        say("ok", unv.length + "টি যাচাইহীন এন্ট্রি পাওয়া গেছে।");
+      }
+    }).catch(function (e) { say("err", e.message); })
+      .finally(function () { if (btn) btn.disabled = false; });
+  }
+
+  if ($("loadUnverified")) {
+    $("loadUnverified").addEventListener("click", loadUnverified);
+  }
+
+  // Preload tab badges on dashboard show
+  var origShowDashboard = showDashboard;
+  showDashboard = function (username) {
+    origShowDashboard(username);
+    call("/api/admin/pending").then(function (r) {
+      updatePendingBadge((r.entries || []).length);
+    }).catch(function () {});
+    refreshApprovedBadge();
+  };
+
+    // Initialize
   initAuth();
 })();
 </script>
