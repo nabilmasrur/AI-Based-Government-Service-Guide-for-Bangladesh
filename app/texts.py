@@ -16,8 +16,16 @@ T = {
 
     # --- small talk: answered from here, never from the model, so a greeting
     # --- costs nothing and always sounds the same.
-    "chat_greet": {
+    "chat_salam": {
         "bn": "ওয়ালাইকুম আসসালাম! আমি পাসপোর্ট ও ড্রাইভিং লাইসেন্স সংক্রান্ত সরকারি সেবার তথ্য দিয়ে সাহায্য করি। কোনটি নিয়ে জানতে চান?",
+        "en": "Wa Alaikum Assalam! I help with passport and driving licence services in Bangladesh. Which one can I help you with?",
+    },
+    "chat_hello": {
+        "bn": "হ্যালো! আমি পাসপোর্ট ও ড্রাইভিং লাইসেন্স সংক্রান্ত সরকারি সেবার তথ্য দিয়ে সাহায্য করি। কোনটি নিয়ে জানতে চান?",
+        "en": "Hello! I help with passport and driving licence services in Bangladesh. Which one can I help you with?",
+    },
+    "chat_greet": {
+        "bn": "হ্যালো! আমি পাসপোর্ট ও ড্রাইভিং লাইসেন্স সংক্রান্ত সরকারি সেবার তথ্য দিয়ে সাহায্য করি। কোনটি নিয়ে জানতে চান?",
         "en": "Hello! I help with passport and driving licence services in Bangladesh. Which one can I help you with?",
     },
     "chat_name": {
@@ -41,8 +49,38 @@ T = {
         "en": "Goodbye, and good luck. Come back any time.",
     },
     "chat_howareyou": {
-        "bn": "ভালো আছি, ধন্যবাদ! আপনার কোন সেবাটি নিয়ে সাহায্য দরকার?",
-        "en": "I am well, thank you. Which service can I help you with?",
+        "bn": (
+            "আমি ভালো আছি, ধন্যবাদ! আমি একটি এআই সরকারি সেবা সহায়ক।\n\n"
+            "আপনি কোন সেবাটি নিতে চান? বর্তমানে আমি নিচের সেবাগুলোর সঠিক তথ্য দিতে পারি:\n"
+            "• 🛂 পাসপোর্ট সেবা (ই-পাসপোর্ট আবেদন, ফি, পুলিশ ভেরিফিকেশন, স্ট্যাটাস ট্র্যাকিং)\n"
+            "• 🚗 ড্রাইভিং লাইসেন্স সেবা (বিআরটিএ লার্নার, স্মার্টকার্ড, টেস্ট মাঠ ও ফি)\n\n"
+            "নিচের সেবাটি নির্বাচন করুন অথবা আপনার প্রশ্নটি লিখুন:"
+        ),
+        "en": (
+            "I am well, thank you! I am an AI government service assistant.\n\n"
+            "Which service do you need help with? Currently, I provide verified information for:\n"
+            "• 🛂 Passport Services (e-Passport application, fees, police verification, delivery tracking)\n"
+            "• 🚗 Driving Licence Services (BRTA learner permit, smart card, driving test ground & fees)\n\n"
+            "Please select a service below or type your question:"
+        ),
+    },
+    "chat_personal": {
+        "bn": (
+            "আমি একটি এআই সহায়ক, তাই আমার খাওয়া-দাওয়া বা ব্যক্তিগত কাজের প্রয়োজন হয় না। "
+            "আমি সরকারি সেবার তথ্য দিয়ে আপনাকে সাহায্য করতে প্রস্তুত!\n\n"
+            "আপনি কোন সেবাটি নিতে চান? বর্তমানে আমি নিচের সেবাগুলোর সঠিক তথ্য দিতে পারি:\n"
+            "• 🛂 পাসপোর্ট সেবা (ই-পাসপোর্ট আবেদন, ফি, পুলিশ ভেরিফিকেশন, স্ট্যাটাস ট্র্যাকিং)\n"
+            "• 🚗 ড্রাইভিং লাইসেন্স সেবা (বিআরটিএ লার্নার, স্মার্টকার্ড, টেস্ট মাঠ ও ফি)\n\n"
+            "নিচের সেবাটি নির্বাচন করুন অথবা আপনার প্রশ্নটি লিখুন:"
+        ),
+        "en": (
+            "I am an AI assistant, so I don't eat or need personal breaks. "
+            "I am always ready to help you with government service information!\n\n"
+            "Which service do you need help with? Currently, I provide verified information for:\n"
+            "• 🛂 Passport Services (e-Passport application, fees, police verification, delivery tracking)\n"
+            "• 🚗 Driving Licence Services (BRTA learner permit, smart card, driving test ground & fees)\n\n"
+            "Please select a service below or type your question:"
+        ),
     },
     "ask_slot": {
         "bn": "{label}?",
